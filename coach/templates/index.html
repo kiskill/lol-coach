@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, details_table with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, teamfights with context %}
 {% block title %}{{ team }} · Bilan global{% endblock %}
 {% block content %}
 
@@ -50,6 +50,13 @@
   <h2>Indicateurs clés <small class="muted">· {{ r.key.games }} parties détaillées · barres = évolution par soirée</small></h2>
   {{ keytiles(r.key_rows, trend=r.trend) }}
   <p class="muted small-note">Conversion : {{ r.key.converted }} combats gagnés suivis d'un objectif dans les 90 s, sur {{ r.key.fights_won }}. Anti-heal : acheté dans {{ r.key.antiheal_bought }} des {{ r.key.antiheal_needed }} parties face à un gros soigneur.</p>
+</section>
+{% endif %}
+
+{% if r.teamfights %}
+<section class="card">
+  <h2>Teamfights <small class="muted">· {{ r.teamfights.total }} combats sur {{ r.teamfights.games }} parties</small></h2>
+  {{ teamfights(r.teamfights) }}
 </section>
 {% endif %}
 
@@ -121,7 +128,7 @@
 <section class="card">
   <h2>Carte <small class="muted">· survole un point pour le détail</small></h2>
   <div class="map-wrap">
-    {{ lolmap(r.map) }}
+    {{ lolmap(r.map, "deaths,kills") }}
     <div>
       <h3>Où meurt l'équipe ({{ r.zones.total }} morts)</h3>
       <table class="t">
@@ -194,12 +201,6 @@
     {% endfor %}
   </table></div>
 
-  {% if r.player_details %}
-  <details>
-    <summary>Voir le détail par joueur (vision, morts, CS, combat)</summary>
-    {{ details_table(r.player_details) }}
-  </details>
-  {% endif %}
 
   {% if r.form.dates %}
   <details>
@@ -215,18 +216,6 @@
   </details>
   {% endif %}
 
-  {% if r.builds %}
-  <details>
-    <summary>Builds : premier objet légendaire par champion</summary>
-    <div class="builds">
-      {% for b in r.builds %}
-      <div class="build"><div class="build-h">{{ champ(b.champion) }} <small class="muted">{{ b.role }} · {{ b.games }} parties</small></div>
-        <table class="t">{% for it in b["items"] %}<tr><td>{{ item_name(it.item) }}{% if it.minute %} <small class="muted">· {{ it.minute | num }} min</small>{% endif %}</td><td>{{ wr(it, 3) }}</td></tr>{% endfor %}</table>
-      </div>
-      {% endfor %}
-    </div>
-  </details>
-  {% endif %}
 </section>
 {% endif %}
 

@@ -68,6 +68,12 @@ def has_timeline(match_id):
     return (TIMELINE / f"{match_id}.json").exists()
 
 
+def timeline_version(match_id):
+    """0 si absente, sinon la version de l'extrait (1 = ancien format sans dégâts)."""
+    ext = _read(TIMELINE / f"{match_id}.json", None)
+    return 0 if ext is None else ext.get("v", 1)
+
+
 def save_timeline(match_id, ext):
     TIMELINE.mkdir(parents=True, exist_ok=True)
     (TIMELINE / f"{match_id}.json").write_text(json.dumps(ext, separators=(",", ":")), encoding="utf-8")

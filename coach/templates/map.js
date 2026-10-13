@@ -98,7 +98,7 @@
       } else if (state.layer === "objectives") {
         // Les objectifs tombent souvent au même endroit : on les regroupe avec un compteur
         const groups = {};
-        data.objectives.filter((o) => okT(o[2])).forEach((o) => {
+        (data.objectives || []).filter((o) => okT(o[2])).forEach((o) => {
           const key = `${o[3]}|${o[4]}|${Math.round(o[0] / 500)}|${Math.round(o[1] / 500)}`;
           (groups[key] = groups[key] || []).push(o);
         });

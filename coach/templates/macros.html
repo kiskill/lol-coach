@@ -47,21 +47,31 @@
 <div class="lolmap" data-map="{{ data | tojs }}" data-layers="{{ layers }}" data-img="{{ (root ~ map_img) if map_img else '' }}"></div>
 {%- endmacro %}
 
-{% macro details_table(rows, ref=none) -%}
-<div class="scroll"><table class="t players">
-  <tr><th>Joueur</th><th>Rôle</th><th title="Morts avant 15 minutes, par partie">Morts &lt;15</th><th title="CS à 10 minutes">CS @10</th><th title="Écart de CS à 10 min avec le vis-à-vis">Écart CS @10</th>
-    <th>Wards</th><th>Wards détruites</th><th>Pinks</th><th title="Participation aux kills">Particip. kills</th>
-    <th title="Dégâts subis + atténués par minute">Encaissé/min</th><th title="Temps de contrôle infligé (s)">CC (s)</th><th>Solo kills</th><th>Plaques</th><th title="Minute du premier objet légendaire">1er objet</th></tr>
-  {% for p in rows %}{% set g = ref.get(p.player) if ref else none %}
-  <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td>
-    <td>{{ p.deaths15 | num }}{% if g %} <small class="muted">({{ g.deaths15 | num }})</small>{% endif %}</td>
-    <td>{{ p.cs10 | num(0) }}</td>
-    <td class="{{ p.cs10_diff | signclass }}">{{ p.cs10_diff | signed }}</td>
-    <td>{{ p.wards | num }}{% if g %} <small class="muted">({{ g.wards | num }})</small>{% endif %}</td>
-    <td>{{ p.wards_killed | num }}</td>
-    <td>{{ p.pinks | num }}{% if g %} <small class="muted">({{ g.pinks | num }})</small>{% endif %}</td>
-    <td>{{ p.kp | num(0) }} %</td><td>{{ p.tank_min | num(0) }}</td><td>{{ p.cc | num(0) }}</td>
-    <td>{{ p.solo_kills | num }}</td><td>{{ p.plates | num }}</td><td>{{ p.first_item_min | num }}{% if p.first_item_min is not none %} min{% endif %}</td></tr>
-  {% endfor %}
-</table></div>
+
+{% macro teamfights(tf, ref=none) -%}
+<div class="tf-grid">
+  <div>
+    <div class="kpis compact">
+      <div class="kpi"><span>Teamfights / partie</span><b>{{ tf.per_game | num }}</b>{% if ref %}<small>moyenne : {{ ref.per_game | num }}</small>{% endif %}</div>
+      <div class="kpi"><span>Gagnés</span><b class="{{ tf.summary.wr | wrclass }}-t">{{ tf.summary.wr }} %</b><small>{{ tf.summary.wins }}/{{ tf.summary.games }} hors égalités{% if ref %} · moyenne {{ ref.summary.wr }} %{% endif %}</small></div>
+      <div class="kpi"><span>En infériorité</span><b>{{ tf.outnumbered.pct | num }} %</b><small>{{ tf.outnumbered.games }} combats · {{ tf.outnumbered.wins }} gagnés</small></div>
+    </div>
+    {% if tf.threats %}
+    <h3>Qui nous fait le plus mal <small class="muted">(dégâts reçus avant nos morts)</small></h3>
+    <div class="chips">{% for t in tf.threats[:6] %}<span class="chip">{{ champ(t.champion, "sm") }}<b>{{ (t.damage / 1000) | round(0) | int }}k</b></span>{% endfor %}</div>
+    {% endif %}
+  </div>
+  <div>
+    <h3>Par joueur</h3>
+    <table class="t">
+      <tr><th>Joueur</th><th title="Part des teamfights où le joueur est impliqué (kill, assist ou mort)">Présence</th><th title="Nombre de teamfights perdus où il est mort en premier">1er mort (TF perdus)</th><th title="Part des dégâts de l'équipe sur les adversaires tués en teamfight">Part des dégâts</th></tr>
+      {% for p in tf.players %}
+      <tr><td><b>{{ p.player }}</b> <small class="muted">{{ p.role }}</small></td><td>{{ p.presence | num }} %</td>
+        <td class="{{ 'bad-t' if p.first_death_pct and p.first_death_pct >= 35 }}">{{ p.first_death }}{% if p.first_death_pct is not none %} <small class="muted">({{ p.first_death_pct }} %)</small>{% endif %}</td>
+        <td>{{ p.dmg_share | num }} %</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+<p class="muted small-note">Teamfight = au moins 2 morts et 5 champions impliqués, avec moins de 20 s entre deux kills. Les joueurs impliqués sont déduits des kills et assists : un joueur présent qui n'a rien touché n'est pas compté.</p>
 {%- endmacro %}

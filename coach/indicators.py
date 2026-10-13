@@ -72,6 +72,7 @@ def game_indicators(game, raw, tl, items):
             "solo_kills": ch.get("soloKills", 0),
             "plates": ch.get("turretPlatesTaken", 0),
             "deaths15": 0, "cs10": None, "cs10_diff": None,
+            "tf": 0, "tf_first_death": 0, "tf_dmg": 0,
             "first_item": None, "first_item_min": None,
             "items": [i for i in final if i and items.legendary(i)],
             "antiheal": any(i and items.antiheal(i) for i in final),
@@ -88,6 +89,8 @@ def game_indicators(game, raw, tl, items):
         "wards": sum(pl["wards"] for pl in players.values()),
         "pinks": sum(pl["pinks"] for pl in players.values()),
         "deaths15": None, "first_death": None, "fights_won": None, "converted": None,
+        "tf": None, "tf_won": None, "tf_lost": None, "tf_outnumbered": None, "tf_outnumbered_won": None,
+        "tf_first_dead": {}, "killers_dmg": {},
     }
     spatial = {"deaths": [], "kills": [], "objectives": [], "jungle": []}
 
@@ -97,7 +100,7 @@ def game_indicators(game, raw, tl, items):
         # --- morts, kills, positions
         deaths15 = 0
         for e in (e for e in events if e[0] == "K"):
-            _, t, killer, victim, x, y, _assists = e
+            t, killer, victim, x, y = e[1], e[2], e[3], e[4], e[5]
             if victim in our_pid:
                 role = our_pid[victim]
                 spatial["deaths"].append({"x": x, "y": y, "t": t, "role": role, "zone": zone(x, y, blue)})
@@ -119,23 +122,62 @@ def game_indicators(game, raw, tl, items):
                 objectives.append({"t": e[1], "ours": e[2] != team_id, "type": e[3], "x": e[5], "y": e[6]})
         spatial["objectives"] = objectives
 
-        # --- combats gagnés et conversion en objectif
+        # --- combats : kills rapprochés dans le temps (moins de FIGHT_GAP s d'écart)
         kills = sorted((e for e in events if e[0] == "K"), key=lambda e: e[1])
         fights, cur = [], None
         for e in kills:
-            if cur and e[1] - cur["end"] <= FIGHT_GAP:
-                cur["end"] = e[1]
-            else:
-                cur = {"start": e[1], "end": e[1], "us": 0, "them": 0}
+            t, killer, victim = e[1], e[2], e[3]
+            assists = e[6] if len(e) > 6 else []
+            dmg = e[7] if len(e) > 7 else {}
+            if not (cur and t - cur["end"] <= FIGHT_GAP):
+                cur = {"start": t, "end": t, "us": 0, "them": 0, "ours": set(), "theirs": set(),
+                       "first": None, "dmg": defaultdict(int)}
                 fights.append(cur)
-            if e[2] in our_pid:
+            cur["end"] = t
+            for pid in [killer, victim, *assists]:
+                if pid in our_pid:
+                    cur["ours"].add(pid)
+                elif pid in their_pid:
+                    cur["theirs"].add(pid)
+            if cur["first"] is None:
+                cur["first"] = ("ours", our_pid[victim]) if victim in our_pid else ("theirs", None)
+            if killer in our_pid or victim in their_pid:
                 cur["us"] += 1
-            elif e[3] in our_pid:
+                # dégâts de chacun de nos joueurs sur l'adversaire tué
+                for pid, d in dmg.items():
+                    if int(pid) in our_pid:
+                        cur["dmg"][our_pid[int(pid)]] += d
+            elif victim in our_pid:
                 cur["them"] += 1
+                # qui nous a infligé les dégâts avant cette mort
+                for pid, d in dmg.items():
+                    if int(pid) in their_pid:
+                        champ = theirs[their_pid[int(pid)]]["championName"]
+                        team["killers_dmg"][champ] = team["killers_dmg"].get(champ, 0) + d
+
         won = [f for f in fights if f["us"] > f["them"]]
         conv = sum(1 for f in won if any(o["ours"] and f["end"] <= o["t"] <= f["end"] + CONVERT_WINDOW
                                           for o in objectives))
         team["fights_won"], team["converted"] = len(won), conv
+
+        # Teamfights : au moins 2 morts et 5 champions impliqués (hors simples picks)
+        tfs = [f for f in fights if f["us"] + f["them"] >= 2 and len(f["ours"]) + len(f["theirs"]) >= 5]
+        lost = [f for f in tfs if f["them"] > f["us"]]
+        outn = [f for f in tfs if len(f["ours"]) < len(f["theirs"])]
+        team.update({
+            "tf": len(tfs), "tf_won": sum(f["us"] > f["them"] for f in tfs), "tf_lost": len(lost),
+            "tf_outnumbered": len(outn), "tf_outnumbered_won": sum(f["us"] > f["them"] for f in outn),
+        })
+        for f in lost:
+            if f["first"][0] == "ours":
+                role = f["first"][1]
+                team["tf_first_dead"][role] = team["tf_first_dead"].get(role, 0) + 1
+                players[role]["tf_first_death"] += 1
+        for f in tfs:
+            for pid in f["ours"]:
+                players[our_pid[pid]]["tf"] += 1
+            for role, d in f["dmg"].items():
+                players[role]["tf_dmg"] += d
 
         # --- CS à 10 min et écart avec le vis-à-vis
         if len(frames) > 10:

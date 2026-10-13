@@ -8,7 +8,7 @@ from pathlib import Path
 import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import ROLES, ai, indicators, insights, stats, store
+from . import ROLES, ai, explorer, indicators, insights, stats, store
 
 OUT = Path("site")
 TEMPLATES = Path(__file__).parent / "templates"
@@ -140,6 +140,14 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
             prev=prev_s, next=next_s, generated=generated, root="../", **ai_flags())
         (OUT / "sessions" / f"{s['date']}.html").write_text(html, encoding="utf-8")
         session_pages.append({**grep["sessions"][i]})
+
+    # Explorateur : toutes les stats par joueur et par partie
+    session_of = {g["match_id"]: s["date"] for s in sessions for g in s["games"]}
+    data = explorer.build_dataset(games, session_of, name)
+    html = env.get_template("explorer.html").render(
+        data_json=json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"),
+        n_rows=len(data["rows"]), n_games=n_ind, generated=generated, root="")
+    (OUT / "explorer.html").write_text(html, encoding="utf-8")
 
     html = env.get_template("index.html").render(
         r=grep, ai_text=g_ai, ins=insights.global_insights(grep, name),

@@ -82,6 +82,9 @@ class RiotClient:
 
 
 # ------------------------------------------------------------------ timeline
+TIMELINE_VERSION = 2  # 2 = kills avec dégâts reçus par la victime
+
+
 def extract_timeline(timeline):
     """Version compacte de la timeline Riot (quelques Ko au lieu de ~1 Mo), conservée
     dans data/timeline/ pour tous les calculs : écarts, morts, carte, achats d'items.
@@ -107,8 +110,15 @@ def extract_timeline(timeline):
             x, y = pos.get("x", 0), pos.get("y", 0)
             typ = e.get("type")
             if typ == "CHAMPION_KILL":
+                # dégâts reçus par la victime juste avant sa mort, par participant
+                dmg = {}
+                for d in e.get("victimDamageReceived", []) or []:
+                    pid = d.get("participantId", 0)
+                    if pid:
+                        dmg[str(pid)] = dmg.get(str(pid), 0) + d.get("physicalDamage", 0) \
+                            + d.get("magicDamage", 0) + d.get("trueDamage", 0)
                 events.append(["K", t, e.get("killerId", 0), e.get("victimId", 0), x, y,
-                               e.get("assistingParticipantIds", [])])
+                               e.get("assistingParticipantIds", []), dmg])
             elif typ == "ELITE_MONSTER_KILL":
                 events.append(["M", t, e.get("killerTeamId", 0), e.get("monsterType", ""),
                                e.get("monsterSubType", ""), x, y])
@@ -117,7 +127,7 @@ def extract_timeline(timeline):
                                e.get("laneType", ""), x, y])
             elif typ == "ITEM_PURCHASED":
                 events.append(["I", t, e.get("participantId", 0), e.get("itemId", 0)])
-    return {"frames": frames, "events": events}
+    return {"v": TIMELINE_VERSION, "frames": frames, "events": events}
 
 
 def early_stats(match, ext, game, minutes=(10, 15)):
@@ -159,7 +169,8 @@ def early_stats(match, ext, game, minutes=(10, 15)):
 def enrich_timelines(client):
     """Télécharge la timeline des parties API qui n'en ont pas encore d'extrait."""
     games = store.load_games()
-    todo = [g for g in games if g.get("source") == "api" and not store.has_timeline(g["match_id"])]
+    todo = [g for g in games if g.get("source") == "api"
+            and store.timeline_version(g["match_id"]) < TIMELINE_VERSION]
     if not todo:
         return 0
     print(f"Timeline : {len(todo)} partie(s) à compléter…")

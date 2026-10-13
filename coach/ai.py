@@ -36,6 +36,7 @@ GLOBAL_TASK = """Voici les statistiques globales de l'équipe. Rédige un bilan 
 ## Faiblesses
 ## Synergies à privilégier / à éviter
 ## Phase de lane et conversion de l'avance (seulement si des données de début de partie sont fournies : écarts d'or à 10/15 min, throws, comebacks, objectifs)
+## Teamfights (bilan, infériorité numérique, qui meurt en premier, menaces adverses), si ces données sont fournies
 ## Discipline et vision (morts avant 15 min, zones de mort, wards et pinks, conversion des combats en objectifs, anti-heal), si ces données sont fournies
 ## Draft : bans prioritaires et picks conseillés
 ## Élargir les champ-pools (2-3 champions simples ou proches des pools actuels par rôle)
@@ -45,7 +46,7 @@ SESSION_TASK = """Voici le détail de la dernière soirée de jeu, avec le bilan
 comparaison. Rédige un débrief de session (250 à 450 mots) avec ces sections :
 ## Résumé de la soirée
 ## Ce qui a marché
-## Ce qui a coincé (picks, drafts, adversaires, phase de lane, objectifs, vision, morts, joueurs)
+## Ce qui a coincé (picks, drafts, adversaires, phase de lane, teamfights, objectifs, vision, morts, joueurs)
 ## À retenir pour la semaine prochaine (2-3 points concrets)"""
 
 
@@ -83,6 +84,25 @@ ITEM_NAMES = {}
 
 def _item(iid):
     return ITEM_NAMES.get(str(iid), str(iid))
+
+
+def _tf_payload(tf, name, short=False):
+    """Teamfights = au moins 2 morts et 5 champions impliqués. Joueurs impliqués déduits des kills/assists."""
+    if not tf:
+        return None
+    out = {"teamfights": tf["total"], "par_partie": tf["per_game"],
+           "gagnés": f"{tf['summary']['wins']}/{tf['summary']['games']}",
+           "en_infériorité_numérique": f"{tf['outnumbered']['games']} ({tf['outnumbered']['pct']} %), "
+                                       f"dont {tf['outnumbered']['wins']} gagnés"}
+    if short:
+        return out
+    out["premier_mort_des_teamfights_perdus (par joueur)"] = {
+        p["player"] + " (" + p["role"] + ")": p["first_death"] for p in tf["players"]}
+    out["présence_en_teamfight_%"] = {p["player"]: p["presence"] for p in tf["players"]}
+    out["part_des_dégâts_sur_adversaires_tués_%"] = {p["player"]: p["dmg_share"] for p in tf["players"]}
+    out["champions_adverses_qui_nous_infligent_le_plus_de_dégâts_avant_nos_morts"] = [
+        f"{name(t['champion'])} ({t['damage']})" for t in tf["threats"]]
+    return out
 
 
 def _key_payload(rows):
@@ -138,10 +158,7 @@ def _global_payload(rep, cfg, name):
         "winrate_après_victoire_ou_défaite": rep.get("tilt"),
         "winrate_selon_type_de_dégâts": rep.get("composition"),
         "détail_par_joueur (moyennes par partie)": rep.get("player_details"),
-        "premier_objet_par_champion": [
-            {"champion": name(b["champion"]), "rôle": b["role"],
-             "objets": [f"{_item(i['item'])} {i['wins']}/{i['games']}" for i in b["items"]]}
-            for b in rep.get("builds") or []],
+        "teamfights": _tf_payload(rep.get("teamfights"), name),
     }
 
 
@@ -250,6 +267,8 @@ def session_analysis(srep, grep, cfg, name):
         "indicateurs_par_partie": srep.get("lines"),
         "morts_par_zone_soirée": srep.get("zones"),
         "détail_par_joueur_soirée": srep.get("player_details"),
+        "teamfights_soirée": _tf_payload(srep.get("teamfights"), name),
+        "teamfights_moyenne_globale": _tf_payload(srep.get("teamfights_global"), name, short=True),
     }
     text = json.dumps(payload, ensure_ascii=False, indent=1)
     return _call(SYSTEM, f"{SESSION_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)

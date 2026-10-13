@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}{{ team }} · Explorateur{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Explorateur</h1>
+  <p class="muted">Toutes les statistiques de chaque partie, par joueur. Choisis un indicateur, un calcul et un regroupement.
+    {{ n_rows }} lignes (joueur × partie) issues de {{ n_games }} parties détaillées.</p>
+</section>
+
+<section class="card">
+  <div class="ex-controls">
+    <label class="ex-wide">Indicateur
+      <input id="ex-search" type="search" placeholder="Rechercher (ex. ward, dégâts, vol…)" autocomplete="off">
+      <select id="ex-metric" size="8"></select>
+    </label>
+    <div class="ex-col">
+      <label>Calcul
+        <select id="ex-agg">
+          <option value="avg">Moyenne par joueur et par partie</option>
+          <option value="team">Total de l'équipe par partie</option>
+          <option value="min">Par minute de jeu (par joueur)</option>
+          <option value="sum">Total cumulé</option>
+        </select>
+      </label>
+      <label>Regrouper par
+        <select id="ex-group">
+          <option value="player">Joueur</option>
+          <option value="champion">Champion</option>
+          <option value="role">Rôle</option>
+          <option value="date">Soirée</option>
+          <option value="win">Résultat</option>
+        </select>
+      </label>
+      <label>Joueur
+        <select id="ex-player"><option value="">Tous</option></select>
+      </label>
+      <label>Résultat
+        <select id="ex-win"><option value="">Tous</option><option value="1">Victoires</option><option value="0">Défaites</option></select>
+      </label>
+      <label>Période
+        <select id="ex-period"><option value="0">Tout</option><option value="1">Dernière soirée</option><option value="3">3 dernières soirées</option><option value="6">6 dernières soirées</option></select>
+      </label>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2 id="ex-title">—</h2>
+  <div class="scroll"><table class="t" id="ex-table"></table></div>
+  <p class="muted small-note">Les libellés en anglais sont les noms bruts de l'API Riot. Une barre grisée = moins de 3 parties, à interpréter avec prudence.</p>
+</section>
+
+<script id="ex-data" type="application/json">{{ data_json | safe }}</script>
+<script>
+(function () {
+  const D = JSON.parse(document.getElementById("ex-data").textContent);
+  const M = D.metrics, R = D.rows;  // ligne : [soirée, victoire, joueur, rôle, champion, minutes, valeurs, n° de partie]
+  const $ = (id) => document.getElementById(id);
+  const GROUPS = { tool: "Indicateurs de l'outil", game: "Statistiques de partie", challenge: "Challenges Riot" };
+  const fmt = (v) => v == null ? "—" : Math.abs(v) >= 100 ? Math.round(v).toLocaleString("fr-FR") : (Math.round(v * 100) / 100).toLocaleString("fr-FR");
+  const dates = [...new Set(R.map((r) => r[0]))].sort();
+  const fr = (d) => `${d.slice(8, 10)}/${d.slice(5, 7)}`;
+
+  [...new Set(R.map((r) => r[2]))].sort().forEach((p) => $("ex-player").add(new Option(p, p)));
+
+  function fillMetrics() {
+    const q = $("ex-search").value.trim().toLowerCase();
+    const sel = $("ex-metric"), keep = sel.value;
+    sel.innerHTML = "";
+    Object.entries(GROUPS).forEach(([g, label]) => {
+      const og = document.createElement("optgroup");
+      og.label = label;
+      M.forEach((m, i) => {
+        if (m.group === g && (!q || m.label.toLowerCase().includes(q) || m.key.toLowerCase().includes(q))) {
+          og.appendChild(new Option(m.label, i));
+        }
+      });
+      if (og.children.length) sel.appendChild(og);
+    });
+    if ([...sel.options].some((o) => o.value === keep)) sel.value = keep;
+    else if (sel.options.length) sel.selectedIndex = 0;
+  }
+
+  function render() {
+    const mi = Number($("ex-metric").value);
+    if (Number.isNaN(mi) || !M[mi]) { $("ex-table").innerHTML = ""; return; }
+    const agg = $("ex-agg").value, by = $("ex-group").value;
+    const pl = $("ex-player").value, win = $("ex-win").value, period = Number($("ex-period").value);
+    const okDates = period ? new Set(dates.slice(-period)) : null;
+    const col = { date: 0, win: 1, player: 2, role: 3, champion: 4 }[by];
+    const acc = {};
+    R.forEach((r) => {
+      if (pl && r[2] !== pl) return;
+      if (win !== "" && String(r[1]) !== win) return;
+      if (okDates && !okDates.has(r[0])) return;
+      const v = r[6][mi];
+      if (v == null) return;
+      const k = by === "win" ? (r[1] ? "Victoires" : "Défaites") : by === "date" ? r[0] : r[col];
+      const a = (acc[k] = acc[k] || { sum: 0, n: 0, minutes: 0, games: new Map() });
+      a.sum += v; a.n += 1; a.minutes += r[5]; a.games.set(r[7], r[1]);
+    });
+    const rows = Object.entries(acc).map(([k, a]) => {
+      const g = a.games.size, wins = [...a.games.values()].reduce((x, y) => x + y, 0);
+      return { k, n: g, wr: Math.round(100 * wins / g),
+        v: agg === "sum" ? a.sum : agg === "min" ? a.sum / a.minutes : agg === "team" ? a.sum / g : a.sum / a.n };
+    });
+    if (by === "date") rows.sort((a, b) => a.k.localeCompare(b.k)); else rows.sort((a, b) => b.v - a.v);
+    const max = Math.max(...rows.map((r) => Math.abs(r.v)), 1e-9);
+    const aggLabel = { avg: "moyenne par joueur et par partie", team: "total de l'équipe par partie", min: "par minute", sum: "total cumulé" }[agg];
+    $("ex-title").textContent = `${M[mi].label} · ${aggLabel}`;
+    $("ex-table").innerHTML =
+      `<tr><th>${$("ex-group").selectedOptions[0].text}</th><th>Valeur</th><th>Parties</th><th>Winrate</th></tr>` +
+      (rows.length ? rows.map((r) => `<tr class="${r.n < 3 ? "faded" : ""}"><td><b>${by === "date" ? fr(r.k) : r.k}</b></td>
+        <td><span class="wr mid"><span class="bar"><span style="width:${Math.round(100 * Math.abs(r.v) / max)}%"></span></span><b>${fmt(r.v)}</b></span></td>
+        <td>${r.n}</td><td>${r.wr} %</td></tr>`).join("")
+        : `<tr><td colspan="4" class="muted">Aucune donnée pour ces filtres.</td></tr>`);
+  }
+
+  $("ex-search").addEventListener("input", () => { fillMetrics(); render(); });
+  ["ex-metric", "ex-agg", "ex-group", "ex-player", "ex-win", "ex-period"].forEach((id) => $(id).addEventListener("change", render));
+  fillMetrics(); render();
+})();
+</script>
+{% endblock %}

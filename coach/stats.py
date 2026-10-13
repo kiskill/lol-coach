@@ -275,9 +275,9 @@ def global_report(games, sessions, cfg):
         "players": player_stats(games),
         "key": key_indicators(games),
         "key_rows": indicator_rows(key_indicators(games)),
+        "teamfights": teamfight_stats(games),
         "trend": indicator_trend(sessions),
         "player_details": player_details(games),
-        "builds": build_stats(games),
         "composition": composition_stats(games),
         "tilt": tilt_stats(sessions),
         "zones": zone_stats(games),
@@ -312,6 +312,8 @@ def session_report(session, all_games, cfg):
         "players_global": {p["player"]: p for p in player_stats(all_games)},
         "key": key_indicators(games),
         "key_rows": indicator_rows(key_indicators(games), key_indicators(all_games)),
+        "teamfights": teamfight_stats(games),
+        "teamfights_global": teamfight_stats(all_games),
         "player_details": player_details(games),
         "player_details_global": {p["player"]: p for p in player_details(all_games)},
         "zones": zone_stats(games),
@@ -325,6 +327,8 @@ def session_report(session, all_games, cfg):
 # (clé, libellé, unité, sens : "high" = plus c'est haut mieux c'est)
 KEY_INDICATORS = [
     ("deaths15", "Morts avant 15 min", "/ partie", "low"),
+    ("tf_wr", "Teamfights gagnés", "%", "high"),
+    ("tf_outnumbered", "Teamfights en infériorité numérique", "%", "low"),
     ("conversion", "Combats gagnés convertis en objectif", "%", "high"),
     ("cs10_diff", "Écart de CS à 10 min (lanes)", "", "high"),
     ("wards", "Wards posées (équipe)", "/ partie", "high"),
@@ -350,7 +354,12 @@ def key_indicators(games):
           if r in g["ind"]["players"] and g["ind"]["players"][r]["cs10_diff"] is not None]
     need = [g for g in gs if g["ind"]["team"]["antiheal_needed"]]
     fd = [g["ind"]["team"]["first_death"] for g in tl if g["ind"]["team"]["first_death"] is not None]
+    tf = sum(g["ind"]["team"].get("tf") or 0 for g in tl)
+    tf_won = sum(g["ind"]["team"].get("tf_won") or 0 for g in tl)
+    tf_out = sum(g["ind"]["team"].get("tf_outnumbered") or 0 for g in tl)
     vals = {
+        "tf_wr": round(100 * tf_won / tf) if tf else None,
+        "tf_outnumbered": round(100 * tf_out / tf) if tf else None,
         "deaths15": _avg([g["ind"]["team"]["deaths15"] for g in tl], 1),
         "conversion": round(100 * conv / won) if won else None,
         "cs10_diff": _avg(cs, 1),
@@ -388,6 +397,45 @@ def indicator_trend(sessions):
         for k in out:
             out[k].append({"date": s["date"], "value": ki["values"][k] if ki else None})
     return out
+
+
+def teamfight_stats(games):
+    """Teamfights : bilan, infériorité numérique, qui meurt en premier, menaces adverses."""
+    gs = [g for g in _ind_games(games) if g["ind"]["team"].get("tf") is not None]
+    if not gs:
+        return None
+    t = lambda k: sum(g["ind"]["team"].get(k) or 0 for g in gs)
+    total, won, lost = t("tf"), t("tf_won"), t("tf_lost")
+    first_dead, threats = Counter(), Counter()
+    per_player = defaultdict(lambda: {"tf": 0, "first": 0, "dmg": 0})
+    team_dmg = 0
+    for g in gs:
+        names = {p["role"]: p.get("player") or p["role"] for p in g["our"]}
+        for role, n in g["ind"]["team"]["tf_first_dead"].items():
+            first_dead[(names.get(role, role), role)] += n
+        threats.update(g["ind"]["team"].get("killers_dmg", {}))
+        for role, pl in g["ind"]["players"].items():
+            pp = per_player[(names.get(role, role), role)]
+            pp["tf"] += pl.get("tf", 0)
+            pp["first"] += pl.get("tf_first_death", 0)
+            pp["dmg"] += pl.get("tf_dmg", 0)
+            team_dmg += pl.get("tf_dmg", 0)
+    order = {r: i for i, r in enumerate(ROLES)}
+    players = [{"player": who, "role": role,
+                "presence": round(100 * v["tf"] / total) if total else None,
+                "first_death": v["first"],
+                "first_death_pct": round(100 * v["first"] / lost) if lost else None,
+                "dmg_share": round(100 * v["dmg"] / team_dmg) if team_dmg else None}
+               for (who, role), v in per_player.items()]
+    return {
+        "games": len(gs), "total": total, "per_game": round(total / len(gs), 1),
+        "summary": rec(won + lost, won),
+        "outnumbered": {**rec(t("tf_outnumbered"), t("tf_outnumbered_won")),
+                        "pct": round(100 * t("tf_outnumbered") / total) if total else None},
+        "players": sorted(players, key=lambda p: order.get(p["role"], 9)),
+        "first_dead_total": sum(first_dead.values()),
+        "threats": [{"champion": c, "damage": d} for c, d in threats.most_common(8)],
+    }
 
 
 def player_details(games):
@@ -481,8 +529,6 @@ def map_data(games, with_jungle=False):
             out["deaths"].append([d["x"], d["y"], d["t"], d["role"], names.get(d["role"], d["role"]), i])
         for k in m["kills"]:
             out["kills"].append([k["x"], k["y"], k["t"], k["role"], names.get(k["role"], k["role"]), i])
-        for o in m["objectives"]:
-            out["objectives"].append([o["x"], o["y"], o["t"], o["type"], o["ours"], i])
         if with_jungle and m["jungle"]:
             out["jungle"].append({"game": i, "win": g["win"], "blue": g["ind"]["blue"],
                                   "path": [[p["x"], p["y"], p["m"]] for p in m["jungle"]]})
@@ -507,5 +553,7 @@ def game_line(g):
     t = ind["team"]
     return {"deaths15": t["deaths15"], "wards": t["wards"], "pinks": t["pinks"],
             "fights": f"{t['converted']}/{t['fights_won']}" if t["fights_won"] is not None else None,
+            "tf": f"{t['tf_won']}/{t['tf']}" if t.get("tf") else None,
+            "tf_outnumbered": t.get("tf_outnumbered"),
             "antiheal": (t["antiheal_bought"] if t["antiheal_needed"] else None),
             "healers": t["enemy_healers"], "ap_share": t["ap_share"]}

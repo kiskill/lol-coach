@@ -95,32 +95,30 @@ Ensuite, tout se fait **automatiquement chaque mercredi matin**. Pour changer le
 
 ---
 
-## Indicateurs avancés et carte
+## Indicateurs avancés, teamfights et explorateur
 
 Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'historique CSV.
 
 - **Indicateurs clés :**
-  - morts avant 15 minutes ;
-  - combats gagnés convertis en objectif (dans les 90 s) ;
+  - teamfights gagnés et teamfights en infériorité numérique ;
+  - combats gagnés convertis en objectif ;
   - écart de CS à 10 minutes ;
+  - morts avant 15 minutes ;
   - wards et pinks ;
-  - anti-heal acheté face aux soigneurs ;
-  - minute de la première mort.
+  - anti-heal ;
+  - première mort.
   Sur la page globale, chaque indicateur affiche sa mini-évolution par soirée. Sur une page de session, il est comparé à vos moyennes.
-- **Carte :**
-  - morts et kills, filtrables par joueur et par période ;
-  - objectifs ;
-  - trajet du jungler de 1 à 8 minutes (page de session) ;
-  - tableau des zones de mort.
-- **Blocs repliables :**
-  - détail par joueur (vision, CS à 10 minutes, participation aux kills, dégâts encaissés, CC, solo kills, plaques) ;
-  - forme sur les 6 dernières soirées ;
-  - premier objet légendaire par champion.
-- **Selon le moment :** winrate après une victoire ou une défaite (tilt) et winrate selon le type de dégâts de la compo.
+- **Teamfights :**
+  - nombre par partie, winrate, combats en infériorité ;
+  - par joueur : présence, nombre de fois mort en premier dans un teamfight perdu, part des dégâts ;
+  - les champions adverses qui vous infligent le plus de dégâts avant vos morts.
+  Un teamfight compte au moins 2 morts et 5 champions impliqués, avec moins de 20 s entre deux kills.
+- **Carte :** morts et kills filtrables par joueur et par période, trajet du jungler (page de session), zones de mort.
+- **Explorateur :** toutes les statistiques Riot de chaque partie (plus de 150, dont les « challenges ») et les indicateurs de l'outil. On peut les regrouper par joueur, champion, rôle, soirée ou résultat, et les filtrer.
 
 Tout est aussi transmis à l'analyse IA.
 
-**Fichiers utilisés :** `data/raw/` (détail des parties) et `data/timeline/` (extrait compact des timelines, quelques Ko par partie). Les timelines manquantes sont téléchargées automatiquement au passage suivant.
+**Fichiers utilisés :** `data/raw/` (détail des parties) et `data/timeline/` (extrait compact des timelines). Les timelines manquantes ou dans un ancien format sont retéléchargées automatiquement au passage suivant.
 
 ---
 
