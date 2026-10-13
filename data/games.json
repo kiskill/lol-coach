@@ -1,31 +1,2646 @@
 [
  {
+  "match_id": "EUW1_7843811394",
+  "source": "api",
+  "start_utc": "2026-05-05T19:45:02.827000+00:00",
+  "duration_min": 37.72,
+  "win": false,
+  "patch": "16.9",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 12,
+    "deaths": 10,
+    "assists": 9,
+    "cs": 220,
+    "gold": 16079,
+    "damage": 40951,
+    "vision": 14,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 12,
+    "deaths": 9,
+    "assists": 20,
+    "cs": 253,
+    "gold": 20174,
+    "damage": 35038,
+    "vision": 58,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Malzahar",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 14,
+    "assists": 13,
+    "cs": 260,
+    "gold": 16468,
+    "damage": 29812,
+    "vision": 35,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe",
+    "player": "Eoden974",
+    "kills": 10,
+    "deaths": 14,
+    "assists": 12,
+    "cs": 233,
+    "gold": 16343,
+    "damage": 25523,
+    "vision": 16,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 9,
+    "assists": 19,
+    "cs": 51,
+    "gold": 12499,
+    "damage": 11206,
+    "vision": 46,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shaco"
+   },
+   {
+    "role": "Mid",
+    "champion": "Hwei"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Support",
+    "champion": "Pantheon"
+   }
+  ],
+  "our_bans": [
+   "Morgana",
+   "Viego",
+   "Ambessa",
+   "Gwen",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Garen",
+   "Twitch",
+   "Kayn",
+   "Katarina",
+   "Briar"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    5
+   ],
+   "barons": [
+    1,
+    2
+   ],
+   "towers": [
+    5,
+    9
+   ],
+   "kills": [
+    47,
+    56
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2884,
+    "xp": -2068,
+    "cs": -31,
+    "lanes": {
+     "Top": {
+      "gold": -42,
+      "xp": 15,
+      "cs": -12
+     },
+     "Jungle": {
+      "gold": 209,
+      "xp": -334,
+      "cs": 4
+     },
+     "Mid": {
+      "gold": -550,
+      "xp": -1151,
+      "cs": -2
+     },
+     "ADC": {
+      "gold": -1191,
+      "xp": -678,
+      "cs": -31
+     },
+     "Support": {
+      "gold": -1310,
+      "xp": 80,
+      "cs": 10
+     }
+    }
+   },
+   "15": {
+    "gold": -4279,
+    "xp": -2519,
+    "cs": -16,
+    "lanes": {
+     "Top": {
+      "gold": -119,
+      "xp": -489,
+      "cs": -7
+     },
+     "Jungle": {
+      "gold": 46,
+      "xp": -781,
+      "cs": 3
+     },
+     "Mid": {
+      "gold": -1405,
+      "xp": -994,
+      "cs": 10
+     },
+     "ADC": {
+      "gold": -1476,
+      "xp": -1217,
+      "cs": -33
+     },
+     "Support": {
+      "gold": -1325,
+      "xp": 962,
+      "cs": 11
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7851418948",
+  "source": "api",
+  "start_utc": "2026-05-12T19:26:20.122000+00:00",
+  "duration_min": 33.48,
+  "win": true,
+  "patch": "16.9",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 7,
+    "assists": 1,
+    "cs": 213,
+    "gold": 12103,
+    "damage": 25835,
+    "vision": 26,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 10,
+    "assists": 11,
+    "cs": 231,
+    "gold": 15095,
+    "damage": 33876,
+    "vision": 39,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 5,
+    "cs": 272,
+    "gold": 18424,
+    "damage": 34066,
+    "vision": 11,
+    "first_blood": true
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 5,
+    "deaths": 10,
+    "assists": 3,
+    "cs": 248,
+    "gold": 14025,
+    "damage": 19280,
+    "vision": 28,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 9,
+    "assists": 10,
+    "cs": 42,
+    "gold": 8882,
+    "damage": 8239,
+    "vision": 46,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Mordekaiser"
+   },
+   {
+    "role": "Jungle",
+    "champion": "XinZhao"
+   },
+   {
+    "role": "Mid",
+    "champion": "Lux"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe"
+   },
+   {
+    "role": "Support",
+    "champion": "Xerath"
+   }
+  ],
+  "our_bans": [
+   "Ambessa",
+   "Gwen",
+   "Naafiri",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Mel",
+   "Shaco",
+   "Yasuo",
+   "Gangplank",
+   "Brand"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    8,
+    9
+   ],
+   "kills": [
+    31,
+    40
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 130,
+    "xp": -803,
+    "cs": 29,
+    "lanes": {
+     "Top": {
+      "gold": -656,
+      "xp": -637,
+      "cs": -21
+     },
+     "Jungle": {
+      "gold": 182,
+      "xp": -86,
+      "cs": 6
+     },
+     "Mid": {
+      "gold": 562,
+      "xp": -46,
+      "cs": 22
+     },
+     "ADC": {
+      "gold": 55,
+      "xp": -218,
+      "cs": 16
+     },
+     "Support": {
+      "gold": -13,
+      "xp": 184,
+      "cs": 6
+     }
+    }
+   },
+   "15": {
+    "gold": -1591,
+    "xp": -3184,
+    "cs": -4,
+    "lanes": {
+     "Top": {
+      "gold": -1274,
+      "xp": -1874,
+      "cs": -28
+     },
+     "Jungle": {
+      "gold": 297,
+      "xp": -353,
+      "cs": -7
+     },
+     "Mid": {
+      "gold": 1022,
+      "xp": 383,
+      "cs": 33
+     },
+     "ADC": {
+      "gold": -815,
+      "xp": -1186,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -821,
+      "xp": -154,
+      "cs": 5
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7851487997",
+  "source": "api",
+  "start_utc": "2026-05-12T20:06:19.911000+00:00",
+  "duration_min": 36.53,
+  "win": false,
+  "patch": "16.9",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 11,
+    "deaths": 5,
+    "assists": 13,
+    "cs": 214,
+    "gold": 15552,
+    "damage": 41022,
+    "vision": 25,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 6,
+    "assists": 11,
+    "cs": 260,
+    "gold": 15216,
+    "damage": 21561,
+    "vision": 48,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 7,
+    "assists": 9,
+    "cs": 298,
+    "gold": 17030,
+    "damage": 39273,
+    "vision": 31,
+    "first_blood": true
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 238,
+    "gold": 12802,
+    "damage": 17998,
+    "vision": 31,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 6,
+    "assists": 17,
+    "cs": 51,
+    "gold": 10091,
+    "damage": 8791,
+    "vision": 96,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Jungle",
+    "champion": "MasterYi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Diana"
+   },
+   {
+    "role": "ADC",
+    "champion": "Smolder"
+   },
+   {
+    "role": "Support",
+    "champion": "Velkoz"
+   }
+  ],
+  "our_bans": [
+   "Pyke",
+   "Gwen",
+   "Naafiri",
+   "Ambessa",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Milio",
+   "Jax",
+   "Mordekaiser",
+   "Naafiri",
+   "Pyke"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    1,
+    1
+   ],
+   "towers": [
+    4,
+    11
+   ],
+   "kills": [
+    35,
+    30
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 57,
+    "xp": -912,
+    "cs": -27,
+    "lanes": {
+     "Top": {
+      "gold": 956,
+      "xp": 1239,
+      "cs": 22
+     },
+     "Jungle": {
+      "gold": 544,
+      "xp": -162,
+      "cs": -16
+     },
+     "Mid": {
+      "gold": -792,
+      "xp": -1238,
+      "cs": -15
+     },
+     "ADC": {
+      "gold": -443,
+      "xp": -387,
+      "cs": -25
+     },
+     "Support": {
+      "gold": -208,
+      "xp": -364,
+      "cs": 7
+     }
+    }
+   },
+   "15": {
+    "gold": -1166,
+    "xp": -1296,
+    "cs": -37,
+    "lanes": {
+     "Top": {
+      "gold": 1344,
+      "xp": 1463,
+      "cs": 19
+     },
+     "Jungle": {
+      "gold": 564,
+      "xp": 76,
+      "cs": -12
+     },
+     "Mid": {
+      "gold": -1382,
+      "xp": -1896,
+      "cs": -19
+     },
+     "ADC": {
+      "gold": -1663,
+      "xp": -1126,
+      "cs": -39
+     },
+     "Support": {
+      "gold": -29,
+      "xp": 187,
+      "cs": 14
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7851556013",
+  "source": "api",
+  "start_utc": "2026-05-12T20:47:40.427000+00:00",
+  "duration_min": 28.92,
+  "win": false,
+  "patch": "16.9",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 4,
+    "assists": 8,
+    "cs": 243,
+    "gold": 11367,
+    "damage": 25699,
+    "vision": 15,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 7,
+    "assists": 6,
+    "cs": 176,
+    "gold": 12291,
+    "damage": 19545,
+    "vision": 38,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Yone",
+    "player": "Eoden974",
+    "kills": 8,
+    "deaths": 9,
+    "assists": 6,
+    "cs": 213,
+    "gold": 12140,
+    "damage": 23354,
+    "vision": 5,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 8,
+    "cs": 181,
+    "gold": 10676,
+    "damage": 22447,
+    "vision": 28,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 9,
+    "assists": 12,
+    "cs": 32,
+    "gold": 8169,
+    "damage": 10663,
+    "vision": 59,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Ornn"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Kayn"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ahri"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "our_bans": [
+   "Ambessa",
+   "Yasuo",
+   "MasterYi",
+   "Pyke",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Zed",
+   "Morgana",
+   "Varus",
+   "Akshan",
+   "Brand"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    4,
+    10
+   ],
+   "kills": [
+    24,
+    37
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1765,
+    "xp": -1495,
+    "cs": -5,
+    "lanes": {
+     "Top": {
+      "gold": 460,
+      "xp": -344,
+      "cs": 15
+     },
+     "Jungle": {
+      "gold": -121,
+      "xp": 186,
+      "cs": 0
+     },
+     "Mid": {
+      "gold": -774,
+      "xp": -710,
+      "cs": 0
+     },
+     "ADC": {
+      "gold": -909,
+      "xp": -340,
+      "cs": -18
+     },
+     "Support": {
+      "gold": -421,
+      "xp": -287,
+      "cs": -2
+     }
+    }
+   },
+   "15": {
+    "gold": -623,
+    "xp": 44,
+    "cs": -10,
+    "lanes": {
+     "Top": {
+      "gold": 544,
+      "xp": -401,
+      "cs": 8
+     },
+     "Jungle": {
+      "gold": 1295,
+      "xp": 2036,
+      "cs": 12
+     },
+     "Mid": {
+      "gold": 159,
+      "xp": -560,
+      "cs": -3
+     },
+     "ADC": {
+      "gold": -1945,
+      "xp": -235,
+      "cs": -27
+     },
+     "Support": {
+      "gold": -676,
+      "xp": -796,
+      "cs": 0
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7859251345",
+  "source": "api",
+  "start_utc": "2026-05-19T17:46:24.712000+00:00",
+  "duration_min": 34.93,
+  "win": false,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 5,
+    "deaths": 6,
+    "assists": 14,
+    "cs": 219,
+    "gold": 12276,
+    "damage": 31641,
+    "vision": 23,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 3,
+    "deaths": 11,
+    "assists": 13,
+    "cs": 230,
+    "gold": 13025,
+    "damage": 14368,
+    "vision": 61,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 18,
+    "deaths": 7,
+    "assists": 10,
+    "cs": 280,
+    "gold": 18720,
+    "damage": 49303,
+    "vision": 27,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 12,
+    "deaths": 8,
+    "assists": 5,
+    "cs": 294,
+    "gold": 18054,
+    "damage": 38451,
+    "vision": 29,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 10,
+    "assists": 25,
+    "cs": 23,
+    "gold": 9836,
+    "damage": 6781,
+    "vision": 97,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Briar"
+   },
+   {
+    "role": "Mid",
+    "champion": "Kayle"
+   },
+   {
+    "role": "ADC",
+    "champion": "Vayne"
+   },
+   {
+    "role": "Support",
+    "champion": "Nautilus"
+   }
+  ],
+  "our_bans": [
+   "Ambessa",
+   "Naafiri",
+   "Pyke",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Kayn",
+   "Zed",
+   "Ambessa",
+   "Zilean",
+   "Morgana"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    0,
+    2
+   ],
+   "towers": [
+    3,
+    11
+   ],
+   "kills": [
+    39,
+    42
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 582,
+    "xp": 509,
+    "cs": -20,
+    "lanes": {
+     "Top": {
+      "gold": -818,
+      "xp": -984,
+      "cs": -34
+     },
+     "Jungle": {
+      "gold": 341,
+      "xp": 396,
+      "cs": 0
+     },
+     "Mid": {
+      "gold": 2945,
+      "xp": 1223,
+      "cs": 33
+     },
+     "ADC": {
+      "gold": -1441,
+      "xp": -327,
+      "cs": -13
+     },
+     "Support": {
+      "gold": -445,
+      "xp": 201,
+      "cs": -6
+     }
+    }
+   },
+   "15": {
+    "gold": -1924,
+    "xp": -4070,
+    "cs": -41,
+    "lanes": {
+     "Top": {
+      "gold": -2274,
+      "xp": -3502,
+      "cs": -56
+     },
+     "Jungle": {
+      "gold": 474,
+      "xp": 450,
+      "cs": 3
+     },
+     "Mid": {
+      "gold": 3138,
+      "xp": 621,
+      "cs": 15
+     },
+     "ADC": {
+      "gold": -2764,
+      "xp": -635,
+      "cs": 2
+     },
+     "Support": {
+      "gold": -498,
+      "xp": -1004,
+      "cs": -5
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7859340742",
+  "source": "api",
+  "start_utc": "2026-05-19T18:38:10.858000+00:00",
+  "duration_min": 30.83,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 3,
+    "assists": 5,
+    "cs": 205,
+    "gold": 11105,
+    "damage": 33495,
+    "vision": 25,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 5,
+    "assists": 10,
+    "cs": 232,
+    "gold": 13907,
+    "damage": 24673,
+    "vision": 25,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 3,
+    "assists": 18,
+    "cs": 216,
+    "gold": 12969,
+    "damage": 24151,
+    "vision": 23,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 16,
+    "deaths": 8,
+    "assists": 7,
+    "cs": 225,
+    "gold": 18616,
+    "damage": 26030,
+    "vision": 32,
+    "first_blood": true
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 7,
+    "assists": 14,
+    "cs": 28,
+    "gold": 9316,
+    "damage": 6257,
+    "vision": 64,
+    "first_blood": true
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Sett"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Amumu"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ziggs"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [
+   "Naafiri",
+   "MasterYi",
+   "Pyke",
+   "Gwen",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "TahmKench",
+   "Vayne",
+   "Jax",
+   "Zed",
+   "Morgana"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    7,
+    6
+   ],
+   "kills": [
+    33,
+    26
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1719,
+    "xp": 1020,
+    "cs": -21,
+    "lanes": {
+     "Top": {
+      "gold": -532,
+      "xp": -86,
+      "cs": -23
+     },
+     "Jungle": {
+      "gold": 895,
+      "xp": 679,
+      "cs": 7
+     },
+     "Mid": {
+      "gold": 208,
+      "xp": -398,
+      "cs": -14
+     },
+     "ADC": {
+      "gold": 832,
+      "xp": 687,
+      "cs": 12
+     },
+     "Support": {
+      "gold": 316,
+      "xp": 138,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": -187,
+    "xp": 85,
+    "cs": -38,
+    "lanes": {
+     "Top": {
+      "gold": -1770,
+      "xp": -707,
+      "cs": -27
+     },
+     "Jungle": {
+      "gold": 650,
+      "xp": 861,
+      "cs": 22
+     },
+     "Mid": {
+      "gold": -679,
+      "xp": -429,
+      "cs": -29
+     },
+     "ADC": {
+      "gold": 1652,
+      "xp": 311,
+      "cs": -1
+     },
+     "Support": {
+      "gold": -40,
+      "xp": 49,
+      "cs": -3
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7859390347",
+  "source": "api",
+  "start_utc": "2026-05-19T19:17:28.479000+00:00",
+  "duration_min": 37.48,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 10,
+    "deaths": 5,
+    "assists": 14,
+    "cs": 273,
+    "gold": 18509,
+    "damage": 41684,
+    "vision": 21,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 4,
+    "assists": 9,
+    "cs": 314,
+    "gold": 19130,
+    "damage": 39824,
+    "vision": 47,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Lux",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 11,
+    "assists": 14,
+    "cs": 196,
+    "gold": 14055,
+    "damage": 25997,
+    "vision": 29,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe",
+    "player": "Eoden974",
+    "kills": 8,
+    "deaths": 9,
+    "assists": 16,
+    "cs": 252,
+    "gold": 17292,
+    "damage": 31024,
+    "vision": 20,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 18,
+    "cs": 37,
+    "gold": 10402,
+    "damage": 5963,
+    "vision": 90,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Darius"
+   },
+   {
+    "role": "Mid",
+    "champion": "Zed"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rell"
+   }
+  ],
+  "our_bans": [
+   "Pyke",
+   "MasterYi",
+   "Naafiri",
+   "Gwen",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Soraka",
+   "Jax",
+   "Vi",
+   "Akali",
+   "Smolder"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": false,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    9,
+    6
+   ],
+   "kills": [
+    39,
+    34
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -3421,
+    "xp": -2058,
+    "cs": 4,
+    "lanes": {
+     "Top": {
+      "gold": -1790,
+      "xp": -1227,
+      "cs": -21
+     },
+     "Jungle": {
+      "gold": -250,
+      "xp": 588,
+      "cs": 25
+     },
+     "Mid": {
+      "gold": -965,
+      "xp": -1206,
+      "cs": -17
+     },
+     "ADC": {
+      "gold": 37,
+      "xp": -305,
+      "cs": 17
+     },
+     "Support": {
+      "gold": -453,
+      "xp": 92,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": -3195,
+    "xp": -1834,
+    "cs": 5,
+    "lanes": {
+     "Top": {
+      "gold": -986,
+      "xp": -239,
+      "cs": -10
+     },
+     "Jungle": {
+      "gold": 708,
+      "xp": 1178,
+      "cs": 25
+     },
+     "Mid": {
+      "gold": -2462,
+      "xp": -2687,
+      "cs": -30
+     },
+     "ADC": {
+      "gold": 261,
+      "xp": -310,
+      "cs": 16
+     },
+     "Support": {
+      "gold": -716,
+      "xp": 224,
+      "cs": 4
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7859467869",
+  "source": "api",
+  "start_utc": "2026-05-19T20:03:48.821000+00:00",
+  "duration_min": 34.63,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 8,
+    "deaths": 5,
+    "assists": 10,
+    "cs": 180,
+    "gold": 14475,
+    "damage": 39313,
+    "vision": 26,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 4,
+    "assists": 9,
+    "cs": 271,
+    "gold": 15833,
+    "damage": 25386,
+    "vision": 42,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 13,
+    "cs": 263,
+    "gold": 17653,
+    "damage": 60713,
+    "vision": 22,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 7,
+    "deaths": 7,
+    "assists": 10,
+    "cs": 247,
+    "gold": 16307,
+    "damage": 28143,
+    "vision": 21,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 18,
+    "cs": 37,
+    "gold": 10394,
+    "damage": 6234,
+    "vision": 101,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Mordekaiser"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Sylas"
+   },
+   {
+    "role": "Mid",
+    "champion": "Leblanc"
+   },
+   {
+    "role": "ADC",
+    "champion": "Sivir"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [
+   "Naafiri",
+   "Ambessa",
+   "Pyke",
+   "Morgana",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "XinZhao",
+   "Katarina",
+   "Naafiri",
+   "Jax",
+   "Teemo"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    1
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    12,
+    4
+   ],
+   "kills": [
+    37,
+    25
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1090,
+    "xp": 525,
+    "cs": 18,
+    "lanes": {
+     "Top": {
+      "gold": -438,
+      "xp": 352,
+      "cs": -21
+     },
+     "Jungle": {
+      "gold": -168,
+      "xp": -27,
+      "cs": 8
+     },
+     "Mid": {
+      "gold": 565,
+      "xp": 643,
+      "cs": 37
+     },
+     "ADC": {
+      "gold": -649,
+      "xp": 267,
+      "cs": -12
+     },
+     "Support": {
+      "gold": -400,
+      "xp": -710,
+      "cs": 6
+     }
+    }
+   },
+   "15": {
+    "gold": 416,
+    "xp": 1331,
+    "cs": 40,
+    "lanes": {
+     "Top": {
+      "gold": 362,
+      "xp": 867,
+      "cs": -12
+     },
+     "Jungle": {
+      "gold": -135,
+      "xp": -272,
+      "cs": 11
+     },
+     "Mid": {
+      "gold": 881,
+      "xp": 1080,
+      "cs": 49
+     },
+     "ADC": {
+      "gold": -682,
+      "xp": 98,
+      "cs": -18
+     },
+     "Support": {
+      "gold": -10,
+      "xp": -442,
+      "cs": 10
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7859547989",
+  "source": "api",
+  "start_utc": "2026-05-19T20:51:38.784000+00:00",
+  "duration_min": 31.35,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 8,
+    "deaths": 4,
+    "assists": 15,
+    "cs": 187,
+    "gold": 13598,
+    "damage": 41508,
+    "vision": 24,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 12,
+    "cs": 248,
+    "gold": 16504,
+    "damage": 36014,
+    "vision": 38,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 2,
+    "assists": 9,
+    "cs": 269,
+    "gold": 14915,
+    "damage": 43977,
+    "vision": 38,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 10,
+    "deaths": 3,
+    "assists": 8,
+    "cs": 253,
+    "gold": 16542,
+    "damage": 28410,
+    "vision": 40,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 2,
+    "assists": 26,
+    "cs": 41,
+    "gold": 9329,
+    "damage": 5888,
+    "vision": 65,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Hecarim"
+   },
+   {
+    "role": "Mid",
+    "champion": "Yone"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ezreal"
+   },
+   {
+    "role": "Support",
+    "champion": "Nami"
+   }
+  ],
+  "our_bans": [
+   "Ambessa",
+   "Pyke",
+   "Naafiri",
+   "Gwen",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Lux",
+   "Lissandra",
+   "Morgana",
+   "Ornn"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    11,
+    4
+   ],
+   "kills": [
+    43,
+    14
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1644,
+    "xp": 1146,
+    "cs": 35,
+    "lanes": {
+     "Top": {
+      "gold": 852,
+      "xp": 590,
+      "cs": 23
+     },
+     "Jungle": {
+      "gold": 1283,
+      "xp": 860,
+      "cs": 14
+     },
+     "Mid": {
+      "gold": -308,
+      "xp": -231,
+      "cs": 0
+     },
+     "ADC": {
+      "gold": -51,
+      "xp": 94,
+      "cs": -3
+     },
+     "Support": {
+      "gold": -132,
+      "xp": -167,
+      "cs": 1
+     }
+    }
+   },
+   "15": {
+    "gold": 2699,
+    "xp": 3427,
+    "cs": 54,
+    "lanes": {
+     "Top": {
+      "gold": 17,
+      "xp": 128,
+      "cs": 31
+     },
+     "Jungle": {
+      "gold": 2031,
+      "xp": 935,
+      "cs": 9
+     },
+     "Mid": {
+      "gold": 414,
+      "xp": 1142,
+      "cs": 4
+     },
+     "ADC": {
+      "gold": 220,
+      "xp": 487,
+      "cs": 9
+     },
+     "Support": {
+      "gold": 17,
+      "xp": 735,
+      "cs": 1
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7866737319",
+  "source": "api",
+  "start_utc": "2026-05-26T17:46:58.580000+00:00",
+  "duration_min": 30.98,
+  "win": false,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 11,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 163,
+    "gold": 13339,
+    "damage": 32493,
+    "vision": 18,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 12,
+    "deaths": 4,
+    "assists": 10,
+    "cs": 218,
+    "gold": 16003,
+    "damage": 24838,
+    "vision": 43,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 3,
+    "deaths": 8,
+    "assists": 15,
+    "cs": 214,
+    "gold": 10973,
+    "damage": 16994,
+    "vision": 9,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 1,
+    "deaths": 10,
+    "assists": 7,
+    "cs": 202,
+    "gold": 10276,
+    "damage": 18360,
+    "vision": 24,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 46,
+    "gold": 9372,
+    "damage": 11127,
+    "vision": 64,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Teemo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Velkoz"
+   }
+  ],
+  "our_bans": [
+   "Ambessa",
+   "Gwen",
+   "Yasuo",
+   "Naafiri",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Naafiri",
+   "Thresh",
+   "Nocturne",
+   "Fizz",
+   "Yone"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    2,
+    9
+   ],
+   "kills": [
+    31,
+    34
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1061,
+    "xp": 137,
+    "cs": 3,
+    "lanes": {
+     "Top": {
+      "gold": 571,
+      "xp": 813,
+      "cs": -1
+     },
+     "Jungle": {
+      "gold": 958,
+      "xp": -595,
+      "cs": -22
+     },
+     "Mid": {
+      "gold": 68,
+      "xp": -65,
+      "cs": 8
+     },
+     "ADC": {
+      "gold": 105,
+      "xp": 335,
+      "cs": 11
+     },
+     "Support": {
+      "gold": -641,
+      "xp": -351,
+      "cs": 7
+     }
+    }
+   },
+   "15": {
+    "gold": -169,
+    "xp": 1447,
+    "cs": 3,
+    "lanes": {
+     "Top": {
+      "gold": 464,
+      "xp": 1655,
+      "cs": -2
+     },
+     "Jungle": {
+      "gold": 356,
+      "xp": -432,
+      "cs": -25
+     },
+     "Mid": {
+      "gold": 648,
+      "xp": 1171,
+      "cs": 18
+     },
+     "ADC": {
+      "gold": -299,
+      "xp": -121,
+      "cs": -1
+     },
+     "Support": {
+      "gold": -1338,
+      "xp": -826,
+      "cs": 13
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7866803884",
+  "source": "api",
+  "start_utc": "2026-05-26T18:31:42.345000+00:00",
+  "duration_min": 32.3,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 7,
+    "assists": 14,
+    "cs": 157,
+    "gold": 10481,
+    "damage": 24895,
+    "vision": 16,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 6,
+    "assists": 17,
+    "cs": 208,
+    "gold": 15227,
+    "damage": 28189,
+    "vision": 41,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 7,
+    "deaths": 3,
+    "assists": 11,
+    "cs": 247,
+    "gold": 14605,
+    "damage": 28989,
+    "vision": 10,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 15,
+    "deaths": 7,
+    "assists": 6,
+    "cs": 197,
+    "gold": 18719,
+    "damage": 36454,
+    "vision": 42,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 3,
+    "assists": 18,
+    "cs": 34,
+    "gold": 10040,
+    "damage": 7003,
+    "vision": 63,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Renekton"
+   },
+   {
+    "role": "Jungle",
+    "champion": "LeeSin"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ahri"
+   },
+   {
+    "role": "ADC",
+    "champion": "Senna"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [
+   "Naafiri",
+   "Pyke",
+   "Yasuo",
+   "Gwen",
+   "Morgana"
+  ],
+  "enemy_bans": [
+   "Ezreal",
+   "Caitlyn",
+   "Garen",
+   "Rengar",
+   "Mel"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    9,
+    4
+   ],
+   "kills": [
+    34,
+    26
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -425,
+    "xp": -1757,
+    "cs": -72,
+    "lanes": {
+     "Top": {
+      "gold": -1271,
+      "xp": -791,
+      "cs": -35
+     },
+     "Jungle": {
+      "gold": -631,
+      "xp": -900,
+      "cs": -22
+     },
+     "Mid": {
+      "gold": 738,
+      "xp": -73,
+      "cs": -5
+     },
+     "ADC": {
+      "gold": 498,
+      "xp": 245,
+      "cs": 4
+     },
+     "Support": {
+      "gold": 241,
+      "xp": -238,
+      "cs": -14
+     }
+    }
+   },
+   "15": {
+    "gold": -1591,
+    "xp": -2078,
+    "cs": -72,
+    "lanes": {
+     "Top": {
+      "gold": -2222,
+      "xp": -1713,
+      "cs": -33
+     },
+     "Jungle": {
+      "gold": -845,
+      "xp": -402,
+      "cs": -22
+     },
+     "Mid": {
+      "gold": 1130,
+      "xp": 613,
+      "cs": 0
+     },
+     "ADC": {
+      "gold": 258,
+      "xp": -339,
+      "cs": 3
+     },
+     "Support": {
+      "gold": 88,
+      "xp": -237,
+      "cs": -20
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7866854210",
+  "source": "api",
+  "start_utc": "2026-05-26T19:08:40.017000+00:00",
+  "duration_min": 29.72,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 9,
+    "deaths": 3,
+    "assists": 9,
+    "cs": 195,
+    "gold": 13122,
+    "damage": 34320,
+    "vision": 20,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 211,
+    "gold": 13311,
+    "damage": 17599,
+    "vision": 48,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 5,
+    "deaths": 5,
+    "assists": 10,
+    "cs": 232,
+    "gold": 12455,
+    "damage": 36392,
+    "vision": 25,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 14,
+    "deaths": 5,
+    "assists": 6,
+    "cs": 234,
+    "gold": 17964,
+    "damage": 35870,
+    "vision": 39,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 4,
+    "assists": 21,
+    "cs": 32,
+    "gold": 9343,
+    "damage": 7671,
+    "vision": 74,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Zac"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vladimir"
+   },
+   {
+    "role": "ADC",
+    "champion": "Varus"
+   },
+   {
+    "role": "Support",
+    "champion": "Braum"
+   }
+  ],
+  "our_bans": [
+   "MasterYi",
+   "Gwen",
+   "Naafiri",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Velkoz",
+   "Twitch",
+   "Smolder",
+   "Shaco",
+   "Fizz"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    8,
+    3
+   ],
+   "kills": [
+    36,
+    23
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1184,
+    "xp": -105,
+    "cs": 6,
+    "lanes": {
+     "Top": {
+      "gold": 1006,
+      "xp": 1466,
+      "cs": 7
+     },
+     "Jungle": {
+      "gold": -619,
+      "xp": -1109,
+      "cs": -17
+     },
+     "Mid": {
+      "gold": 173,
+      "xp": -187,
+      "cs": 12
+     },
+     "ADC": {
+      "gold": 536,
+      "xp": -38,
+      "cs": 4
+     },
+     "Support": {
+      "gold": 88,
+      "xp": -237,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": 1038,
+    "xp": 1760,
+    "cs": 45,
+    "lanes": {
+     "Top": {
+      "gold": 1436,
+      "xp": 3007,
+      "cs": 6
+     },
+     "Jungle": {
+      "gold": -786,
+      "xp": -366,
+      "cs": -2
+     },
+     "Mid": {
+      "gold": -275,
+      "xp": -587,
+      "cs": 9
+     },
+     "ADC": {
+      "gold": 607,
+      "xp": 319,
+      "cs": 30
+     },
+     "Support": {
+      "gold": 56,
+      "xp": -613,
+      "cs": 2
+     }
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_7866908075",
+  "source": "api",
+  "start_utc": "2026-05-26T19:42:35.810000+00:00",
+  "duration_min": 23.3,
+  "win": false,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 9,
+    "deaths": 2,
+    "assists": 3,
+    "cs": 128,
+    "gold": 9219,
+    "damage": 18757,
+    "vision": 12,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 168,
+    "gold": 10298,
+    "damage": 15204,
+    "vision": 29,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Diana",
+    "player": "Eoden974",
+    "kills": 0,
+    "deaths": 10,
+    "assists": 2,
+    "cs": 141,
+    "gold": 6157,
+    "damage": 11804,
+    "vision": 5,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 3,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 175,
+    "gold": 9383,
+    "damage": 13430,
+    "vision": 24,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 7,
+    "assists": 7,
+    "cs": 32,
+    "gold": 5536,
+    "damage": 4067,
+    "vision": 36,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Vayne"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Hecarim"
+   },
+   {
+    "role": "Mid",
+    "champion": "Veigar"
+   },
+   {
+    "role": "ADC",
+    "champion": "Sivir"
+   },
+   {
+    "role": "Support",
+    "champion": "Nami"
+   }
+  ],
+  "our_bans": [
+   "MasterYi",
+   "Pyke",
+   "Yasuo",
+   "Naafiri",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Ivern",
+   "Smolder",
+   "Maokai"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    2,
+    1
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    0,
+    10
+   ],
+   "kills": [
+    18,
+    32
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1321,
+    "xp": -1413,
+    "cs": -66,
+    "lanes": {
+     "Top": {
+      "gold": -339,
+      "xp": 501,
+      "cs": -28
+     },
+     "Jungle": {
+      "gold": 149,
+      "xp": -801,
+      "cs": -22
+     },
+     "Mid": {
+      "gold": -1786,
+      "xp": -1562,
+      "cs": -22
+     },
+     "ADC": {
+      "gold": 594,
+      "xp": 128,
+      "cs": 9
+     },
+     "Support": {
+      "gold": 61,
+      "xp": 321,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": -4758,
+    "xp": -2656,
+    "cs": -85,
+    "lanes": {
+     "Top": {
+      "gold": 1392,
+      "xp": 3767,
+      "cs": -12
+     },
+     "Jungle": {
+      "gold": -52,
+      "xp": -1208,
+      "cs": -20
+     },
+     "Mid": {
+      "gold": -4034,
+      "xp": -3902,
+      "cs": -50
+     },
+     "ADC": {
+      "gold": -1322,
+      "xp": -925,
+      "cs": 0
+     },
+     "Support": {
+      "gold": -742,
+      "xp": -388,
+      "cs": -3
+     }
+    }
+   }
+  }
+ },
+ {
   "match_id": "EUW1_7866950423",
-  "source": "csv",
-  "start_utc": "2026-05-26T20:10:19.856000+00:00",
+  "source": "api",
+  "start_utc": "2026-05-26T20:10:45.387000+00:00",
   "duration_min": 29.62,
   "win": false,
   "patch": "16.10",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 3,
+    "deaths": 6,
+    "assists": 5,
+    "cs": 176,
+    "gold": 10087,
+    "damage": 23573,
+    "vision": 16,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Trundle"
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 8,
+    "assists": 1,
+    "cs": 211,
+    "gold": 12736,
+    "damage": 16198,
+    "vision": 42,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Seraphine"
+    "champion": "Seraphine",
+    "player": "Eoden974",
+    "kills": 4,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 217,
+    "gold": 13578,
+    "damage": 20598,
+    "vision": 4,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 195,
+    "gold": 12889,
+    "damage": 29915,
+    "vision": 21,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 12,
+    "cs": 34,
+    "gold": 8714,
+    "damage": 6857,
+    "vision": 69,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -50,37 +2665,180 @@
     "champion": "Rell"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Naafiri",
+   "Pyke",
+   "Gwen",
+   "Veigar",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Viego",
+   "TahmKench",
+   "Smolder",
+   "Mel",
+   "Riven"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    4,
+    9
+   ],
+   "kills": [
+    26,
+    35
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2171,
+    "xp": 1173,
+    "cs": 1,
+    "lanes": {
+     "Top": {
+      "gold": -704,
+      "xp": -686,
+      "cs": -21
+     },
+     "Jungle": {
+      "gold": 1728,
+      "xp": 1465,
+      "cs": 33
+     },
+     "Mid": {
+      "gold": -240,
+      "xp": -63,
+      "cs": -16
+     },
+     "ADC": {
+      "gold": 1042,
+      "xp": 396,
+      "cs": -1
+     },
+     "Support": {
+      "gold": 345,
+      "xp": 61,
+      "cs": 6
+     }
+    }
+   },
+   "15": {
+    "gold": -655,
+    "xp": -1340,
+    "cs": -8,
+    "lanes": {
+     "Top": {
+      "gold": -1001,
+      "xp": -888,
+      "cs": -26
+     },
+     "Jungle": {
+      "gold": 169,
+      "xp": -225,
+      "cs": 28
+     },
+     "Mid": {
+      "gold": -1651,
+      "xp": -659,
+      "cs": -19
+     },
+     "ADC": {
+      "gold": 1440,
+      "xp": 467,
+      "cs": 1
+     },
+     "Support": {
+      "gold": 388,
+      "xp": -35,
+      "cs": 8
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7867004252",
-  "source": "csv",
-  "start_utc": "2026-05-26T20:45:32.181000+00:00",
+  "source": "api",
+  "start_utc": "2026-05-26T20:46:05.870000+00:00",
   "duration_min": 26.62,
   "win": true,
   "patch": "16.10",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 3,
+    "assists": 8,
+    "cs": 157,
+    "gold": 11180,
+    "damage": 26716,
+    "vision": 5,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 2,
+    "assists": 11,
+    "cs": 195,
+    "gold": 14291,
+    "damage": 22690,
+    "vision": 23,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 2,
+    "assists": 10,
+    "cs": 193,
+    "gold": 11612,
+    "damage": 21453,
+    "vision": 13,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 13,
+    "cs": 186,
+    "gold": 16312,
+    "damage": 37868,
+    "vision": 30,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 3,
+    "assists": 20,
+    "cs": 29,
+    "gold": 8067,
+    "damage": 8240,
+    "vision": 52,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -105,37 +2863,180 @@
     "champion": "Taric"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Gwen",
+   "Veigar",
+   "Yasuo",
+   "Naafiri"
+  ],
+  "enemy_bans": [
+   "Ziggs",
+   "Mordekaiser",
+   "Caitlyn",
+   "Mel",
+   "Smolder"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    10,
+    2
+   ],
+   "kills": [
+    37,
+    14
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2486,
+    "xp": 1428,
+    "cs": 34,
+    "lanes": {
+     "Top": {
+      "gold": -709,
+      "xp": -304,
+      "cs": -30
+     },
+     "Jungle": {
+      "gold": 688,
+      "xp": 742,
+      "cs": 8
+     },
+     "Mid": {
+      "gold": 1344,
+      "xp": 1075,
+      "cs": 34
+     },
+     "ADC": {
+      "gold": 863,
+      "xp": 81,
+      "cs": 25
+     },
+     "Support": {
+      "gold": 300,
+      "xp": -166,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": 6176,
+    "xp": 5077,
+    "cs": 71,
+    "lanes": {
+     "Top": {
+      "gold": -8,
+      "xp": 974,
+      "cs": -26
+     },
+     "Jungle": {
+      "gold": 1910,
+      "xp": 1876,
+      "cs": 23
+     },
+     "Mid": {
+      "gold": 1871,
+      "xp": 1531,
+      "cs": 47
+     },
+     "ADC": {
+      "gold": 1809,
+      "xp": 631,
+      "cs": 33
+     },
+     "Support": {
+      "gold": 594,
+      "xp": 65,
+      "cs": -6
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7867052916",
-  "source": "csv",
-  "start_utc": "2026-05-26T21:17:24.290000+00:00",
+  "source": "api",
+  "start_utc": "2026-05-26T21:18:42.959000+00:00",
   "duration_min": 24.92,
   "win": false,
   "patch": "16.10",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 4,
+    "assists": 2,
+    "cs": 142,
+    "gold": 7899,
+    "damage": 16947,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 1,
+    "deaths": 8,
+    "assists": 1,
+    "cs": 196,
+    "gold": 8785,
+    "damage": 5888,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Nunu"
+    "champion": "Nunu",
+    "player": "Eoden974",
+    "kills": 7,
+    "deaths": 9,
+    "assists": 3,
+    "cs": 138,
+    "gold": 9243,
+    "damage": 19217,
+    "vision": 9,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 4,
+    "cs": 218,
+    "gold": 10132,
+    "damage": 10714,
+    "vision": 15,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 4,
+    "assists": 5,
+    "cs": 39,
+    "gold": 6028,
+    "damage": 2974,
+    "vision": 45,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -160,37 +3061,180 @@
     "champion": "Karma"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Naafiri",
+   "Syndra",
+   "Veigar",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Darius",
+   "Pyke",
+   "Naafiri",
+   "Smolder",
+   "Viktor"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    0,
+    9
+   ],
+   "kills": [
+    14,
+    32
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -308,
+    "xp": -998,
+    "cs": 3,
+    "lanes": {
+     "Top": {
+      "gold": 408,
+      "xp": 286,
+      "cs": 9
+     },
+     "Jungle": {
+      "gold": -28,
+      "xp": 104,
+      "cs": 9
+     },
+     "Mid": {
+      "gold": -1831,
+      "xp": -2329,
+      "cs": -42
+     },
+     "ADC": {
+      "gold": 690,
+      "xp": 246,
+      "cs": 19
+     },
+     "Support": {
+      "gold": 453,
+      "xp": 695,
+      "cs": 8
+     }
+    }
+   },
+   "15": {
+    "gold": -4283,
+    "xp": -2992,
+    "cs": -7,
+    "lanes": {
+     "Top": {
+      "gold": 888,
+      "xp": 890,
+      "cs": 22
+     },
+     "Jungle": {
+      "gold": 29,
+      "xp": 65,
+      "cs": 14
+     },
+     "Mid": {
+      "gold": -3709,
+      "xp": -3707,
+      "cs": -62
+     },
+     "ADC": {
+      "gold": -1094,
+      "xp": -986,
+      "cs": 8
+     },
+     "Support": {
+      "gold": -397,
+      "xp": 746,
+      "cs": 11
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7874256224",
-  "source": "csv",
-  "start_utc": "2026-06-02T17:45:45.469000+00:00",
+  "source": "api",
+  "start_utc": "2026-06-02T17:47:20.699000+00:00",
   "duration_min": 27.63,
   "win": true,
   "patch": "16.11",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 3,
+    "assists": 3,
+    "cs": 186,
+    "gold": 10594,
+    "damage": 20985,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 2,
+    "assists": 11,
+    "cs": 199,
+    "gold": 14006,
+    "damage": 15795,
+    "vision": 34,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 3,
+    "assists": 6,
+    "cs": 224,
+    "gold": 12966,
+    "damage": 27418,
+    "vision": 24,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Jinx"
+    "champion": "Jinx",
+    "player": "Andorian",
+    "kills": 6,
+    "deaths": 1,
+    "assists": 8,
+    "cs": 233,
+    "gold": 13112,
+    "damage": 14985,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 1,
+    "assists": 15,
+    "cs": 29,
+    "gold": 7840,
+    "damage": 5296,
+    "vision": 77,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -215,37 +3259,180 @@
     "champion": "Nautilus"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Diana",
+   "Pyke",
+   "Naafiri",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Samira",
+   "Viego",
+   "Zilean",
+   "Briar",
+   "Ambessa"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    7,
+    3
+   ],
+   "kills": [
+    35,
+    9
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1981,
+    "xp": 508,
+    "cs": 24,
+    "lanes": {
+     "Top": {
+      "gold": 103,
+      "xp": 393,
+      "cs": -6
+     },
+     "Jungle": {
+      "gold": 450,
+      "xp": -18,
+      "cs": 1
+     },
+     "Mid": {
+      "gold": 577,
+      "xp": 366,
+      "cs": 29
+     },
+     "ADC": {
+      "gold": 523,
+      "xp": -163,
+      "cs": -3
+     },
+     "Support": {
+      "gold": 328,
+      "xp": -70,
+      "cs": 3
+     }
+    }
+   },
+   "15": {
+    "gold": 5214,
+    "xp": 4352,
+    "cs": 62,
+    "lanes": {
+     "Top": {
+      "gold": 467,
+      "xp": 1565,
+      "cs": 4
+     },
+     "Jungle": {
+      "gold": 1258,
+      "xp": 213,
+      "cs": -2
+     },
+     "Mid": {
+      "gold": 2074,
+      "xp": 2457,
+      "cs": 56
+     },
+     "ADC": {
+      "gold": 1251,
+      "xp": 229,
+      "cs": 9
+     },
+     "Support": {
+      "gold": 164,
+      "xp": -112,
+      "cs": -5
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7874302397",
-  "source": "csv",
-  "start_utc": "2026-06-02T18:19:34.290000+00:00",
+  "source": "api",
+  "start_utc": "2026-06-02T18:19:54.449000+00:00",
   "duration_min": 37.98,
   "win": false,
   "patch": "16.11",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 1,
+    "deaths": 5,
+    "assists": 4,
+    "cs": 212,
+    "gold": 11219,
+    "damage": 41151,
+    "vision": 21,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 6,
+    "assists": 2,
+    "cs": 265,
+    "gold": 15550,
+    "damage": 36005,
+    "vision": 47,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 9,
+    "deaths": 3,
+    "assists": 8,
+    "cs": 272,
+    "gold": 15048,
+    "damage": 53193,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Jinx"
+    "champion": "Jinx",
+    "player": "Andorian",
+    "kills": 3,
+    "deaths": 13,
+    "assists": 9,
+    "cs": 266,
+    "gold": 14845,
+    "damage": 26325,
+    "vision": 41,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 8,
+    "assists": 10,
+    "cs": 26,
+    "gold": 8670,
+    "damage": 4980,
+    "vision": 83,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -270,37 +3457,180 @@
     "champion": "Seraphine"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Nunu",
+   "Sylas",
+   "Yasuo",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Katarina",
+   "Milio",
+   "Caitlyn",
+   "LeeSin",
+   "Gwen"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    3,
+    3
+   ],
+   "barons": [
+    1,
+    1
+   ],
+   "towers": [
+    4,
+    9
+   ],
+   "kills": [
+    20,
+    35
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -931,
+    "xp": 194,
+    "cs": -26,
+    "lanes": {
+     "Top": {
+      "gold": -1718,
+      "xp": -905,
+      "cs": -31
+     },
+     "Jungle": {
+      "gold": 603,
+      "xp": 665,
+      "cs": 1
+     },
+     "Mid": {
+      "gold": 1739,
+      "xp": 1439,
+      "cs": 20
+     },
+     "ADC": {
+      "gold": -1119,
+      "xp": -639,
+      "cs": -22
+     },
+     "Support": {
+      "gold": -436,
+      "xp": -366,
+      "cs": 6
+     }
+    }
+   },
+   "15": {
+    "gold": -1426,
+    "xp": -1429,
+    "cs": -44,
+    "lanes": {
+     "Top": {
+      "gold": -2830,
+      "xp": -1780,
+      "cs": -44
+     },
+     "Jungle": {
+      "gold": -313,
+      "xp": -220,
+      "cs": -4
+     },
+     "Mid": {
+      "gold": 2321,
+      "xp": 1041,
+      "cs": 4
+     },
+     "ADC": {
+      "gold": -178,
+      "xp": -259,
+      "cs": -3
+     },
+     "Support": {
+      "gold": -426,
+      "xp": -211,
+      "cs": 3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7874376162",
-  "source": "csv",
-  "start_utc": "2026-06-02T19:01:56.842000+00:00",
+  "source": "api",
+  "start_utc": "2026-06-02T19:02:11.876000+00:00",
   "duration_min": 27.23,
   "win": false,
   "patch": "16.11",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 1,
+    "deaths": 6,
+    "assists": 0,
+    "cs": 165,
+    "gold": 7413,
+    "damage": 23558,
+    "vision": 12,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 1,
+    "cs": 185,
+    "gold": 9265,
+    "damage": 21941,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 1,
+    "deaths": 6,
+    "assists": 2,
+    "cs": 210,
+    "gold": 8523,
+    "damage": 38217,
+    "vision": 13,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Jinx"
+    "champion": "Jinx",
+    "player": "Andorian",
+    "kills": 1,
+    "deaths": 8,
+    "assists": 1,
+    "cs": 198,
+    "gold": 8924,
+    "damage": 14295,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 2,
+    "cs": 37,
+    "gold": 5956,
+    "damage": 2826,
+    "vision": 60,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -325,37 +3655,180 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Naafiri",
+   "Gwen",
+   "Nocturne",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Shyvana",
+   "Viego",
+   "Mel",
+   "Garen",
+   "Cassiopeia"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    4
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    0,
+    9
+   ],
+   "kills": [
+    5,
+    33
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2708,
+    "xp": -1418,
+    "cs": -24,
+    "lanes": {
+     "Top": {
+      "gold": -124,
+      "xp": -63,
+      "cs": -23
+     },
+     "Jungle": {
+      "gold": -709,
+      "xp": -176,
+      "cs": -9
+     },
+     "Mid": {
+      "gold": -950,
+      "xp": -499,
+      "cs": 4
+     },
+     "ADC": {
+      "gold": -189,
+      "xp": -427,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -736,
+      "xp": -253,
+      "cs": -2
+     }
+    }
+   },
+   "15": {
+    "gold": -6137,
+    "xp": -3808,
+    "cs": -24,
+    "lanes": {
+     "Top": {
+      "gold": -811,
+      "xp": -601,
+      "cs": -29
+     },
+     "Jungle": {
+      "gold": -1337,
+      "xp": -711,
+      "cs": -1
+     },
+     "Mid": {
+      "gold": -2215,
+      "xp": -1225,
+      "cs": -2
+     },
+     "ADC": {
+      "gold": -1075,
+      "xp": -807,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -699,
+      "xp": -464,
+      "cs": 2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7874428374",
-  "source": "csv",
-  "start_utc": "2026-06-02T19:35:35.636000+00:00",
+  "source": "api",
+  "start_utc": "2026-06-02T19:35:58.568000+00:00",
   "duration_min": 27.27,
   "win": false,
   "patch": "16.11",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 0,
+    "deaths": 8,
+    "assists": 3,
+    "cs": 134,
+    "gold": 6899,
+    "damage": 11499,
+    "vision": 10,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Trundle"
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 1,
+    "deaths": 6,
+    "assists": 2,
+    "cs": 166,
+    "gold": 8578,
+    "damage": 9495,
+    "vision": 39,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Malphite"
+    "champion": "Malphite",
+    "player": "Eoden974",
+    "kills": 5,
+    "deaths": 8,
+    "assists": 4,
+    "cs": 156,
+    "gold": 10201,
+    "damage": 19160,
+    "vision": 5,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 2,
+    "deaths": 9,
+    "assists": 2,
+    "cs": 214,
+    "gold": 11441,
+    "damage": 17058,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 7,
+    "assists": 3,
+    "cs": 20,
+    "gold": 6439,
+    "damage": 4274,
+    "vision": 65,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -380,37 +3853,180 @@
     "champion": "Leona"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Nocturne",
+   "Sylas",
+   "Yasuo",
+   "Gwen",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Caitlyn",
+   "Malzahar",
+   "Kayle",
+   "Shyvana",
+   "Tristana"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    4
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    0,
+    9
+   ],
+   "kills": [
+    9,
+    38
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2757,
+    "xp": -2090,
+    "cs": -26,
+    "lanes": {
+     "Top": {
+      "gold": -1157,
+      "xp": -666,
+      "cs": -20
+     },
+     "Jungle": {
+      "gold": -830,
+      "xp": -540,
+      "cs": -3
+     },
+     "Mid": {
+      "gold": -468,
+      "xp": -900,
+      "cs": 0
+     },
+     "ADC": {
+      "gold": -96,
+      "xp": -112,
+      "cs": -3
+     },
+     "Support": {
+      "gold": -206,
+      "xp": 128,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": -4115,
+    "xp": -2393,
+    "cs": -35,
+    "lanes": {
+     "Top": {
+      "gold": -2560,
+      "xp": -1778,
+      "cs": -38
+     },
+     "Jungle": {
+      "gold": -1534,
+      "xp": -735,
+      "cs": -7
+     },
+     "Mid": {
+      "gold": 194,
+      "xp": -76,
+      "cs": 6
+     },
+     "ADC": {
+      "gold": 78,
+      "xp": -106,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -293,
+      "xp": 302,
+      "cs": -2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7874484831",
-  "source": "csv",
-  "start_utc": "2026-06-02T20:06:44.029000+00:00",
+  "source": "api",
+  "start_utc": "2026-06-02T20:07:11.062000+00:00",
   "duration_min": 23.35,
   "win": true,
   "patch": "16.11",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 3,
+    "deaths": 7,
+    "assists": 9,
+    "cs": 88,
+    "gold": 7683,
+    "damage": 17207,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 0,
+    "deaths": 2,
+    "assists": 6,
+    "cs": 163,
+    "gold": 8688,
+    "damage": 7404,
+    "vision": 33,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 3,
+    "assists": 9,
+    "cs": 187,
+    "gold": 12260,
+    "damage": 32140,
+    "vision": 8,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 24,
+    "deaths": 3,
+    "assists": 3,
+    "cs": 197,
+    "gold": 16473,
+    "damage": 35788,
+    "vision": 22,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 2,
+    "assists": 18,
+    "cs": 27,
+    "gold": 7691,
+    "damage": 5100,
+    "vision": 43,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -435,37 +4051,180 @@
     "champion": "Seraphine"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Yasuo",
+   "Nocturne",
+   "Gwen",
+   "Anivia"
+  ],
+  "enemy_bans": [
+   "Malphite",
+   "Mel",
+   "Smolder",
+   "Ryze",
+   "Zed"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    0
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    6,
+    1
+   ],
+   "kills": [
+    40,
+    17
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 3768,
+    "xp": 2620,
+    "cs": 37,
+    "lanes": {
+     "Top": {
+      "gold": -1265,
+      "xp": -1178,
+      "cs": -26
+     },
+     "Jungle": {
+      "gold": 397,
+      "xp": 170,
+      "cs": 7
+     },
+     "Mid": {
+      "gold": 2733,
+      "xp": 2507,
+      "cs": 50
+     },
+     "ADC": {
+      "gold": 1426,
+      "xp": 1140,
+      "cs": 17
+     },
+     "Support": {
+      "gold": 477,
+      "xp": -19,
+      "cs": -11
+     }
+    }
+   },
+   "15": {
+    "gold": 4855,
+    "xp": 3507,
+    "cs": 63,
+    "lanes": {
+     "Top": {
+      "gold": -1324,
+      "xp": -2618,
+      "cs": -45
+     },
+     "Jungle": {
+      "gold": 528,
+      "xp": 604,
+      "cs": 19
+     },
+     "Mid": {
+      "gold": 3964,
+      "xp": 4154,
+      "cs": 72
+     },
+     "ADC": {
+      "gold": 1664,
+      "xp": 1296,
+      "cs": 37
+     },
+     "Support": {
+      "gold": 23,
+      "xp": 71,
+      "cs": -20
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7911686368",
-  "source": "csv",
-  "start_utc": "2026-07-07T18:03:50.323000+00:00",
+  "source": "api",
+  "start_utc": "2026-07-07T18:04:09.032000+00:00",
   "duration_min": 32.28,
   "win": true,
   "patch": "16.13",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 7,
+    "deaths": 5,
+    "assists": 15,
+    "cs": 139,
+    "gold": 12403,
+    "damage": 28022,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 5,
+    "deaths": 7,
+    "assists": 10,
+    "cs": 280,
+    "gold": 15024,
+    "damage": 16928,
+    "vision": 46,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Malphite"
+    "champion": "Malphite",
+    "player": "Eoden974",
+    "kills": 19,
+    "deaths": 5,
+    "assists": 12,
+    "cs": 208,
+    "gold": 18520,
+    "damage": 47060,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 11,
+    "deaths": 10,
+    "assists": 14,
+    "cs": 232,
+    "gold": 16137,
+    "damage": 41540,
+    "vision": 20,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 4,
+    "assists": 20,
+    "cs": 43,
+    "gold": 10000,
+    "damage": 6426,
+    "vision": 73,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -490,37 +4249,180 @@
     "champion": "Nautilus"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Sylas",
+   "Veigar",
+   "Gwen",
+   "Locke"
+  ],
+  "enemy_bans": [
+   "Shaco",
+   "Locke",
+   "Galio",
+   "Pyke",
+   "Vayne"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    1
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    11,
+    4
+   ],
+   "kills": [
+    45,
+    31
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2151,
+    "xp": -1170,
+    "cs": -17,
+    "lanes": {
+     "Top": {
+      "gold": -1044,
+      "xp": -1347,
+      "cs": -31
+     },
+     "Jungle": {
+      "gold": -1208,
+      "xp": -282,
+      "cs": 1
+     },
+     "Mid": {
+      "gold": 834,
+      "xp": 1118,
+      "cs": -1
+     },
+     "ADC": {
+      "gold": -553,
+      "xp": -26,
+      "cs": 13
+     },
+     "Support": {
+      "gold": -180,
+      "xp": -633,
+      "cs": 1
+     }
+    }
+   },
+   "15": {
+    "gold": -3692,
+    "xp": -591,
+    "cs": -11,
+    "lanes": {
+     "Top": {
+      "gold": -1893,
+      "xp": -1795,
+      "cs": -45
+     },
+     "Jungle": {
+      "gold": -2299,
+      "xp": -273,
+      "cs": 16
+     },
+     "Mid": {
+      "gold": 1819,
+      "xp": 2019,
+      "cs": -1
+     },
+     "ADC": {
+      "gold": -1107,
+      "xp": -291,
+      "cs": 12
+     },
+     "Support": {
+      "gold": -212,
+      "xp": -251,
+      "cs": 7
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7911739963",
-  "source": "csv",
-  "start_utc": "2026-07-07T18:41:03.170000+00:00",
+  "source": "api",
+  "start_utc": "2026-07-07T18:41:21.995000+00:00",
   "duration_min": 35.82,
   "win": false,
   "patch": "16.13",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 5,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 154,
+    "gold": 11393,
+    "damage": 21309,
+    "vision": 21,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 10,
+    "deaths": 5,
+    "assists": 7,
+    "cs": 303,
+    "gold": 18799,
+    "damage": 29643,
+    "vision": 52,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 4,
+    "deaths": 9,
+    "assists": 8,
+    "cs": 276,
+    "gold": 13039,
+    "damage": 32106,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 5,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 278,
+    "gold": 14933,
+    "damage": 31066,
+    "vision": 34,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 6,
+    "assists": 16,
+    "cs": 39,
+    "gold": 9687,
+    "damage": 5579,
+    "vision": 108,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -545,37 +4447,180 @@
     "champion": "Nautilus"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Naafiri",
+   "Yasuo",
+   "Veigar",
+   "Gwen",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Seraphine",
+   "Naafiri",
+   "Aurora",
+   "Senna",
+   "Mordekaiser"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    1
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    5,
+    11
+   ],
+   "kills": [
+    25,
+    32
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1519,
+    "xp": 457,
+    "cs": -23,
+    "lanes": {
+     "Top": {
+      "gold": 464,
+      "xp": 216,
+      "cs": -24
+     },
+     "Jungle": {
+      "gold": 1176,
+      "xp": 731,
+      "cs": 9
+     },
+     "Mid": {
+      "gold": -500,
+      "xp": -91,
+      "cs": -16
+     },
+     "ADC": {
+      "gold": -121,
+      "xp": 320,
+      "cs": -2
+     },
+     "Support": {
+      "gold": 500,
+      "xp": -719,
+      "cs": 10
+     }
+    }
+   },
+   "15": {
+    "gold": -700,
+    "xp": -213,
+    "cs": -17,
+    "lanes": {
+     "Top": {
+      "gold": -430,
+      "xp": 1094,
+      "cs": -21
+     },
+     "Jungle": {
+      "gold": 768,
+      "xp": 204,
+      "cs": 14
+     },
+     "Mid": {
+      "gold": -314,
+      "xp": -235,
+      "cs": -17
+     },
+     "ADC": {
+      "gold": -855,
+      "xp": -103,
+      "cs": -6
+     },
+     "Support": {
+      "gold": 131,
+      "xp": -1173,
+      "cs": 13
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7911804612",
-  "source": "csv",
-  "start_utc": "2026-07-07T19:22:06.156000+00:00",
+  "source": "api",
+  "start_utc": "2026-07-07T19:25:18.371000+00:00",
   "duration_min": 22.7,
   "win": false,
   "patch": "16.13",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 2,
+    "cs": 114,
+    "gold": 5741,
+    "damage": 8562,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 6,
+    "assists": 3,
+    "cs": 172,
+    "gold": 8476,
+    "damage": 11052,
+    "vision": 32,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 4,
+    "deaths": 4,
+    "assists": 2,
+    "cs": 210,
+    "gold": 10067,
+    "damage": 20481,
+    "vision": 14,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 2,
+    "cs": 189,
+    "gold": 7506,
+    "damage": 3559,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 4,
+    "assists": 4,
+    "cs": 28,
+    "gold": 5869,
+    "damage": 2642,
+    "vision": 59,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -600,37 +4645,179 @@
     "champion": "Rell"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Sylas",
+   "Pyke",
+   "Yasuo",
+   "Gwen",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Karma",
+   "Zac",
+   "Fiora",
+   "Twitch"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    3
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    0,
+    6
+   ],
+   "kills": [
+    8,
+    24
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -3321,
+    "xp": -1918,
+    "cs": -15,
+    "lanes": {
+     "Top": {
+      "gold": -1914,
+      "xp": -1281,
+      "cs": -20
+     },
+     "Jungle": {
+      "gold": -591,
+      "xp": 11,
+      "cs": -1
+     },
+     "Mid": {
+      "gold": 407,
+      "xp": 351,
+      "cs": 29
+     },
+     "ADC": {
+      "gold": -1101,
+      "xp": -839,
+      "cs": -24
+     },
+     "Support": {
+      "gold": -122,
+      "xp": -160,
+      "cs": 1
+     }
+    }
+   },
+   "15": {
+    "gold": -8716,
+    "xp": -6676,
+    "cs": -62,
+    "lanes": {
+     "Top": {
+      "gold": -2939,
+      "xp": -2367,
+      "cs": -32
+     },
+     "Jungle": {
+      "gold": -1258,
+      "xp": -179,
+      "cs": -6
+     },
+     "Mid": {
+      "gold": 451,
+      "xp": -148,
+      "cs": 14
+     },
+     "ADC": {
+      "gold": -3750,
+      "xp": -3139,
+      "cs": -37
+     },
+     "Support": {
+      "gold": -1220,
+      "xp": -843,
+      "cs": -1
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7911849670",
-  "source": "csv",
-  "start_utc": "2026-07-07T19:52:19.589000+00:00",
+  "source": "api",
+  "start_utc": "2026-07-07T19:52:34.292000+00:00",
   "duration_min": 15.58,
   "win": true,
   "patch": "16.13",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 1,
+    "assists": 2,
+    "cs": 121,
+    "gold": 6175,
+    "damage": 12157,
+    "vision": 8,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Trundle"
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 4,
+    "deaths": 2,
+    "assists": 4,
+    "cs": 109,
+    "gold": 6614,
+    "damage": 6305,
+    "vision": 17,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Malphite"
+    "champion": "Malphite",
+    "player": "Eoden974",
+    "kills": 7,
+    "deaths": 1,
+    "assists": 3,
+    "cs": 104,
+    "gold": 7348,
+    "damage": 12315,
+    "vision": 4,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 1,
+    "cs": 152,
+    "gold": 6405,
+    "damage": 6144,
+    "vision": 12,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 4,
+    "cs": 24,
+    "gold": 3898,
+    "damage": 1620,
+    "vision": 29,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -655,37 +4842,180 @@
     "champion": "Seraphine"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Veigar",
+   "Naafiri",
+   "Pyke",
+   "Gwen",
+   "Locke"
+  ],
+  "enemy_bans": [
+   "Jax",
+   "Sylas",
+   "Zilean",
+   "Draven",
+   "Locke"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    0
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    2,
+    0
+   ],
+   "kills": [
+    13,
+    4
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2606,
+    "xp": 2464,
+    "cs": -2,
+    "lanes": {
+     "Top": {
+      "gold": 768,
+      "xp": 500,
+      "cs": 7
+     },
+     "Jungle": {
+      "gold": 485,
+      "xp": 389,
+      "cs": -4
+     },
+     "Mid": {
+      "gold": 925,
+      "xp": 1246,
+      "cs": -13
+     },
+     "ADC": {
+      "gold": 385,
+      "xp": 737,
+      "cs": 6
+     },
+     "Support": {
+      "gold": 43,
+      "xp": -408,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": 4521,
+    "xp": 4300,
+    "cs": 33,
+    "lanes": {
+     "Top": {
+      "gold": 1349,
+      "xp": 723,
+      "cs": 14
+     },
+     "Jungle": {
+      "gold": 263,
+      "xp": 366,
+      "cs": 5
+     },
+     "Mid": {
+      "gold": 1531,
+      "xp": 2071,
+      "cs": -7
+     },
+     "ADC": {
+      "gold": 1075,
+      "xp": 1343,
+      "cs": 13
+     },
+     "Support": {
+      "gold": 303,
+      "xp": -203,
+      "cs": 8
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7947790943",
-  "source": "csv",
-  "start_utc": "2026-08-11T21:04:40.132000+00:00",
+  "source": "api",
+  "start_utc": "2026-08-11T21:06:19.770000+00:00",
   "duration_min": 36.62,
   "win": true,
   "patch": "16.15",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 16,
+    "deaths": 7,
+    "assists": 14,
+    "cs": 177,
+    "gold": 16514,
+    "damage": 45148,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 4,
+    "deaths": 11,
+    "assists": 8,
+    "cs": 241,
+    "gold": 14786,
+    "damage": 14179,
+    "vision": 49,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 9,
+    "assists": 15,
+    "cs": 286,
+    "gold": 18093,
+    "damage": 42875,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 18,
+    "deaths": 8,
+    "assists": 10,
+    "cs": 279,
+    "gold": 24104,
+    "damage": 48785,
+    "vision": 34,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Seraphine"
+    "champion": "Seraphine",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 10,
+    "assists": 27,
+    "cs": 41,
+    "gold": 11666,
+    "damage": 16977,
+    "vision": 105,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -710,37 +5040,180 @@
     "champion": "Rell"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Locke",
+   "Yasuo",
+   "Talon",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Lulu",
+   "Kled",
+   "Nocturne",
+   "Nami",
+   "Naafiri"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    9,
+    7
+   ],
+   "kills": [
+    53,
+    45
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 536,
+    "xp": -60,
+    "cs": 22,
+    "lanes": {
+     "Top": {
+      "gold": -357,
+      "xp": -263,
+      "cs": -25
+     },
+     "Jungle": {
+      "gold": -578,
+      "xp": -246,
+      "cs": 5
+     },
+     "Mid": {
+      "gold": 734,
+      "xp": 493,
+      "cs": 20
+     },
+     "ADC": {
+      "gold": 462,
+      "xp": 124,
+      "cs": 17
+     },
+     "Support": {
+      "gold": 275,
+      "xp": -168,
+      "cs": 5
+     }
+    }
+   },
+   "15": {
+    "gold": -655,
+    "xp": -782,
+    "cs": 19,
+    "lanes": {
+     "Top": {
+      "gold": -1230,
+      "xp": -643,
+      "cs": -35
+     },
+     "Jungle": {
+      "gold": -672,
+      "xp": -104,
+      "cs": 19
+     },
+     "Mid": {
+      "gold": 653,
+      "xp": 444,
+      "cs": 17
+     },
+     "ADC": {
+      "gold": -54,
+      "xp": 191,
+      "cs": 17
+     },
+     "Support": {
+      "gold": 648,
+      "xp": -670,
+      "cs": 1
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7969868719",
-  "source": "csv",
-  "start_utc": "2026-09-01T17:46:44.785000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T17:48:20.104000+00:00",
   "duration_min": 25.98,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 7,
+    "deaths": 1,
+    "assists": 8,
+    "cs": 156,
+    "gold": 10563,
+    "damage": 23968,
+    "vision": 15,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 4,
+    "assists": 11,
+    "cs": 212,
+    "gold": 14725,
+    "damage": 23973,
+    "vision": 36,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 10,
+    "deaths": 6,
+    "assists": 12,
+    "cs": 186,
+    "gold": 12461,
+    "damage": 27973,
+    "vision": 14,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 2,
+    "assists": 5,
+    "cs": 236,
+    "gold": 13397,
+    "damage": 22531,
+    "vision": 27,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 2,
+    "assists": 13,
+    "cs": 33,
+    "gold": 7538,
+    "damage": 7253,
+    "vision": 65,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -765,37 +5238,180 @@
     "champion": "Velkoz"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Veigar",
+   "Gwen",
+   "Sylas",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Samira",
+   "Thresh",
+   "Illaoi",
+   "Zed",
+   "Jinx"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    8,
+    1
+   ],
+   "kills": [
+    37,
+    15
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2087,
+    "xp": 2397,
+    "cs": 42,
+    "lanes": {
+     "Top": {
+      "gold": 258,
+      "xp": 379,
+      "cs": -6
+     },
+     "Jungle": {
+      "gold": 928,
+      "xp": 743,
+      "cs": 21
+     },
+     "Mid": {
+      "gold": 28,
+      "xp": 884,
+      "cs": 6
+     },
+     "ADC": {
+      "gold": 587,
+      "xp": 534,
+      "cs": 14
+     },
+     "Support": {
+      "gold": 286,
+      "xp": -143,
+      "cs": 7
+     }
+    }
+   },
+   "15": {
+    "gold": 2152,
+    "xp": 2502,
+    "cs": 57,
+    "lanes": {
+     "Top": {
+      "gold": 268,
+      "xp": 751,
+      "cs": -5
+     },
+     "Jungle": {
+      "gold": 1211,
+      "xp": 1128,
+      "cs": 42
+     },
+     "Mid": {
+      "gold": -616,
+      "xp": 17,
+      "cs": -9
+     },
+     "ADC": {
+      "gold": 868,
+      "xp": 838,
+      "cs": 24
+     },
+     "Support": {
+      "gold": 421,
+      "xp": -232,
+      "cs": 5
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7969914756",
-  "source": "csv",
-  "start_utc": "2026-09-01T18:18:51.045000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T18:20:38.452000+00:00",
   "duration_min": 25.87,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 12,
+    "cs": 137,
+    "gold": 9224,
+    "damage": 18194,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 2,
+    "assists": 6,
+    "cs": 233,
+    "gold": 13698,
+    "damage": 23327,
+    "vision": 37,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 10,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 189,
+    "gold": 12014,
+    "damage": 27766,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 11,
+    "deaths": 4,
+    "assists": 7,
+    "cs": 210,
+    "gold": 14299,
+    "damage": 26843,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 18,
+    "cs": 28,
+    "gold": 7792,
+    "damage": 5722,
+    "vision": 65,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -820,37 +5436,180 @@
     "champion": "Lulu"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Veigar",
+   "Sylas",
+   "Gwen",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Fizz",
+   "Nasus",
+   "Darius",
+   "Soraka",
+   "Braum"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    9,
+    2
+   ],
+   "kills": [
+    30,
+    22
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -560,
+    "xp": 437,
+    "cs": 41,
+    "lanes": {
+     "Top": {
+      "gold": -671,
+      "xp": -15,
+      "cs": -7
+     },
+     "Jungle": {
+      "gold": -42,
+      "xp": 114,
+      "cs": 21
+     },
+     "Mid": {
+      "gold": 191,
+      "xp": 245,
+      "cs": 17
+     },
+     "ADC": {
+      "gold": 5,
+      "xp": 75,
+      "cs": 11
+     },
+     "Support": {
+      "gold": -43,
+      "xp": 18,
+      "cs": -1
+     }
+    }
+   },
+   "15": {
+    "gold": 1438,
+    "xp": 2252,
+    "cs": 103,
+    "lanes": {
+     "Top": {
+      "gold": -546,
+      "xp": -137,
+      "cs": 11
+     },
+     "Jungle": {
+      "gold": 598,
+      "xp": 911,
+      "cs": 54
+     },
+     "Mid": {
+      "gold": 627,
+      "xp": 794,
+      "cs": 30
+     },
+     "ADC": {
+      "gold": 392,
+      "xp": 600,
+      "cs": 5
+     },
+     "Support": {
+      "gold": 367,
+      "xp": 84,
+      "cs": 3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7969961721",
-  "source": "csv",
-  "start_utc": "2026-09-01T18:51:21.968000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T18:52:55.794000+00:00",
   "duration_min": 29.85,
   "win": false,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 3,
+    "deaths": 5,
+    "assists": 8,
+    "cs": 184,
+    "gold": 10985,
+    "damage": 23330,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 5,
+    "assists": 4,
+    "cs": 229,
+    "gold": 16599,
+    "damage": 24455,
+    "vision": 32,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Lux"
+    "champion": "Lux",
+    "player": "Eoden974",
+    "kills": 11,
+    "deaths": 7,
+    "assists": 5,
+    "cs": 245,
+    "gold": 14820,
+    "damage": 36943,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 2,
+    "deaths": 6,
+    "assists": 5,
+    "cs": 234,
+    "gold": 12223,
+    "damage": 10419,
+    "vision": 40,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 6,
+    "assists": 11,
+    "cs": 29,
+    "gold": 8443,
+    "damage": 4338,
+    "vision": 67,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -875,37 +5634,180 @@
     "champion": "Blitzcrank"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Sylas",
+   "Yasuo",
+   "Gwen",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Teemo",
+   "Brand",
+   "Zed",
+   "Seraphine",
+   "Shaco"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    9,
+    10
+   ],
+   "kills": [
+    27,
+    29
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -524,
+    "xp": -772,
+    "cs": -27,
+    "lanes": {
+     "Top": {
+      "gold": 372,
+      "xp": 955,
+      "cs": 3
+     },
+     "Jungle": {
+      "gold": 143,
+      "xp": -441,
+      "cs": -14
+     },
+     "Mid": {
+      "gold": -116,
+      "xp": -368,
+      "cs": -14
+     },
+     "ADC": {
+      "gold": -373,
+      "xp": -204,
+      "cs": 0
+     },
+     "Support": {
+      "gold": -550,
+      "xp": -714,
+      "cs": -2
+     }
+    }
+   },
+   "15": {
+    "gold": -5560,
+    "xp": -5604,
+    "cs": -83,
+    "lanes": {
+     "Top": {
+      "gold": -808,
+      "xp": -521,
+      "cs": -2
+     },
+     "Jungle": {
+      "gold": -1179,
+      "xp": -2186,
+      "cs": -36
+     },
+     "Mid": {
+      "gold": 14,
+      "xp": -321,
+      "cs": -27
+     },
+     "ADC": {
+      "gold": -1855,
+      "xp": -1398,
+      "cs": -6
+     },
+     "Support": {
+      "gold": -1732,
+      "xp": -1178,
+      "cs": -12
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7970032605",
-  "source": "csv",
-  "start_utc": "2026-09-01T19:26:35.167000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T19:26:49.873000+00:00",
   "duration_min": 29.08,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 5,
+    "deaths": 2,
+    "assists": 12,
+    "cs": 207,
+    "gold": 12808,
+    "damage": 33512,
+    "vision": 10,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 8,
+    "assists": 9,
+    "cs": 202,
+    "gold": 13977,
+    "damage": 24162,
+    "vision": 30,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 8,
+    "cs": 216,
+    "gold": 14853,
+    "damage": 29934,
+    "vision": 13,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "Caitlyn"
+    "champion": "Caitlyn",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 212,
+    "gold": 13841,
+    "damage": 22179,
+    "vision": 32,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 6,
+    "assists": 15,
+    "cs": 30,
+    "gold": 8537,
+    "damage": 5313,
+    "vision": 77,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -930,37 +5832,180 @@
     "champion": "Velkoz"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Veigar",
+   "Gwen",
+   "Yasuo",
+   "Talon"
+  ],
+  "enemy_bans": [
+   "Darius",
+   "Zed",
+   "Belveth",
+   "Lux",
+   "Hwei"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    2,
+    3
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    9,
+    5
+   ],
+   "kills": [
+    34,
+    26
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2036,
+    "xp": 895,
+    "cs": 18,
+    "lanes": {
+     "Top": {
+      "gold": 811,
+      "xp": 523,
+      "cs": 8
+     },
+     "Jungle": {
+      "gold": 203,
+      "xp": -729,
+      "cs": -16
+     },
+     "Mid": {
+      "gold": 1389,
+      "xp": 1674,
+      "cs": 36
+     },
+     "ADC": {
+      "gold": -109,
+      "xp": -296,
+      "cs": -18
+     },
+     "Support": {
+      "gold": -258,
+      "xp": -277,
+      "cs": 8
+     }
+    }
+   },
+   "15": {
+    "gold": -2485,
+    "xp": -2632,
+    "cs": -1,
+    "lanes": {
+     "Top": {
+      "gold": 1664,
+      "xp": 1273,
+      "cs": 22
+     },
+     "Jungle": {
+      "gold": -941,
+      "xp": -2259,
+      "cs": -33
+     },
+     "Mid": {
+      "gold": 690,
+      "xp": 1199,
+      "cs": 30
+     },
+     "ADC": {
+      "gold": -1762,
+      "xp": -934,
+      "cs": -22
+     },
+     "Support": {
+      "gold": -2136,
+      "xp": -1911,
+      "cs": 2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7970078084",
-  "source": "csv",
-  "start_utc": "2026-09-01T20:00:15.697000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T20:00:43.720000+00:00",
   "duration_min": 31.83,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "Darius"
+    "champion": "Darius",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 14,
+    "assists": 8,
+    "cs": 185,
+    "gold": 12536,
+    "damage": 20010,
+    "vision": 19,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 7,
+    "assists": 16,
+    "cs": 201,
+    "gold": 15022,
+    "damage": 26338,
+    "vision": 24,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Diana"
+    "champion": "Diana",
+    "player": "Eoden974",
+    "kills": 9,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 294,
+    "gold": 17440,
+    "damage": 35716,
+    "vision": 21,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 6,
+    "deaths": 11,
+    "assists": 10,
+    "cs": 208,
+    "gold": 13278,
+    "damage": 22406,
+    "vision": 31,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 10,
+    "assists": 15,
+    "cs": 28,
+    "gold": 9053,
+    "damage": 10446,
+    "vision": 80,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -985,37 +6030,180 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Sylas",
+   "Veigar",
+   "Yasuo",
+   "Gwen"
+  ],
+  "enemy_bans": [
+   "Xerath",
+   "Teemo",
+   "Sylas",
+   "Caitlyn",
+   "Lulu"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    1
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    8,
+    7
+   ],
+   "kills": [
+    32,
+    48
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 29,
+    "xp": -1625,
+    "cs": 18,
+    "lanes": {
+     "Top": {
+      "gold": -1314,
+      "xp": -1834,
+      "cs": -20
+     },
+     "Jungle": {
+      "gold": 492,
+      "xp": 255,
+      "cs": 3
+     },
+     "Mid": {
+      "gold": 1222,
+      "xp": 327,
+      "cs": 25
+     },
+     "ADC": {
+      "gold": -501,
+      "xp": 267,
+      "cs": 5
+     },
+     "Support": {
+      "gold": 130,
+      "xp": -640,
+      "cs": 5
+     }
+    }
+   },
+   "15": {
+    "gold": -1271,
+    "xp": -2337,
+    "cs": 8,
+    "lanes": {
+     "Top": {
+      "gold": -3187,
+      "xp": -3859,
+      "cs": -40
+     },
+     "Jungle": {
+      "gold": 1170,
+      "xp": 905,
+      "cs": 0
+     },
+     "Mid": {
+      "gold": 3842,
+      "xp": 2308,
+      "cs": 57
+     },
+     "ADC": {
+      "gold": -2600,
+      "xp": -729,
+      "cs": -13
+     },
+     "Support": {
+      "gold": -496,
+      "xp": -962,
+      "cs": 4
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7970130307",
-  "source": "csv",
-  "start_utc": "2026-09-01T20:36:55.488000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-01T20:38:21.551000+00:00",
   "duration_min": 25.2,
   "win": false,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "Darius"
+    "champion": "Darius",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 10,
+    "assists": 5,
+    "cs": 154,
+    "gold": 8642,
+    "damage": 12393,
+    "vision": 13,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Trundle"
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 6,
+    "assists": 2,
+    "cs": 167,
+    "gold": 8194,
+    "damage": 7265,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Malphite"
+    "champion": "Malphite",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 10,
+    "assists": 2,
+    "cs": 183,
+    "gold": 10685,
+    "damage": 31525,
+    "vision": 6,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 2,
+    "cs": 200,
+    "gold": 9859,
+    "damage": 16441,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 5,
+    "assists": 5,
+    "cs": 25,
+    "gold": 7414,
+    "damage": 7782,
+    "vision": 53,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1040,37 +6228,180 @@
     "champion": "TahmKench"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Pyke",
+   "Talon",
+   "Veigar",
+   "Yasuo",
+   "Zaahen"
+  ],
+  "enemy_bans": [
+   "LeeSin",
+   "Morgana",
+   "Malzahar",
+   "Garen",
+   "Tristana"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    1,
+    11
+   ],
+   "kills": [
+    18,
+    39
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1436,
+    "xp": -444,
+    "cs": -13,
+    "lanes": {
+     "Top": {
+      "gold": -664,
+      "xp": -338,
+      "cs": -19
+     },
+     "Jungle": {
+      "gold": -1509,
+      "xp": -1118,
+      "cs": -16
+     },
+     "Mid": {
+      "gold": 476,
+      "xp": 1021,
+      "cs": 14
+     },
+     "ADC": {
+      "gold": 320,
+      "xp": 106,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -59,
+      "xp": -115,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": -2947,
+    "xp": -1950,
+    "cs": -25,
+    "lanes": {
+     "Top": {
+      "gold": -2843,
+      "xp": -2479,
+      "cs": -45
+     },
+     "Jungle": {
+      "gold": -2287,
+      "xp": -839,
+      "cs": -14
+     },
+     "Mid": {
+      "gold": 1710,
+      "xp": 1263,
+      "cs": 20
+     },
+     "ADC": {
+      "gold": 262,
+      "xp": 274,
+      "cs": 9
+     },
+     "Support": {
+      "gold": 211,
+      "xp": -169,
+      "cs": 5
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7977442044",
-  "source": "csv",
-  "start_utc": "2026-09-08T17:41:42.306000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-08T17:43:15.385000+00:00",
   "duration_min": 30.48,
   "win": false,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 7,
+    "deaths": 9,
+    "assists": 5,
+    "cs": 172,
+    "gold": 11582,
+    "damage": 21871,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 4,
+    "deaths": 10,
+    "assists": 10,
+    "cs": 206,
+    "gold": 12420,
+    "damage": 17872,
+    "vision": 50,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 10,
+    "deaths": 8,
+    "assists": 10,
+    "cs": 233,
+    "gold": 13955,
+    "damage": 32388,
+    "vision": 10,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 10,
+    "deaths": 9,
+    "assists": 5,
+    "cs": 220,
+    "gold": 15095,
+    "damage": 22550,
+    "vision": 30,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 16,
+    "cs": 22,
+    "gold": 7934,
+    "damage": 11584,
+    "vision": 56,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1095,37 +6426,180 @@
     "champion": "Nami"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Sylas",
+   "Veigar",
+   "Gwen",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Draven",
+   "Swain",
+   "Syndra",
+   "Malphite",
+   "Briar"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    5
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    1,
+    11
+   ],
+   "kills": [
+    31,
+    41
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 31,
+    "xp": -1106,
+    "cs": 12,
+    "lanes": {
+     "Top": {
+      "gold": -152,
+      "xp": -44,
+      "cs": 2
+     },
+     "Jungle": {
+      "gold": 45,
+      "xp": -87,
+      "cs": -8
+     },
+     "Mid": {
+      "gold": -247,
+      "xp": -819,
+      "cs": 5
+     },
+     "ADC": {
+      "gold": 299,
+      "xp": -143,
+      "cs": 3
+     },
+     "Support": {
+      "gold": 86,
+      "xp": -13,
+      "cs": 10
+     }
+    }
+   },
+   "15": {
+    "gold": -1669,
+    "xp": -2107,
+    "cs": 11,
+    "lanes": {
+     "Top": {
+      "gold": -947,
+      "xp": -838,
+      "cs": -2
+     },
+     "Jungle": {
+      "gold": -716,
+      "xp": -220,
+      "cs": -7
+     },
+     "Mid": {
+      "gold": 80,
+      "xp": -68,
+      "cs": 10
+     },
+     "ADC": {
+      "gold": 380,
+      "xp": -9,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -466,
+      "xp": -972,
+      "cs": 4
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7977606890",
-  "source": "csv",
-  "start_utc": "2026-09-08T19:33:35.068000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-08T19:33:56.023000+00:00",
   "duration_min": 27.95,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 7,
+    "deaths": 3,
+    "assists": 10,
+    "cs": 145,
+    "gold": 10998,
+    "damage": 34966,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 1,
+    "assists": 13,
+    "cs": 249,
+    "gold": 15408,
+    "damage": 35478,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 17,
+    "deaths": 4,
+    "assists": 9,
+    "cs": 213,
+    "gold": 15232,
+    "damage": 38456,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Jinx"
+    "champion": "Jinx",
+    "player": "Andorian",
+    "kills": 6,
+    "deaths": 6,
+    "assists": 13,
+    "cs": 167,
+    "gold": 12915,
+    "damage": 18302,
+    "vision": 29,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 5,
+    "assists": 24,
+    "cs": 16,
+    "gold": 8271,
+    "damage": 11352,
+    "vision": 72,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1150,37 +6624,179 @@
     "champion": "Seraphine"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Yasuo",
+   "Sylas",
+   "Pyke",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Nautilus",
+   "Maokai",
+   "Shaco",
+   "Darius",
+   "Mel"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    6,
+    3
+   ],
+   "kills": [
+    41,
+    19
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 2246,
+    "xp": 776,
+    "cs": 66,
+    "lanes": {
+     "Top": {
+      "gold": 181,
+      "xp": -79,
+      "cs": 0
+     },
+     "Jungle": {
+      "gold": 1694,
+      "xp": 1453,
+      "cs": 32
+     },
+     "Mid": {
+      "gold": 2089,
+      "xp": 591,
+      "cs": 41
+     },
+     "ADC": {
+      "gold": -1014,
+      "xp": -174,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -704,
+      "xp": -1015,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": 3201,
+    "xp": 1853,
+    "cs": 80,
+    "lanes": {
+     "Top": {
+      "gold": 421,
+      "xp": 527,
+      "cs": -7
+     },
+     "Jungle": {
+      "gold": 1808,
+      "xp": 2844,
+      "cs": 63
+     },
+     "Mid": {
+      "gold": 3550,
+      "xp": 353,
+      "cs": 43
+     },
+     "ADC": {
+      "gold": -1576,
+      "xp": -415,
+      "cs": -16
+     },
+     "Support": {
+      "gold": -1002,
+      "xp": -1456,
+      "cs": -3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7977654865",
-  "source": "csv",
-  "start_utc": "2026-09-08T20:05:28.763000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-08T20:05:42.763000+00:00",
   "duration_min": 16.9,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 1,
+    "assists": 4,
+    "cs": 139,
+    "gold": 7253,
+    "damage": 11789,
+    "vision": 7,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 0,
+    "assists": 3,
+    "cs": 130,
+    "gold": 8810,
+    "damage": 8027,
+    "vision": 23,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Ahri"
+    "champion": "Ahri",
+    "player": "Eoden974",
+    "kills": 4,
+    "deaths": 1,
+    "assists": 4,
+    "cs": 135,
+    "gold": 7250,
+    "damage": 7334,
+    "vision": 4,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 3,
+    "assists": 6,
+    "cs": 139,
+    "gold": 8784,
+    "damage": 11810,
+    "vision": 8,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 2,
+    "assists": 11,
+    "cs": 18,
+    "gold": 5916,
+    "damage": 6051,
+    "vision": 29,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -1205,37 +6821,180 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Veigar",
+   "Pyke",
+   "Yasuo",
+   "Gwen",
+   "Sylas"
+  ],
+  "enemy_bans": [
+   "Caitlyn",
+   "Locke",
+   "Akali",
+   "Naafiri",
+   "Heimerdinger"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    0
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    4,
+    0
+   ],
+   "kills": [
+    24,
+    7
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1838,
+    "xp": 1936,
+    "cs": 39,
+    "lanes": {
+     "Top": {
+      "gold": 309,
+      "xp": 514,
+      "cs": 14
+     },
+     "Jungle": {
+      "gold": 610,
+      "xp": 737,
+      "cs": 21
+     },
+     "Mid": {
+      "gold": 872,
+      "xp": 689,
+      "cs": 1
+     },
+     "ADC": {
+      "gold": -296,
+      "xp": -242,
+      "cs": 1
+     },
+     "Support": {
+      "gold": 343,
+      "xp": 238,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": 7218,
+    "xp": 5523,
+    "cs": 63,
+    "lanes": {
+     "Top": {
+      "gold": 108,
+      "xp": 290,
+      "cs": 14
+     },
+     "Jungle": {
+      "gold": 2311,
+      "xp": 1812,
+      "cs": 23
+     },
+     "Mid": {
+      "gold": 1873,
+      "xp": 1235,
+      "cs": 8
+     },
+     "ADC": {
+      "gold": 1499,
+      "xp": 1195,
+      "cs": 15
+     },
+     "Support": {
+      "gold": 1427,
+      "xp": 991,
+      "cs": 3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7977678330",
-  "source": "csv",
-  "start_utc": "2026-09-08T20:26:44.818000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-08T20:27:42.610000+00:00",
   "duration_min": 28.68,
   "win": true,
   "patch": "16.17",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 15,
+    "deaths": 6,
+    "assists": 5,
+    "cs": 162,
+    "gold": 14376,
+    "damage": 34641,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 4,
+    "assists": 11,
+    "cs": 261,
+    "gold": 15433,
+    "damage": 27123,
+    "vision": 42,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 10,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 187,
+    "gold": 13398,
+    "damage": 31259,
+    "vision": 30,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 6,
+    "assists": 6,
+    "cs": 169,
+    "gold": 14071,
+    "damage": 18966,
+    "vision": 23,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 5,
+    "assists": 13,
+    "cs": 22,
+    "gold": 9406,
+    "damage": 10173,
+    "vision": 66,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1260,37 +7019,180 @@
     "champion": "Poppy"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Sylas",
+   "Yasuo",
+   "Pyke",
+   "Gwen",
+   "Mel"
+  ],
+  "enemy_bans": [
+   "Locke",
+   "Khazix",
+   "Caitlyn",
+   "Fiora",
+   "Milio"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    11,
+    4
+   ],
+   "kills": [
+    47,
+    27
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 912,
+    "xp": 2028,
+    "cs": 15,
+    "lanes": {
+     "Top": {
+      "gold": 390,
+      "xp": 392,
+      "cs": -6
+     },
+     "Jungle": {
+      "gold": 1097,
+      "xp": 943,
+      "cs": 29
+     },
+     "Mid": {
+      "gold": 734,
+      "xp": 1365,
+      "cs": 14
+     },
+     "ADC": {
+      "gold": -440,
+      "xp": 148,
+      "cs": -8
+     },
+     "Support": {
+      "gold": -869,
+      "xp": -820,
+      "cs": -14
+     }
+    }
+   },
+   "15": {
+    "gold": 4594,
+    "xp": 5769,
+    "cs": 61,
+    "lanes": {
+     "Top": {
+      "gold": 600,
+      "xp": 849,
+      "cs": -20
+     },
+     "Jungle": {
+      "gold": 3116,
+      "xp": 3047,
+      "cs": 70
+     },
+     "Mid": {
+      "gold": 2888,
+      "xp": 3495,
+      "cs": 32
+     },
+     "ADC": {
+      "gold": -954,
+      "xp": -583,
+      "cs": -5
+     },
+     "Support": {
+      "gold": -1056,
+      "xp": -1039,
+      "cs": -16
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7984809229",
-  "source": "csv",
-  "start_utc": "2026-09-15T17:44:43.718000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-15T17:46:14.542000+00:00",
   "duration_min": 41.77,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 11,
+    "deaths": 4,
+    "assists": 10,
+    "cs": 322,
+    "gold": 18616,
+    "damage": 50257,
+    "vision": 27,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Trundle"
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 6,
+    "assists": 13,
+    "cs": 281,
+    "gold": 19320,
+    "damage": 26972,
+    "vision": 56,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 10,
+    "assists": 18,
+    "cs": 297,
+    "gold": 16589,
+    "damage": 44443,
+    "vision": 49,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 10,
+    "assists": 14,
+    "cs": 259,
+    "gold": 18534,
+    "damage": 39283,
+    "vision": 56,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 25,
+    "cs": 28,
+    "gold": 13123,
+    "damage": 18569,
+    "vision": 141,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -1315,37 +7217,180 @@
     "champion": "Alistar"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Veigar",
+   "Sylas",
+   "Pyke",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Thresh",
+   "Caitlyn",
+   "Kayn",
+   "Leblanc",
+   "Gangplank"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    4
+   ],
+   "barons": [
+    3,
+    0
+   ],
+   "towers": [
+    10,
+    2
+   ],
+   "kills": [
+    41,
+    38
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1572,
+    "xp": 302,
+    "cs": 22,
+    "lanes": {
+     "Top": {
+      "gold": 284,
+      "xp": 243,
+      "cs": 0
+     },
+     "Jungle": {
+      "gold": 434,
+      "xp": 156,
+      "cs": 24
+     },
+     "Mid": {
+      "gold": 323,
+      "xp": 323,
+      "cs": 25
+     },
+     "ADC": {
+      "gold": -127,
+      "xp": -751,
+      "cs": -22
+     },
+     "Support": {
+      "gold": 658,
+      "xp": 331,
+      "cs": -5
+     }
+    }
+   },
+   "15": {
+    "gold": 3796,
+    "xp": 2213,
+    "cs": 65,
+    "lanes": {
+     "Top": {
+      "gold": 1115,
+      "xp": 1380,
+      "cs": 17
+     },
+     "Jungle": {
+      "gold": 885,
+      "xp": 425,
+      "cs": 37
+     },
+     "Mid": {
+      "gold": 986,
+      "xp": 787,
+      "cs": 41
+     },
+     "ADC": {
+      "gold": 335,
+      "xp": -91,
+      "cs": -24
+     },
+     "Support": {
+      "gold": 475,
+      "xp": -288,
+      "cs": -6
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7984872301",
-  "source": "csv",
-  "start_utc": "2026-09-15T18:33:30.364000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-15T18:33:55.223000+00:00",
   "duration_min": 30.48,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 8,
+    "deaths": 4,
+    "assists": 11,
+    "cs": 242,
+    "gold": 15347,
+    "damage": 34240,
+    "vision": 13,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 3,
+    "assists": 19,
+    "cs": 279,
+    "gold": 17894,
+    "damage": 37862,
+    "vision": 41,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 9,
+    "assists": 6,
+    "cs": 168,
+    "gold": 11249,
+    "damage": 22444,
+    "vision": 17,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 10,
+    "deaths": 8,
+    "assists": 9,
+    "cs": 160,
+    "gold": 14876,
+    "damage": 16105,
+    "vision": 23,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 4,
+    "assists": 17,
+    "cs": 20,
+    "gold": 9220,
+    "damage": 9862,
+    "vision": 89,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1370,37 +7415,180 @@
     "champion": "Blitzcrank"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Veigar",
+   "Sylas",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Vayne",
+   "Caitlyn",
+   "Shyvana",
+   "Fiddlesticks",
+   "Singed"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    5,
+    0
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    9,
+    5
+   ],
+   "kills": [
+    37,
+    28
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 778,
+    "xp": -382,
+    "cs": -19,
+    "lanes": {
+     "Top": {
+      "gold": 1264,
+      "xp": 629,
+      "cs": -12
+     },
+     "Jungle": {
+      "gold": -146,
+      "xp": 179,
+      "cs": 4
+     },
+     "Mid": {
+      "gold": 92,
+      "xp": -521,
+      "cs": 3
+     },
+     "ADC": {
+      "gold": -314,
+      "xp": -458,
+      "cs": -16
+     },
+     "Support": {
+      "gold": -118,
+      "xp": -211,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": 531,
+    "xp": -1722,
+    "cs": -31,
+    "lanes": {
+     "Top": {
+      "gold": 1262,
+      "xp": 653,
+      "cs": -6
+     },
+     "Jungle": {
+      "gold": -750,
+      "xp": 41,
+      "cs": 10
+     },
+     "Mid": {
+      "gold": 29,
+      "xp": -779,
+      "cs": 12
+     },
+     "ADC": {
+      "gold": -123,
+      "xp": -1279,
+      "cs": -45
+     },
+     "Support": {
+      "gold": 113,
+      "xp": -358,
+      "cs": -2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7984942950",
-  "source": "csv",
-  "start_utc": "2026-09-15T19:08:58.537000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-15T19:09:17.473000+00:00",
   "duration_min": 42.78,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 8,
+    "assists": 23,
+    "cs": 265,
+    "gold": 19421,
+    "damage": 55252,
+    "vision": 36,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 11,
+    "assists": 17,
+    "cs": 275,
+    "gold": 19131,
+    "damage": 31893,
+    "vision": 47,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 11,
+    "deaths": 10,
+    "assists": 23,
+    "cs": 278,
+    "gold": 17151,
+    "damage": 64801,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 17,
+    "deaths": 13,
+    "assists": 15,
+    "cs": 235,
+    "gold": 21585,
+    "damage": 59134,
+    "vision": 42,
+    "first_blood": true
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 13,
+    "assists": 29,
+    "cs": 18,
+    "gold": 11393,
+    "damage": 14148,
+    "vision": 116,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -1425,37 +7613,180 @@
     "champion": "Nautilus"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Hwei",
+   "Veigar",
+   "Gwen",
+   "Pyke",
+   "Sylas"
+  ],
+  "enemy_bans": [
+   "Kayn",
+   "Naafiri",
+   "Katarina",
+   "Zed",
+   "Lux"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    1,
+    5
+   ],
+   "barons": [
+    1,
+    2
+   ],
+   "towers": [
+    10,
+    8
+   ],
+   "kills": [
+    46,
+    55
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1182,
+    "xp": -2065,
+    "cs": -42,
+    "lanes": {
+     "Top": {
+      "gold": 144,
+      "xp": -25,
+      "cs": 3
+     },
+     "Jungle": {
+      "gold": 116,
+      "xp": -271,
+      "cs": -6
+     },
+     "Mid": {
+      "gold": -169,
+      "xp": -223,
+      "cs": -7
+     },
+     "ADC": {
+      "gold": -1197,
+      "xp": -1175,
+      "cs": -28
+     },
+     "Support": {
+      "gold": -76,
+      "xp": -371,
+      "cs": -4
+     }
+    }
+   },
+   "15": {
+    "gold": -1332,
+    "xp": -1929,
+    "cs": -48,
+    "lanes": {
+     "Top": {
+      "gold": 1814,
+      "xp": -20,
+      "cs": -1
+     },
+     "Jungle": {
+      "gold": 155,
+      "xp": 321,
+      "cs": 0
+     },
+     "Mid": {
+      "gold": -17,
+      "xp": 61,
+      "cs": 3
+     },
+     "ADC": {
+      "gold": -3054,
+      "xp": -1685,
+      "cs": -41
+     },
+     "Support": {
+      "gold": -230,
+      "xp": -606,
+      "cs": -9
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7985029648",
-  "source": "csv",
-  "start_utc": "2026-09-15T19:59:45.007000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-15T20:00:02.544000+00:00",
   "duration_min": 34.48,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 12,
+    "deaths": 2,
+    "assists": 9,
+    "cs": 269,
+    "gold": 17985,
+    "damage": 39549,
+    "vision": 22,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 5,
+    "assists": 10,
+    "cs": 230,
+    "gold": 14879,
+    "damage": 17869,
+    "vision": 47,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 8,
+    "deaths": 5,
+    "assists": 10,
+    "cs": 284,
+    "gold": 14866,
+    "damage": 33032,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 6,
+    "assists": 7,
+    "cs": 244,
+    "gold": 13448,
+    "damage": 18059,
+    "vision": 44,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 8,
+    "assists": 17,
+    "cs": 22,
+    "gold": 8880,
+    "damage": 5626,
+    "vision": 74,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1480,37 +7811,179 @@
     "champion": "FiddleSticks"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Sylas",
+   "Pyke",
+   "Hwei",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Samira",
+   "Yasuo",
+   "Kayn",
+   "Thresh"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    2
+   ],
+   "barons": [
+    1,
+    1
+   ],
+   "towers": [
+    8,
+    4
+   ],
+   "kills": [
+    32,
+    26
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -445,
+    "xp": 26,
+    "cs": -11,
+    "lanes": {
+     "Top": {
+      "gold": 21,
+      "xp": 757,
+      "cs": 5
+     },
+     "Jungle": {
+      "gold": 550,
+      "xp": 125,
+      "cs": -5
+     },
+     "Mid": {
+      "gold": 269,
+      "xp": 285,
+      "cs": 15
+     },
+     "ADC": {
+      "gold": -549,
+      "xp": -713,
+      "cs": -29
+     },
+     "Support": {
+      "gold": -736,
+      "xp": -428,
+      "cs": 3
+     }
+    }
+   },
+   "15": {
+    "gold": -1172,
+    "xp": -1897,
+    "cs": -61,
+    "lanes": {
+     "Top": {
+      "gold": 781,
+      "xp": 885,
+      "cs": 8
+     },
+     "Jungle": {
+      "gold": 433,
+      "xp": -492,
+      "cs": -29
+     },
+     "Mid": {
+      "gold": -271,
+      "xp": -210,
+      "cs": 3
+     },
+     "ADC": {
+      "gold": -923,
+      "xp": -1059,
+      "cs": -40
+     },
+     "Support": {
+      "gold": -1192,
+      "xp": -1021,
+      "cs": -3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7985082721",
-  "source": "csv",
-  "start_utc": "2026-09-15T20:38:54.038000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-15T20:39:53.344000+00:00",
   "duration_min": 39.07,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 9,
+    "deaths": 6,
+    "assists": 15,
+    "cs": 264,
+    "gold": 17482,
+    "damage": 48306,
+    "vision": 19,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "JarvanIV"
+    "champion": "JarvanIV",
+    "player": "Kiskill",
+    "kills": 14,
+    "deaths": 9,
+    "assists": 20,
+    "cs": 256,
+    "gold": 20179,
+    "damage": 31111,
+    "vision": 68,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 11,
+    "assists": 14,
+    "cs": 220,
+    "gold": 15332,
+    "damage": 46568,
+    "vision": 19,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 15,
+    "deaths": 12,
+    "assists": 10,
+    "cs": 278,
+    "gold": 21323,
+    "damage": 39077,
+    "vision": 27,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 4,
+    "deaths": 10,
+    "assists": 22,
+    "cs": 31,
+    "gold": 11650,
+    "damage": 16179,
+    "vision": 68,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1535,37 +8008,180 @@
     "champion": "Karma"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Sylas",
+   "Veigar",
+   "Pyke",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Blitzcrank",
+   "Akali",
+   "Nasus",
+   "Mel",
+   "Viktor"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    2
+   ],
+   "barons": [
+    2,
+    1
+   ],
+   "towers": [
+    12,
+    5
+   ],
+   "kills": [
+    54,
+    48
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1955,
+    "xp": 1535,
+    "cs": 15,
+    "lanes": {
+     "Top": {
+      "gold": 427,
+      "xp": 373,
+      "cs": -11
+     },
+     "Jungle": {
+      "gold": 875,
+      "xp": 40,
+      "cs": 5
+     },
+     "Mid": {
+      "gold": -49,
+      "xp": 1195,
+      "cs": 22
+     },
+     "ADC": {
+      "gold": 355,
+      "xp": 278,
+      "cs": -6
+     },
+     "Support": {
+      "gold": 347,
+      "xp": -351,
+      "cs": 5
+     }
+    }
+   },
+   "15": {
+    "gold": 4596,
+    "xp": 3815,
+    "cs": 55,
+    "lanes": {
+     "Top": {
+      "gold": 596,
+      "xp": 692,
+      "cs": -2
+     },
+     "Jungle": {
+      "gold": 2031,
+      "xp": 1013,
+      "cs": 24
+     },
+     "Mid": {
+      "gold": 766,
+      "xp": 1813,
+      "cs": 24
+     },
+     "ADC": {
+      "gold": 487,
+      "xp": 598,
+      "cs": 2
+     },
+     "Support": {
+      "gold": 716,
+      "xp": -301,
+      "cs": 7
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7991873467",
-  "source": "csv",
-  "start_utc": "2026-09-22T17:38:17.380000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-22T17:39:51.928000+00:00",
   "duration_min": 27.98,
   "win": false,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 4,
+    "assists": 1,
+    "cs": 232,
+    "gold": 12629,
+    "damage": 24185,
+    "vision": 20,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 5,
+    "deaths": 7,
+    "assists": 3,
+    "cs": 220,
+    "gold": 10989,
+    "damage": 14994,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 3,
+    "deaths": 8,
+    "assists": 7,
+    "cs": 184,
+    "gold": 9105,
+    "damage": 18629,
+    "vision": 23,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 3,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 209,
+    "gold": 10768,
+    "damage": 16455,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 4,
+    "assists": 8,
+    "cs": 26,
+    "gold": 6521,
+    "damage": 4656,
+    "vision": 62,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1590,37 +8206,180 @@
     "champion": "Lulu"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Sylas",
+   "Hwei",
+   "Pyke",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Seraphine",
+   "Leblanc",
+   "Heimerdinger",
+   "Locke",
+   "Vayne"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    2
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    0,
+    11
+   ],
+   "kills": [
+    17,
+    30
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -194,
+    "xp": 303,
+    "cs": 44,
+    "lanes": {
+     "Top": {
+      "gold": -438,
+      "xp": 303,
+      "cs": 19
+     },
+     "Jungle": {
+      "gold": 754,
+      "xp": 1155,
+      "cs": 41
+     },
+     "Mid": {
+      "gold": 205,
+      "xp": -1100,
+      "cs": -6
+     },
+     "ADC": {
+      "gold": -457,
+      "xp": 73,
+      "cs": -16
+     },
+     "Support": {
+      "gold": -258,
+      "xp": -128,
+      "cs": 6
+     }
+    }
+   },
+   "15": {
+    "gold": -1411,
+    "xp": -871,
+    "cs": 14,
+    "lanes": {
+     "Top": {
+      "gold": -965,
+      "xp": 84,
+      "cs": 17
+     },
+     "Jungle": {
+      "gold": 1107,
+      "xp": 444,
+      "cs": 32
+     },
+     "Mid": {
+      "gold": -679,
+      "xp": -1362,
+      "cs": -15
+     },
+     "ADC": {
+      "gold": -487,
+      "xp": -210,
+      "cs": -26
+     },
+     "Support": {
+      "gold": -387,
+      "xp": 173,
+      "cs": 6
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7991930523",
-  "source": "csv",
-  "start_utc": "2026-09-22T18:22:44.572000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-22T18:23:05.740000+00:00",
   "duration_min": 29.33,
   "win": false,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 4,
+    "assists": 4,
+    "cs": 244,
+    "gold": 10367,
+    "damage": 20795,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 9,
+    "assists": 8,
+    "cs": 176,
+    "gold": 11902,
+    "damage": 14803,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 7,
+    "assists": 11,
+    "cs": 178,
+    "gold": 11229,
+    "damage": 46212,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 7,
+    "deaths": 6,
+    "assists": 7,
+    "cs": 237,
+    "gold": 13881,
+    "damage": 24532,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 8,
+    "assists": 14,
+    "cs": 24,
+    "gold": 8092,
+    "damage": 5068,
+    "vision": 62,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1645,37 +8404,180 @@
     "champion": "Shen"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Sylas",
+   "Qiyana",
+   "Gwen",
+   "Hwei",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Akali",
+   "Twitch",
+   "Nasus",
+   "Vladimir",
+   "Lux"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    4
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    2,
+    12
+   ],
+   "kills": [
+    22,
+    34
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1904,
+    "xp": -898,
+    "cs": -26,
+    "lanes": {
+     "Top": {
+      "gold": -768,
+      "xp": -220,
+      "cs": -10
+     },
+     "Jungle": {
+      "gold": -216,
+      "xp": -895,
+      "cs": -21
+     },
+     "Mid": {
+      "gold": -600,
+      "xp": 7,
+      "cs": 3
+     },
+     "ADC": {
+      "gold": 194,
+      "xp": 421,
+      "cs": 6
+     },
+     "Support": {
+      "gold": -514,
+      "xp": -211,
+      "cs": -4
+     }
+    }
+   },
+   "15": {
+    "gold": -2329,
+    "xp": -1696,
+    "cs": -48,
+    "lanes": {
+     "Top": {
+      "gold": -1104,
+      "xp": -695,
+      "cs": -18
+     },
+     "Jungle": {
+      "gold": 502,
+      "xp": -1674,
+      "cs": -39
+     },
+     "Mid": {
+      "gold": -519,
+      "xp": -132,
+      "cs": -6
+     },
+     "ADC": {
+      "gold": -425,
+      "xp": 787,
+      "cs": 17
+     },
+     "Support": {
+      "gold": -783,
+      "xp": 18,
+      "cs": -2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7991962432",
-  "source": "csv",
-  "start_utc": "2026-09-22T18:57:18.710000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-22T18:57:31.799000+00:00",
   "duration_min": 26.4,
   "win": false,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 4,
+    "assists": 6,
+    "cs": 139,
+    "gold": 9704,
+    "damage": 26359,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Nocturne"
+    "champion": "Nocturne",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 9,
+    "assists": 8,
+    "cs": 151,
+    "gold": 11110,
+    "damage": 21621,
+    "vision": 24,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 5,
+    "deaths": 4,
+    "assists": 11,
+    "cs": 181,
+    "gold": 9755,
+    "damage": 18050,
+    "vision": 17,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 8,
+    "assists": 5,
+    "cs": 198,
+    "gold": 12190,
+    "damage": 23706,
+    "vision": 21,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 9,
+    "cs": 19,
+    "gold": 7055,
+    "damage": 4453,
+    "vision": 62,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1700,37 +8602,180 @@
     "champion": "Pantheon"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Qiyana",
+   "Sylas",
+   "Hwei",
+   "Gwen",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Braum",
+   "Malzahar",
+   "Naafiri",
+   "Seraphine",
+   "Teemo"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    2,
+    9
+   ],
+   "kills": [
+    29,
+    33
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -3903,
+    "xp": -1414,
+    "cs": -51,
+    "lanes": {
+     "Top": {
+      "gold": -1363,
+      "xp": -658,
+      "cs": -39
+     },
+     "Jungle": {
+      "gold": 8,
+      "xp": 282,
+      "cs": -1
+     },
+     "Mid": {
+      "gold": -1004,
+      "xp": -904,
+      "cs": -21
+     },
+     "ADC": {
+      "gold": -417,
+      "xp": 429,
+      "cs": 18
+     },
+     "Support": {
+      "gold": -1127,
+      "xp": -563,
+      "cs": -8
+     }
+    }
+   },
+   "15": {
+    "gold": -1539,
+    "xp": 1861,
+    "cs": -51,
+    "lanes": {
+     "Top": {
+      "gold": -1500,
+      "xp": 900,
+      "cs": -39
+     },
+     "Jungle": {
+      "gold": 1180,
+      "xp": 13,
+      "cs": -5
+     },
+     "Mid": {
+      "gold": -914,
+      "xp": -380,
+      "cs": -22
+     },
+     "ADC": {
+      "gold": 853,
+      "xp": 1414,
+      "cs": 27
+     },
+     "Support": {
+      "gold": -1158,
+      "xp": -86,
+      "cs": -12
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7992019961",
-  "source": "csv",
-  "start_utc": "2026-09-22T19:27:44.727000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-22T19:27:57.185000+00:00",
   "duration_min": 34.23,
   "win": false,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 4,
+    "assists": 10,
+    "cs": 231,
+    "gold": 13327,
+    "damage": 45915,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 8,
+    "deaths": 8,
+    "assists": 7,
+    "cs": 229,
+    "gold": 15685,
+    "damage": 25850,
+    "vision": 45,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 7,
+    "deaths": 8,
+    "assists": 15,
+    "cs": 258,
+    "gold": 14546,
+    "damage": 39138,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 10,
+    "deaths": 10,
+    "assists": 5,
+    "cs": 218,
+    "gold": 14917,
+    "damage": 29049,
+    "vision": 17,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 18,
+    "cs": 19,
+    "gold": 9531,
+    "damage": 10726,
+    "vision": 87,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1755,37 +8800,180 @@
     "champion": "Soraka"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Sylas",
+   "Qiyana",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Syndra",
+   "LeeSin",
+   "Caitlyn",
+   "Darius",
+   "Yunara"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    3,
+    9
+   ],
+   "kills": [
+    33,
+    35
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2034,
+    "xp": -1776,
+    "cs": -20,
+    "lanes": {
+     "Top": {
+      "gold": -90,
+      "xp": -129,
+      "cs": 5
+     },
+     "Jungle": {
+      "gold": -28,
+      "xp": -955,
+      "cs": -19
+     },
+     "Mid": {
+      "gold": 792,
+      "xp": 1,
+      "cs": 26
+     },
+     "ADC": {
+      "gold": -1843,
+      "xp": -375,
+      "cs": -29
+     },
+     "Support": {
+      "gold": -865,
+      "xp": -318,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": -3866,
+    "xp": -2978,
+    "cs": -45,
+    "lanes": {
+     "Top": {
+      "gold": -1021,
+      "xp": -1047,
+      "cs": -8
+     },
+     "Jungle": {
+      "gold": -41,
+      "xp": -1870,
+      "cs": -35
+     },
+     "Mid": {
+      "gold": 1629,
+      "xp": 1156,
+      "cs": 49
+     },
+     "ADC": {
+      "gold": -2963,
+      "xp": -714,
+      "cs": -45
+     },
+     "Support": {
+      "gold": -1470,
+      "xp": -503,
+      "cs": -6
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7992075093",
-  "source": "csv",
-  "start_utc": "2026-09-22T20:06:59.309000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-22T20:07:16.137000+00:00",
   "duration_min": 39.13,
   "win": true,
   "patch": "16.18",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 15,
+    "cs": 210,
+    "gold": 15222,
+    "damage": 30484,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 15,
+    "deaths": 4,
+    "assists": 13,
+    "cs": 335,
+    "gold": 22006,
+    "damage": 33150,
+    "vision": 62,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 19,
+    "deaths": 8,
+    "assists": 17,
+    "cs": 271,
+    "gold": 20382,
+    "damage": 53189,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 11,
+    "assists": 10,
+    "cs": 239,
+    "gold": 16219,
+    "damage": 23373,
+    "vision": 37,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 6,
+    "assists": 20,
+    "cs": 46,
+    "gold": 12617,
+    "damage": 6893,
+    "vision": 104,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1810,37 +8998,180 @@
     "champion": "Seraphine"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Qiyana",
+   "Sylas",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Caitlyn",
+   "Blitzcrank",
+   "Locke",
+   "Mordekaiser",
+   "Sylas"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    5
+   ],
+   "barons": [
+    3,
+    0
+   ],
+   "towers": [
+    9,
+    5
+   ],
+   "kills": [
+    49,
+    37
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 341,
+    "xp": 1696,
+    "cs": 42,
+    "lanes": {
+     "Top": {
+      "gold": -428,
+      "xp": 76,
+      "cs": 5
+     },
+     "Jungle": {
+      "gold": -74,
+      "xp": 522,
+      "cs": 5
+     },
+     "Mid": {
+      "gold": 902,
+      "xp": 1004,
+      "cs": 12
+     },
+     "ADC": {
+      "gold": -62,
+      "xp": 425,
+      "cs": 10
+     },
+     "Support": {
+      "gold": 3,
+      "xp": -331,
+      "cs": 10
+     }
+    }
+   },
+   "15": {
+    "gold": 1301,
+    "xp": 3971,
+    "cs": 80,
+    "lanes": {
+     "Top": {
+      "gold": -394,
+      "xp": 402,
+      "cs": 6
+     },
+     "Jungle": {
+      "gold": 814,
+      "xp": 1427,
+      "cs": 29
+     },
+     "Mid": {
+      "gold": 1185,
+      "xp": 2318,
+      "cs": 10
+     },
+     "ADC": {
+      "gold": -38,
+      "xp": 340,
+      "cs": 23
+     },
+     "Support": {
+      "gold": -266,
+      "xp": -516,
+      "cs": 12
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7998819827",
-  "source": "csv",
-  "start_utc": "2026-09-29T17:35:21.185000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-29T17:36:55.336000+00:00",
   "duration_min": 32.97,
   "win": true,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 5,
+    "deaths": 3,
+    "assists": 18,
+    "cs": 192,
+    "gold": 13854,
+    "damage": 30581,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 11,
+    "deaths": 7,
+    "assists": 14,
+    "cs": 202,
+    "gold": 15493,
+    "damage": 28278,
+    "vision": 47,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Brand"
+    "champion": "Brand",
+    "player": "Eoden974",
+    "kills": 20,
+    "deaths": 6,
+    "assists": 9,
+    "cs": 270,
+    "gold": 18285,
+    "damage": 37643,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 11,
+    "deaths": 9,
+    "assists": 9,
+    "cs": 215,
+    "gold": 15967,
+    "damage": 24905,
+    "vision": 42,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Soraka"
+    "champion": "Soraka",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 25,
+    "cs": 20,
+    "gold": 10250,
+    "damage": 5317,
+    "vision": 69,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1865,37 +9196,180 @@
     "champion": "Xerath"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Sylas",
+   "Pyke",
+   "Veigar",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Malphite",
+   "Nautilus",
+   "XinZhao",
+   "Jinx",
+   "Locke"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    1
+   ],
+   "barons": [
+    2,
+    0
+   ],
+   "towers": [
+    8,
+    5
+   ],
+   "kills": [
+    49,
+    33
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1047,
+    "xp": -631,
+    "cs": -26,
+    "lanes": {
+     "Top": {
+      "gold": -525,
+      "xp": 20,
+      "cs": -19
+     },
+     "Jungle": {
+      "gold": 544,
+      "xp": -493,
+      "cs": -18
+     },
+     "Mid": {
+      "gold": 316,
+      "xp": 342,
+      "cs": 5
+     },
+     "ADC": {
+      "gold": -570,
+      "xp": 390,
+      "cs": 9
+     },
+     "Support": {
+      "gold": -812,
+      "xp": -890,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": -1939,
+    "xp": 555,
+    "cs": -34,
+    "lanes": {
+     "Top": {
+      "gold": 59,
+      "xp": 1138,
+      "cs": -20
+     },
+     "Jungle": {
+      "gold": 1518,
+      "xp": 737,
+      "cs": -10
+     },
+     "Mid": {
+      "gold": -439,
+      "xp": 724,
+      "cs": 16
+     },
+     "ADC": {
+      "gold": -1449,
+      "xp": -199,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -1628,
+      "xp": -1845,
+      "cs": -13
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7998874637",
-  "source": "csv",
-  "start_utc": "2026-09-29T18:16:25.430000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-29T18:16:49.245000+00:00",
   "duration_min": 36.45,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 8,
+    "deaths": 7,
+    "assists": 7,
+    "cs": 241,
+    "gold": 16002,
+    "damage": 55078,
+    "vision": 24,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 6,
+    "assists": 16,
+    "cs": 245,
+    "gold": 17048,
+    "damage": 26449,
+    "vision": 49,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 16,
+    "deaths": 13,
+    "assists": 12,
+    "cs": 208,
+    "gold": 17193,
+    "damage": 49993,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 10,
+    "cs": 219,
+    "gold": 13993,
+    "damage": 25972,
+    "vision": 34,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 13,
+    "assists": 16,
+    "cs": 25,
+    "gold": 8993,
+    "damage": 6204,
+    "vision": 106,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1920,37 +9394,179 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Sylas",
+   "Hwei",
+   "Pyke",
+   "Veigar"
+  ],
+  "enemy_bans": [
+   "Xerath",
+   "Draven",
+   "Viktor",
+   "Zaahen"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    1
+   ],
+   "barons": [
+    1,
+    1
+   ],
+   "towers": [
+    11,
+    7
+   ],
+   "kills": [
+    37,
+    47
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 444,
+    "xp": 1080,
+    "cs": 22,
+    "lanes": {
+     "Top": {
+      "gold": 476,
+      "xp": 38,
+      "cs": 5
+     },
+     "Jungle": {
+      "gold": 579,
+      "xp": 947,
+      "cs": 18
+     },
+     "Mid": {
+      "gold": 865,
+      "xp": 251,
+      "cs": 14
+     },
+     "ADC": {
+      "gold": -973,
+      "xp": 13,
+      "cs": -9
+     },
+     "Support": {
+      "gold": -503,
+      "xp": -169,
+      "cs": -6
+     }
+    }
+   },
+   "15": {
+    "gold": -140,
+    "xp": 1149,
+    "cs": 25,
+    "lanes": {
+     "Top": {
+      "gold": 992,
+      "xp": -166,
+      "cs": 12
+     },
+     "Jungle": {
+      "gold": 623,
+      "xp": 753,
+      "cs": 31
+     },
+     "Mid": {
+      "gold": 393,
+      "xp": 528,
+      "cs": 11
+     },
+     "ADC": {
+      "gold": -1642,
+      "xp": -249,
+      "cs": -22
+     },
+     "Support": {
+      "gold": -506,
+      "xp": 283,
+      "cs": -7
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7998946555",
-  "source": "csv",
-  "start_utc": "2026-09-29T18:58:33.874000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-29T18:58:49.386000+00:00",
   "duration_min": 31.07,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 7,
+    "deaths": 5,
+    "assists": 9,
+    "cs": 224,
+    "gold": 13165,
+    "damage": 31501,
+    "vision": 20,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Nocturne"
+    "champion": "Nocturne",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 10,
+    "assists": 8,
+    "cs": 172,
+    "gold": 12098,
+    "damage": 17631,
+    "vision": 31,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 11,
+    "assists": 11,
+    "cs": 158,
+    "gold": 12921,
+    "damage": 31768,
+    "vision": 13,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 5,
+    "deaths": 10,
+    "assists": 13,
+    "cs": 192,
+    "gold": 13546,
+    "damage": 18535,
+    "vision": 12,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 9,
+    "assists": 17,
+    "cs": 26,
+    "gold": 9088,
+    "damage": 5325,
+    "vision": 79,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -1975,37 +9591,180 @@
     "champion": "Leona"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Veigar",
+   "Pyke",
+   "Sylas",
+   "Hwei"
+  ],
+  "enemy_bans": [
+   "Braum",
+   "Malzahar",
+   "Caitlyn",
+   "LeeSin",
+   "Teemo"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    1,
+    1
+   ],
+   "towers": [
+    5,
+    8
+   ],
+   "kills": [
+    33,
+    44
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -4010,
+    "xp": -2677,
+    "cs": -39,
+    "lanes": {
+     "Top": {
+      "gold": 991,
+      "xp": 763,
+      "cs": 39
+     },
+     "Jungle": {
+      "gold": -1162,
+      "xp": -1374,
+      "cs": -22
+     },
+     "Mid": {
+      "gold": -1265,
+      "xp": -1237,
+      "cs": -21
+     },
+     "ADC": {
+      "gold": -2232,
+      "xp": -764,
+      "cs": -35
+     },
+     "Support": {
+      "gold": -342,
+      "xp": -65,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": -6228,
+    "xp": -4997,
+    "cs": -83,
+    "lanes": {
+     "Top": {
+      "gold": 2188,
+      "xp": 2543,
+      "cs": 62
+     },
+     "Jungle": {
+      "gold": -2735,
+      "xp": -3128,
+      "cs": -40
+     },
+     "Mid": {
+      "gold": -1700,
+      "xp": -2489,
+      "cs": -50
+     },
+     "ADC": {
+      "gold": -3468,
+      "xp": -1264,
+      "cs": -52
+     },
+     "Support": {
+      "gold": -513,
+      "xp": -659,
+      "cs": -3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7998986414",
-  "source": "csv",
-  "start_utc": "2026-09-29T19:35:26.470000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-29T19:36:26.495000+00:00",
   "duration_min": 25.77,
   "win": true,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 1,
+    "assists": 4,
+    "cs": 173,
+    "gold": 11008,
+    "damage": 14985,
+    "vision": 12,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 9,
+    "deaths": 3,
+    "assists": 7,
+    "cs": 222,
+    "gold": 14383,
+    "damage": 21434,
+    "vision": 55,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 8,
+    "deaths": 1,
+    "assists": 8,
+    "cs": 220,
+    "gold": 12057,
+    "damage": 20842,
+    "vision": 10,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 3,
+    "assists": 3,
+    "cs": 190,
+    "gold": 11175,
+    "damage": 12697,
+    "vision": 19,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 0,
+    "assists": 15,
+    "cs": 36,
+    "gold": 7599,
+    "damage": 5949,
+    "vision": 79,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2030,37 +9789,180 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Veigar",
+   "Yasuo",
+   "Mel"
+  ],
+  "enemy_bans": [
+   "Naafiri",
+   "Ekko",
+   "Fizz",
+   "Xerath",
+   "Volibear"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    2,
+    1
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    11,
+    1
+   ],
+   "kills": [
+    31,
+    8
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 3703,
+    "xp": 3597,
+    "cs": 23,
+    "lanes": {
+     "Top": {
+      "gold": 891,
+      "xp": 1305,
+      "cs": 0
+     },
+     "Jungle": {
+      "gold": 1529,
+      "xp": 1116,
+      "cs": 18
+     },
+     "Mid": {
+      "gold": 1643,
+      "xp": 1359,
+      "cs": 31
+     },
+     "ADC": {
+      "gold": -307,
+      "xp": -55,
+      "cs": -20
+     },
+     "Support": {
+      "gold": -53,
+      "xp": -128,
+      "cs": -6
+     }
+    }
+   },
+   "15": {
+    "gold": 4838,
+    "xp": 5075,
+    "cs": 32,
+    "lanes": {
+     "Top": {
+      "gold": 1511,
+      "xp": 2153,
+      "cs": 11
+     },
+     "Jungle": {
+      "gold": 2529,
+      "xp": 1688,
+      "cs": 25
+     },
+     "Mid": {
+      "gold": 1528,
+      "xp": 1569,
+      "cs": 39
+     },
+     "ADC": {
+      "gold": -769,
+      "xp": 504,
+      "cs": -35
+     },
+     "Support": {
+      "gold": 39,
+      "xp": -839,
+      "cs": -8
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_7999034295",
-  "source": "csv",
-  "start_utc": "2026-09-29T20:07:03.772000+00:00",
+  "source": "api",
+  "start_utc": "2026-09-29T20:07:22.240000+00:00",
   "duration_min": 22.57,
   "win": true,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 8,
+    "deaths": 2,
+    "assists": 12,
+    "cs": 136,
+    "gold": 10670,
+    "damage": 20847,
+    "vision": 13,
+    "first_blood": true
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 4,
+    "assists": 5,
+    "cs": 162,
+    "gold": 9828,
+    "damage": 9745,
+    "vision": 23,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 13,
+    "deaths": 4,
+    "assists": 9,
+    "cs": 158,
+    "gold": 11496,
+    "damage": 32622,
+    "vision": 10,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 8,
+    "deaths": 7,
+    "assists": 9,
+    "cs": 165,
+    "gold": 11913,
+    "damage": 24919,
+    "vision": 12,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 3,
+    "assists": 18,
+    "cs": 24,
+    "gold": 6507,
+    "damage": 6772,
+    "vision": 42,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2085,37 +9987,180 @@
     "champion": "Blitzcrank"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Mel",
+   "Hwei",
+   "Sylas"
+  ],
+  "enemy_bans": [
+   "Milio",
+   "Malphite",
+   "Fizz",
+   "Shaco",
+   "Darius"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    4,
+    2
+   ],
+   "kills": [
+    35,
+    19
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 1177,
+    "xp": 1829,
+    "cs": 9,
+    "lanes": {
+     "Top": {
+      "gold": 734,
+      "xp": 928,
+      "cs": -11
+     },
+     "Jungle": {
+      "gold": 821,
+      "xp": 784,
+      "cs": 19
+     },
+     "Mid": {
+      "gold": 973,
+      "xp": 956,
+      "cs": 17
+     },
+     "ADC": {
+      "gold": -668,
+      "xp": -471,
+      "cs": -13
+     },
+     "Support": {
+      "gold": -683,
+      "xp": -368,
+      "cs": -3
+     }
+    }
+   },
+   "15": {
+    "gold": 3534,
+    "xp": 3996,
+    "cs": 39,
+    "lanes": {
+     "Top": {
+      "gold": 2152,
+      "xp": 2607,
+      "cs": 13
+     },
+     "Jungle": {
+      "gold": 213,
+      "xp": 389,
+      "cs": 11
+     },
+     "Mid": {
+      "gold": 1183,
+      "xp": 1417,
+      "cs": 19
+     },
+     "ADC": {
+      "gold": 1128,
+      "xp": 218,
+      "cs": -2
+     },
+     "Support": {
+      "gold": -1142,
+      "xp": -635,
+      "cs": -2
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_8005651133",
-  "source": "csv",
-  "start_utc": "2026-10-06T17:41:36.026000+00:00",
+  "source": "api",
+  "start_utc": "2026-10-06T17:43:38.707000+00:00",
   "duration_min": 33.28,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 6,
+    "deaths": 8,
+    "assists": 6,
+    "cs": 201,
+    "gold": 13208,
+    "damage": 25182,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 4,
+    "deaths": 8,
+    "assists": 8,
+    "cs": 235,
+    "gold": 13732,
+    "damage": 13693,
+    "vision": 34,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 2,
+    "deaths": 8,
+    "assists": 11,
+    "cs": 247,
+    "gold": 11272,
+    "damage": 25536,
+    "vision": 20,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 12,
+    "deaths": 6,
+    "assists": 8,
+    "cs": 271,
+    "gold": 17950,
+    "damage": 37985,
+    "vision": 25,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Soraka"
+    "champion": "Soraka",
+    "player": "ChUck NoUb",
+    "kills": 2,
+    "deaths": 7,
+    "assists": 18,
+    "cs": 26,
+    "gold": 9647,
+    "damage": 3795,
+    "vision": 82,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2140,37 +10185,180 @@
     "champion": "Leona"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Yasuo",
+   "Pyke",
+   "Veigar",
+   "Naafiri"
+  ],
+  "enemy_bans": [
+   "Fizz",
+   "Syndra",
+   "Pyke",
+   "Aatrox",
+   "Viego"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    2,
+    3
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    3,
+    10
+   ],
+   "kills": [
+    26,
+    37
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1711,
+    "xp": -1153,
+    "cs": -2,
+    "lanes": {
+     "Top": {
+      "gold": -544,
+      "xp": -602,
+      "cs": -7
+     },
+     "Jungle": {
+      "gold": 191,
+      "xp": 444,
+      "cs": 7
+     },
+     "Mid": {
+      "gold": -27,
+      "xp": 124,
+      "cs": 18
+     },
+     "ADC": {
+      "gold": -819,
+      "xp": -43,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -512,
+      "xp": -1076,
+      "cs": -13
+     }
+    }
+   },
+   "15": {
+    "gold": -4009,
+    "xp": -2996,
+    "cs": -11,
+    "lanes": {
+     "Top": {
+      "gold": -628,
+      "xp": -1565,
+      "cs": -11
+     },
+     "Jungle": {
+      "gold": -217,
+      "xp": 25,
+      "cs": 9
+     },
+     "Mid": {
+      "gold": -419,
+      "xp": -255,
+      "cs": 16
+     },
+     "ADC": {
+      "gold": -1612,
+      "xp": -606,
+      "cs": -14
+     },
+     "Support": {
+      "gold": -1133,
+      "xp": -595,
+      "cs": -11
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_8005726774",
-  "source": "csv",
-  "start_utc": "2026-10-06T18:36:48.996000+00:00",
+  "source": "api",
+  "start_utc": "2026-10-06T18:37:08.161000+00:00",
   "duration_min": 27.73,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 1,
+    "deaths": 7,
+    "assists": 8,
+    "cs": 161,
+    "gold": 8177,
+    "damage": 11941,
+    "vision": 11,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Shyvana"
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 8,
+    "assists": 8,
+    "cs": 187,
+    "gold": 11774,
+    "damage": 20807,
+    "vision": 28,
+    "first_blood": true
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 5,
+    "assists": 15,
+    "cs": 185,
+    "gold": 11007,
+    "damage": 26023,
+    "vision": 14,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 9,
+    "deaths": 8,
+    "assists": 7,
+    "cs": 203,
+    "gold": 13009,
+    "damage": 21059,
+    "vision": 26,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 6,
+    "assists": 14,
+    "cs": 18,
+    "gold": 8549,
+    "damage": 10031,
+    "vision": 72,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2195,37 +10383,179 @@
     "champion": "Braum"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Pyke",
+   "Yasuo",
+   "Qiyana",
+   "Naafiri"
+  ],
+  "enemy_bans": [
+   "Viktor",
+   "Pantheon",
+   "Fiora",
+   "Zyra"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    0,
+    2
+   ],
+   "towers": [
+    1,
+    9
+   ],
+   "kills": [
+    26,
+    34
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1929,
+    "xp": -789,
+    "cs": -36,
+    "lanes": {
+     "Top": {
+      "gold": -672,
+      "xp": 59,
+      "cs": 6
+     },
+     "Jungle": {
+      "gold": 164,
+      "xp": -1,
+      "cs": 0
+     },
+     "Mid": {
+      "gold": 214,
+      "xp": -408,
+      "cs": -24
+     },
+     "ADC": {
+      "gold": -1260,
+      "xp": -435,
+      "cs": -13
+     },
+     "Support": {
+      "gold": -375,
+      "xp": -4,
+      "cs": -5
+     }
+    }
+   },
+   "15": {
+    "gold": -4520,
+    "xp": -2781,
+    "cs": -56,
+    "lanes": {
+     "Top": {
+      "gold": -2147,
+      "xp": -1054,
+      "cs": 5
+     },
+     "Jungle": {
+      "gold": -457,
+      "xp": -1155,
+      "cs": -9
+     },
+     "Mid": {
+      "gold": -7,
+      "xp": -111,
+      "cs": -24
+     },
+     "ADC": {
+      "gold": -1265,
+      "xp": -442,
+      "cs": -24
+     },
+     "Support": {
+      "gold": -644,
+      "xp": -19,
+      "cs": -4
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_8005774445",
-  "source": "csv",
-  "start_utc": "2026-10-06T19:21:02.390000+00:00",
+  "source": "api",
+  "start_utc": "2026-10-06T19:21:22.859000+00:00",
   "duration_min": 27.25,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "TahmKench"
+    "champion": "TahmKench",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 7,
+    "assists": 3,
+    "cs": 147,
+    "gold": 9644,
+    "damage": 16327,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Volibear"
+    "champion": "Volibear",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 7,
+    "assists": 2,
+    "cs": 174,
+    "gold": 9565,
+    "damage": 10956,
+    "vision": 43,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 9,
+    "assists": 6,
+    "cs": 199,
+    "gold": 11158,
+    "damage": 32590,
+    "vision": 10,
+    "first_blood": true
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 3,
+    "deaths": 9,
+    "assists": 4,
+    "cs": 208,
+    "gold": 10548,
+    "damage": 15361,
+    "vision": 15,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Leona"
+    "champion": "Leona",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 6,
+    "assists": 7,
+    "cs": 24,
+    "gold": 7954,
+    "damage": 8499,
+    "vision": 58,
+    "first_blood": true
    }
   ],
   "enemy": [
@@ -2250,37 +10580,180 @@
     "champion": "Senna"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Yasuo",
+   "Qiyana",
+   "Naafiri",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Yorick",
+   "Thresh",
+   "Nocturne",
+   "Yuumi",
+   "AurelionSol"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    4
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    2,
+    10
+   ],
+   "kills": [
+    18,
+    38
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1445,
+    "xp": -1408,
+    "cs": -26,
+    "lanes": {
+     "Top": {
+      "gold": -256,
+      "xp": 420,
+      "cs": 6
+     },
+     "Jungle": {
+      "gold": -1209,
+      "xp": -833,
+      "cs": -13
+     },
+     "Mid": {
+      "gold": -337,
+      "xp": -842,
+      "cs": -21
+     },
+     "ADC": {
+      "gold": 304,
+      "xp": 359,
+      "cs": 2
+     },
+     "Support": {
+      "gold": 53,
+      "xp": -512,
+      "cs": 0
+     }
+    }
+   },
+   "15": {
+    "gold": -4038,
+    "xp": -3136,
+    "cs": -45,
+    "lanes": {
+     "Top": {
+      "gold": 83,
+      "xp": 1529,
+      "cs": 8
+     },
+     "Jungle": {
+      "gold": -2220,
+      "xp": -2673,
+      "cs": -34
+     },
+     "Mid": {
+      "gold": -363,
+      "xp": -744,
+      "cs": -14
+     },
+     "ADC": {
+      "gold": -859,
+      "xp": 144,
+      "cs": -1
+     },
+     "Support": {
+      "gold": -679,
+      "xp": -1392,
+      "cs": -4
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_8005827315",
-  "source": "csv",
-  "start_utc": "2026-10-06T19:56:16.258000+00:00",
+  "source": "api",
+  "start_utc": "2026-10-06T19:56:37.855000+00:00",
   "duration_min": 27.83,
   "win": true,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 11,
+    "deaths": 3,
+    "assists": 13,
+    "cs": 161,
+    "gold": 12614,
+    "damage": 38427,
+    "vision": 7,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 4,
+    "assists": 15,
+    "cs": 203,
+    "gold": 13509,
+    "damage": 14754,
+    "vision": 35,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Vex"
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 6,
+    "assists": 14,
+    "cs": 185,
+    "gold": 13874,
+    "damage": 33249,
+    "vision": 18,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "MissFortune"
+    "champion": "MissFortune",
+    "player": "Andorian",
+    "kills": 10,
+    "deaths": 6,
+    "assists": 12,
+    "cs": 175,
+    "gold": 14669,
+    "damage": 22945,
+    "vision": 22,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 4,
+    "assists": 18,
+    "cs": 20,
+    "gold": 7894,
+    "damage": 6632,
+    "vision": 77,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2305,37 +10778,179 @@
     "champion": "Poppy"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Naafiri",
+   "Gwen",
+   "Qiyana",
+   "Pyke",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Mel",
+   "Gwen",
+   "Shaco",
+   "Locke"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    9,
+    4
+   ],
+   "kills": [
+    40,
+    23
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 585,
+    "xp": 584,
+    "cs": -5,
+    "lanes": {
+     "Top": {
+      "gold": 1134,
+      "xp": 1685,
+      "cs": 10
+     },
+     "Jungle": {
+      "gold": 515,
+      "xp": -343,
+      "cs": -5
+     },
+     "Mid": {
+      "gold": -265,
+      "xp": 21,
+      "cs": 2
+     },
+     "ADC": {
+      "gold": -401,
+      "xp": -277,
+      "cs": -14
+     },
+     "Support": {
+      "gold": -398,
+      "xp": -502,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": 2833,
+    "xp": 3587,
+    "cs": 31,
+    "lanes": {
+     "Top": {
+      "gold": 2606,
+      "xp": 3108,
+      "cs": 25
+     },
+     "Jungle": {
+      "gold": 75,
+      "xp": 99,
+      "cs": 9
+     },
+     "Mid": {
+      "gold": 1592,
+      "xp": 1842,
+      "cs": 25
+     },
+     "ADC": {
+      "gold": -872,
+      "xp": -1173,
+      "cs": -25
+     },
+     "Support": {
+      "gold": -568,
+      "xp": -289,
+      "cs": -3
+     }
+    }
+   }
+  }
  },
  {
   "match_id": "EUW1_8005878031",
-  "source": "csv",
-  "start_utc": "2026-10-06T20:29:50.295000+00:00",
+  "source": "api",
+  "start_utc": "2026-10-06T20:30:14.078000+00:00",
   "duration_min": 20.28,
   "win": false,
   "patch": "16.19",
   "our": [
    {
     "role": "Top",
-    "champion": "DrMundo"
+    "champion": "DrMundo",
+    "player": "Durtyweedz",
+    "kills": 1,
+    "deaths": 4,
+    "assists": 3,
+    "cs": 149,
+    "gold": 7530,
+    "damage": 13150,
+    "vision": 16,
+    "first_blood": false
    },
    {
     "role": "Jungle",
-    "champion": "Vi"
+    "champion": "Vi",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 9,
+    "assists": 2,
+    "cs": 94,
+    "gold": 7014,
+    "damage": 7676,
+    "vision": 14,
+    "first_blood": false
    },
    {
     "role": "Mid",
-    "champion": "Galio"
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 4,
+    "deaths": 7,
+    "assists": 4,
+    "cs": 140,
+    "gold": 7405,
+    "damage": 17438,
+    "vision": 7,
+    "first_blood": false
    },
    {
     "role": "ADC",
-    "champion": "Yunara"
+    "champion": "Yunara",
+    "player": "Andorian",
+    "kills": 6,
+    "deaths": 10,
+    "assists": 1,
+    "cs": 115,
+    "gold": 8375,
+    "damage": 8287,
+    "vision": 21,
+    "first_blood": false
    },
    {
     "role": "Support",
-    "champion": "Rakan"
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 8,
+    "assists": 6,
+    "cs": 16,
+    "gold": 5546,
+    "damage": 4035,
+    "vision": 41,
+    "first_blood": false
    }
   ],
   "enemy": [
@@ -2360,8 +10975,106 @@
     "champion": "Thresh"
    }
   ],
-  "our_bans": [],
-  "enemy_bans": [],
-  "objectives": {}
+  "our_bans": [
+   "Gwen",
+   "Yasuo",
+   "Qiyana",
+   "Naafiri",
+   "Pyke"
+  ],
+  "enemy_bans": [
+   "Yasuo",
+   "Morgana",
+   "Locke",
+   "Leblanc",
+   "Alistar"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    3
+   ],
+   "barons": [
+    0,
+    0
+   ],
+   "towers": [
+    1,
+    7
+   ],
+   "kills": [
+    14,
+    38
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -1366,
+    "xp": -1391,
+    "cs": -6,
+    "lanes": {
+     "Top": {
+      "gold": 485,
+      "xp": -462,
+      "cs": 10
+     },
+     "Jungle": {
+      "gold": -1077,
+      "xp": -318,
+      "cs": 7
+     },
+     "Mid": {
+      "gold": 781,
+      "xp": 774,
+      "cs": 4
+     },
+     "ADC": {
+      "gold": -686,
+      "xp": -326,
+      "cs": -20
+     },
+     "Support": {
+      "gold": -869,
+      "xp": -1059,
+      "cs": -7
+     }
+    }
+   },
+   "15": {
+    "gold": -6306,
+    "xp": -5213,
+    "cs": -12,
+    "lanes": {
+     "Top": {
+      "gold": 100,
+      "xp": -830,
+      "cs": 6
+     },
+     "Jungle": {
+      "gold": -1582,
+      "xp": -747,
+      "cs": 4
+     },
+     "Mid": {
+      "gold": -226,
+      "xp": -402,
+      "cs": 11
+     },
+     "ADC": {
+      "gold": -2433,
+      "xp": -750,
+      "cs": -27
+     },
+     "Support": {
+      "gold": -2165,
+      "xp": -2484,
+      "cs": -6
+     }
+    }
+   }
+  }
  }
 ]
