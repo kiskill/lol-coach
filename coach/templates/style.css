@@ -128,3 +128,7 @@ table.t { width: 100%; border-collapse: collapse; }
   .slot .champ span { display: none; }
   .slot small { padding-left: 0; }
 }
+.kpis.compact { margin: 0 0 8px; }
+.kpis.compact .kpi b { font-size: 1.6rem; }
+.game-head .obj b { font-weight: 600; }
+h2 small { font-family: Inter; font-size: .85rem; font-weight: 400; }

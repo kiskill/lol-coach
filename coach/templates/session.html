@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi %}
+{% from "macros.html" import champ, wr, kpi with context %}
 {% block title %}{{ team }} · Session du {{ r.date }}{% endblock %}
 {% block content %}
 
@@ -22,6 +22,8 @@
   <h2>Débrief du coach IA</h2>
   {% if ai_text %}
     <div class="prose">{{ ai_text | md | safe }}</div>
+  {% elif ai_on %}
+    <p class="muted">Le débrief IA n'a pas pu être généré lors de ce passage. Il sera retenté au prochain lancement. Constats automatiques :</p>
   {% else %}
     <p class="muted">Analyse IA désactivée (secret <code>ANTHROPIC_API_KEY</code> absent). Constats automatiques :</p>
   {% endif %}
@@ -35,12 +37,14 @@
     <div class="game-head">
       <b>{{ "Victoire" if g.win else "Défaite" }}</b>
       <span>Partie {{ loop.index }} · {{ g.start_utc | localtime }} · {{ g.duration_min | round(0) | int }} min{% if g.patch %} · patch {{ g.patch }}{% endif %}</span>
+      {% if g.early and g.early['15'] %}<span class="obj">Or : <b class="{{ g.early['10'].gold | signclass }}">{{ g.early['10'].gold | signed }}</b> à 10 min, <b class="{{ g.early['15'].gold | signclass }}">{{ g.early['15'].gold | signed }}</b> à 15 min</span>{% endif %}
       {% if g.objectives.dragons %}<span class="obj">Dragons {{ g.objectives.dragons[0] }}-{{ g.objectives.dragons[1] }} · Barons {{ g.objectives.barons[0] }}-{{ g.objectives.barons[1] }} · Tours {{ g.objectives.towers[0] }}-{{ g.objectives.towers[1] }}</span>{% endif %}
     </div>
     <div class="teams">
       <div class="team">
         {% for p in g.our %}
-        <div class="slot">{{ champ(p.champion) }}{% if p.kills is defined %}<small>{{ p.kills }}/{{ p.deaths }}/{{ p.assists }}</small>{% endif %}</div>
+        {% set lane = g.early['15'].lanes[p.role] if g.early and g.early['15'] and p.role in g.early['15'].lanes else none %}
+        <div class="slot">{{ champ(p.champion) }}{% if p.kills is defined %}<small>{{ p.kills }}/{{ p.deaths }}/{{ p.assists }}{% if lane %} · <span class="{{ lane.gold | signclass }}">{{ lane.gold | signed }}</span>{% endif %}</small>{% endif %}</div>
         {% endfor %}
       </div>
       <div class="vs">vs</div>
@@ -70,12 +74,13 @@
 <section class="card">
   <h2>Joueurs ce soir</h2>
   <div class="scroll"><table class="t players">
-    <tr><th>Joueur</th><th>Rôle</th><th>KDA</th><th>KDA habituel</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Vision/min</th></tr>
+    <tr><th>Joueur</th><th>Rôle</th><th>KDA</th><th>KDA habituel</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Part dégâts</th><th>Lane @15</th><th>Lane @15 habituel</th><th>Vision/min</th></tr>
     {% for p in r.players %}{% set gp = r.players_global.get(p.player) %}
     <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td>
       <td class="{{ 'good-t' if gp and p.kda > gp.kda else 'bad-t' if gp and p.kda < gp.kda }}">{{ p.kda }}</td>
       <td class="muted">{{ gp.kda if gp }}</td>
-      <td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.vision_min }}</td></tr>
+      <td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.dmg_share }} %</td>
+      <td class="{{ p.lane15 | signclass }}">{{ p.lane15 | signed }}</td><td class="muted">{{ gp.lane15 | signed if gp }}</td><td>{{ p.vision_min }}</td></tr>
     {% endfor %}
   </table></div>
 </section>

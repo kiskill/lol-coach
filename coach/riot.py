@@ -77,6 +77,69 @@ class RiotClient:
     def match(self, match_id):
         return self._get(f"/lol/match/v5/matches/{match_id}")
 
+    def timeline(self, match_id):
+        return self._get(f"/lol/match/v5/matches/{match_id}/timeline")
+
+
+# ------------------------------------------------------------------ timeline
+def early_stats(match, timeline, game, minutes=(10, 15)):
+    """Écarts (nous - eux) d'or, d'XP et de CS à 10 et 15 min, pour l'équipe et par couloir.
+
+    La timeline contient une "frame" par minute ; chaque frame donne, pour les
+    participants 1 à 10, leur or total, XP et sbires tués à cet instant.
+    Un champion n'apparaît qu'une fois par partie : on s'en sert pour faire le lien.
+    """
+    by_champ = {p["championName"]: p for p in match["info"]["participants"]}
+    frames = timeline["info"]["frames"]
+    enemy_by_role = {p["role"]: p["champion"] for p in game["enemy"]}
+    out = {}
+    for minute in minutes:
+        if len(frames) <= minute:
+            continue
+        pf = frames[minute]["participantFrames"]
+
+        def val(champ, key):
+            p = by_champ.get(champ)
+            f = pf.get(str(p["participantId"]), {}) if p else {}
+            if key == "cs":
+                return f.get("minionsKilled", 0) + f.get("jungleMinionsKilled", 0)
+            return f.get(key, 0)
+
+        def team_diff(key):
+            return (sum(val(p["champion"], key) for p in game["our"])
+                    - sum(val(p["champion"], key) for p in game["enemy"]))
+
+        lanes = {}
+        for p in game["our"]:
+            opp = enemy_by_role.get(p["role"])
+            if opp:
+                lanes[p["role"]] = {
+                    "gold": val(p["champion"], "totalGold") - val(opp, "totalGold"),
+                    "xp": val(p["champion"], "xp") - val(opp, "xp"),
+                    "cs": val(p["champion"], "cs") - val(opp, "cs"),
+                }
+        out[str(minute)] = {"gold": team_diff("totalGold"), "xp": team_diff("xp"),
+                            "cs": team_diff("cs"), "lanes": lanes}
+    return out
+
+
+def enrich_timelines(client):
+    """Ajoute les écarts à 10/15 min aux parties API qui ne les ont pas encore."""
+    games = store.load_games()
+    todo = [g for g in games if g.get("source") == "api" and "early" not in g]
+    if not todo:
+        return 0
+    print(f"Timeline : {len(todo)} partie(s) à enrichir…")
+    for i, g in enumerate(todo, 1):
+        match = store.load_raw(g["match_id"]) or client.match(g["match_id"])
+        tl = client.timeline(g["match_id"])
+        g["early"] = early_stats(match, tl, g) if match and tl else {}
+        if i % 10 == 0:
+            print(f"  {i}/{len(todo)}…")
+            store.save_games(games)  # sauvegarde régulière si la clé expire en route
+    store.save_games(games)
+    return len(todo)
+
 
 # ------------------------------------------------------------------ normalisation
 def normalize(match, player_by_puuid, player_roles, champs, min_players):
@@ -219,4 +282,5 @@ def collect(cfg, api_key, champs):
     if new_games:
         store.upsert_games(new_games)
     print(f"{len(new_games)} partie(s) d'équipe ajoutée(s).")
+    enrich_timelines(client)
     return len(new_games)

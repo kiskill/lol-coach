@@ -132,16 +132,103 @@ def objective_stats(games):
     return out
 
 
+GOLD_STATES = [(1500, 10**6, "Avance > 1 500 or"), (0, 1500, "Légère avance"),
+               (-1500, 0, "Léger retard"), (-10**6, -1500, "Retard > 1 500 or")]
+
+
+def _avg(xs, nd=0):
+    if not xs:
+        return None
+    v = sum(xs) / len(xs)
+    return round(v) if nd == 0 else round(v, nd)
+
+
+def early_game_stats(games):
+    """Exploitation de la timeline : où se gagnent / se perdent les parties."""
+    g10 = [g for g in games if g.get("early", {}).get("10")]
+    g15 = [g for g in games if g.get("early", {}).get("15")]
+    if not g10:
+        return None
+    gold15 = lambda g: g["early"]["15"]["gold"]
+    out = {
+        "games": len(g15),
+        "gold10": _avg([g["early"]["10"]["gold"] for g in g10]),
+        "gold15": _avg([gold15(g) for g in g15]),
+        "cs15": _avg([g["early"]["15"]["cs"] for g in g15]),
+        "xp15": _avg([g["early"]["15"]["xp"] for g in g15]),
+        "states": [],
+        "throws": [{"match_id": g["match_id"], "start_utc": g["start_utc"], "gold15": gold15(g)}
+                   for g in g15 if gold15(g) >= 1500 and not g["win"]],
+        "comebacks": [{"match_id": g["match_id"], "start_utc": g["start_utc"], "gold15": gold15(g)}
+                      for g in g15 if gold15(g) <= -1500 and g["win"]],
+    }
+    for lo, hi, label in GOLD_STATES:
+        gs = [g for g in g15 if lo <= gold15(g) < hi]
+        out["states"].append({"label": label, **rec(len(gs), sum(g["win"] for g in gs))})
+
+    # Phase de lane par rôle : écart moyen face au vis-à-vis + % de lanes "gagnées" à 15 min
+    lanes = []
+    for r in ROLES:
+        l10 = [g["early"]["10"]["lanes"][r] for g in g10 if r in g["early"]["10"]["lanes"]]
+        l15 = [g["early"]["15"]["lanes"][r] for g in g15 if r in g["early"]["15"]["lanes"]]
+        if not l15 and not l10:
+            continue
+        lanes.append({"role": r, "games": len(l15),
+                      "gold10": _avg([x["gold"] for x in l10]),
+                      "gold15": _avg([x["gold"] for x in l15]),
+                      "cs15": _avg([x["cs"] for x in l15], 1),
+                      "xp15": _avg([x["xp"] for x in l15]),
+                      "won_pct": round(100 * sum(x["gold"] > 0 for x in l15) / len(l15)) if l15 else None})
+    out["lanes"] = lanes
+
+    # Phase de lane par champion (quels picks gagnent leur lane)
+    acc = defaultdict(list)
+    for g in g15:
+        for p in g["our"]:
+            lane = g["early"]["15"]["lanes"].get(p["role"])
+            if lane:
+                acc[(p["role"], p["champion"])].append((lane["gold"], g["win"]))
+    out["champions"] = sorted(
+        ({"role": r, "champion": c, "gold15": _avg([x[0] for x in v]),
+          **rec(len(v), sum(x[1] for x in v))} for (r, c), v in acc.items() if len(v) >= 2),
+        key=lambda x: -x["gold15"])
+    return out
+
+
+def objective_totals(games):
+    """Moyennes d'objectifs par partie et winrate selon qui contrôle les dragons / Nashor."""
+    gs = [g for g in games if g.get("objectives", {}).get("dragons")]
+    if not gs:
+        return None
+    o = lambda g, k, i: g["objectives"][k][i]
+    out = {"games": len(gs), "avg": {}, "splits": []}
+    for k, label in [("dragons", "Dragons"), ("barons", "Nashors"), ("towers", "Tours")]:
+        out["avg"][label] = [_avg([o(g, k, 0) for g in gs], 1), _avg([o(g, k, 1) for g in gs], 1)]
+    for k, label in [("dragons", "Plus de dragons"), ("barons", "Au moins autant de Nashors")]:
+        cmp = (lambda a, b: a > b) if k == "dragons" else (lambda a, b: a >= b and a > 0)
+        yes = [g for g in gs if cmp(o(g, k, 0), o(g, k, 1))]
+        out["splits"].append({"label": label, **rec(len(yes), sum(g["win"] for g in yes))})
+    return out
+
+
 def player_stats(games):
     acc = {}
     for g in games:
+        team_dmg = sum(p.get("damage", 0) for p in g["our"]) or 1
+        team_gold = sum(p.get("gold", 0) for p in g["our"]) or 1
+        lanes15 = g.get("early", {}).get("15", {}).get("lanes", {})
         for p in g["our"]:
             if "player" not in p:
                 continue
             a = acc.setdefault(p["player"], {"player": p["player"], "role": p["role"],
                                              "games": 0, "wins": 0, "k": 0, "d": 0, "a": 0,
                                              "cs": 0, "minutes": 0, "damage": 0, "vision": 0,
+                                             "dmg_share": [], "gold_share": [], "lane15": [],
                                              "champions": Counter()})
+            a["dmg_share"].append(p["damage"] / team_dmg)
+            a["gold_share"].append(p["gold"] / team_gold)
+            if p["role"] in lanes15:
+                a["lane15"].append(lanes15[p["role"]]["gold"])
             a["games"] += 1
             a["wins"] += g["win"]
             a["k"] += p["kills"]
@@ -163,6 +250,9 @@ def player_stats(games):
             "cs_min": round(a["cs"] / a["minutes"], 1) if a["minutes"] else 0,
             "damage_min": round(a["damage"] / a["minutes"]) if a["minutes"] else 0,
             "vision_min": round(a["vision"] / a["minutes"], 2) if a["minutes"] else 0,
+            "dmg_share": round(100 * sum(a["dmg_share"]) / n),
+            "gold_share": round(100 * sum(a["gold_share"]) / n),
+            "lane15": _avg(a["lane15"]),
             "champions": a["champions"].most_common(5),
         })
     order = {r: i for i, r in enumerate(ROLES)}
@@ -180,6 +270,8 @@ def global_report(games, sessions, cfg):
         "durations": duration_stats(games),
         "game_index": game_index_stats(sessions),
         "objectives": objective_stats(games),
+        "objective_totals": objective_totals(games),
+        "early": early_game_stats(games),
         "players": player_stats(games),
         "sessions": [{"date": s["date"], "games": len(s["games"]),
                       "wins": s["wins"], "wr": s["wr"]} for s in sessions],
@@ -205,6 +297,7 @@ def session_report(session, all_games, cfg):
         "picks": picks,
         "duos": duo_stats(games),
         "objectives": objective_stats(games),
+        "early": early_game_stats(games),
         "players": player_stats(games),
         "players_global": {p["player"]: p for p in player_stats(all_games)},
         "bans": ban_stats(games),

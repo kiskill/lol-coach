@@ -2,13 +2,16 @@
 import hashlib
 import json
 import os
+import time
 from pathlib import Path
 
 import requests
 
 CACHE = Path("data/ai_cache")
 API_URL = "https://api.anthropic.com/v1/messages"
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
+# État de l'IA pour l'affichage : désactivée (pas de clé) ou en erreur
+STATUS = {"enabled": False, "errors": []}
 
 SYSTEM = """Tu es un coach League of Legends expérimenté qui analyse les statistiques \
 d'une équipe amateur. Tu écris en français, de façon directe et concrète, pour le coach \
@@ -26,6 +29,7 @@ GLOBAL_TASK = """Voici les statistiques globales de l'équipe. Rédige un bilan 
 ## Forces
 ## Faiblesses
 ## Synergies à privilégier / à éviter
+## Phase de lane et conversion de l'avance (seulement si des données de début de partie sont fournies : écarts d'or à 10/15 min, throws, comebacks, objectifs)
 ## Draft : bans prioritaires et picks conseillés
 ## Élargir les champ-pools (2-3 champions simples ou proches des pools actuels par rôle)
 ## 3 actions prioritaires pour les prochaines sessions"""
@@ -34,7 +38,7 @@ SESSION_TASK = """Voici le détail de la dernière soirée de jeu, avec le bilan
 comparaison. Rédige un débrief de session (250 à 450 mots) avec ces sections :
 ## Résumé de la soirée
 ## Ce qui a marché
-## Ce qui a coincé (picks, drafts, adversaires, joueurs)
+## Ce qui a coincé (picks, drafts, adversaires, phase de lane, objectifs, joueurs)
 ## À retenir pour la semaine prochaine (2-3 points concrets)"""
 
 
@@ -51,11 +55,36 @@ def _compact_game(g, name):
     if g["our"] and "kills" in g["our"][0]:
         out["kda_joueurs"] = {p["role"]: f"{p['kills']}/{p['deaths']}/{p['assists']}"
                               for p in g["our"]}
+    early = g.get("early") or {}
+    for m in ("10", "15"):
+        if m in early:
+            out[f"écart_or_équipe_{m}min"] = early[m]["gold"]
+    if "15" in early:
+        out["écart_or_couloir_15min"] = {r: v["gold"] for r, v in early["15"]["lanes"].items()}
+    if g["our"] and "damage" in g["our"][0]:
+        tot = sum(p["damage"] for p in g["our"]) or 1
+        out["part_dégâts_%"] = {p["role"]: round(100 * p["damage"] / tot) for p in g["our"]}
     if g.get("objectives", {}).get("dragons"):
         o = g["objectives"]
         out["objectifs"] = {"premier_dragon": o["first_dragon"], "première_tour": o["first_tower"],
                             "dragons": o["dragons"], "barons": o["barons"]}
     return out
+
+
+def _early_payload(early, name):
+    if not early:
+        return None
+    return {
+        "parties_avec_timeline": early["games"],
+        "écart_or_moyen_10min": early["gold10"], "écart_or_moyen_15min": early["gold15"],
+        "winrate_selon_écart_or_15min": early["states"],
+        "throws (perdues avec +1500 à 15 min)": len(early["throws"]),
+        "comebacks (gagnées avec -1500 à 15 min)": len(early["comebacks"]),
+        "phase_de_lane_par_rôle": early["lanes"],
+        "phase_de_lane_par_champion": [
+            f"{name(c['champion'])} ({c['role']}) {c['gold15']:+} or à 15 min, {c['wins']}/{c['games']}"
+            for c in early["champions"]],
+    }
 
 
 def _global_payload(rep, cfg, name):
@@ -76,6 +105,8 @@ def _global_payload(rep, cfg, name):
         "par_durée": rep["durations"],
         "par_rang_dans_la_soirée": rep["game_index"],
         "objectifs": rep["objectives"],
+        "objectifs_moyennes (nous, eux)": rep.get("objective_totals"),
+        "début_de_partie (écarts nous-eux)": _early_payload(rep.get("early"), name),
         "joueurs": [{k: v for k, v in p.items() if k != "champions"} | {"champions": [(name(c), n) for c, n in p["champions"]]}
                     for p in rep["players"]],
         "historique_sessions": rep["sessions"],
@@ -83,27 +114,45 @@ def _global_payload(rep, cfg, name):
 
 
 def _call(system, user, cfg):
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
     ai = cfg.get("ai", {})
-    if not key or not ai.get("enabled", True):
+    STATUS["enabled"] = bool(key) and ai.get("enabled", True)
+    if not STATUS["enabled"]:
         return None
     digest = hashlib.sha256(f"{PROMPT_VERSION}{ai.get('model')}{system}{user}".encode()).hexdigest()[:24]
     cached = CACHE / f"{digest}.md"
-    if cached.exists():
+    if cached.exists() and cached.read_text(encoding="utf-8").strip():
         return cached.read_text(encoding="utf-8")
-    try:
-        r = requests.post(API_URL, timeout=180, headers={
-            "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json",
-        }, json={
-            "model": ai.get("model", "claude-sonnet-5-5"),
-            "max_tokens": ai.get("max_tokens", 3000),
-            "system": system,
-            "messages": [{"role": "user", "content": user}],
-        })
-        r.raise_for_status()
-        text = "".join(b.get("text", "") for b in r.json()["content"] if b.get("type") == "text")
-    except Exception as exc:
-        print(f"[avertissement] Analyse IA impossible : {exc}")
+    base = max(int(ai.get("max_tokens", 8000)), 8000)
+    text, reason = "", None
+    # 2 essais : si la réponse est vide (limite de longueur atteinte), on double la limite
+    for max_tokens in (base, base * 2):
+        try:
+            r = requests.post(API_URL, timeout=300, headers={
+                "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json",
+            }, json={
+                "model": ai.get("model", "claude-sonnet-5-5"),
+                "max_tokens": max_tokens,
+                "system": system,
+                "messages": [{"role": "user", "content": user}],
+            })
+            if r.status_code >= 400:
+                reason = f"erreur {r.status_code} : {r.text[:300]}"
+                print(f"[avertissement] Analyse IA impossible, {reason}")
+                if r.status_code in (429, 500, 502, 503, 529):  # surcharge passagère : on patiente
+                    time.sleep(20)
+                continue
+            data = r.json()
+            text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+            if text.strip():
+                break
+            reason = f"réponse vide (stop_reason={data.get('stop_reason')})"
+            print(f"[avertissement] {reason}, nouvel essai avec une limite plus haute…")
+        except Exception as exc:
+            reason = str(exc)
+            print(f"[avertissement] Analyse IA impossible : {exc}")
+    if not text.strip():
+        STATUS["errors"].append(reason or "réponse vide")
         return None
     CACHE.mkdir(parents=True, exist_ok=True)
     cached.write_text(text, encoding="utf-8")

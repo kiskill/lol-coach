@@ -30,7 +30,7 @@ git init
 git add .
 git commit -m "Premier jet"
 git branch -M main
-git remote add origin https://github.com/kiskill/lol-coach.git
+git remote add origin https://github.com/TON_PSEUDO/lol-coach.git
 git push -u origin main
 ```
 
@@ -144,8 +144,8 @@ data/ai_cache/           ← analyses IA déjà générées (évite de repayer)
 
 - **Les 43 parties importées du CSV** n'ont ni bans, ni KDA, ni objectifs. Lors de la première collecte API, si `start_date` les couvre, elles sont remplacées automatiquement par la version complète.
 - **Le rôle de chaque joueur** vient de la position détectée par Riot. Si la détection échoue, l'outil utilise le rôle indiqué dans `config.yaml`.
+- **Timeline (écarts à 10/15 min)** : un appel API de plus par partie. Les parties déjà collectées sont complétées automatiquement au passage suivant.
 - **Pistes d'amélioration :**
-  - écart d'or à 15 min (endpoint *timeline*) ;
   - page par joueur ;
   - envoi du débrief sur Discord via un webhook ;
   - filtre par patch.

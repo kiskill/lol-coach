@@ -20,6 +20,11 @@ def fr_date(iso):
     return f"{DAYS[d.weekday()]} {d.day} {MONTHS[d.month - 1]} {d.year}"
 
 
+def ai_flags():
+    errs = ai.STATUS["errors"]
+    return {"ai_on": ai.STATUS["enabled"], "ai_error": errs[-1][:200] if errs else ""}
+
+
 def build(games, cfg, champs, warning=None):
     if not games:
         print("Aucune partie : rien à générer.")
@@ -33,6 +38,8 @@ def build(games, cfg, champs, warning=None):
     env.globals.update(name=name, icon=champs.icon, ROLES=ROLES, fr_date=fr_date,
                        team=cfg.get("team_name", "Équipe"), min_champ=cfg.get("stats", {}).get("min_games_champion", 4))
     env.filters["wrclass"] = lambda wr: "good" if wr >= 60 else "bad" if wr <= 40 else "mid"
+    env.filters["signed"] = lambda v: "—" if v is None else f"{int(v):+,}".replace(",", " ")
+    env.filters["signclass"] = lambda v: "" if v is None else "good-t" if v > 0 else "bad-t" if v < 0 else ""
     env.filters["md"] = lambda text: markdown.markdown(text or "", extensions=["tables"])
     env.filters["localtime"] = lambda iso: stats.local_dt({"start_utc": iso}, tz).strftime("%H:%M")
 
@@ -40,6 +47,15 @@ def build(games, cfg, champs, warning=None):
         shutil.rmtree(OUT)
     (OUT / "sessions").mkdir(parents=True)
     shutil.copy(TEMPLATES / "style.css", OUT / "style.css")
+
+    # Icônes : téléchargées une fois dans data/icons/, puis copiées avec le site
+    used = {p["champion"] for g in games for side in ("our", "enemy") for p in g[side]}
+    used |= {c for g in games for c in g.get("our_bans", []) + g.get("enemy_bans", [])}
+    ok = champs.fetch_icons(used)
+    (OUT / "img").mkdir()
+    for f in ok:
+        shutil.copy(f, OUT / "img" / f.name)
+    print(f"Icônes : {len(ok)}/{len(used)} disponibles.")
 
     print("Analyse IA globale…")
     g_ai = ai.global_analysis(grep, cfg, name)
@@ -54,13 +70,13 @@ def build(games, cfg, champs, warning=None):
         next_s = sessions[i + 1]["date"] if i + 1 < len(sessions) else None
         html = env.get_template("session.html").render(
             r=srep, ai_text=s_ai, notes=insights.session_insights(srep, name),
-            prev=prev_s, next=next_s, generated=generated, root="../")
+            prev=prev_s, next=next_s, generated=generated, root="../", **ai_flags())
         (OUT / "sessions" / f"{s['date']}.html").write_text(html, encoding="utf-8")
         session_pages.append({**grep["sessions"][i]})
 
     html = env.get_template("index.html").render(
         r=grep, ai_text=g_ai, ins=insights.global_insights(grep, name),
         sessions=list(reversed(session_pages)), last=session_pages[-1],
-        generated=generated, warning=warning, root="")
+        generated=generated, warning=warning, root="", **ai_flags())
     (OUT / "index.html").write_text(html, encoding="utf-8")
     print(f"Site généré dans {OUT}/ ({len(sessions)} sessions, {len(games)} parties).")

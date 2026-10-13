@@ -45,6 +45,25 @@ def global_insights(rep, name):
         notes.append(f"Tendance sur les 3 dernières sessions : {w}/{n} ({wr} %), {trend} "
                      f"par rapport à la moyenne.")
 
+    early = rep.get("early")
+    if early and early["games"] >= 3:
+        notes.append(f"Écart d'or moyen : {early['gold10']:+} à 10 min, {early['gold15']:+} à 15 min.")
+        lanes = [l for l in early["lanes"] if l["gold15"] is not None and l["games"] >= 3]
+        if lanes:
+            best = max(lanes, key=lambda l: l["gold15"])
+            worst = min(lanes, key=lambda l: l["gold15"])
+            if best["gold15"] > 300:
+                good.append(f"Phase de lane {best['role']} : {best['gold15']:+} or à 15 min en moyenne "
+                            f"({best['won_pct']} % de lanes gagnées)")
+            if worst["gold15"] < -300:
+                bad.append(f"Phase de lane {worst['role']} : {worst['gold15']:+} or à 15 min en moyenne "
+                           f"({worst['won_pct']} % de lanes gagnées)")
+        if early["throws"]:
+            bad.append(f"{len(early['throws'])} partie(s) perdue(s) malgré +1 500 or d'avance à 15 min "
+                       "(problème de conversion de l'avance)")
+        if early["comebacks"]:
+            good.append(f"{len(early['comebacks'])} comeback(s) après −1 500 or à 15 min")
+
     idx = [g for g in rep["game_index"] if g["games"] >= 4]
     if idx:
         low = min(idx, key=lambda g: g["wr"])

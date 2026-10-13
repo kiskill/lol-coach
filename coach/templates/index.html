@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi %}
+{% from "macros.html" import champ, wr, kpi with context %}
 {% block title %}{{ team }} · Bilan global{% endblock %}
 {% block content %}
 
@@ -35,6 +35,8 @@
   <h2>Analyse du coach IA</h2>
   {% if ai_text %}
     <div class="prose">{{ ai_text | md | safe }}</div>
+  {% elif ai_on %}
+    <p class="muted">L'analyse IA n'a pas pu être générée lors de ce passage ({{ ai_error }}). Elle sera retentée au prochain lancement. En attendant, voici les constats automatiques.</p>
   {% else %}
     <p class="muted">Analyse IA désactivée : ajoute le secret <code>ANTHROPIC_API_KEY</code> pour l'activer. En attendant, voici les constats automatiques.</p>
   {% endif %}
@@ -60,8 +62,43 @@
       {% for o in r.objectives %}<tr><td>{{ o.label }} <small class="muted">({{ o.rate }} %)</small></td><td>{{ wr(o.with) }}</td><td>{{ wr(o.without) }}</td></tr>{% endfor %}
     </table>
     {% endif %}
+    {% if r.objective_totals %}{% set ot = r.objective_totals %}
+    <h3>Objectifs moyens par partie</h3>
+    <table class="t">
+      <tr><th></th><th>Nous</th><th>Eux</th></tr>
+      {% for label, v in ot.avg.items() %}<tr><td>{{ label }}</td><td><b>{{ v[0] }}</b></td><td>{{ v[1] }}</td></tr>{% endfor %}
+      {% for s in ot.splits %}<tr><td>{{ s.label }}</td><td colspan="2">{{ wr(s) }}</td></tr>{% endfor %}
+    </table>
+    {% endif %}
   </div>
 </section>
+
+{% if r.early %}{% set e = r.early %}
+<section class="card">
+  <h2>Début de partie <small class="muted">· {{ e.games }} parties avec timeline</small></h2>
+  <div class="kpis compact">
+    <div class="kpi"><span>Écart d'or à 10 min</span><b class="{{ e.gold10 | signclass }}">{{ e.gold10 | signed }}</b></div>
+    <div class="kpi"><span>Écart d'or à 15 min</span><b class="{{ e.gold15 | signclass }}">{{ e.gold15 | signed }}</b></div>
+    <div class="kpi"><span>Throws</span><b class="{{ 'bad-t' if e.throws }}">{{ e.throws|length }}</b><small>perdues avec +1 500 à 15 min</small></div>
+    <div class="kpi"><span>Comebacks</span><b class="{{ 'good-t' if e.comebacks }}">{{ e.comebacks|length }}</b><small>gagnées avec −1 500 à 15 min</small></div>
+  </div>
+  <div class="grid2 inner">
+    <div>
+      <h3>Winrate selon la situation à 15 min</h3>
+      <table class="t">{% for s in e.states %}<tr><td>{{ s.label }}</td><td>{{ wr(s, 3) }}</td></tr>{% endfor %}</table>
+      <h3>Phase de lane par rôle (vs vis-à-vis)</h3>
+      <table class="t">
+        <tr><th>Rôle</th><th>Or @10</th><th>Or @15</th><th>CS @15</th><th>Lanes gagnées</th></tr>
+        {% for l in e.lanes %}<tr><td>{{ l.role }}</td><td class="{{ l.gold10 | signclass }}">{{ l.gold10 | signed }}</td><td class="{{ l.gold15 | signclass }}"><b>{{ l.gold15 | signed }}</b></td><td>{{ l.cs15 | signed }}</td><td>{{ l.won_pct }} %</td></tr>{% endfor %}
+      </table>
+    </div>
+    <div>
+      <h3>Phase de lane par champion (or @15 vs vis-à-vis, 2+ parties)</h3>
+      <table class="t">{% for c in e.champions[:14] %}<tr><td>{{ champ(c.champion) }} <small class="muted">{{ c.role }}</small></td><td class="{{ c.gold15 | signclass }}"><b>{{ c.gold15 | signed }}</b></td><td>{{ wr(c) }}</td></tr>{% endfor %}</table>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <section class="card">
   <h2>Champions par rôle</h2>
@@ -117,9 +154,9 @@
 <section class="card">
   <h2>Joueurs</h2>
   <div class="scroll"><table class="t players">
-    <tr><th>Joueur</th><th>Rôle</th><th>Winrate</th><th>KDA</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Vision/min</th><th>Champions</th></tr>
+    <tr><th>Joueur</th><th>Rôle</th><th>Winrate</th><th>KDA</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Part dégâts</th><th>Part or</th><th>Lane @15</th><th>Vision/min</th><th>Champions</th></tr>
     {% for p in r.players %}
-    <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td><td>{{ wr(p) }}</td><td>{{ p.kda }}</td><td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.vision_min }}</td>
+    <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td><td>{{ wr(p) }}</td><td>{{ p.kda }}</td><td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.dmg_share }} %</td><td>{{ p.gold_share }} %</td><td class="{{ p.lane15 | signclass }}">{{ p.lane15 | signed }}</td><td>{{ p.vision_min }}</td>
       <td class="pair">{% for c, n in p.champions %}{{ champ(c, "sm", false) }}{% endfor %}</td></tr>
     {% endfor %}
   </table></div>

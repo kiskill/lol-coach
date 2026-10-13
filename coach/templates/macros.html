@@ -1,7 +1,7 @@
 {% macro champ(cid, size="md", label=true) -%}
 <span class="champ champ-{{ size }}" title="{{ name(cid) }}">
   {%- set src = icon(cid) -%}
-  {%- if src %}<img src="{{ src }}" alt="" loading="lazy">{% else %}<i>{{ name(cid)[:2] }}</i>{% endif -%}
+  {%- if src %}<img src="{{ root }}{{ src }}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">{% else %}<i>{{ name(cid)[:2] }}</i>{% endif -%}
   {%- if label %}<span>{{ name(cid) }}</span>{% endif -%}
 </span>
 {%- endmacro %}

@@ -10,6 +10,7 @@ RAW = DATA / "raw"              # réponses brutes de l'API Riot (1 fichier par 
 GAMES = DATA / "games.json"     # parties normalisées utilisées pour les stats
 STATE = DATA / "state.json"     # PUUID des joueurs + parties ignorées
 CHAMPS = DATA / "champions.json"  # noms des champions (Data Dragon)
+ICONS = DATA / "icons"            # icônes des champions (téléchargées une fois)
 
 
 def _read(path, default):
@@ -54,6 +55,10 @@ def save_state(state):
 
 def save_raw(match):
     _write(RAW / f"{match['metadata']['matchId']}.json", match)
+
+
+def load_raw(match_id):
+    return _read(RAW / f"{match_id}.json", None)
 
 
 # ---------------------------------------------------------------- champions
@@ -111,8 +116,42 @@ class Champions:
             return _OVERRIDES[low]
         return re.sub(r"(?<=[a-z])(?=[A-Z])", " ", champ_id)
 
+    def cdn_id(self, champ_id):
+        return self.ids.get(champ_id.lower(), champ_id)
+
     def icon(self, champ_id):
-        if not self.version:
-            return None
-        cid = self.ids.get(champ_id.lower(), champ_id)
-        return f"https://ddragon.leagueoflegends.com/cdn/{self.version}/img/champion/{cid}.png"
+        """Chemin relatif de l'icône si elle a été téléchargée, sinon None (initiales)."""
+        f = ICONS / f"{self.cdn_id(champ_id)}.png"
+        return f"img/{f.name}" if f.exists() else None
+
+    def fetch_icons(self, champ_ids):
+        """Télécharge les icônes manquantes. Si la toute dernière version de Data Dragon
+        n'a pas encore l'image, on essaie les 2 versions précédentes."""
+        ICONS.mkdir(parents=True, exist_ok=True)
+        versions, online, files = None, bool(self.version), []
+        for cid in sorted(champ_ids):
+            f = ICONS / f"{self.cdn_id(cid)}.png"
+            if not f.exists() and online:
+                if versions is None:
+                    versions = self._versions()
+                for v in versions:
+                    try:
+                        r = requests.get(
+                            f"https://ddragon.leagueoflegends.com/cdn/{v}/img/champion/{f.name}", timeout=15)
+                    except Exception as exc:
+                        print(f"[info] Icônes indisponibles ({exc.__class__.__name__}) : initiales à la place.")
+                        online = False
+                        break
+                    if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
+                        f.write_bytes(r.content)
+                        break
+            if f.exists():
+                files.append(f)
+        return files
+
+    def _versions(self):
+        try:
+            allv = requests.get("https://ddragon.leagueoflegends.com/api/versions.json", timeout=15).json()
+            return [self.version] + [v for v in allv[:3] if v != self.version][:2]
+        except Exception:
+            return [self.version]
