@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ team }}{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ root }}style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="{{ root }}index.html">{{ team }}<span>Coaching flex</span></a>
+    <nav><a href="{{ root }}index.html">Bilan global</a><a href="{{ root }}index.html#sessions">Sessions</a></nav>
+  </div>
+</header>
+<main class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="wrap foot">Généré le {{ generated }} · Données : API Riot Games · Analyse : IA, à prendre comme un avis de coach, pas une vérité absolue.</footer>
+</body>
+</html>

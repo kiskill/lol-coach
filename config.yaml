@@ -1,0 +1,64 @@
+# =============================================================
+#  Configuration de l'outil de coaching — à adapter à ton équipe
+# =============================================================
+
+team_name: "Mon équipe"
+
+# Serveur : EUW -> plateforme "euw1", routage régional "europe"
+platform: euw1
+regional: europe
+
+# 440 = Ranked Flex (420 = Ranked Solo/Duo, 400 = Normal Draft)
+queue: 440
+
+# On ne récupère pas les parties avant cette date (AAAA-MM-JJ)
+start_date: "2026-05-01"
+
+# Nombre minimum de joueurs de la liste ci-dessous présents dans la même
+# équipe pour que la partie compte (5 = uniquement les parties à 5,
+# 4 = accepte un remplaçant)
+min_team_players: 5
+
+# Fuseau horaire et heure de "coupure" d'une session :
+# une partie lancée avant 6h du matin compte dans la soirée de la veille.
+timezone: "Europe/Paris"
+session_cutoff_hour: 6
+
+# Les joueurs : Riot ID exact (Pseudo#TAG) et rôle principal
+# Rôles possibles : Top, Jungle, Mid, ADC, Support
+players:
+  - riot_id: "PseudoTop#EUW"
+    role: Top
+  - riot_id: "PseudoJungle#EUW"
+    role: Jungle
+  - riot_id: "PseudoMid#EUW"
+    role: Mid
+  - riot_id: "PseudoADC#EUW"
+    role: ADC
+  - riot_id: "PseudoSupport#EUW"
+    role: Support
+
+# Champ-pools déclarés (sert à l'analyse IA pour proposer des extensions)
+champion_pools:
+  Top: [Dr. Mundo, Tahm Kench]
+  Jungle: [Trundle, Shyvana, Vi, Volibear]
+  Mid: [Vex, Galio, Yone, Diana, Brand]
+  ADC: [Miss Fortune, Caitlyn, Jinx, Yunara]
+  Support: [Leona, Rakan, Soraka, Seraphine]
+
+# Analyse IA (nécessite le secret ANTHROPIC_API_KEY, sinon désactivée)
+ai:
+  enabled: true
+  model: "claude-sonnet-5-5"
+  max_tokens: 3000
+  # Contexte libre donné au "coach IA"
+  team_context: >
+    Équipe amateur de niveau Platine-Émeraude en ranked flex, une soirée de
+    jeu par semaine. Le coach cherche des conseils concrets de draft
+    (pick/ban), des synergies et des champions simples à ajouter aux pools.
+
+# Seuils statistiques (en dessous, un résultat est jugé "peu fiable")
+stats:
+  min_games_champion: 4
+  min_games_duo: 3
+  min_games_enemy: 2

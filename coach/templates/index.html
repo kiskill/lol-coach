@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% from "macros.html" import champ, wr, kpi %}
+{% block title %}{{ team }} · Bilan global{% endblock %}
+{% block content %}
+
+{% if warning %}<div class="alert">{{ warning }}</div>{% endif %}
+
+<section class="hero">
+  <h1>Bilan global</h1>
+  <p class="muted">{{ r.summary.games }} parties en ranked flex à 5, sur {{ r.sessions|length }} soirées.</p>
+  <div class="kpis">
+    {{ kpi("Victoires", r.summary.wins ~ " / " ~ r.summary.games) }}
+    {{ kpi("Winrate", r.summary.wr ~ " %") }}
+    {{ kpi("Durée moyenne", r.summary.avg_duration ~ " min") }}
+    {{ kpi("Dernière soirée", last.wins ~ " / " ~ last.games, fr_date(last.date)) }}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Évolution par soirée</h2>
+  <div class="trend">
+    {% for s in r.sessions %}
+    <a class="col" href="sessions/{{ s.date }}.html" title="{{ fr_date(s.date) }} : {{ s.wins }}/{{ s.games }}">
+      <span class="stack">
+        {% for i in range(s.games) %}<span class="dot {{ 'w' if i < s.wins else 'l' }}"></span>{% endfor %}
+      </span>
+      <small>{{ s.date[8:10] }}/{{ s.date[5:7] }}</small>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="legend"><span class="dot w"></span> victoire <span class="dot l"></span> défaite · clique sur une soirée pour son débrief</p>
+</section>
+
+<section class="card ai">
+  <h2>Analyse du coach IA</h2>
+  {% if ai_text %}
+    <div class="prose">{{ ai_text | md | safe }}</div>
+  {% else %}
+    <p class="muted">Analyse IA désactivée : ajoute le secret <code>ANTHROPIC_API_KEY</code> pour l'activer. En attendant, voici les constats automatiques.</p>
+  {% endif %}
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Constats automatiques</h2>
+    <ul class="notes">{% for n in ins.notes %}<li>{{ n }}</li>{% endfor %}</ul>
+    {% if ins.good %}<h3 class="good-t">Points forts</h3><ul>{% for n in ins.good %}<li>{{ n }}</li>{% endfor %}</ul>{% endif %}
+    {% if ins.bad %}<h3 class="bad-t">À surveiller</h3><ul>{% for n in ins.bad %}<li>{{ n }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+  <div class="card">
+    <h2>Selon le moment</h2>
+    <h3>Durée de la partie</h3>
+    <table class="t">{% for d in r.durations if d.games %}<tr><td>{{ d.label }}</td><td>{{ wr(d) }}</td></tr>{% endfor %}</table>
+    <h3>Rang dans la soirée</h3>
+    <table class="t">{% for d in r.game_index %}<tr><td>{{ d.label }}</td><td>{{ wr(d, 4) }}</td></tr>{% endfor %}</table>
+    {% if r.objectives %}
+    <h3>Objectifs</h3>
+    <table class="t">
+      <tr><th></th><th>Obtenu</th><th>Concédé</th></tr>
+      {% for o in r.objectives %}<tr><td>{{ o.label }} <small class="muted">({{ o.rate }} %)</small></td><td>{{ wr(o.with) }}</td><td>{{ wr(o.without) }}</td></tr>{% endfor %}
+    </table>
+    {% endif %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Champions par rôle</h2>
+  <p class="muted small-note">Les lignes grisées ont moins de {{ min_champ }} parties : à interpréter avec prudence.</p>
+  <div class="roles">
+    {% for role in ROLES %}
+    <div>
+      <h3>{{ role }}</h3>
+      <table class="t">{% for c in r.champions[role] %}<tr class="{{ 'faded' if c.games < min_champ }}"><td>{{ champ(c.champion) }}</td><td>{{ wr(c) }}</td></tr>{% endfor %}</table>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="card">
+  <h2>Synergies</h2>
+  <div class="roles">
+    {% for d in r.duos %}
+    <div>
+      <h3>{{ d.label }}</h3>
+      <table class="t">{% for row in d.rows[:8] %}<tr class="{{ 'faded' if row.games < 3 }}"><td class="pair">{{ champ(row.pair[0], "sm", false) }}{{ champ(row.pair[1], "sm", false) }}<span>{{ name(row.pair[0]) }} + {{ name(row.pair[1]) }}</span></td><td>{{ wr(row) }}</td></tr>{% endfor %}</table>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Adversaires les plus durs</h2>
+    <table class="t">{% for e in r.enemies.hardest %}<tr><td>{{ champ(e.champion) }}</td><td>{{ wr(e) }}</td></tr>{% endfor %}</table>
+  </div>
+  <div class="card">
+    <h2>Adversaires les plus faciles</h2>
+    <table class="t">{% for e in r.enemies.easiest %}<tr><td>{{ champ(e.champion) }}</td><td>{{ wr(e) }}</td></tr>{% endfor %}</table>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Bans</h2>
+  {% if r.bans.games_with_bans %}
+  <div class="grid2 inner">
+    <div><h3>Nos bans les plus fréquents</h3>
+      <div class="chips">{% for c, n in r.bans.our_bans %}<span class="chip">{{ champ(c, "sm") }}<b>×{{ n }}</b></span>{% endfor %}</div></div>
+    <div><h3>Bannis contre nous</h3>
+      <div class="chips">{% for c, n in r.bans.enemy_bans %}<span class="chip">{{ champ(c, "sm") }}<b>×{{ n }}</b></span>{% endfor %}</div></div>
+  </div>
+  {% else %}
+  <p class="muted">Pas encore de données de bans : elles arriveront avec les parties récupérées par l'API Riot.</p>
+  {% endif %}
+</section>
+
+{% if r.players %}
+<section class="card">
+  <h2>Joueurs</h2>
+  <div class="scroll"><table class="t players">
+    <tr><th>Joueur</th><th>Rôle</th><th>Winrate</th><th>KDA</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Vision/min</th><th>Champions</th></tr>
+    {% for p in r.players %}
+    <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td><td>{{ wr(p) }}</td><td>{{ p.kda }}</td><td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.vision_min }}</td>
+      <td class="pair">{% for c, n in p.champions %}{{ champ(c, "sm", false) }}{% endfor %}</td></tr>
+    {% endfor %}
+  </table></div>
+</section>
+{% endif %}
+
+<section class="card" id="sessions">
+  <h2>Sessions</h2>
+  <ul class="sessions">
+    {% for s in sessions %}
+    <li><a href="sessions/{{ s.date }}.html"><span>{{ fr_date(s.date) }}</span>{{ wr(s) }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

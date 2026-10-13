@@ -1,0 +1,2367 @@
+[
+ {
+  "match_id": "EUW1_7866950423",
+  "source": "csv",
+  "start_utc": "2026-05-26T20:10:19.856000+00:00",
+  "duration_min": 29.62,
+  "win": false,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Mid",
+    "champion": "Seraphine"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Evelynn"
+   },
+   {
+    "role": "Mid",
+    "champion": "Anivia"
+   },
+   {
+    "role": "ADC",
+    "champion": "Senna"
+   },
+   {
+    "role": "Support",
+    "champion": "Rell"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7867004252",
+  "source": "csv",
+  "start_utc": "2026-05-26T20:45:32.181000+00:00",
+  "duration_min": 26.62,
+  "win": true,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Illaoi"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne"
+   },
+   {
+    "role": "Mid",
+    "champion": "Fizz"
+   },
+   {
+    "role": "ADC",
+    "champion": "Nilah"
+   },
+   {
+    "role": "Support",
+    "champion": "Taric"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7867052916",
+  "source": "csv",
+  "start_utc": "2026-05-26T21:17:24.290000+00:00",
+  "duration_min": 24.92,
+  "win": false,
+  "patch": "16.10",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Nunu"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Gnar"
+   },
+   {
+    "role": "Jungle",
+    "champion": "LeeSin"
+   },
+   {
+    "role": "Mid",
+    "champion": "Irelia"
+   },
+   {
+    "role": "ADC",
+    "champion": "Velkoz"
+   },
+   {
+    "role": "Support",
+    "champion": "Karma"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7874256224",
+  "source": "csv",
+  "start_utc": "2026-06-02T17:45:45.469000+00:00",
+  "duration_min": 27.63,
+  "win": true,
+  "patch": "16.11",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Gangplank"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Rumble"
+   },
+   {
+    "role": "Mid",
+    "champion": "Qiyana"
+   },
+   {
+    "role": "ADC",
+    "champion": "Viktor"
+   },
+   {
+    "role": "Support",
+    "champion": "Nautilus"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7874302397",
+  "source": "csv",
+  "start_utc": "2026-06-02T18:19:34.290000+00:00",
+  "duration_min": 37.98,
+  "win": false,
+  "patch": "16.11",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Illaoi"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne"
+   },
+   {
+    "role": "Mid",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "ADC",
+    "champion": "Cassiopeia"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7874376162",
+  "source": "csv",
+  "start_utc": "2026-06-02T19:01:56.842000+00:00",
+  "duration_min": 27.23,
+  "win": false,
+  "patch": "16.11",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Sejuani"
+   },
+   {
+    "role": "Mid",
+    "champion": "XinZhao"
+   },
+   {
+    "role": "ADC",
+    "champion": "Smolder"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7874428374",
+  "source": "csv",
+  "start_utc": "2026-06-02T19:35:35.636000+00:00",
+  "duration_min": 27.27,
+  "win": false,
+  "patch": "16.11",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Swain"
+   },
+   {
+    "role": "Jungle",
+    "champion": "RekSai"
+   },
+   {
+    "role": "Mid",
+    "champion": "Qiyana"
+   },
+   {
+    "role": "ADC",
+    "champion": "Brand"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7874484831",
+  "source": "csv",
+  "start_utc": "2026-06-02T20:06:44.029000+00:00",
+  "duration_min": 23.35,
+  "win": true,
+  "patch": "16.11",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Aatrox"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Viego"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vladimir"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7911686368",
+  "source": "csv",
+  "start_utc": "2026-07-07T18:03:50.323000+00:00",
+  "duration_min": 32.28,
+  "win": true,
+  "patch": "16.13",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yorick"
+   },
+   {
+    "role": "Jungle",
+    "champion": "MasterYi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Naafiri"
+   },
+   {
+    "role": "ADC",
+    "champion": "Smolder"
+   },
+   {
+    "role": "Support",
+    "champion": "Nautilus"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7911739963",
+  "source": "csv",
+  "start_utc": "2026-07-07T18:41:03.170000+00:00",
+  "duration_min": 35.82,
+  "win": false,
+  "patch": "16.13",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Sylas"
+   },
+   {
+    "role": "Mid",
+    "champion": "Hwei"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Nautilus"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7911804612",
+  "source": "csv",
+  "start_utc": "2026-07-07T19:22:06.156000+00:00",
+  "duration_min": 22.7,
+  "win": false,
+  "patch": "16.13",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Sett"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Naafiri"
+   },
+   {
+    "role": "Mid",
+    "champion": "Azir"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ezreal"
+   },
+   {
+    "role": "Support",
+    "champion": "Rell"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7911849670",
+  "source": "csv",
+  "start_utc": "2026-07-07T19:52:19.589000+00:00",
+  "duration_min": 15.58,
+  "win": true,
+  "patch": "16.13",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Sion"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Briar"
+   },
+   {
+    "role": "Mid",
+    "champion": "Orianna"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7947790943",
+  "source": "csv",
+  "start_utc": "2026-08-11T21:04:40.132000+00:00",
+  "duration_min": 36.62,
+  "win": true,
+  "patch": "16.15",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Teemo"
+   },
+   {
+    "role": "Mid",
+    "champion": "Veigar"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ezreal"
+   },
+   {
+    "role": "Support",
+    "champion": "Rell"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7969868719",
+  "source": "csv",
+  "start_utc": "2026-09-01T17:46:44.785000+00:00",
+  "duration_min": 25.98,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Mordekaiser"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shaco"
+   },
+   {
+    "role": "Mid",
+    "champion": "Akali"
+   },
+   {
+    "role": "ADC",
+    "champion": "Tristana"
+   },
+   {
+    "role": "Support",
+    "champion": "Velkoz"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7969914756",
+  "source": "csv",
+  "start_utc": "2026-09-01T18:18:51.045000+00:00",
+  "duration_min": 25.87,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Camille"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Zac"
+   },
+   {
+    "role": "Mid",
+    "champion": "Mel"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Lulu"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7969961721",
+  "source": "csv",
+  "start_utc": "2026-09-01T18:51:21.968000+00:00",
+  "duration_min": 29.85,
+  "win": false,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Lux"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Nasus"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nidalee"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malzahar"
+   },
+   {
+    "role": "ADC",
+    "champion": "Mel"
+   },
+   {
+    "role": "Support",
+    "champion": "Blitzcrank"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7970032605",
+  "source": "csv",
+  "start_utc": "2026-09-01T19:26:35.167000+00:00",
+  "duration_min": 29.08,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Nasus"
+   },
+   {
+    "role": "Jungle",
+    "champion": "XinZhao"
+   },
+   {
+    "role": "Mid",
+    "champion": "Viktor"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ezreal"
+   },
+   {
+    "role": "Support",
+    "champion": "Velkoz"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7970078084",
+  "source": "csv",
+  "start_utc": "2026-09-01T20:00:15.697000+00:00",
+  "duration_min": 31.83,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Diana"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Zaahen"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Hwei"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kalista"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7970130307",
+  "source": "csv",
+  "start_utc": "2026-09-01T20:36:55.488000+00:00",
+  "duration_min": 25.2,
+  "win": false,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Gwen"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Qiyana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Yone"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "TahmKench"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7977442044",
+  "source": "csv",
+  "start_utc": "2026-09-08T17:41:42.306000+00:00",
+  "duration_min": 30.48,
+  "win": false,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Rengar"
+   },
+   {
+    "role": "Jungle",
+    "champion": "MonkeyKing"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ahri"
+   },
+   {
+    "role": "ADC",
+    "champion": "Xayah"
+   },
+   {
+    "role": "Support",
+    "champion": "Nami"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7977606890",
+  "source": "csv",
+  "start_utc": "2026-09-08T19:33:35.068000+00:00",
+  "duration_min": 27.95,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Nasus"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Skarner"
+   },
+   {
+    "role": "Mid",
+    "champion": "Viktor"
+   },
+   {
+    "role": "ADC",
+    "champion": "Swain"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7977654865",
+  "source": "csv",
+  "start_utc": "2026-09-08T20:05:28.763000+00:00",
+  "duration_min": 16.9,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ahri"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "MonkeyKing"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Talon"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malzahar"
+   },
+   {
+    "role": "ADC",
+    "champion": "Nilah"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7977678330",
+  "source": "csv",
+  "start_utc": "2026-09-08T20:26:44.818000+00:00",
+  "duration_min": 28.68,
+  "win": true,
+  "patch": "16.17",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nidalee"
+   },
+   {
+    "role": "Mid",
+    "champion": "AurelionSol"
+   },
+   {
+    "role": "ADC",
+    "champion": "Twitch"
+   },
+   {
+    "role": "Support",
+    "champion": "Poppy"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7984809229",
+  "source": "csv",
+  "start_utc": "2026-09-15T17:44:43.718000+00:00",
+  "duration_min": 41.77,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Amumu"
+   },
+   {
+    "role": "Mid",
+    "champion": "Diana"
+   },
+   {
+    "role": "ADC",
+    "champion": "AurelionSol"
+   },
+   {
+    "role": "Support",
+    "champion": "Alistar"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7984872301",
+  "source": "csv",
+  "start_utc": "2026-09-15T18:33:30.364000+00:00",
+  "duration_min": 30.48,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Aatrox"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne"
+   },
+   {
+    "role": "Mid",
+    "champion": "Fizz"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yasuo"
+   },
+   {
+    "role": "Support",
+    "champion": "Blitzcrank"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7984942950",
+  "source": "csv",
+  "start_utc": "2026-09-15T19:08:58.537000+00:00",
+  "duration_min": 42.78,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Chogath"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ahri"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Support",
+    "champion": "Nautilus"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7985029648",
+  "source": "csv",
+  "start_utc": "2026-09-15T19:59:45.007000+00:00",
+  "duration_min": 34.48,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Darius"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Jax"
+   },
+   {
+    "role": "Mid",
+    "champion": "Taliyah"
+   },
+   {
+    "role": "ADC",
+    "champion": "Mel"
+   },
+   {
+    "role": "Support",
+    "champion": "FiddleSticks"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7985082721",
+  "source": "csv",
+  "start_utc": "2026-09-15T20:38:54.038000+00:00",
+  "duration_min": 39.07,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "JarvanIV"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Olaf"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shaco"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Support",
+    "champion": "Karma"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7991873467",
+  "source": "csv",
+  "start_utc": "2026-09-22T17:38:17.380000+00:00",
+  "duration_min": 27.98,
+  "win": false,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Kled"
+   },
+   {
+    "role": "Jungle",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Mid",
+    "champion": "Xerath"
+   },
+   {
+    "role": "ADC",
+    "champion": "Zeri"
+   },
+   {
+    "role": "Support",
+    "champion": "Lulu"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7991930523",
+  "source": "csv",
+  "start_utc": "2026-09-22T18:22:44.572000+00:00",
+  "duration_min": 29.33,
+  "win": false,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Chogath"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Shen"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7991962432",
+  "source": "csv",
+  "start_utc": "2026-09-22T18:57:18.710000+00:00",
+  "duration_min": 26.4,
+  "win": false,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Illaoi"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Zac"
+   },
+   {
+    "role": "Mid",
+    "champion": "Ryze"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Pantheon"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7992019961",
+  "source": "csv",
+  "start_utc": "2026-09-22T19:27:44.727000+00:00",
+  "duration_min": 34.23,
+  "win": false,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Nasus"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Talon"
+   },
+   {
+    "role": "Mid",
+    "champion": "Kennen"
+   },
+   {
+    "role": "ADC",
+    "champion": "Sivir"
+   },
+   {
+    "role": "Support",
+    "champion": "Soraka"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7992075093",
+  "source": "csv",
+  "start_utc": "2026-09-22T20:06:59.309000+00:00",
+  "duration_min": 39.13,
+  "win": true,
+  "patch": "16.18",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Teemo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "AurelionSol"
+   },
+   {
+    "role": "ADC",
+    "champion": "Twitch"
+   },
+   {
+    "role": "Support",
+    "champion": "Seraphine"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7998819827",
+  "source": "csv",
+  "start_utc": "2026-09-29T17:35:21.185000+00:00",
+  "duration_min": 32.97,
+  "win": true,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Brand"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Soraka"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Aatrox"
+   },
+   {
+    "role": "Mid",
+    "champion": "Zed"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe"
+   },
+   {
+    "role": "Support",
+    "champion": "Xerath"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7998874637",
+  "source": "csv",
+  "start_utc": "2026-09-29T18:16:25.430000+00:00",
+  "duration_min": 36.45,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Nasus"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Graves"
+   },
+   {
+    "role": "Mid",
+    "champion": "Kassadin"
+   },
+   {
+    "role": "ADC",
+    "champion": "Kaisa"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7998946555",
+  "source": "csv",
+  "start_utc": "2026-09-29T18:58:33.874000+00:00",
+  "duration_min": 31.07,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Pantheon"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Talon"
+   },
+   {
+    "role": "Mid",
+    "champion": "Yasuo"
+   },
+   {
+    "role": "ADC",
+    "champion": "Mel"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7998986414",
+  "source": "csv",
+  "start_utc": "2026-09-29T19:35:26.470000+00:00",
+  "duration_min": 25.77,
+  "win": true,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Olaf"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Viego"
+   },
+   {
+    "role": "Mid",
+    "champion": "Hwei"
+   },
+   {
+    "role": "ADC",
+    "champion": "Xayah"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_7999034295",
+  "source": "csv",
+  "start_utc": "2026-09-29T20:07:03.772000+00:00",
+  "duration_min": 22.57,
+  "win": true,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Yone"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Lillia"
+   },
+   {
+    "role": "Mid",
+    "champion": "Sion"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Blitzcrank"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_8005651133",
+  "source": "csv",
+  "start_utc": "2026-10-06T17:41:36.026000+00:00",
+  "duration_min": 33.28,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Soraka"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "KSante"
+   },
+   {
+    "role": "Jungle",
+    "champion": "MasterYi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Yone"
+   },
+   {
+    "role": "ADC",
+    "champion": "Viktor"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_8005726774",
+  "source": "csv",
+  "start_utc": "2026-10-06T18:36:48.996000+00:00",
+  "duration_min": 27.73,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Kled"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Amumu"
+   },
+   {
+    "role": "Mid",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Braum"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_8005774445",
+  "source": "csv",
+  "start_utc": "2026-10-06T19:21:02.390000+00:00",
+  "duration_min": 27.25,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "TahmKench"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Leona"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Camille"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Sylas"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vladimir"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe"
+   },
+   {
+    "role": "Support",
+    "champion": "Senna"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_8005827315",
+  "source": "csv",
+  "start_utc": "2026-10-06T19:56:16.258000+00:00",
+  "duration_min": 27.83,
+  "win": true,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex"
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Anivia"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Mordekaiser"
+   },
+   {
+    "role": "Mid",
+    "champion": "Zed"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Poppy"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ },
+ {
+  "match_id": "EUW1_8005878031",
+  "source": "csv",
+  "start_utc": "2026-10-06T20:29:50.295000+00:00",
+  "duration_min": 20.28,
+  "win": false,
+  "patch": "16.19",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "DrMundo"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Vi"
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio"
+   },
+   {
+    "role": "ADC",
+    "champion": "Yunara"
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan"
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Shyvana"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Warwick"
+   },
+   {
+    "role": "Mid",
+    "champion": "Malphite"
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn"
+   },
+   {
+    "role": "Support",
+    "champion": "Thresh"
+   }
+  ],
+  "our_bans": [],
+  "enemy_bans": [],
+  "objectives": {}
+ }
+]

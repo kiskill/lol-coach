@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "macros.html" import champ, wr, kpi %}
+{% block title %}{{ team }} · Session du {{ r.date }}{% endblock %}
+{% block content %}
+
+<div class="pager">
+  {% if prev %}<a href="{{ prev }}.html">← Soirée précédente</a>{% else %}<span></span>{% endif %}
+  <a href="../index.html">Bilan global</a>
+  {% if next %}<a href="{{ next }}.html">Soirée suivante →</a>{% else %}<span></span>{% endif %}
+</div>
+
+<section class="hero">
+  <h1>Session du {{ fr_date(r.date) }}</h1>
+  <div class="kpis">
+    {{ kpi("Victoires", r.summary.wins ~ " / " ~ r.summary.games) }}
+    {{ kpi("Winrate", r.summary.wr ~ " %") }}
+    {{ kpi("Durée moyenne", r.summary.avg_duration ~ " min") }}
+  </div>
+</section>
+
+<section class="card ai">
+  <h2>Débrief du coach IA</h2>
+  {% if ai_text %}
+    <div class="prose">{{ ai_text | md | safe }}</div>
+  {% else %}
+    <p class="muted">Analyse IA désactivée (secret <code>ANTHROPIC_API_KEY</code> absent). Constats automatiques :</p>
+  {% endif %}
+  <ul class="notes">{% for n in notes %}<li>{{ n }}</li>{% endfor %}</ul>
+</section>
+
+<section class="card">
+  <h2>Les parties</h2>
+  {% for g in r.games %}
+  <article class="game {{ 'win' if g.win else 'loss' }}">
+    <div class="game-head">
+      <b>{{ "Victoire" if g.win else "Défaite" }}</b>
+      <span>Partie {{ loop.index }} · {{ g.start_utc | localtime }} · {{ g.duration_min | round(0) | int }} min{% if g.patch %} · patch {{ g.patch }}{% endif %}</span>
+      {% if g.objectives.dragons %}<span class="obj">Dragons {{ g.objectives.dragons[0] }}-{{ g.objectives.dragons[1] }} · Barons {{ g.objectives.barons[0] }}-{{ g.objectives.barons[1] }} · Tours {{ g.objectives.towers[0] }}-{{ g.objectives.towers[1] }}</span>{% endif %}
+    </div>
+    <div class="teams">
+      <div class="team">
+        {% for p in g.our %}
+        <div class="slot">{{ champ(p.champion) }}{% if p.kills is defined %}<small>{{ p.kills }}/{{ p.deaths }}/{{ p.assists }}</small>{% endif %}</div>
+        {% endfor %}
+      </div>
+      <div class="vs">vs</div>
+      <div class="team">
+        {% for p in g.enemy %}<div class="slot">{{ champ(p.champion) }}</div>{% endfor %}
+      </div>
+    </div>
+    {% if g.our_bans or g.enemy_bans %}
+    <div class="bans"><span>Nos bans</span>{% for c in g.our_bans %}{{ champ(c, "xs", false) }}{% endfor %}
+      <span>Leurs bans</span>{% for c in g.enemy_bans %}{{ champ(c, "xs", false) }}{% endfor %}</div>
+    {% endif %}
+  </article>
+  {% endfor %}
+</section>
+
+<section class="card">
+  <h2>Picks de la soirée vs bilan global</h2>
+  <table class="t">
+    <tr><th>Rôle</th><th>Champion</th><th>Ce soir</th><th>Global</th></tr>
+    {% for p in r.picks %}
+    <tr><td>{{ p.role }}</td><td>{{ champ(p.champion) }}</td><td>{{ wr(p) }}</td><td>{% if p.global %}{{ wr(p.global, min_champ) }}{% endif %}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+
+{% if r.players %}
+<section class="card">
+  <h2>Joueurs ce soir</h2>
+  <div class="scroll"><table class="t players">
+    <tr><th>Joueur</th><th>Rôle</th><th>KDA</th><th>KDA habituel</th><th>K / D / A</th><th>CS/min</th><th>Dégâts/min</th><th>Vision/min</th></tr>
+    {% for p in r.players %}{% set gp = r.players_global.get(p.player) %}
+    <tr><td><b>{{ p.player }}</b></td><td>{{ p.role }}</td>
+      <td class="{{ 'good-t' if gp and p.kda > gp.kda else 'bad-t' if gp and p.kda < gp.kda }}">{{ p.kda }}</td>
+      <td class="muted">{{ gp.kda if gp }}</td>
+      <td>{{ p.kills }} / {{ p.deaths }} / {{ p.assists }}</td><td>{{ p.cs_min }}</td><td>{{ p.damage_min }}</td><td>{{ p.vision_min }}</td></tr>
+    {% endfor %}
+  </table></div>
+</section>
+{% endif %}
+{% endblock %}
