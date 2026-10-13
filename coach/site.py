@@ -1,4 +1,5 @@
 """Génération du site statique (dossier site/) : page globale + une page par session."""
+import json
 import os
 import shutil
 from datetime import date, datetime
@@ -7,7 +8,7 @@ from pathlib import Path
 import markdown
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from . import ROLES, ai, insights, stats
+from . import ROLES, ai, indicators, insights, stats, store
 
 OUT = Path("site")
 TEMPLATES = Path(__file__).parent / "templates"
@@ -19,6 +20,25 @@ DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
 def fr_date(iso):
     d = date.fromisoformat(iso)
     return f"{DAYS[d.weekday()]} {d.day} {MONTHS[d.month - 1]} {d.year}"
+
+
+def num(v, nd=1):
+    """Nombre lisible : 12.0 -> 12, 3.45 -> 3.5 (sans couper les zéros d'un entier)."""
+    if v is None:
+        return "—"
+    if isinstance(v, float):
+        txt = f"{v:.{nd}f}"
+        return txt.rstrip("0").rstrip(".") if "." in txt else txt
+    return str(v)
+
+
+def signed(v):
+    """+1 200 / −56 ; petites valeurs avec une décimale (+0.4)."""
+    if v is None:
+        return "—"
+    if isinstance(v, float) and abs(v) < 10 and round(v) != v:
+        return f"{v:+.1f}"
+    return f"{round(v):+,}".replace(",", " ")
 
 
 def ai_flags():
@@ -50,16 +70,21 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
         print("Aucune partie : rien à générer.")
         return
     tz, cutoff = cfg.get("timezone", "Europe/Paris"), cfg.get("session_cutoff_hour", 6)
+    items, n_ind = indicators.attach(games, champs)
+    ai.ITEM_NAMES.update({k: v["name"] for k, v in items.data.items()})
+    print(f"Indicateurs avancés : {n_ind} partie(s) avec données détaillées.")
     sessions = stats.split_sessions(games, tz, cutoff)
     grep = stats.global_report(games, sessions, cfg)
     name = champs.name
 
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape())
-    env.globals.update(name=name, icon=champs.icon, ROLES=ROLES, fr_date=fr_date,
+    env.globals.update(name=name, icon=champs.icon, ROLES=ROLES, fr_date=fr_date, item_name=items.name,
                        team=cfg.get("team_name", "Équipe"), min_champ=cfg.get("stats", {}).get("min_games_champion", 4))
     env.filters["wrclass"] = lambda wr: "good" if wr >= 60 else "bad" if wr <= 40 else "mid"
-    env.filters["signed"] = lambda v: "—" if v is None else f"{int(v):+,}".replace(",", " ")
+    env.filters["signed"] = signed
     env.filters["signclass"] = lambda v: "" if v is None else "good-t" if v > 0 else "bad-t" if v < 0 else ""
+    env.filters["num"] = num
+    env.filters["tojs"] = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":"))
     env.filters["md"] = lambda text: markdown.markdown(text or "", extensions=["tables"])
     env.filters["localtime"] = lambda iso: stats.local_dt({"start_utc": iso}, tz).strftime("%H:%M")
 
@@ -76,6 +101,11 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     for f in ok:
         shutil.copy(f, OUT / "img" / f.name)
     print(f"Icônes : {len(ok)}/{len(used)} disponibles.")
+    shutil.copy(TEMPLATES / "map.js", OUT / "map.js")
+    map_img = store.fetch_map(champs.version)
+    if map_img:
+        shutil.copy(map_img, OUT / "img" / "map11.png")
+    env.globals["map_img"] = "img/map11.png" if map_img else ""
 
     g_ai = ai.load("global")
     if ia_global or (cfg.get("ai", {}).get("global_auto") and not g_ai):

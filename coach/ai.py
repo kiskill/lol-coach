@@ -36,6 +36,7 @@ GLOBAL_TASK = """Voici les statistiques globales de l'équipe. Rédige un bilan 
 ## Faiblesses
 ## Synergies à privilégier / à éviter
 ## Phase de lane et conversion de l'avance (seulement si des données de début de partie sont fournies : écarts d'or à 10/15 min, throws, comebacks, objectifs)
+## Discipline et vision (morts avant 15 min, zones de mort, wards et pinks, conversion des combats en objectifs, anti-heal), si ces données sont fournies
 ## Draft : bans prioritaires et picks conseillés
 ## Élargir les champ-pools (2-3 champions simples ou proches des pools actuels par rôle)
 ## 3 actions prioritaires pour les prochaines sessions"""
@@ -44,7 +45,7 @@ SESSION_TASK = """Voici le détail de la dernière soirée de jeu, avec le bilan
 comparaison. Rédige un débrief de session (250 à 450 mots) avec ces sections :
 ## Résumé de la soirée
 ## Ce qui a marché
-## Ce qui a coincé (picks, drafts, adversaires, phase de lane, objectifs, joueurs)
+## Ce qui a coincé (picks, drafts, adversaires, phase de lane, objectifs, vision, morts, joueurs)
 ## À retenir pour la semaine prochaine (2-3 points concrets)"""
 
 
@@ -75,6 +76,21 @@ def _compact_game(g, name):
         out["objectifs"] = {"premier_dragon": o["first_dragon"], "première_tour": o["first_tower"],
                             "dragons": o["dragons"], "barons": o["barons"]}
     return out
+
+
+ITEM_NAMES = {}
+
+
+def _item(iid):
+    return ITEM_NAMES.get(str(iid), str(iid))
+
+
+def _key_payload(rows):
+    if not rows:
+        return None
+    return [{"indicateur": r["label"], "valeur": r["value"], "unité": r["unit"],
+             "référence": r["ref"], "sens": "plus haut = mieux" if r["better"] == "high" else "plus bas = mieux"}
+            for r in rows]
 
 
 def _early_payload(early, name):
@@ -116,6 +132,16 @@ def _global_payload(rep, cfg, name):
         "joueurs": [{k: v for k, v in p.items() if k != "champions"} | {"champions": [(name(c), n) for c, n in p["champions"]]}
                     for p in rep["players"]],
         "historique_sessions": rep["sessions"],
+        "indicateurs_clés": _key_payload(rep.get("key_rows")),
+        "indicateurs_clés_par_soirée (6 dernières)": {k: [p["value"] for p in v[-6:]] for k, v in (rep.get("trend") or {}).items()},
+        "morts_par_zone": rep.get("zones"),
+        "winrate_après_victoire_ou_défaite": rep.get("tilt"),
+        "winrate_selon_type_de_dégâts": rep.get("composition"),
+        "détail_par_joueur (moyennes par partie)": rep.get("player_details"),
+        "premier_objet_par_champion": [
+            {"champion": name(b["champion"]), "rôle": b["role"],
+             "objets": [f"{_item(i['item'])} {i['wins']}/{i['games']}" for i in b["items"]]}
+            for b in rep.get("builds") or []],
     }
 
 
@@ -203,6 +229,10 @@ def session_analysis(srep, grep, cfg, name):
         "joueurs_soirée": [{k: v for k, v in p.items() if k != "champions"} for p in srep["players"]],
         "bilan_global": grep["summary"],
         "historique_sessions": grep["sessions"][-8:],
+        "indicateurs_clés_soirée_vs_moyenne": _key_payload(srep.get("key_rows")),
+        "indicateurs_par_partie": srep.get("lines"),
+        "morts_par_zone_soirée": srep.get("zones"),
+        "détail_par_joueur_soirée": srep.get("player_details"),
     }
     text = json.dumps(payload, ensure_ascii=False, indent=1)
     return _call(SYSTEM, f"{SESSION_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)

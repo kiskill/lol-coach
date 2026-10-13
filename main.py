@@ -20,20 +20,21 @@ from coach.riot import RiotError, collect
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Outil de coaching LoL")
-    sub = parser.add_subparsers(dest="cmd", required=True)
-    p_imp = sub.add_parser("import-csv", help="importer un historique CSV")
-    p_imp.add_argument("path")
-    sub.add_parser("collect", help="récupérer les nouvelles parties via l'API Riot")
-    sub.add_parser("build", help="générer le site")
-    sub.add_parser("update", help="collect puis build")
-    parser.add_argument("--config", default="config.yaml")
-    parser.add_argument("--ia-sessions", default=os.environ.get("IA_SESSIONS") or "nouvelles",
+    common = argparse.ArgumentParser(add_help=False)
+    common.add_argument("--config", default="config.yaml")
+    common.add_argument("--ia-sessions", default=os.environ.get("IA_SESSIONS") or "nouvelles",
                         choices=["nouvelles", "derniere", "toutes", "aucune"],
                         help="débriefs IA de session à générer (défaut : nouvelles)")
-    parser.add_argument("--ia-global", action="store_true",
+    common.add_argument("--ia-global", action="store_true",
                         default=os.environ.get("IA_GLOBAL", "").lower() == "true",
                         help="regénérer le bilan IA global (payant, à la demande)")
+    parser = argparse.ArgumentParser(description="Outil de coaching LoL", parents=[common])
+    sub = parser.add_subparsers(dest="cmd", required=True)
+    p_imp = sub.add_parser("import-csv", help="importer un historique CSV", parents=[common])
+    p_imp.add_argument("path")
+    sub.add_parser("collect", help="récupérer les nouvelles parties via l'API Riot", parents=[common])
+    sub.add_parser("build", help="générer le site", parents=[common])
+    sub.add_parser("update", help="collect puis build", parents=[common])
     args = parser.parse_args()
 
     with open(args.config, encoding="utf-8") as f:

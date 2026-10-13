@@ -82,28 +82,61 @@ class RiotClient:
 
 
 # ------------------------------------------------------------------ timeline
-def early_stats(match, timeline, game, minutes=(10, 15)):
-    """Écarts (nous - eux) d'or, d'XP et de CS à 10 et 15 min, pour l'équipe et par couloir.
+def extract_timeline(timeline):
+    """Version compacte de la timeline Riot (quelques Ko au lieu de ~1 Mo), conservée
+    dans data/timeline/ pour tous les calculs : écarts, morts, carte, achats d'items.
 
-    La timeline contient une "frame" par minute ; chaque frame donne, pour les
-    participants 1 à 10, leur or total, XP et sbires tués à cet instant.
-    Un champion n'apparaît qu'une fois par partie : on s'en sert pour faire le lien.
+    frames[minute][participantId] = [or_total, xp, cs, x, y]
+    events : ["K", t, tueur, victime, x, y, [assistants]]   kill de champion
+             ["M", t, équipe, type, sous_type, x, y]        dragon / Nashor / Héraut / larves
+             ["B", t, équipe_qui_perd, type, couloir, x, y] tour / inhibiteur détruit
+             ["I", t, participant, item]                     achat d'item
+    (t en secondes)
     """
+    frames = []
+    for fr in timeline["info"]["frames"]:
+        frames.append({pid: [f.get("totalGold", 0), f.get("xp", 0),
+                             f.get("minionsKilled", 0) + f.get("jungleMinionsKilled", 0),
+                             f.get("position", {}).get("x", 0), f.get("position", {}).get("y", 0)]
+                       for pid, f in fr["participantFrames"].items()})
+    events = []
+    for fr in timeline["info"]["frames"]:
+        for e in fr.get("events", []):
+            t = round(e.get("timestamp", 0) / 1000)
+            pos = e.get("position", {})
+            x, y = pos.get("x", 0), pos.get("y", 0)
+            typ = e.get("type")
+            if typ == "CHAMPION_KILL":
+                events.append(["K", t, e.get("killerId", 0), e.get("victimId", 0), x, y,
+                               e.get("assistingParticipantIds", [])])
+            elif typ == "ELITE_MONSTER_KILL":
+                events.append(["M", t, e.get("killerTeamId", 0), e.get("monsterType", ""),
+                               e.get("monsterSubType", ""), x, y])
+            elif typ == "BUILDING_KILL":
+                events.append(["B", t, e.get("teamId", 0), e.get("buildingType", ""),
+                               e.get("laneType", ""), x, y])
+            elif typ == "ITEM_PURCHASED":
+                events.append(["I", t, e.get("participantId", 0), e.get("itemId", 0)])
+    return {"frames": frames, "events": events}
+
+
+def early_stats(match, ext, game, minutes=(10, 15)):
+    """Écarts (nous - eux) d'or, d'XP et de CS à 10 et 15 min, pour l'équipe et par couloir.
+    Un champion n'apparaît qu'une fois par partie : on s'en sert pour relier timeline et rôles."""
     by_champ = {p["championName"]: p for p in match["info"]["participants"]}
-    frames = timeline["info"]["frames"]
+    frames = ext["frames"]
     enemy_by_role = {p["role"]: p["champion"] for p in game["enemy"]}
+    idx = {"totalGold": 0, "xp": 1, "cs": 2}
     out = {}
     for minute in minutes:
         if len(frames) <= minute:
             continue
-        pf = frames[minute]["participantFrames"]
+        pf = frames[minute]
 
         def val(champ, key):
             p = by_champ.get(champ)
-            f = pf.get(str(p["participantId"]), {}) if p else {}
-            if key == "cs":
-                return f.get("minionsKilled", 0) + f.get("jungleMinionsKilled", 0)
-            return f.get(key, 0)
+            f = pf.get(str(p["participantId"])) if p else None
+            return f[idx[key]] if f else 0
 
         def team_diff(key):
             return (sum(val(p["champion"], key) for p in game["our"])
@@ -124,16 +157,19 @@ def early_stats(match, timeline, game, minutes=(10, 15)):
 
 
 def enrich_timelines(client):
-    """Ajoute les écarts à 10/15 min aux parties API qui ne les ont pas encore."""
+    """Télécharge la timeline des parties API qui n'en ont pas encore d'extrait."""
     games = store.load_games()
-    todo = [g for g in games if g.get("source") == "api" and "early" not in g]
+    todo = [g for g in games if g.get("source") == "api" and not store.has_timeline(g["match_id"])]
     if not todo:
         return 0
-    print(f"Timeline : {len(todo)} partie(s) à enrichir…")
+    print(f"Timeline : {len(todo)} partie(s) à compléter…")
     for i, g in enumerate(todo, 1):
         match = store.load_raw(g["match_id"]) or client.match(g["match_id"])
         tl = client.timeline(g["match_id"])
-        g["early"] = early_stats(match, tl, g) if match and tl else {}
+        if match and tl:
+            ext = extract_timeline(tl)
+            store.save_timeline(g["match_id"], ext)
+            g["early"] = early_stats(match, ext, g)
         if i % 10 == 0:
             print(f"  {i}/{len(todo)}…")
             store.save_games(games)  # sauvegarde régulière si la clé expire en route

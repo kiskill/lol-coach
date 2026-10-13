@@ -95,6 +95,35 @@ Ensuite, tout se fait **automatiquement chaque mercredi matin**. Pour changer le
 
 ---
 
+## Indicateurs avancés et carte
+
+Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'historique CSV.
+
+- **Indicateurs clés :**
+  - morts avant 15 minutes ;
+  - combats gagnés convertis en objectif (dans les 90 s) ;
+  - écart de CS à 10 minutes ;
+  - wards et pinks ;
+  - anti-heal acheté face aux soigneurs ;
+  - minute de la première mort.
+  Sur la page globale, chaque indicateur affiche sa mini-évolution par soirée. Sur une page de session, il est comparé à vos moyennes.
+- **Carte :**
+  - morts et kills, filtrables par joueur et par période ;
+  - objectifs ;
+  - trajet du jungler de 1 à 8 minutes (page de session) ;
+  - tableau des zones de mort.
+- **Blocs repliables :**
+  - détail par joueur (vision, CS à 10 minutes, participation aux kills, dégâts encaissés, CC, solo kills, plaques) ;
+  - forme sur les 6 dernières soirées ;
+  - premier objet légendaire par champion.
+- **Selon le moment :** winrate après une victoire ou une défaite (tilt) et winrate selon le type de dégâts de la compo.
+
+Tout est aussi transmis à l'analyse IA.
+
+**Fichiers utilisés :** `data/raw/` (détail des parties) et `data/timeline/` (extrait compact des timelines, quelques Ko par partie). Les timelines manquantes sont téléchargées automatiquement au passage suivant.
+
+---
+
 ## Maîtriser le coût de l'IA
 
 Chaque texte IA est généré **une seule fois**, puis conservé dans `data/ai/`. Un push, une relance ou un redéploiement ne coûte donc rien.

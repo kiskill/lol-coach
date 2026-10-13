@@ -61,6 +61,22 @@ def load_raw(match_id):
     return _read(RAW / f"{match_id}.json", None)
 
 
+TIMELINE = DATA / "timeline"      # extraits compacts des timelines
+
+
+def has_timeline(match_id):
+    return (TIMELINE / f"{match_id}.json").exists()
+
+
+def save_timeline(match_id, ext):
+    TIMELINE.mkdir(parents=True, exist_ok=True)
+    (TIMELINE / f"{match_id}.json").write_text(json.dumps(ext, separators=(",", ":")), encoding="utf-8")
+
+
+def load_timeline(match_id):
+    return _read(TIMELINE / f"{match_id}.json", None)
+
+
 # ---------------------------------------------------------------- champions
 _OVERRIDES = {
     "monkeyking": "Wukong", "drmundo": "Dr. Mundo", "jarvaniv": "Jarvan IV",
@@ -155,3 +171,74 @@ class Champions:
             return [self.version] + [v for v in allv[:3] if v != self.version][:2]
         except Exception:
             return [self.version]
+
+
+# ---------------------------------------------------------------- items & carte
+ITEMS = DATA / "items.json"
+MAP_IMG = ICONS / "map11.png"
+# Repli hors ligne : objets "Blessures graves" connus (la liste à jour vient de Data Dragon)
+_ANTIHEAL_FALLBACK = {3123, 3033, 3076, 3075, 3916, 3165, 6609, 3011}
+
+
+class Items:
+    """Noms d'items (fr), objets légendaires et objets anti-soin, via Data Dragon."""
+
+    def __init__(self, version):
+        cache = _read(ITEMS, None)
+        if not cache or cache.get("version") != version:
+            cache = self._download(version) or cache or {}
+        self.data = cache.get("items", {})
+
+    @staticmethod
+    def _download(version):
+        if not version:
+            return None
+        try:
+            base = f"https://ddragon.leagueoflegends.com/cdn/{version}/data"
+            fr = requests.get(f"{base}/fr_FR/item.json", timeout=20).json()["data"]
+            en = requests.get(f"{base}/en_US/item.json", timeout=20).json()["data"]
+        except Exception as exc:
+            print(f"[info] Items Data Dragon indisponibles ({exc.__class__.__name__}).")
+            return None
+        items = {}
+        for iid, it in fr.items():
+            desc = en.get(iid, {}).get("description", "")
+            tags = it.get("tags", [])
+            gold = it.get("gold", {}).get("total", 0)
+            items[iid] = {
+                "name": it.get("name", iid),
+                "legendary": (not it.get("into") and gold >= 2200 and "Consumable" not in tags
+                              and "Boots" not in tags and it.get("maps", {}).get("11", False)),
+                "antiheal": "Grievous Wounds" in desc,
+            }
+        cache = {"version": version, "items": items}
+        _write(ITEMS, cache)
+        return cache
+
+    def name(self, iid):
+        return self.data.get(str(iid), {}).get("name", f"Objet {iid}")
+
+    def legendary(self, iid):
+        it = self.data.get(str(iid))
+        return it["legendary"] if it else False
+
+    def antiheal(self, iid):
+        it = self.data.get(str(iid))
+        return it["antiheal"] if it else int(iid) in _ANTIHEAL_FALLBACK
+
+
+def fetch_map(version):
+    """Image de la mini-map (Faille de l'invocateur). None si indisponible."""
+    if MAP_IMG.exists():
+        return MAP_IMG
+    if not version:
+        return None
+    try:
+        r = requests.get(f"https://ddragon.leagueoflegends.com/cdn/{version}/img/map/map11.png", timeout=20)
+        if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
+            ICONS.mkdir(parents=True, exist_ok=True)
+            MAP_IMG.write_bytes(r.content)
+            return MAP_IMG
+    except Exception:
+        pass
+    return None

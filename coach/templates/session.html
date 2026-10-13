@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, details_table with context %}
 {% block title %}{{ team }} · Session du {{ r.date }}{% endblock %}
 {% block content %}
 
@@ -31,6 +31,13 @@
   <ul class="notes">{% for n in notes %}<li>{{ n }}</li>{% endfor %}</ul>
 </section>
 
+{% if r.key %}
+<section class="card">
+  <h2>Indicateurs clés de la soirée <small class="muted">· comparés à vos moyennes</small></h2>
+  {{ keytiles(r.key_rows, "moyenne") }}
+</section>
+{% endif %}
+
 <section class="card">
   <h2>Les parties</h2>
   {% for g in r.games %}
@@ -53,6 +60,16 @@
         {% for p in g.enemy %}<div class="slot">{{ champ(p.champion) }}</div>{% endfor %}
       </div>
     </div>
+    {% set ln = r.lines[loop.index0] %}
+    {% if ln %}
+    <div class="gline">
+      <span title="Morts avant 15 min">☠ {{ ln.deaths15 }} mort(s) avant 15 min</span>
+      <span title="Wards posées · pinks achetées">👁 {{ ln.wards }} wards · {{ ln.pinks }} pinks</span>
+      {% if ln.fights %}<span title="Combats gagnés suivis d'un objectif dans les 90 s">⚔ {{ ln.fights }} combats convertis</span>{% endif %}
+      {% if ln.antiheal is not none %}<span class="{{ 'good-t' if ln.antiheal else 'bad-t' }}" title="Face à : {{ ln.healers | map('string') | join(', ') }}">anti-heal {{ "✓" if ln.antiheal else "✗" }}</span>{% endif %}
+      {% if ln.ap_share is not none %}<span title="Part de dégâts magiques de notre équipe">{{ ln.ap_share }} % AP</span>{% endif %}
+    </div>
+    {% endif %}
     {% if g.our_bans or g.enemy_bans %}
     <div class="bans"><span>Nos bans</span>{% for c in g.our_bans %}{{ champ(c, "xs", false) }}{% endfor %}
       <span>Leurs bans</span>{% for c in g.enemy_bans %}{{ champ(c, "xs", false) }}{% endfor %}</div>
@@ -60,6 +77,22 @@
   </article>
   {% endfor %}
 </section>
+
+{% if r.zones %}
+<section class="card">
+  <h2>Carte de la soirée <small class="muted">· survole un point pour le détail</small></h2>
+  <div class="map-wrap">
+    {{ lolmap(r.map, "deaths,kills,objectives,jungle") }}
+    <div>
+      <h3>Où meurt l'équipe ce soir ({{ r.zones.total }} morts)</h3>
+      <table class="t">
+        <tr><th>Zone</th><th>Part</th><th>&lt; 15 min</th><th>15 min +</th></tr>
+        {% for z in r.zones.rows %}<tr><td>{{ z.zone }}</td><td><span class="wr mid"><span class="bar"><span style="width: {{ z.pct }}%"></span></span><b>{{ z.pct }} %</b></span></td><td>{{ z.early }}</td><td>{{ z.late }}</td></tr>{% endfor %}
+      </table>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 <section class="card">
   <h2>Picks de la soirée vs bilan global</h2>
@@ -84,6 +117,13 @@
       <td class="{{ p.lane15 | signclass }}">{{ p.lane15 | signed }}</td><td class="muted">{{ gp.lane15 | signed if gp }}</td><td>{{ p.vision_min }}</td></tr>
     {% endfor %}
   </table></div>
+  {% if r.player_details %}
+  <details>
+    <summary>Voir le détail par joueur (entre parenthèses : sa moyenne habituelle)</summary>
+    {{ details_table(r.player_details, r.player_details_global) }}
+  </details>
+  {% endif %}
 </section>
 {% endif %}
+<script src="../map.js" defer></script>
 {% endblock %}

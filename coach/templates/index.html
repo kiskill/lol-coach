@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, details_table with context %}
 {% block title %}{{ team }} · Bilan global{% endblock %}
 {% block content %}
 
@@ -45,6 +45,14 @@
   {% endif %}
 </section>
 
+{% if r.key %}
+<section class="card">
+  <h2>Indicateurs clés <small class="muted">· {{ r.key.games }} parties détaillées · barres = évolution par soirée</small></h2>
+  {{ keytiles(r.key_rows, trend=r.trend) }}
+  <p class="muted small-note">Conversion : {{ r.key.converted }} combats gagnés suivis d'un objectif dans les 90 s, sur {{ r.key.fights_won }}. Anti-heal : acheté dans {{ r.key.antiheal_bought }} des {{ r.key.antiheal_needed }} parties face à un gros soigneur.</p>
+</section>
+{% endif %}
+
 <section class="grid2">
   <div class="card">
     <h2>Constats automatiques</h2>
@@ -58,6 +66,12 @@
     <table class="t">{% for d in r.durations if d.games %}<tr><td>{{ d.label }}</td><td>{{ wr(d) }}</td></tr>{% endfor %}</table>
     <h3>Rang dans la soirée</h3>
     <table class="t">{% for d in r.game_index %}<tr><td>{{ d.label }}</td><td>{{ wr(d, 4) }}</td></tr>{% endfor %}</table>
+    <h3>Après une victoire / une défaite (même soirée)</h3>
+    <table class="t">{% for d in r.tilt %}<tr><td>{{ d.label }}</td><td>{{ wr(d, 4) }}</td></tr>{% endfor %}</table>
+    {% if r.composition %}
+    <h3>Type de dégâts de notre compo</h3>
+    <table class="t">{% for d in r.composition if d.games %}<tr><td>{{ d.label }}</td><td>{{ wr(d, 3) }}</td></tr>{% endfor %}</table>
+    {% endif %}
     {% if r.objectives %}
     <h3>Objectifs</h3>
     <table class="t">
@@ -98,6 +112,22 @@
     <div>
       <h3>Phase de lane par champion (or @15 vs vis-à-vis, 2+ parties)</h3>
       <table class="t">{% for c in e.champions[:14] %}<tr><td>{{ champ(c.champion) }} <small class="muted">{{ c.role }}</small></td><td class="{{ c.gold15 | signclass }}"><b>{{ c.gold15 | signed }}</b></td><td>{{ wr(c) }}</td></tr>{% endfor %}</table>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if r.zones %}
+<section class="card">
+  <h2>Carte <small class="muted">· survole un point pour le détail</small></h2>
+  <div class="map-wrap">
+    {{ lolmap(r.map) }}
+    <div>
+      <h3>Où meurt l'équipe ({{ r.zones.total }} morts)</h3>
+      <table class="t">
+        <tr><th>Zone</th><th>Part</th><th>&lt; 15 min</th><th>15 min +</th></tr>
+        {% for z in r.zones.rows %}<tr><td>{{ z.zone }}</td><td><span class="wr mid"><span class="bar"><span style="width: {{ z.pct }}%"></span></span><b>{{ z.pct }} %</b></span></td><td>{{ z.early }}</td><td>{{ z.late }}</td></tr>{% endfor %}
+      </table>
     </div>
   </div>
 </section>
@@ -163,6 +193,40 @@
       <td class="pair">{% for c, n in p.champions %}{{ champ(c, "sm", false) }}{% endfor %}</td></tr>
     {% endfor %}
   </table></div>
+
+  {% if r.player_details %}
+  <details>
+    <summary>Voir le détail par joueur (vision, morts, CS, combat)</summary>
+    {{ details_table(r.player_details) }}
+  </details>
+  {% endif %}
+
+  {% if r.form.dates %}
+  <details>
+    <summary>Forme des joueurs sur les dernières soirées (KDA · CS/min)</summary>
+    <div class="scroll"><table class="t players">
+      <tr><th>Joueur</th>{% for d in r.form.dates %}<th>{{ d[8:10] }}/{{ d[5:7] }}</th>{% endfor %}</tr>
+      {% for pl, by in r.form.players.items() %}{% set base = (r.players | selectattr("player", "equalto", pl) | first) %}
+      <tr><td><b>{{ pl }}</b></td>{% for d in r.form.dates %}{% set v = by.get(d) %}
+        <td class="{{ ('good-t' if v.kda > base.kda else 'bad-t') if v and base else '' }}">{% if v %}{{ v.kda }} · {{ v.cs_min }}{% else %}<span class="muted">—</span>{% endif %}</td>{% endfor %}</tr>
+      {% endfor %}
+    </table></div>
+    <p class="muted small-note">Vert / rouge : KDA de la soirée au-dessus / en dessous de la moyenne du joueur.</p>
+  </details>
+  {% endif %}
+
+  {% if r.builds %}
+  <details>
+    <summary>Builds : premier objet légendaire par champion</summary>
+    <div class="builds">
+      {% for b in r.builds %}
+      <div class="build"><div class="build-h">{{ champ(b.champion) }} <small class="muted">{{ b.role }} · {{ b.games }} parties</small></div>
+        <table class="t">{% for it in b["items"] %}<tr><td>{{ item_name(it.item) }}{% if it.minute %} <small class="muted">· {{ it.minute | num }} min</small>{% endif %}</td><td>{{ wr(it, 3) }}</td></tr>{% endfor %}</table>
+      </div>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
 </section>
 {% endif %}
 
@@ -174,4 +238,5 @@
     {% endfor %}
   </ul>
 </section>
+<script src="map.js" defer></script>
 {% endblock %}

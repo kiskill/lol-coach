@@ -273,6 +273,16 @@ def global_report(games, sessions, cfg):
         "objective_totals": objective_totals(games),
         "early": early_game_stats(games),
         "players": player_stats(games),
+        "key": key_indicators(games),
+        "key_rows": indicator_rows(key_indicators(games)),
+        "trend": indicator_trend(sessions),
+        "player_details": player_details(games),
+        "builds": build_stats(games),
+        "composition": composition_stats(games),
+        "tilt": tilt_stats(sessions),
+        "zones": zone_stats(games),
+        "map": map_data(games),
+        "form": form_stats(sessions),
         "sessions": [{"date": s["date"], "games": len(s["games"]),
                       "wins": s["wins"], "wr": s["wr"]} for s in sessions],
         "thresholds": st,
@@ -300,5 +310,202 @@ def session_report(session, all_games, cfg):
         "early": early_game_stats(games),
         "players": player_stats(games),
         "players_global": {p["player"]: p for p in player_stats(all_games)},
+        "key": key_indicators(games),
+        "key_rows": indicator_rows(key_indicators(games), key_indicators(all_games)),
+        "player_details": player_details(games),
+        "player_details_global": {p["player"]: p for p in player_details(all_games)},
+        "zones": zone_stats(games),
+        "map": map_data(games, with_jungle=True),
+        "lines": [game_line(g) for g in games],
         "bans": ban_stats(games),
     }
+
+
+# =================================================================== indicateurs avancés
+# (clé, libellé, unité, sens : "high" = plus c'est haut mieux c'est)
+KEY_INDICATORS = [
+    ("deaths15", "Morts avant 15 min", "/ partie", "low"),
+    ("conversion", "Combats gagnés convertis en objectif", "%", "high"),
+    ("cs10_diff", "Écart de CS à 10 min (lanes)", "", "high"),
+    ("wards", "Wards posées (équipe)", "/ partie", "high"),
+    ("pinks", "Pinks achetées (équipe)", "/ partie", "high"),
+    ("antiheal", "Anti-heal acheté quand nécessaire", "%", "high"),
+    ("first_death", "Première mort", "min", "high"),
+]
+LANES = ("Top", "Mid", "ADC")
+
+
+def _ind_games(games):
+    return [g for g in games if g.get("ind")]
+
+
+def key_indicators(games):
+    gs = _ind_games(games)
+    if not gs:
+        return None
+    tl = [g for g in gs if g["ind"]["team"]["deaths15"] is not None]
+    won = sum(g["ind"]["team"]["fights_won"] or 0 for g in tl)
+    conv = sum(g["ind"]["team"]["converted"] or 0 for g in tl)
+    cs = [g["ind"]["players"][r]["cs10_diff"] for g in tl for r in LANES
+          if r in g["ind"]["players"] and g["ind"]["players"][r]["cs10_diff"] is not None]
+    need = [g for g in gs if g["ind"]["team"]["antiheal_needed"]]
+    fd = [g["ind"]["team"]["first_death"] for g in tl if g["ind"]["team"]["first_death"] is not None]
+    vals = {
+        "deaths15": _avg([g["ind"]["team"]["deaths15"] for g in tl], 1),
+        "conversion": round(100 * conv / won) if won else None,
+        "cs10_diff": _avg(cs, 1),
+        "wards": _avg([g["ind"]["team"]["wards"] for g in gs], 1),
+        "pinks": _avg([g["ind"]["team"]["pinks"] for g in gs], 1),
+        "antiheal": round(100 * sum(g["ind"]["team"]["antiheal_bought"] for g in need) / len(need)) if need else None,
+        "first_death": _avg(fd, 1),
+    }
+    extra = {"games": len(gs), "fights_won": won, "converted": conv,
+             "antiheal_needed": len(need), "antiheal_bought": sum(g["ind"]["team"]["antiheal_bought"] for g in need)}
+    return {"values": vals, **extra}
+
+
+def indicator_rows(cur, ref=None):
+    """Lignes prêtes à afficher : valeur, référence, et si c'est mieux / moins bien."""
+    if not cur:
+        return []
+    rows = []
+    for key, label, unit, better in KEY_INDICATORS:
+        v = cur["values"].get(key)
+        r = ref["values"].get(key) if ref else None
+        status = ""
+        if v is not None and r is not None and v != r:
+            status = "good" if (v > r) == (better == "high") else "bad"
+        rows.append({"key": key, "label": label, "unit": unit, "value": v, "ref": r,
+                     "status": status, "better": better})
+    return rows
+
+
+def indicator_trend(sessions):
+    """Valeur de chaque indicateur clé, soirée par soirée (pour les mini-graphiques)."""
+    out = {k: [] for k, *_ in KEY_INDICATORS}
+    for s in sessions:
+        ki = key_indicators(s["games"])
+        for k in out:
+            out[k].append({"date": s["date"], "value": ki["values"][k] if ki else None})
+    return out
+
+
+def player_details(games):
+    acc = defaultdict(lambda: defaultdict(list))
+    roles = {}
+    for g in _ind_games(games):
+        names = {p["role"]: p.get("player") for p in g["our"]}
+        for role, pl in g["ind"]["players"].items():
+            who = names.get(role) or role
+            roles[who] = role
+            for k, v in pl.items():
+                if isinstance(v, (int, float)) and not isinstance(v, bool) and v is not None:
+                    acc[who][k].append(v)
+            acc[who]["games"].append(1)
+    order = {r: i for i, r in enumerate(ROLES)}
+    rows = []
+    for who, d in acc.items():
+        row = {"player": who, "role": roles[who], "games": len(d["games"])}
+        for k in ("wards", "wards_killed", "pinks", "kp", "tank_min", "cc", "solo_kills", "plates",
+                  "deaths15", "cs10", "cs10_diff", "first_item_min"):
+            row[k] = _avg(d[k], 1)
+        rows.append(row)
+    return sorted(rows, key=lambda r: order.get(r["role"], 9))
+
+
+def build_stats(games, min_games=2):
+    """Par champion : premier objet légendaire acheté -> winrate et minute moyenne."""
+    acc = defaultdict(lambda: defaultdict(list))
+    for g in _ind_games(games):
+        for p in g["our"]:
+            pl = g["ind"]["players"].get(p["role"])
+            if pl and pl["first_item"]:
+                acc[(p["role"], p["champion"])][pl["first_item"]].append((g["win"], pl["first_item_min"]))
+    out = []
+    for (role, champ), by_item in acc.items():
+        total = sum(len(v) for v in by_item.values())
+        if total < min_games:
+            continue
+        rows = sorted(({"item": it, **rec(len(v), sum(w for w, _ in v)),
+                        "minute": _avg([m for _, m in v if m], 1)} for it, v in by_item.items()),
+                      key=lambda x: -x["games"])
+        out.append({"role": role, "champion": champ, "games": total, "items": rows[:3]})
+    order = {r: i for i, r in enumerate(ROLES)}
+    return sorted(out, key=lambda x: (order[x["role"]], -x["games"]))
+
+
+def composition_stats(games):
+    buckets = [(0, 25, "Très AD (< 25 % de dégâts magiques)"), (25, 60, "Mixte"),
+               (60, 101, "Très AP (> 60 % de dégâts magiques)")]
+    gs = [g for g in _ind_games(games) if g["ind"]["team"]["ap_share"] is not None]
+    out = []
+    for lo, hi, label in buckets:
+        b = [g for g in gs if lo <= g["ind"]["team"]["ap_share"] < hi]
+        out.append({"label": label, **rec(len(b), sum(g["win"] for g in b))})
+    return out if gs else []
+
+
+def tilt_stats(sessions):
+    after = {"win": [0, 0], "loss": [0, 0]}
+    for s in sessions:
+        for prev, cur in zip(s["games"], s["games"][1:]):
+            k = after["win" if prev["win"] else "loss"]
+            k[0] += 1
+            k[1] += cur["win"]
+    return [{"label": "Après une victoire", **rec(*after["win"])},
+            {"label": "Après une défaite", **rec(*after["loss"])}]
+
+
+def zone_stats(games):
+    deaths = [d for g in _ind_games(games) for d in g["ind"]["map"]["deaths"]]
+    if not deaths:
+        return None
+    total = len(deaths)
+    rows = []
+    for z in ["Base", "Top lane", "Mid lane", "Bot lane", "Rivière", "Notre jungle", "Jungle adverse"]:
+        early = sum(1 for d in deaths if d["zone"] == z and d["t"] < 900)
+        late = sum(1 for d in deaths if d["zone"] == z and d["t"] >= 900)
+        if early + late:
+            rows.append({"zone": z, "count": early + late, "pct": round(100 * (early + late) / total),
+                         "early": early, "late": late})
+    return {"total": total, "rows": sorted(rows, key=lambda r: -r["count"])}
+
+
+def map_data(games, with_jungle=False):
+    """Points à dessiner sur la mini-map (coordonnées Riot, ramenées côté bleu si besoin)."""
+    out = {"deaths": [], "kills": [], "objectives": [], "jungle": []}
+    for i, g in enumerate(_ind_games(games), 1):
+        names = {p["role"]: p.get("player") or p["role"] for p in g["our"]}
+        m = g["ind"]["map"]
+        for d in m["deaths"]:
+            out["deaths"].append([d["x"], d["y"], d["t"], d["role"], names.get(d["role"], d["role"]), i])
+        for k in m["kills"]:
+            out["kills"].append([k["x"], k["y"], k["t"], k["role"], names.get(k["role"], k["role"]), i])
+        for o in m["objectives"]:
+            out["objectives"].append([o["x"], o["y"], o["t"], o["type"], o["ours"], i])
+        if with_jungle and m["jungle"]:
+            out["jungle"].append({"game": i, "win": g["win"], "blue": g["ind"]["blue"],
+                                  "path": [[p["x"], p["y"], p["m"]] for p in m["jungle"]]})
+    return out
+
+
+def form_stats(sessions, last=6):
+    """KDA et CS/min de chaque joueur sur les dernières soirées (repérer une baisse de forme)."""
+    rows = defaultdict(dict)
+    dates = [s["date"] for s in sessions[-last:]]
+    for s in sessions[-last:]:
+        for p in player_stats(s["games"]):
+            rows[p["player"]][s["date"]] = {"kda": p["kda"], "cs_min": p["cs_min"], "games": p["games"]}
+    return {"dates": dates, "players": dict(rows)}
+
+
+def game_line(g):
+    """Résumé compact d'une partie pour sa carte : quelques indicateurs clés."""
+    ind = g.get("ind")
+    if not ind:
+        return None
+    t = ind["team"]
+    return {"deaths15": t["deaths15"], "wards": t["wards"], "pinks": t["pinks"],
+            "fights": f"{t['converted']}/{t['fights_won']}" if t["fights_won"] is not None else None,
+            "antiheal": (t["antiheal_bought"] if t["antiheal_needed"] else None),
+            "healers": t["enemy_healers"], "ap_share": t["ap_share"]}
