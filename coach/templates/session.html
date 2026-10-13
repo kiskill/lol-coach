@@ -21,9 +21,10 @@
 <section class="card ai">
   <h2>Débrief du coach IA</h2>
   {% if ai_text %}
-    <div class="prose">{{ ai_text | md | safe }}</div>
+    <p class="ai-meta">Débrief généré le {{ ai_text.generated }}.</p>
+    <div class="prose">{{ ai_text.text | md | safe }}</div>
   {% elif ai_on %}
-    <p class="muted">Le débrief IA n'a pas pu être généré lors de ce passage. Il sera retenté au prochain lancement. Constats automatiques :</p>
+    <p class="muted">Pas de débrief IA pour cette soirée : seule la soirée la plus récente en reçoit un automatiquement. Pour les anciennes, lance le workflow avec l'option « toutes ». Constats automatiques :</p>
   {% else %}
     <p class="muted">Analyse IA désactivée (secret <code>ANTHROPIC_API_KEY</code> absent). Constats automatiques :</p>
   {% endif %}

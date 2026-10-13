@@ -95,6 +95,27 @@ Ensuite, tout se fait **automatiquement chaque mercredi matin**. Pour changer le
 
 ---
 
+## Maîtriser le coût de l'IA
+
+Chaque texte IA est généré **une seule fois**, puis conservé dans `data/ai/`. Un push, une relance ou un redéploiement ne coûte donc rien.
+
+| Quand | Appels IA |
+|---|---|
+| Lancement automatique du mercredi | **1** : le débrief de la soirée de la veille, seulement s'il n'existe pas encore |
+| Relance manuelle avec les options par défaut | 0 si le débrief de la dernière soirée existe déjà |
+| Case « Regénérer le bilan global IA » cochée | +1 |
+| Option « derniere » | 1 : refait le débrief de la dernière soirée |
+| Option « toutes » | rattrape les anciennes soirées sans débrief, au maximum `max_calls_per_run` par passage |
+| Option « aucune » | 0 |
+
+**Garde-fous dans `config.yaml` (section `ai`)**
+- `max_calls_per_run: 3` : plafond absolu d'appels par passage.
+- `global_auto: false` : le bilan global n'est jamais généré automatiquement.
+
+**Conseil :** fixe aussi une limite de dépense mensuelle dans la console Anthropic. Même en cas d'erreur, tu ne pourras jamais dépasser ce montant.
+
+---
+
 ## Correspondance GitLab → GitHub
 
 | GitLab | GitHub |
@@ -137,7 +158,7 @@ coach/site.py            ← génération des pages
 coach/templates/         ← HTML / CSS du site
 data/games.json          ← parties normalisées (sauvegardées à chaque passage)
 data/raw/                ← réponses brutes de Riot (tout le détail, pour de futures stats)
-data/ai_cache/           ← analyses IA déjà générées (évite de repayer)
+data/ai/                 ← textes IA conservés (bilan global + 1 fichier par soirée)
 ```
 
 ## Limites connues et pistes d'amélioration

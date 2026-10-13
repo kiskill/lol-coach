@@ -4,6 +4,10 @@
   python main.py collect                                   # récupérer les nouvelles parties (API Riot)
   python main.py build                                     # générer le site dans site/
   python main.py update                                    # collect + build (utilisé chaque semaine)
+
+Options IA (chaque texte est généré une seule fois puis conservé dans data/ai/) :
+  --ia-sessions nouvelles|derniere|toutes|aucune   (défaut : nouvelles = dernière soirée si pas encore faite)
+  --ia-global                                      regénère le bilan global (sinon jamais automatique)
 """
 import argparse
 import os
@@ -24,6 +28,12 @@ def main():
     sub.add_parser("build", help="générer le site")
     sub.add_parser("update", help="collect puis build")
     parser.add_argument("--config", default="config.yaml")
+    parser.add_argument("--ia-sessions", default=os.environ.get("IA_SESSIONS") or "nouvelles",
+                        choices=["nouvelles", "derniere", "toutes", "aucune"],
+                        help="débriefs IA de session à générer (défaut : nouvelles)")
+    parser.add_argument("--ia-global", action="store_true",
+                        default=os.environ.get("IA_GLOBAL", "").lower() == "true",
+                        help="regénérer le bilan IA global (payant, à la demande)")
     args = parser.parse_args()
 
     with open(args.config, encoding="utf-8") as f:
@@ -45,7 +55,8 @@ def main():
             warning = f"Collecte des nouvelles parties impossible : {exc}"
 
     if args.cmd in ("build", "update"):
-        site.build(store.load_games(), cfg, champs, warning)
+        site.build(store.load_games(), cfg, champs, warning,
+                   ia_sessions=args.ia_sessions, ia_global=args.ia_global)
 
 
 if __name__ == "__main__":

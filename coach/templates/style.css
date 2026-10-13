@@ -132,3 +132,4 @@ table.t { width: 100%; border-collapse: collapse; }
 .kpis.compact .kpi b { font-size: 1.6rem; }
 .game-head .obj b { font-weight: 600; }
 h2 small { font-family: Inter; font-size: .85rem; font-weight: 400; }
+.ai-meta { font-size: .8rem; color: var(--muted); margin: -6px 0 10px; }

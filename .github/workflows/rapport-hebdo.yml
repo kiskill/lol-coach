@@ -5,8 +5,18 @@ on:
   # le lendemain de la soirée de jeu du mardi. Ajuste si besoin.
   schedule:
     - cron: "0 5 * * 3"
-  # Bouton "Run workflow" pour lancer à la main
+  # Bouton "Run workflow" pour lancer à la main, avec des options IA
   workflow_dispatch:
+    inputs:
+      ia_sessions:
+        description: "Débrief IA des soirées (nouvelles = seulement la dernière si pas encore faite)"
+        type: choice
+        options: [nouvelles, aucune, derniere, toutes]
+        default: nouvelles
+      ia_global:
+        description: "Regénérer le bilan global IA (1 appel payant)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write   # pour sauvegarder les nouvelles parties dans data/
@@ -36,6 +46,9 @@ jobs:
         env:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Lancement automatique du mercredi : valeurs par défaut (dernière soirée uniquement)
+          IA_SESSIONS: ${{ inputs.ia_sessions || 'nouvelles' }}
+          IA_GLOBAL: ${{ inputs.ia_global && 'true' || 'false' }}
 
       - name: Sauvegarder les données dans le dépôt
         run: |

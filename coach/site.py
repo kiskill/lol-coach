@@ -1,4 +1,5 @@
 """Génération du site statique (dossier site/) : page globale + une page par session."""
+import os
 import shutil
 from datetime import date, datetime
 from pathlib import Path
@@ -22,10 +23,29 @@ def fr_date(iso):
 
 def ai_flags():
     errs = ai.STATUS["errors"]
-    return {"ai_on": ai.STATUS["enabled"], "ai_error": errs[-1][:200] if errs else ""}
+    on = ai.STATUS["enabled"] or bool(os.environ.get("ANTHROPIC_API_KEY", "").strip())
+    return {"ai_on": on, "ai_error": errs[-1][:200] if errs else ""}
 
 
-def build(games, cfg, champs, warning=None):
+def plan_ai(sessions, ia_sessions):
+    """Quelles soirées reçoivent un débrief IA lors de ce passage.
+
+    nouvelles : seulement la dernière soirée, si elle n'a pas encore de débrief (défaut)
+    derniere  : refaire le débrief de la dernière soirée (même s'il existe)
+    toutes    : toutes les soirées sans débrief (rattrapage, dans la limite du plafond)
+    aucune    : aucun appel IA pour les sessions
+    """
+    dates = [s["date"] for s in sessions]
+    if not dates or ia_sessions == "aucune":
+        return set()
+    if ia_sessions == "derniere":
+        return {dates[-1]}
+    if ia_sessions == "toutes":
+        return {d for d in reversed(dates) if not ai.load("session", d)}
+    return {dates[-1]} if not ai.load("session", dates[-1]) else set()
+
+
+def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=False):
     if not games:
         print("Aucune partie : rien à générer.")
         return
@@ -57,15 +77,32 @@ def build(games, cfg, champs, warning=None):
         shutil.copy(f, OUT / "img" / f.name)
     print(f"Icônes : {len(ok)}/{len(used)} disponibles.")
 
-    print("Analyse IA globale…")
-    g_ai = ai.global_analysis(grep, cfg, name)
+    g_ai = ai.load("global")
+    if ia_global or (cfg.get("ai", {}).get("global_auto") and not g_ai):
+        print("Analyse IA globale…")
+        text = ai.global_analysis(grep, cfg, name)
+        if text:
+            g_ai = ai.save("global", text, games=len(games))
+    todo = plan_ai(sessions, ia_sessions)
+    # La plus récente d'abord, pour qu'elle passe avant le plafond d'appels
+    for s in sorted(sessions, key=lambda x: x["date"], reverse=True):
+        if s["date"] in todo:
+            limit = int(cfg.get("ai", {}).get("max_calls_per_run", 3))
+            if ai.STATUS["calls"] >= limit:
+                print(f"[info] Plafond de {limit} appel(s) IA atteint : les autres soirées "
+                      "seront faites au prochain lancement « toutes ».")
+                break
+            print(f"Débrief IA de la session du {s['date']}…")
+            text = ai.session_analysis(stats.session_report(s, games, cfg), grep, cfg, name)
+            if text:
+                ai.save("session", text, s["date"], games=len(s["games"]))
+    print(f"Appels IA effectués lors de ce passage : {ai.STATUS['calls']}")
     generated = datetime.now().strftime("%d/%m/%Y %H:%M")
 
     session_pages = []
     for i, s in enumerate(sessions):
         srep = stats.session_report(s, games, cfg)
-        print(f"Session du {s['date']}…")
-        s_ai = ai.session_analysis(srep, grep, cfg, name)
+        s_ai = ai.load("session", s["date"])
         prev_s = sessions[i - 1]["date"] if i > 0 else None
         next_s = sessions[i + 1]["date"] if i + 1 < len(sessions) else None
         html = env.get_template("session.html").render(

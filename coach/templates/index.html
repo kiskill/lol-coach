@@ -34,9 +34,12 @@
 <section class="card ai">
   <h2>Analyse du coach IA</h2>
   {% if ai_text %}
-    <div class="prose">{{ ai_text | md | safe }}</div>
+    <p class="ai-meta">Bilan généré le {{ ai_text.generated }}{% if ai_text.games %} sur {{ ai_text.games }} parties{% endif %}. Pour l'actualiser : Actions → Run workflow → cocher « Regénérer le bilan global IA ».</p>
+    <div class="prose">{{ ai_text.text | md | safe }}</div>
+  {% elif ai_error %}
+    <p class="muted">L'analyse IA n'a pas pu être générée lors de ce passage ({{ ai_error }}). Voici les constats automatiques en attendant.</p>
   {% elif ai_on %}
-    <p class="muted">L'analyse IA n'a pas pu être générée lors de ce passage ({{ ai_error }}). Elle sera retentée au prochain lancement. En attendant, voici les constats automatiques.</p>
+    <p class="muted">Pas encore de bilan IA global. Il se génère <b>à la demande</b> : Actions → Run workflow → cocher « Regénérer le bilan global IA ». En attendant, voici les constats automatiques.</p>
   {% else %}
     <p class="muted">Analyse IA désactivée : ajoute le secret <code>ANTHROPIC_API_KEY</code> pour l'activer. En attendant, voici les constats automatiques.</p>
   {% endif %}

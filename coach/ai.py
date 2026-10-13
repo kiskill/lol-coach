@@ -1,17 +1,23 @@
-"""Analyse texte par IA (API Claude d'Anthropic), avec cache pour ne payer qu'une fois."""
-import hashlib
+"""Analyse texte par IA (API Claude d'Anthropic).
+
+Chaque texte est généré UNE fois puis conservé dans data/ai/ :
+  data/ai/global.json             -> bilan global (regénéré seulement sur demande)
+  data/ai/sessions/AAAA-MM-JJ.json -> débrief d'une soirée (généré une fois)
+Les relances, pushs ou redéploiements réutilisent ces fichiers sans rien payer.
+"""
 import json
 import os
 import time
+from datetime import datetime
 from pathlib import Path
 
 import requests
 
-CACHE = Path("data/ai_cache")
+STORE = Path("data/ai")
 API_URL = "https://api.anthropic.com/v1/messages"
 PROMPT_VERSION = "v2"
 # État de l'IA pour l'affichage : désactivée (pas de clé) ou en erreur
-STATUS = {"enabled": False, "errors": []}
+STATUS = {"enabled": False, "errors": [], "calls": 0}
 
 SYSTEM = """Tu es un coach League of Legends expérimenté qui analyse les statistiques \
 d'une équipe amateur. Tu écris en français, de façon directe et concrète, pour le coach \
@@ -119,10 +125,11 @@ def _call(system, user, cfg):
     STATUS["enabled"] = bool(key) and ai.get("enabled", True)
     if not STATUS["enabled"]:
         return None
-    digest = hashlib.sha256(f"{PROMPT_VERSION}{ai.get('model')}{system}{user}".encode()).hexdigest()[:24]
-    cached = CACHE / f"{digest}.md"
-    if cached.exists() and cached.read_text(encoding="utf-8").strip():
-        return cached.read_text(encoding="utf-8")
+    limit = int(ai.get("max_calls_per_run", 3))
+    if STATUS["calls"] >= limit:
+        print(f"[info] Plafond de {limit} analyse(s) IA par passage atteint : on s'arrête là.")
+        return None
+    STATUS["calls"] += 1
     base = max(int(ai.get("max_tokens", 8000)), 8000)
     text, reason = "", None
     # 2 essais : si la réponse est vide (limite de longueur atteinte), on double la limite
@@ -154,9 +161,29 @@ def _call(system, user, cfg):
     if not text.strip():
         STATUS["errors"].append(reason or "réponse vide")
         return None
-    CACHE.mkdir(parents=True, exist_ok=True)
-    cached.write_text(text, encoding="utf-8")
     return text
+
+
+# ------------------------------------------------------------------ textes conservés
+def _path(kind, date=None):
+    return STORE / "global.json" if kind == "global" else STORE / "sessions" / f"{date}.json"
+
+
+def load(kind, date=None):
+    f = _path(kind, date)
+    if f.exists():
+        data = json.loads(f.read_text(encoding="utf-8"))
+        if data.get("text", "").strip():
+            return data
+    return None
+
+
+def save(kind, text, date=None, **meta):
+    f = _path(kind, date)
+    f.parent.mkdir(parents=True, exist_ok=True)
+    data = {"text": text, "generated": datetime.now().strftime("%d/%m/%Y"), **meta}
+    f.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    return data
 
 
 def global_analysis(rep, cfg, name):
