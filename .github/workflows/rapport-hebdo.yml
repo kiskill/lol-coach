@@ -1,6 +1,10 @@
 name: Rapport hebdomadaire
 
 on:
+  # Déclenchement automatique à chaque push sur la branche main, sauf si seules les données ont changé
+  push: 
+    branches: [main]
+    paths-ignore: ["data/**"]
   # Chaque mercredi à 5h UTC (7h à Paris en été, 6h en hiver),
   # le lendemain de la soirée de jeu du mardi. Ajuste si besoin.
   schedule:
@@ -47,7 +51,7 @@ jobs:
           RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # Lancement automatique du mercredi : valeurs par défaut (dernière soirée uniquement)
-          IA_SESSIONS: ${{ inputs.ia_sessions || 'nouvelles' }}
+          IA_SESSIONS: ${{ github.event_name == 'push' && 'aucune' || inputs.ia_sessions || 'nouvelles' }}
           IA_GLOBAL: ${{ inputs.ia_global && 'true' || 'false' }}
 
       - name: Sauvegarder les données dans le dépôt
