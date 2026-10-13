@@ -2,7 +2,7 @@
 #  Configuration de l'outil de coaching — à adapter à ton équipe
 # =============================================================
 
-team_name: "Mon équipe"
+team_name: "Les Chals"
 
 # Serveur : EUW -> plateforme "euw1", routage régional "europe"
 platform: euw1
@@ -27,15 +27,15 @@ session_cutoff_hour: 6
 # Les joueurs : Riot ID exact (Pseudo#TAG) et rôle principal
 # Rôles possibles : Top, Jungle, Mid, ADC, Support
 players:
-  - riot_id: "PseudoTop#EUW"
+  - riot_id: "Durtyweedz#EUW"
     role: Top
-  - riot_id: "PseudoJungle#EUW"
+  - riot_id: "Kiskill#EUW"
     role: Jungle
-  - riot_id: "PseudoMid#EUW"
+  - riot_id: "Eoden974#EUW"
     role: Mid
-  - riot_id: "PseudoADC#EUW"
+  - riot_id: "Andorian#EUW"
     role: ADC
-  - riot_id: "PseudoSupport#EUW"
+  - riot_id: "ChUck NoUb#EUW"
     role: Support
 
 # Champ-pools déclarés (sert à l'analyse IA pour proposer des extensions)

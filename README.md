@@ -30,7 +30,7 @@ git init
 git add .
 git commit -m "Premier jet"
 git branch -M main
-git remote add origin https://github.com/TON_PSEUDO/lol-coach.git
+git remote add origin https://github.com/kiskill/lol-coach.git
 git push -u origin main
 ```
 
