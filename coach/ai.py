@@ -156,19 +156,33 @@ def _call(system, user, cfg):
         print(f"[info] Plafond de {limit} analyse(s) IA par passage atteint : on s'arrête là.")
         return None
     STATUS["calls"] += 1
-    base = max(int(ai.get("max_tokens", 8000)), 8000)
-    text, reason = "", None
-    # 2 essais : si la réponse est vide (limite de longueur atteinte), on double la limite
-    for max_tokens in (base, base * 2):
+    base = max(int(ai.get("max_tokens", 16000)), 16000)
+    effort = ai.get("effort", "medium")
+    # La réflexion interne du modèle est décomptée de max_tokens. Avec l'effort par défaut
+    # ("high"), elle peut tout consommer avant la réponse. On fixe donc un effort modéré,
+    # puis, si la réponse est encore vide, on réessaie en "low" avec une limite doublée.
+    attempts = [(base, effort), (base * 2, "low")]
+    text, reason, use_effort = "", None, True
+    for max_tokens, eff in attempts:
+        body = {
+            "model": ai.get("model", "claude-sonnet-5-5"),
+            "max_tokens": max_tokens,
+            "system": system,
+            "messages": [{"role": "user", "content": user}],
+        }
+        if use_effort:
+            body["output_config"] = {"effort": eff}
         try:
-            r = requests.post(API_URL, timeout=300, headers={
+            r = requests.post(API_URL, timeout=600, headers={
                 "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json",
-            }, json={
-                "model": ai.get("model", "claude-sonnet-5-5"),
-                "max_tokens": max_tokens,
-                "system": system,
-                "messages": [{"role": "user", "content": user}],
-            })
+            }, json=body)
+            if r.status_code == 400 and use_effort and "output_config" in r.text:
+                # Modèle qui ne connaît pas le réglage d'effort : on réessaie sans
+                print("[info] Ce modèle n'accepte pas le réglage d'effort, nouvel essai sans.")
+                use_effort = False
+                r = requests.post(API_URL, timeout=600, headers={
+                    "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json",
+                }, json={k: v for k, v in body.items() if k != "output_config"})
             if r.status_code >= 400:
                 reason = f"erreur {r.status_code} : {r.text[:300]}"
                 print(f"[avertissement] Analyse IA impossible, {reason}")
@@ -177,10 +191,13 @@ def _call(system, user, cfg):
                 continue
             data = r.json()
             text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+            usage = data.get("usage", {})
+            print(f"[info] IA : {usage.get('input_tokens', '?')} jetons en entrée, "
+                  f"{usage.get('output_tokens', '?')} en sortie (effort {eff if use_effort else 'par défaut'}).")
             if text.strip():
                 break
             reason = f"réponse vide (stop_reason={data.get('stop_reason')})"
-            print(f"[avertissement] {reason}, nouvel essai avec une limite plus haute…")
+            print(f"[avertissement] {reason}, nouvel essai plus économe…")
         except Exception as exc:
             reason = str(exc)
             print(f"[avertissement] Analyse IA impossible : {exc}")
