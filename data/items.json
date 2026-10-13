@@ -1,0 +1,4355 @@
+{
+ "version": "16.20.1",
+ "items": {
+  "1001": {
+   "name": "Bottes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1004": {
+   "name": "Charme féérique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1006": {
+   "name": "Collier rafraîchissant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1011": {
+   "name": "Ceinture du géant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1018": {
+   "name": "Cape d'agilité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1026": {
+   "name": "Baguette explosive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1027": {
+   "name": "Cristal de saphir",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1028": {
+   "name": "Cristal de rubis",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1029": {
+   "name": "Armure d'étoffe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1031": {
+   "name": "Cotte de mailles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1033": {
+   "name": "Cape de néant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1035": {
+   "name": "Couteau incandescent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1036": {
+   "name": "Épée longue",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1037": {
+   "name": "Pioche",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1038": {
+   "name": "BF Glaive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1039": {
+   "name": "Lame des frimas",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1040": {
+   "name": "Lame d'obsidienne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1042": {
+   "name": "Dague",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1043": {
+   "name": "Arc courbe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1052": {
+   "name": "Tome d'amplification",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1053": {
+   "name": "Sceptre vampirique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1054": {
+   "name": "Bouclier de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1055": {
+   "name": "Lame de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1056": {
+   "name": "Anneau de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1057": {
+   "name": "Manteau de Négatron",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1058": {
+   "name": "Baguette trop grosse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1082": {
+   "name": "Sceau noir",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1083": {
+   "name": "Abatteur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1086": {
+   "name": "Arc de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1090": {
+   "name": "Quête : Voie du haut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1091": {
+   "name": "Quête : Voie du milieu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1092": {
+   "name": "Quête : Voie du bas",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1093": {
+   "name": "Quête : Support",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1094": {
+   "name": "Quête : Jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1101": {
+   "name": "Bébé Chardent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1102": {
+   "name": "Bébé Saute-nuages",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1103": {
+   "name": "Bébé Ixamandre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1104": {
+   "name": "Œil du héraut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1105": {
+   "name": "Bébé Ixamandre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1106": {
+   "name": "Bébé Saute-nuages",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1107": {
+   "name": "Bébé Chardent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1111": {
+   "name": "Jarvan I",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1120": {
+   "name": "Casque de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1200": {
+   "name": "Quête de la voie du haut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1201": {
+   "name": "Quête de la voie du milieu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1202": {
+   "name": "Quête de la voie du bas",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1203": {
+   "name": "Quête de support",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1204": {
+   "name": "Quête de la jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1205": {
+   "name": "Récompense de la quête de la jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1206": {
+   "name": "Récompense de quête de la voie du milieu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1207": {
+   "name": "Récompense de quête de la voie du bas",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1208": {
+   "name": "Récompense de quête du support",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1209": {
+   "name": "Récompense de la quête de la jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1210": {
+   "name": "Récompense de la quête de la jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1211": {
+   "name": "Récompense de la quête de la jungle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1220": {
+   "name": "Téléportation débridée (Récompense de quête de la voie du haut)",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1221": {
+   "name": "Récompense de quête de la voie du haut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1222": {
+   "name": "Quête de la voie du haut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "123430": {
+   "name": "Rite des ruines",
+   "legendary": false,
+   "antiheal": false
+  },
+  "124011": {
+   "name": "Épée de l'aube",
+   "legendary": false,
+   "antiheal": false
+  },
+  "126697": {
+   "name": "Orgueil",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1500": {
+   "name": "Balles perforantes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1501": {
+   "name": "Fortification",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1502": {
+   "name": "Armure renforcée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1503": {
+   "name": "Œil du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1504": {
+   "name": "Avant-garde",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1505": {
+   "name": "Armure renforcée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1506": {
+   "name": "Armure renforcée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1507": {
+   "name": "Surchargé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1508": {
+   "name": "Chaussettes anti-tourelles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1509": {
+   "name": "Impulsivité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1510": {
+   "name": "Impulsivité phreakienne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1511": {
+   "name": "Armure de super mech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1512": {
+   "name": "Champ de force de super mech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1515": {
+   "name": "Bouclier de tourelle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1516": {
+   "name": "Prime de bâtiment",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1517": {
+   "name": "Prime de bâtiment",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1518": {
+   "name": "Prime de bâtiment",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1519": {
+   "name": "Prime de bâtiment",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1520": {
+   "name": "Surcharge",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1521": {
+   "name": "Fortification",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1522": {
+   "name": "Amélioration de tourelle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1523": {
+   "name": "Surcharge",
+   "legendary": false,
+   "antiheal": false
+  },
+  "1524": {
+   "name": "Surcroissance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2001": {
+   "name": "Rappel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2002": {
+   "name": "Rappel renforcé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2003": {
+   "name": "Potion de soin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2007": {
+   "name": "Rappel désactivé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2008": {
+   "name": "",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2010": {
+   "name": "Biscuit de longévité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2015": {
+   "name": "Éclat de Kircheis",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2019": {
+   "name": "Sceau d'acier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2020": {
+   "name": "Brutaliseur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2021": {
+   "name": "Foreuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2022": {
+   "name": "Poussière luisante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2031": {
+   "name": "Potion rechargeable",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2033": {
+   "name": "Potion de corruption",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2049": {
+   "name": "Amulette du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2050": {
+   "name": "Linceul du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2051": {
+   "name": "Corne du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2052": {
+   "name": "Poro-Snax",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2055": {
+   "name": "Balise de contrôle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2056": {
+   "name": "Balise camouflée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2065": {
+   "name": "Chant de guerre de Shurelya",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2138": {
+   "name": "Élixir de fer",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2139": {
+   "name": "Élixir de sorcellerie",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2140": {
+   "name": "Élixir de rage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2141": {
+   "name": "Jus chapi-chapo",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2142": {
+   "name": "Jus de puissance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2143": {
+   "name": "Jus de vitalité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2144": {
+   "name": "Jus de hâte",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2145": {
+   "name": "Chance aux dés",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2146": {
+   "name": "Chance aux dés améliorée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2147": {
+   "name": "Niveau d'optimisation",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2150": {
+   "name": "Élixir de compétence",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2151": {
+   "name": "Élixir d'avarice",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2152": {
+   "name": "Élixir de force",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2161": {
+   "name": "Jus de puissance de Bandle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2162": {
+   "name": "Jus de vitalité de Bandle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2163": {
+   "name": "Jus de hâte de Bandle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220000": {
+   "name": "Bonus de stats",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220001": {
+   "name": "Objet de combattant légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220002": {
+   "name": "Objet de tireur légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220003": {
+   "name": "Objet d'assassin légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220004": {
+   "name": "Objet de mage légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220005": {
+   "name": "Objet de tank légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220006": {
+   "name": "Objet de support légendaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220007": {
+   "name": "Objet prismatique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220008": {
+   "name": "Bon pour Enclume",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220009": {
+   "name": "Bon pour Enclume à stats dorée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220010": {
+   "name": "Bon pour Enclume à stats prismatique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220011": {
+   "name": "Bon pour Courage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220012": {
+   "name": "Laméclat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "220013": {
+   "name": "Poro-Snax",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221011": {
+   "name": "Ceinture du géant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221026": {
+   "name": "Baguette explosive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221031": {
+   "name": "Cotte de mailles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221038": {
+   "name": "BF Glaive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221043": {
+   "name": "Arc courbe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221053": {
+   "name": "Sceptre vampirique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221057": {
+   "name": "Manteau de Négatron",
+   "legendary": false,
+   "antiheal": false
+  },
+  "221058": {
+   "name": "Baguette trop grosse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222022": {
+   "name": "Poussière luisante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222051": {
+   "name": "Corne du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222065": {
+   "name": "Chant de guerre de Shurelya",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222141": {
+   "name": "Jus chapi-chapo",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222502": {
+   "name": "Désespoir infini",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222503": {
+   "name": "Torche noire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222504": {
+   "name": "Rookern kaénique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222510": {
+   "name": "Aube et crépuscule",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222512": {
+   "name": "Chasseur de monstres",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222517": {
+   "name": "Faim insatiable",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222522": {
+   "name": "Actualisateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222523": {
+   "name": "Lunettes Hextech C44",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222524": {
+   "name": "Flûtes de Bandle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222525": {
+   "name": "Harnais protoplasmique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222526": {
+   "name": "Diadème des murmures",
+   "legendary": false,
+   "antiheal": false
+  },
+  "222530": {
+   "name": "Diadème musical",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223001": {
+   "name": "Linceul de la congruence",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223002": {
+   "name": "Sac de l'explorateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223003": {
+   "name": "Bâton de l'archange",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223004": {
+   "name": "Manamune",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223005": {
+   "name": "Bottes fantomatiques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223006": {
+   "name": "Jambières du berzerker",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223008": {
+   "name": "Jambières gloutonnes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223009": {
+   "name": "Bottes de célérité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223011": {
+   "name": "Putrificateur techno-chimique",
+   "legendary": false,
+   "antiheal": true
+  },
+  "223020": {
+   "name": "Chaussures de sorcier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223026": {
+   "name": "Ange gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223031": {
+   "name": "Lame d'infini",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223032": {
+   "name": "Flèches des Yun Tal",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223033": {
+   "name": "Rappel mortel",
+   "legendary": false,
+   "antiheal": true
+  },
+  "223036": {
+   "name": "Salutations de Dominik",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223039": {
+   "name": "Jugement d'Atma",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223040": {
+   "name": "Étreinte du séraphin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223042": {
+   "name": "Muramana",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223046": {
+   "name": "Danseur fantôme",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223047": {
+   "name": "Coques en acier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223050": {
+   "name": "Convergence de Zeke",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223053": {
+   "name": "Gage de Sterak",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223057": {
+   "name": "Brillance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223065": {
+   "name": "Visage spirituel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223067": {
+   "name": "Gemme exaltante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223068": {
+   "name": "Égide solaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223069": {
+   "name": "Immolation du Néant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223071": {
+   "name": "Couperet noir",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223072": {
+   "name": "Soif-de-sang",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223073": {
+   "name": "Hexplaque expérimentale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223074": {
+   "name": "Hydre vorace",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223075": {
+   "name": "Cotte épineuse",
+   "legendary": false,
+   "antiheal": true
+  },
+  "223078": {
+   "name": "Force de la trinité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223084": {
+   "name": "Cœuracier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223085": {
+   "name": "Ouragan de Runaan",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223087": {
+   "name": "Poignard de Statikk",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223089": {
+   "name": "Coiffe de Rabadon",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223091": {
+   "name": "Au bout du rouleau",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223094": {
+   "name": "Canon ultrarapide",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223095": {
+   "name": "Lame tempête",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223100": {
+   "name": "Fléau de liche",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223102": {
+   "name": "Voile de la banshee",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223105": {
+   "name": "Égide de la légion",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223107": {
+   "name": "Rédemption",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223109": {
+   "name": "Vœu du chevalier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223110": {
+   "name": "Cœur gelé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223111": {
+   "name": "Sandales de Mercure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223112": {
+   "name": "Orbe du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223115": {
+   "name": "Dent de Nashor",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223116": {
+   "name": "Sceptre de Rylai",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223118": {
+   "name": "Malfaisance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223119": {
+   "name": "Approche de l'hiver",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223121": {
+   "name": "Fimbulvetr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223124": {
+   "name": "Lame enragée de Guinsoo",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223135": {
+   "name": "Bâton du vide",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223137": {
+   "name": "Fleur de crypte",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223139": {
+   "name": "Cimeterre mercuriel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223142": {
+   "name": "Lame spectre de Youmuu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223143": {
+   "name": "Présage de Randuin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223146": {
+   "name": "Pistolame Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223152": {
+   "name": "Ceinture-roquette Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223153": {
+   "name": "Lame du roi déchu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223156": {
+   "name": "Gueule de Malmortius",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223157": {
+   "name": "Sablier de Zhonya",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223158": {
+   "name": "Bottes de lucidité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223161": {
+   "name": "Lance de Shojin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223165": {
+   "name": "Morellonomicon",
+   "legendary": false,
+   "antiheal": true
+  },
+  "223172": {
+   "name": "Zéphyr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223177": {
+   "name": "Lame du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223181": {
+   "name": "Brise-coques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223184": {
+   "name": "Marteau du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223185": {
+   "name": "Poignard du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223190": {
+   "name": "Médaillon de l'Iron Solari",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223193": {
+   "name": "Lithoplastron de gargouille",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223222": {
+   "name": "Bénédiction de Mikael",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223302": {
+   "name": "Terminus",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223504": {
+   "name": "Encensoir ardent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223508": {
+   "name": "Faux spectrale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223742": {
+   "name": "Plaque du mort",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223748": {
+   "name": "Hydre titanesque",
+   "legendary": false,
+   "antiheal": false
+  },
+  "223814": {
+   "name": "Manteau de la nuit",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224004": {
+   "name": "Sabre spectral",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224005": {
+   "name": "Mandat impérial",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224401": {
+   "name": "Force de la nature",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224403": {
+   "name": "Spatule dorée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224628": {
+   "name": "Concentration lointaine",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224629": {
+   "name": "Volonté cosmique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224633": {
+   "name": "Créateur de failles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224636": {
+   "name": "Moissonneur nocturne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224637": {
+   "name": "Étreinte démoniaque",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224644": {
+   "name": "Couronne de la Reine brisée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224645": {
+   "name": "Flamme-ombre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "224646": {
+   "name": "Onde orageuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226035": {
+   "name": "Aube de Haut-Lac-d'Argent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226333": {
+   "name": "Danse de la mort",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226609": {
+   "name": "Épée dentelée chimico-punk",
+   "legendary": false,
+   "antiheal": true
+  },
+  "226610": {
+   "name": "Ciel éventré",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226616": {
+   "name": "Bâton des flots",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226617": {
+   "name": "Régénérateur de pierre de lune",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226620": {
+   "name": "Échos d'Helia",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226621": {
+   "name": "Cœur de l'aube",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226630": {
+   "name": "Éviscérateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226631": {
+   "name": "Estropieur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226632": {
+   "name": "Pourfendeur divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226653": {
+   "name": "Affliction de Liandry",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226655": {
+   "name": "Écho de Luden",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226656": {
+   "name": "Gel éternel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226657": {
+   "name": "Bâton séculaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226660": {
+   "name": "",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226662": {
+   "name": "Gantelet givrant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226664": {
+   "name": "Rayonnement du vide",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226665": {
+   "name": "Jak'Sho, le Protéiforme",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226667": {
+   "name": "Vertu radieuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226668": {
+   "name": "Hydre ultra",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226671": {
+   "name": "Force du vent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226672": {
+   "name": "Tueur de krakens",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226673": {
+   "name": "Arc-bouclier immortel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226675": {
+   "name": "Tremblelame navori",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226676": {
+   "name": "Percepteur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226691": {
+   "name": "Épée vespérale de Draktharr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226692": {
+   "name": "Éclipse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226693": {
+   "name": "Griffes du rôdeur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226694": {
+   "name": "Rancune de Serylda",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226695": {
+   "name": "Crochet de serpent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226696": {
+   "name": "Arc axiomatique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226697": {
+   "name": "Orgueil",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226698": {
+   "name": "Hydre profane",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226699": {
+   "name": "Cyclosabre voltaïque",
+   "legendary": false,
+   "antiheal": false
+  },
+  "226701": {
+   "name": "Opportunité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228001": {
+   "name": "Chaînes de l'anathème",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228002": {
+   "name": "Coiffe de Wooglet",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228003": {
+   "name": "Lame funeste",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228004": {
+   "name": "Casque adaptatif",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228005": {
+   "name": "Couperet d'obsidienne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228006": {
+   "name": "Épée sanglante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228008": {
+   "name": "Glaive runique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228009": {
+   "name": "Multi-outils",
+   "legendary": false,
+   "antiheal": false
+  },
+  "228020": {
+   "name": "Masque abyssal",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2403": {
+   "name": "Désintégrateur de sbires",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2420": {
+   "name": "Protège-bras du savant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2421": {
+   "name": "Protège-bras pulvérisé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2422": {
+   "name": "Chaussures légèrement magiques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2501": {
+   "name": "Armure sanguine",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2502": {
+   "name": "Désespoir infini",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2503": {
+   "name": "Torche noire",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2504": {
+   "name": "Rookern kaénique",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2508": {
+   "name": "Cendres fatidiques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2510": {
+   "name": "Aube et crépuscule",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2512": {
+   "name": "Chasseur de monstres",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2517": {
+   "name": "Faim insatiable",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2520": {
+   "name": "Briseur de bastion",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2522": {
+   "name": "Actualisateur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2523": {
+   "name": "Lunettes Hextech C44",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2524": {
+   "name": "Flûtes de Bandle",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2525": {
+   "name": "Harnais protoplasmique",
+   "legendary": true,
+   "antiheal": false
+  },
+  "2526": {
+   "name": "Diadème des murmures",
+   "legendary": false,
+   "antiheal": false
+  },
+  "2530": {
+   "name": "Diadème musical",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3001": {
+   "name": "Linceul de la congruence",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3002": {
+   "name": "Sac de l'explorateur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3003": {
+   "name": "Bâton de l'archange",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3004": {
+   "name": "Manamune",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3005": {
+   "name": "Bottes fantomatiques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3006": {
+   "name": "Jambières du berzerker",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3008": {
+   "name": "Jambières gloutonnes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3009": {
+   "name": "Bottes de célérité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3010": {
+   "name": "Semelles symbiotiques",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3011": {
+   "name": "Putrificateur techno-chimique",
+   "legendary": false,
+   "antiheal": true
+  },
+  "3012": {
+   "name": "Calice de bénédiction",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3013": {
+   "name": "Âmes synchronisées",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3020": {
+   "name": "Chaussures de sorcier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3023": {
+   "name": "Pendentif du Puits de la vie",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3024": {
+   "name": "Bouclier glacial",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3026": {
+   "name": "Ange gardien",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3031": {
+   "name": "Lame d'infini",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3032": {
+   "name": "Flèches des Yun Tal",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3033": {
+   "name": "Rappel mortel",
+   "legendary": true,
+   "antiheal": true
+  },
+  "3035": {
+   "name": "Dernier souffle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3036": {
+   "name": "Salutations de Dominik",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3039": {
+   "name": "Jugement d'Atma",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3040": {
+   "name": "Étreinte du séraphin",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3041": {
+   "name": "Voleur d'âmes de Mejai",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3042": {
+   "name": "Muramana",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3044": {
+   "name": "Phage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3046": {
+   "name": "Danseur fantôme",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3047": {
+   "name": "Coques en acier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3050": {
+   "name": "Convergence de Zeke",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3051": {
+   "name": "Hache d'Âtrinsèque",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3053": {
+   "name": "Gage de Sterak",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3057": {
+   "name": "Brillance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3065": {
+   "name": "Visage spirituel",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3066": {
+   "name": "Plaque de lune ailée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3067": {
+   "name": "Gemme exaltante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3068": {
+   "name": "Égide solaire",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3070": {
+   "name": "Larme de la déesse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3071": {
+   "name": "Couperet noir",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3072": {
+   "name": "Soif-de-sang",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3073": {
+   "name": "Hexplaque expérimentale",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3074": {
+   "name": "Hydre vorace",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3075": {
+   "name": "Cotte épineuse",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3076": {
+   "name": "Armure roncière",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3077": {
+   "name": "Tiamat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3078": {
+   "name": "Force de la trinité",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3082": {
+   "name": "Mailles du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3083": {
+   "name": "Armure de Warmog",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3084": {
+   "name": "Cœuracier",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3085": {
+   "name": "Ouragan de Runaan",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3086": {
+   "name": "Zèle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3087": {
+   "name": "Poignard de Statikk",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3089": {
+   "name": "Coiffe de Rabadon",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3091": {
+   "name": "Au bout du rouleau",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3094": {
+   "name": "Canon ultrarapide",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3095": {
+   "name": "Lame tempête",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3100": {
+   "name": "Fléau de liche",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3102": {
+   "name": "Voile de la banshee",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3105": {
+   "name": "Égide de la légion",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3107": {
+   "name": "Rédemption",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3108": {
+   "name": "Codex méphitique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3109": {
+   "name": "Vœu du chevalier",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3110": {
+   "name": "Cœur gelé",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3111": {
+   "name": "Sandales de Mercure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3112": {
+   "name": "Orbe du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3113": {
+   "name": "Feu follet éthéré",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3114": {
+   "name": "Idole interdite",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3115": {
+   "name": "Dent de Nashor",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3116": {
+   "name": "Sceptre de Rylai",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3117": {
+   "name": "Bottes de mobilité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3118": {
+   "name": "Malfaisance",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3119": {
+   "name": "Approche de l'hiver",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3121": {
+   "name": "Fimbulvetr",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3123": {
+   "name": "Marque du bourreau",
+   "legendary": false,
+   "antiheal": true
+  },
+  "3124": {
+   "name": "Lame enragée de Guinsoo",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3128": {
+   "name": "Bracelet de feu mortel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3131": {
+   "name": "Épée du divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3133": {
+   "name": "Marteau de Caulfield",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3134": {
+   "name": "Dague dentelée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3135": {
+   "name": "Bâton du vide",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3137": {
+   "name": "Fleur de crypte",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3139": {
+   "name": "Cimeterre mercuriel",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3140": {
+   "name": "Ceinture de mercure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3142": {
+   "name": "Lame spectre de Youmuu",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3143": {
+   "name": "Présage de Randuin",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3144": {
+   "name": "Fronde de l'éclaireur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3145": {
+   "name": "Alternateur Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3146": {
+   "name": "Pistolame Hextech",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3147": {
+   "name": "Déguisement hanté",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3152": {
+   "name": "Ceinture-roquette Hextech",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3153": {
+   "name": "Lame du roi déchu",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3155": {
+   "name": "Hexterminateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3156": {
+   "name": "Gueule de Malmortius",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3157": {
+   "name": "Sablier de Zhonya",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3158": {
+   "name": "Bottes de lucidité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3161": {
+   "name": "Lance de Shojin",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3165": {
+   "name": "Morellonomicon",
+   "legendary": true,
+   "antiheal": true
+  },
+  "3168": {
+   "name": "Voie immortelle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3170": {
+   "name": "Célérité martiale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3171": {
+   "name": "Lucidité pourpre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3172": {
+   "name": "Jambières de métal",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3173": {
+   "name": "Broyeuses à chaînes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3174": {
+   "name": "Avancée blindée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3175": {
+   "name": "Chaussures de lanceur de sorts",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3176": {
+   "name": "Semelles militaires",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3177": {
+   "name": "Lame du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3179": {
+   "name": "Glaive d'ombre",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3181": {
+   "name": "Brise-coques",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3184": {
+   "name": "Marteau du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3190": {
+   "name": "Médaillon de l'Iron Solari",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3193": {
+   "name": "Lithoplastron de gargouille",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3211": {
+   "name": "Manteau de spectre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "322065": {
+   "name": "Chant de guerre de Shurelya",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3222": {
+   "name": "Bénédiction de Mikael",
+   "legendary": true,
+   "antiheal": false
+  },
+  "322526": {
+   "name": "Diadème des murmures",
+   "legendary": false,
+   "antiheal": false
+  },
+  "322530": {
+   "name": "Diadème musical",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323002": {
+   "name": "Sac de l'explorateur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323003": {
+   "name": "Bâton de l'archange",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323004": {
+   "name": "Manamune",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323040": {
+   "name": "Étreinte du séraphin",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323042": {
+   "name": "Muramana",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323050": {
+   "name": "Convergence de Zeke",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323070": {
+   "name": "Larme de la déesse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "323075": {
+   "name": "Cotte épineuse",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323107": {
+   "name": "Rédemption",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323109": {
+   "name": "Vœu du chevalier",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323110": {
+   "name": "Cœur gelé",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323119": {
+   "name": "Approche de l'hiver",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323121": {
+   "name": "Fimbulvetr",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323190": {
+   "name": "Médaillon de l'Iron Solari",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323222": {
+   "name": "Bénédiction de Mikael",
+   "legendary": true,
+   "antiheal": false
+  },
+  "323504": {
+   "name": "Encensoir ardent",
+   "legendary": true,
+   "antiheal": false
+  },
+  "324005": {
+   "name": "Mandat impérial",
+   "legendary": true,
+   "antiheal": false
+  },
+  "326616": {
+   "name": "Bâton des flots",
+   "legendary": true,
+   "antiheal": false
+  },
+  "326617": {
+   "name": "Régénérateur de pierre de lune",
+   "legendary": true,
+   "antiheal": false
+  },
+  "326620": {
+   "name": "Échos d'Helia",
+   "legendary": true,
+   "antiheal": false
+  },
+  "326621": {
+   "name": "Cœur de l'aube",
+   "legendary": true,
+   "antiheal": false
+  },
+  "326657": {
+   "name": "Bâton séculaire",
+   "legendary": true,
+   "antiheal": false
+  },
+  "328020": {
+   "name": "Masque abyssal",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3302": {
+   "name": "Terminus",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3330": {
+   "name": "Effigie d'épouvantail",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3340": {
+   "name": "Balise camouflée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3348": {
+   "name": "Détecteur arcanique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3349": {
+   "name": "Anomalie radieuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3363": {
+   "name": "Altération divinatoire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3364": {
+   "name": "Brouilleur oraculaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3398": {
+   "name": "Petit cadeau",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3399": {
+   "name": "Cadeau",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3400": {
+   "name": "Votre part",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3430": {
+   "name": "Rite des ruines",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3504": {
+   "name": "Encensoir ardent",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3508": {
+   "name": "Faux spectrale",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3513": {
+   "name": "Œil du héraut",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3599": {
+   "name": "Lance noire de Kalista",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3600": {
+   "name": "Lance noire de Kalista",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3742": {
+   "name": "Plaque du mort",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3748": {
+   "name": "Hydre titanesque",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3801": {
+   "name": "Bracelet cristallin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3802": {
+   "name": "Chapitre perdu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3803": {
+   "name": "Catalyseur de l'éternité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3814": {
+   "name": "Manteau de la nuit",
+   "legendary": true,
+   "antiheal": false
+  },
+  "3850": {
+   "name": "Lame du voleur de sorts",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3851": {
+   "name": "Croc de givre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3853": {
+   "name": "Éclat de glace pure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3854": {
+   "name": "Garde-épaules d'acier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3855": {
+   "name": "Espauliers d'acier runique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3857": {
+   "name": "Épaulières d'Alberoc",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3858": {
+   "name": "Bouclier relique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3859": {
+   "name": "Targe de Targon",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3860": {
+   "name": "Pavois de la montagne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3862": {
+   "name": "Faucille spectrale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3863": {
+   "name": "Croissant de la Nuit de l'horreur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3864": {
+   "name": "Faux de Brume noire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3865": {
+   "name": "Atlas",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3866": {
+   "name": "Boussole runique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3867": {
+   "name": "Trésor des mondes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3869": {
+   "name": "Opposition céleste",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3870": {
+   "name": "Rêve éveillé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3871": {
+   "name": "Pique dimensionnelle de Zaz'Zak",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3876": {
+   "name": "Traîneau du solstice",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3877": {
+   "name": "Mélodie du sang",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3901": {
+   "name": "<rarityLegendary>Feu à volonté</rarityLegendary><br><subtitleLeft><silver>500 serpents d'argent</silver></subtitleLeft>",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3902": {
+   "name": "<rarityLegendary>Jeune Camarde</rarityLegendary><br><subtitleLeft><silver>500 serpents d'argent</silver></subtitleLeft>",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3903": {
+   "name": "<rarityLegendary>Moral élevé</rarityLegendary><br><subtitleLeft><silver>500 serpents d'argent</silver></subtitleLeft>",
+   "legendary": false,
+   "antiheal": false
+  },
+  "3916": {
+   "name": "Orbe de l'oubli",
+   "legendary": false,
+   "antiheal": true
+  },
+  "4003": {
+   "name": "Ligne de vie",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4004": {
+   "name": "Sabre spectral",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4005": {
+   "name": "Mandat impérial",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4010": {
+   "name": "Malédiction du sanguinaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4011": {
+   "name": "Épée de l'aube",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4012": {
+   "name": "Dévoreur des péchés",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4013": {
+   "name": "Tresse électrique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4014": {
+   "name": "Maillet gelé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4015": {
+   "name": "Perplexité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4016": {
+   "name": "Promesse ineffable",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4017": {
+   "name": "Hachette infernale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4401": {
+   "name": "Force de la nature",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4402": {
+   "name": "Médaillon d'excitation",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4403": {
+   "name": "Spatule dorée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443054": {
+   "name": "Serres de sombracier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443055": {
+   "name": "Fulmination",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443056": {
+   "name": "Couronne du Roi-démon",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443058": {
+   "name": "Bouclier de roche en fusion",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443059": {
+   "name": "Manteau de nuit étoilée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443060": {
+   "name": "Épée du divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443061": {
+   "name": "Force de l'entropie",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443062": {
+   "name": "Don de sang",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443063": {
+   "name": "Miracle d'Eleisa",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443064": {
+   "name": "Talisman de l'ascension",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443069": {
+   "name": "Coupe-jarrets",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443079": {
+   "name": "Chimico-scaphandre turbo",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443080": {
+   "name": "Masque des gémeaux",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443081": {
+   "name": "Compagnon Hexclair",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443083": {
+   "name": "Armure de Warmog",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443090": {
+   "name": "Tribut du faucheur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "443193": {
+   "name": "Lithoplastron de gargouille",
+   "legendary": false,
+   "antiheal": false
+  },
+  "444636": {
+   "name": "Moissonneur nocturne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "444637": {
+   "name": "Étreinte démoniaque",
+   "legendary": false,
+   "antiheal": false
+  },
+  "444644": {
+   "name": "Couronne de la Reine brisée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446632": {
+   "name": "Pourfendeur divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446656": {
+   "name": "Gel éternel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446667": {
+   "name": "Vertu radieuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446671": {
+   "name": "Force du vent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446691": {
+   "name": "Épée vespérale de Draktharr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "446693": {
+   "name": "Griffes du rôdeur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447100": {
+   "name": "Lame des mirages",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447101": {
+   "name": "Lame du parieur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447102": {
+   "name": "Réalité fracturée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447103": {
+   "name": "Casque de l'hémomancien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447104": {
+   "name": "Médaillon d'excitation",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447105": {
+   "name": "Promesse empyréenne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447106": {
+   "name": "Cœur de dragon",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447107": {
+   "name": "Guillotine",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447108": {
+   "name": "Sculpteur de rune",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447109": {
+   "name": "Cruauté",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447110": {
+   "name": "Lame des Moonflair",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447111": {
+   "name": "Armure sanguine",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447112": {
+   "name": "Nécrophage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447113": {
+   "name": "Orbe détonant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447114": {
+   "name": "Réverbération",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447115": {
+   "name": "Régicide",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447116": {
+   "name": "Jitte du Kinkou",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447118": {
+   "name": "Cape du pyromancien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447119": {
+   "name": "Paratonnerre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447120": {
+   "name": "Lance de diamant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447121": {
+   "name": "Fil crépusculaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447122": {
+   "name": "Créateur de trous noirs",
+   "legendary": false,
+   "antiheal": false
+  },
+  "447123": {
+   "name": "Marionnettiste",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4628": {
+   "name": "Concentration lointaine",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4629": {
+   "name": "Volonté cosmique",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4630": {
+   "name": "Joyau putréfiant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4632": {
+   "name": "Barrière verdoyante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4633": {
+   "name": "Créateur de failles",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4635": {
+   "name": "Regard parasitaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4636": {
+   "name": "Moissonneur nocturne",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4637": {
+   "name": "Étreinte démoniaque",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4638": {
+   "name": "Pierre de balise attentive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4641": {
+   "name": "Pierre de balise stimulante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4642": {
+   "name": "Miroir en verre de Bandle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4643": {
+   "name": "Pierre de balise vigilante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4644": {
+   "name": "Couronne de la Reine brisée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "4645": {
+   "name": "Flamme-ombre",
+   "legendary": true,
+   "antiheal": false
+  },
+  "4646": {
+   "name": "Onde orageuse",
+   "legendary": true,
+   "antiheal": false
+  },
+  "550001": {
+   "name": "Jauge de PV : bleue",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550002": {
+   "name": "Jauge de PV : orange",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550003": {
+   "name": "Jauge de PV : verte",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550004": {
+   "name": "Jauge de PV : rose",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550005": {
+   "name": "Nettoyage de la jauge de PV : réinitialiser la couleur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550006": {
+   "name": "Jauge de PV : arc-en-ciel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "550007": {
+   "name": "Cadeau",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6029": {
+   "name": "Fouet des Pics-de-fer",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6032": {
+   "name": "Bonus de stats",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6035": {
+   "name": "Aube de Haut-Lac-d'Argent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6333": {
+   "name": "Danse de la mort",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6609": {
+   "name": "Épée dentelée chimico-punk",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6610": {
+   "name": "Ciel éventré",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6616": {
+   "name": "Bâton des flots",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6617": {
+   "name": "Régénérateur de pierre de lune",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6620": {
+   "name": "Échos d'Helia",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6621": {
+   "name": "Cœur de l'aube",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6630": {
+   "name": "Éviscérateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "663039": {
+   "name": "Jugement d'Atma",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663056": {
+   "name": "Couronne du Roi-démon",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663058": {
+   "name": "Bouclier de roche en fusion",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663059": {
+   "name": "Manteau de nuit étoilée",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663060": {
+   "name": "Épée du divin",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663064": {
+   "name": "Talisman de l'ascension de Veigar",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6631": {
+   "name": "Estropieur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663146": {
+   "name": "Pistolame Hextech",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663172": {
+   "name": "Zéphyr",
+   "legendary": true,
+   "antiheal": false
+  },
+  "663193": {
+   "name": "Lithoplastron de gargouille",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6632": {
+   "name": "Pourfendeur divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "664011": {
+   "name": "Épée de l'aube",
+   "legendary": true,
+   "antiheal": false
+  },
+  "664403": {
+   "name": "Spatule dorée",
+   "legendary": true,
+   "antiheal": false
+  },
+  "664644": {
+   "name": "Couronne de la Reine brisée",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6653": {
+   "name": "Tourment de Liandry",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6655": {
+   "name": "Écho de Luden",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6656": {
+   "name": "Gel éternel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6657": {
+   "name": "Bâton séculaire",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6660": {
+   "name": "Cendres de Bami",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6662": {
+   "name": "Gantelet givrant",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6664": {
+   "name": "Rayonnement du vide",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6665": {
+   "name": "Jak'Sho, le Protéiforme",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6667": {
+   "name": "Vertu radieuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6670": {
+   "name": "Carquois zénithien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6671": {
+   "name": "Force du vent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "667101": {
+   "name": "Lame du parieur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "667109": {
+   "name": "Cruauté",
+   "legendary": true,
+   "antiheal": false
+  },
+  "667112": {
+   "name": "Nécrophage",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6672": {
+   "name": "Tueur de krakens",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6673": {
+   "name": "Arc-bouclier immortel",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6675": {
+   "name": "Tremblelame navori",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6676": {
+   "name": "Percepteur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "667666": {
+   "name": "Percepteur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6677": {
+   "name": "Couteau d'enragé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6690": {
+   "name": "Rectrix",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6691": {
+   "name": "Épée vespérale de Draktharr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6692": {
+   "name": "Éclipse",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6693": {
+   "name": "Griffes du rôdeur",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6694": {
+   "name": "Rancune de Serylda",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6695": {
+   "name": "Crochet de serpent",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6696": {
+   "name": "Arc axiomatique",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6697": {
+   "name": "Orgueil",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6698": {
+   "name": "Hydre profane",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6699": {
+   "name": "Cyclosabre voltaïque",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6700": {
+   "name": "Bouclier des Rakkorans",
+   "legendary": false,
+   "antiheal": false
+  },
+  "6701": {
+   "name": "Opportunité",
+   "legendary": true,
+   "antiheal": false
+  },
+  "6702": {
+   "name": "Rapport d'éclaireur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "7050": {
+   "name": "Gangplank Placeholder",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771001": {
+   "name": "Bottes de vitesse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771004": {
+   "name": "Charme féérique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771006": {
+   "name": "Collier rafraîchissant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771011": {
+   "name": "Ceinture du géant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771018": {
+   "name": "Cape d'agilité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771026": {
+   "name": "Baguette explosive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771027": {
+   "name": "Cristal de saphir",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771028": {
+   "name": "Cristal de rubis",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771029": {
+   "name": "Armure d'étoffe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771031": {
+   "name": "Cotte de mailles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771033": {
+   "name": "Cape de néant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771036": {
+   "name": "Épée longue",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771037": {
+   "name": "Pioche",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771038": {
+   "name": "BF Glaive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771039": {
+   "name": "Machette du chasseur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771042": {
+   "name": "Dague",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771043": {
+   "name": "Arc courbe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771051": {
+   "name": "Gants de combat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771052": {
+   "name": "Tome d'amplification",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771053": {
+   "name": "Sceptre vampirique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771054": {
+   "name": "Bouclier de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771055": {
+   "name": "Lame de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771056": {
+   "name": "Anneau de Doran",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771057": {
+   "name": "Manteau de Négatron",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771058": {
+   "name": "Baguette trop grosse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771080": {
+   "name": "Pierre spirituelle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "771500": {
+   "name": "Balles perforantes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772001": {
+   "name": "Rappel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772003": {
+   "name": "Potion de soin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772004": {
+   "name": "Potion de mana",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772009": {
+   "name": "Biscuit de rajeunissement",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772037": {
+   "name": "Élixir de courage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772038": {
+   "name": "Élixir d'agilité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772039": {
+   "name": "Élixir de vivacité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772041": {
+   "name": "Flacon cristallin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772042": {
+   "name": "Élixir de l'oracle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772043": {
+   "name": "Balise de vision",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772044": {
+   "name": "Jalon de vision",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772045": {
+   "name": "Rubis de vision",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772049": {
+   "name": "Pierre de vision",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772050": {
+   "name": "Balise d'explorateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772139": {
+   "name": "",
+   "legendary": false,
+   "antiheal": false
+  },
+  "772140": {
+   "name": "",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773001": {
+   "name": "Sceptre abyssal",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773003": {
+   "name": "Bâton de l'archange",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773004": {
+   "name": "Manamune",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773005": {
+   "name": "Empaleur d'Atma",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773006": {
+   "name": "Jambières du berzerker",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773009": {
+   "name": "Bottes de célérité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773010": {
+   "name": "Catalyste protecteur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773020": {
+   "name": "Chaussures de sorcier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773022": {
+   "name": "Maillet gelé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773023": {
+   "name": "Ombres jumelles",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773024": {
+   "name": "Linceul de glace",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773025": {
+   "name": "Gantelet givrant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773026": {
+   "name": "Ange gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773027": {
+   "name": "Bâton séculaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773028": {
+   "name": "Calice d'harmonie",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773031": {
+   "name": "Lame d'infini",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773035": {
+   "name": "Dernier souffle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773037": {
+   "name": "Manipulateur de mana",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773040": {
+   "name": "Étreinte du séraphin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773041": {
+   "name": "Voleur d'âmes de Mejai",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773042": {
+   "name": "Muramana",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773044": {
+   "name": "Phage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773046": {
+   "name": "Danseur fantôme",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773047": {
+   "name": "Tabi ninja",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773050": {
+   "name": "Ferveur ionienne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773052": {
+   "name": "Emblème de Bravoure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773056": {
+   "name": "Dénohminateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773057": {
+   "name": "Brillance",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773060": {
+   "name": "Bannière de commandement",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773063": {
+   "name": "Voile de l'âme",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773064": {
+   "name": "Force de la nature",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773065": {
+   "name": "Visage spirituel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773067": {
+   "name": "Gemme exaltante",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773068": {
+   "name": "Cape solaire",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773069": {
+   "name": "Songe de Shurelya",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773070": {
+   "name": "Larme de la déesse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773071": {
+   "name": "Couperet noir",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773072": {
+   "name": "Soif-de-sang",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773073": {
+   "name": "Tas de Capes solaires",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773074": {
+   "name": "Hydre vorace",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773075": {
+   "name": "Cotte épineuse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773077": {
+   "name": "Tiamat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773078": {
+   "name": "Force de la trinité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773082": {
+   "name": "Mailles du gardien",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773083": {
+   "name": "Armure de Warmog",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773084": {
+   "name": "Médaillon d'excitation",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773085": {
+   "name": "Ouragan de Runaan",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773086": {
+   "name": "Zèle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773087": {
+   "name": "Poignard de Statikk",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773089": {
+   "name": "Coiffe de Rabadon",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773091": {
+   "name": "Au bout du rouleau",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773092": {
+   "name": "Éclat de glace pure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773093": {
+   "name": "Lame d'avarice",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773096": {
+   "name": "Pierre philosophale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773098": {
+   "name": "Le bon choix",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773100": {
+   "name": "Fléau de liche",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773101": {
+   "name": "Dardeur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773102": {
+   "name": "Voile de la banshee",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773105": {
+   "name": "Égide de la légion",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773106": {
+   "name": "Rasoir de Madred",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773107": {
+   "name": "Pavois runique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773108": {
+   "name": "Codex méphitique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773109": {
+   "name": "Rasoir sanglant de Madred",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773110": {
+   "name": "Cœur gelé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773111": {
+   "name": "Sandales de Mercure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773114": {
+   "name": "Mal",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773115": {
+   "name": "Dent de Nashor",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773116": {
+   "name": "Sceptre de Rylai",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773117": {
+   "name": "Bottes de mobilité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773123": {
+   "name": "Marque du bourreau",
+   "legendary": false,
+   "antiheal": true
+  },
+  "773124": {
+   "name": "Lame enragée de Guinsoo",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773128": {
+   "name": "Bracelet de feu mortel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773131": {
+   "name": "Épée du divin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773132": {
+   "name": "Cœur d'or",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773134": {
+   "name": "Brutaliseur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773135": {
+   "name": "Bâton du vide",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773136": {
+   "name": "Déguisement hanté",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773138": {
+   "name": "Léviathan",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773139": {
+   "name": "Cimeterre mercuriel",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773140": {
+   "name": "Ceinture de mercure",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773141": {
+   "name": "Épée occulte",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773142": {
+   "name": "Lame spectre de Youmuu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773143": {
+   "name": "Présage de Randuin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773144": {
+   "name": "Sabre vicié",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773145": {
+   "name": "Revolver Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773146": {
+   "name": "Pistolame Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773151": {
+   "name": "Tourment de Liandry",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773152": {
+   "name": "Volonté des anciens",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773153": {
+   "name": "Lame du roi déchu",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773154": {
+   "name": "Lanterne de Wriggle",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773155": {
+   "name": "Hexterminateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773156": {
+   "name": "Gueule de Malmortius",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773157": {
+   "name": "Sablier de Zhonya",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773158": {
+   "name": "Bottes de lucidité",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773160": {
+   "name": "Flamme sauvage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773161": {
+   "name": "Lame des Moonflair",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773162": {
+   "name": "Cape et dague",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773165": {
+   "name": "Morellonomicon",
+   "legendary": false,
+   "antiheal": true
+  },
+  "773172": {
+   "name": "Zéphyr",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773173": {
+   "name": "Miracle d'Eleisa",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773174": {
+   "name": "Cruche de mana de Shushei",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773178": {
+   "name": "Étincelle ionique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773190": {
+   "name": "Médaillon de l'Iron Solari",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773191": {
+   "name": "Protège-bras du savant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773206": {
+   "name": "Esprit de l'entité spectrale",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773207": {
+   "name": "Esprit de l'ancien golem",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773209": {
+   "name": "Esprit de l'ancien lézard",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773211": {
+   "name": "Manteau de spectre",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773222": {
+   "name": "Creuset de Mikael",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773340": {
+   "name": "Relique jaune",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773348": {
+   "name": "Relique rouge",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773504": {
+   "name": "Encensoir ardent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773512": {
+   "name": "Portail de Zz'Rot",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773513": {
+   "name": "Prototype de cœur Hextech",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773514": {
+   "name": "Cœur Hextech mk-1",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773515": {
+   "name": "Cœur Hextech mk-2",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773516": {
+   "name": "Cœur Hextech parfait",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773517": {
+   "name": "Lait de poule",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773518": {
+   "name": "Sachet de thé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773519": {
+   "name": "Bonbon de maïs",
+   "legendary": false,
+   "antiheal": false
+  },
+  "773521": {
+   "name": "Potion de soin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "8001": {
+   "name": "Chaînes de l'anathème",
+   "legendary": true,
+   "antiheal": false
+  },
+  "8010": {
+   "name": "Malédiction du sanguinaire",
+   "legendary": true,
+   "antiheal": false
+  },
+  "8020": {
+   "name": "Masque abyssal",
+   "legendary": true,
+   "antiheal": false
+  },
+  "9168": {
+   "name": "Emplacement d'arme verrouillé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9171": {
+   "name": "Lames-cyclones",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9172": {
+   "name": "YuumiBot",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9173": {
+   "name": "Champ de rayonnement",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9174": {
+   "name": "Épée de Statikk",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9175": {
+   "name": "Lamentation de la lionne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9176": {
+   "name": "Gatlagomorphe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9177": {
+   "name": "Arc ardent",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9178": {
+   "name": "L'Annihilateur",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9179": {
+   "name": "Arbalète lapin de combat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9180": {
+   "name": "Atomiseur UwU",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9181": {
+   "name": "Gant du vortex",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9183": {
+   "name": "Lames-boomerangs",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9184": {
+   "name": "Mégarayons lagomorphes",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9185": {
+   "name": "Mine anti-requins",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9187": {
+   "name": "T.I.B.B.E.R.S.",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9188": {
+   "name": "Ani-mines",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9189": {
+   "name": "Ultime cité Express",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9190": {
+   "name": "Écho-lames",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9192": {
+   "name": "Empreintes empoisonnées",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9193": {
+   "name": "Armure de déflaglace",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9271": {
+   "name": "Cyclone infini",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9272": {
+   "name": "YuumiBot_Final_FINAL",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9273": {
+   "name": "Étreinte explosive",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9274": {
+   "name": "Couteau électrique de Prumbis",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9275": {
+   "name": "Éruption de lumière",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9276": {
+   "name": "Barrage des deux lapins",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9277": {
+   "name": "Tir incendiaire évolué",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9278": {
+   "name": "Animapocalypse",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9279": {
+   "name": "Baliste super lapin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9280": {
+   "name": "Atomiseur OwO",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9281": {
+   "name": "Gantelet de la tempête",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9283": {
+   "name": "Boumboomerangs",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9284": {
+   "name": "Bombardement lagomorphe",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9285": {
+   "name": "Brise-foule incessant",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9287": {
+   "name": "T.I.B.B.E.R.S. (édition B.E.E.G.)",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9288": {
+   "name": "Tri-namite de Jinx",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9289": {
+   "name": "UC Express",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9290": {
+   "name": "Chromarbalète de Vayne",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9292": {
+   "name": "Traînée ultra chimique",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9293": {
+   "name": "Froid intense",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9300": {
+   "name": "Miaou miaou",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9301": {
+   "name": "Coup de bouclier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9302": {
+   "name": "Onde sonore",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9303": {
+   "name": "Coup de pilori",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9304": {
+   "name": "Tempête d'acier",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9305": {
+   "name": "Frappe de tentacule",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9306": {
+   "name": "Dague ailée",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9307": {
+   "name": "Maléfice téléguidé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9308": {
+   "name": "Saut de lapin",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9400": {
+   "name": "Barrage du chat de combat",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9401": {
+   "name": "Éclat du lion",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9402": {
+   "name": "Écho Anima",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9403": {
+   "name": "Entaille sauvage",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9404": {
+   "name": "Tempêtes nomades",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9405": {
+   "name": "Frappe du grizzly",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9406": {
+   "name": "Ricochet des amants",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9407": {
+   "name": "Maléfice renforcé",
+   "legendary": false,
+   "antiheal": false
+  },
+  "9408": {
+   "name": "Fracasse-carotte",
+   "legendary": false,
+   "antiheal": false
+  },
+  "994403": {
+   "name": "Spatule dorée",
+   "legendary": false,
+   "antiheal": false
+  }
+ }
+}
