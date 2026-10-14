@@ -1,6 +1,7 @@
 """Collecte des parties via l'API Riot Games (Account-V1 + Match-V5)."""
 import time
 import urllib.parse
+from collections import Counter
 from datetime import datetime, timezone
 
 import requests
@@ -9,6 +10,8 @@ from . import ROLES, store
 
 POSITIONS = {"TOP": "Top", "JUNGLE": "Jungle", "MIDDLE": "Mid",
              "BOTTOM": "ADC", "UTILITY": "Support"}
+QUEUES = {420: "Solo/Duo", 440: "Flex", 400: "Normale draft", 430: "Normale blind"}
+STATE_VERSION = 2  # 2 = les parties écartées alimentent aussi data/outside.json
 
 
 class RiotError(Exception):
@@ -189,12 +192,18 @@ def enrich_timelines(client):
 
 
 # ------------------------------------------------------------------ normalisation
-def normalize(match, player_by_puuid, player_roles, champs, min_players):
+def is_remake(match):
+    """Partie abandonnée très tôt : ignorée partout."""
+    info = match["info"]
+    return info.get("gameDuration", 0) < 300 or any(
+        p.get("gameEndedInEarlySurrender") for p in info["participants"])
+
+
+def normalize(match, player_by_puuid, player_roles, champs, min_players, team_queue=440):
     """Transforme une partie brute Riot en enregistrement simple. None si hors périmètre."""
     info = match["info"]
     parts = info["participants"]
-    # remake (partie abandonnée très tôt) : ignorée
-    if info.get("gameDuration", 0) < 300 or any(p.get("gameEndedInEarlySurrender") for p in parts):
+    if is_remake(match) or info.get("queueId", team_queue) != team_queue:
         return None
 
     ours_by_team = {}
@@ -228,12 +237,17 @@ def normalize(match, player_by_puuid, player_roles, champs, min_players):
     enemy_players = [p for p in parts if p["teamId"] != team_id]
     duration_min = info["gameDuration"] / 60
 
-    our = []
+    our, sub = [], None
     for role, p in ordered(team_players, True):
+        extra = {}
+        if p["puuid"] not in player_by_puuid:  # partie à 4 : le 5e est un remplaçant
+            sub = p.get("riotIdGameName") or p.get("summonerName") or "Remplaçant"
+            extra = {"sub": True}
         our.append({
             "role": role,
             "champion": p["championName"],
-            "player": player_by_puuid.get(p["puuid"], "Remplaçant"),
+            "player": player_by_puuid.get(p["puuid"], sub),
+            **extra,
             "kills": p["kills"], "deaths": p["deaths"], "assists": p["assists"],
             "cs": p["totalMinionsKilled"] + p["neutralMinionsKilled"],
             "gold": p["goldEarned"],
@@ -267,6 +281,7 @@ def normalize(match, player_by_puuid, player_roles, champs, min_players):
         "duration_min": round(duration_min, 2),
         "win": bool(us["win"]),
         "patch": ".".join(info.get("gameVersion", "").split(".")[:2]),
+        **({"sub": sub} if sub else {}),
         "our": our,
         "enemy": enemy,
         "our_bans": bans(us),
@@ -284,8 +299,55 @@ def normalize(match, player_by_puuid, player_roles, champs, min_players):
     }
 
 
+def outside_records(match, player_by_puuid):
+    """Une fiche compacte par joueur de l'équipe présent dans une partie hors soirée."""
+    info = match["info"]
+    parts = info["participants"]
+    if is_remake(match):
+        return []
+    dur = info["gameDuration"] / 60
+    team_kills = Counter()
+    for p in parts:
+        team_kills[p["teamId"]] += p["kills"]
+    ours = [p for p in parts if p["puuid"] in player_by_puuid]
+    out = []
+    for p in ours:
+        role = POSITIONS.get(p.get("teamPosition") or p.get("individualPosition"))
+        opp = next((q for q in parts if q["teamId"] != p["teamId"] and role
+                    and POSITIONS.get(q.get("teamPosition")) == role), None)
+        ch = p.get("challenges") or {}
+        mates = sorted(player_by_puuid[q["puuid"]] for q in ours
+                       if q is not p and q["teamId"] == p["teamId"])
+        out.append({
+            "match_id": match["metadata"]["matchId"],
+            "player": player_by_puuid[p["puuid"]],
+            "queue": QUEUES.get(info.get("queueId"), str(info.get("queueId"))),
+            "start_utc": datetime.fromtimestamp(info["gameStartTimestamp"] / 1000, tz=timezone.utc).isoformat(),
+            "duration_min": round(dur, 2),
+            "patch": ".".join(info.get("gameVersion", "").split(".")[:2]),
+            "win": bool(p["win"]),
+            "role": role,
+            "champion": p["championName"],
+            "opponent": opp["championName"] if opp else None,
+            "mates": mates,
+            "stack": len(mates) + 1,
+            "kills": p["kills"], "deaths": p["deaths"], "assists": p["assists"],
+            "cs": p["totalMinionsKilled"] + p["neutralMinionsKilled"],
+            "gold": p["goldEarned"],
+            "damage": p["totalDamageDealtToChampions"],
+            "vision": p["visionScore"],
+            "kp": round(100 * (p["kills"] + p["assists"]) / team_kills[p["teamId"]])
+                  if team_kills[p["teamId"]] else 0,
+            "dmg_pct": round(100 * ch["teamDamagePercentage"]) if "teamDamagePercentage" in ch else None,
+            "cs10": ch.get("laneMinionsFirst10Minutes"),
+            "solo_kills": ch.get("soloKills"),
+            "pinks": p.get("visionWardsBoughtInGame"),
+        })
+    return out
+
+
 def collect(cfg, api_key, champs):
-    """Récupère les nouvelles parties de l'équipe. Renvoie le nombre de parties ajoutées."""
+    """Récupère les nouvelles parties de l'équipe, et celles jouées hors soirée."""
     client = RiotClient(api_key, cfg.get("regional", "europe"))
     state = store.load_state()
 
@@ -300,34 +362,63 @@ def collect(cfg, api_key, champs):
     store.save_state(state)
 
     known = {g["match_id"] for g in store.load_games() if g.get("source") == "api"}
-    ignored = set(state["ignored"])
+    min_players = cfg.get("min_team_players", 5)
+    team_queue = cfg.get("queue", 440)
+    outside = store.load_outside()
+    if state.get("v", 1) < STATE_VERSION:
+        # Ancien format : les parties écartées n'ont laissé aucune trace, on les réexamine
+        print(f"Migration : réexamen des {len(state['ignored'])} partie(s) écartée(s)…")
+        state["ignored"], state["v"] = [], STATE_VERSION
+    # Parties hors soirée devenues parties d'équipe (min_team_players abaissé) : réexaminées
+    promote = {r["match_id"] for r in outside if r["queue"] == QUEUES.get(team_queue)
+               and r["stack"] >= min_players}
+    if promote:
+        outside = [r for r in outside if r["match_id"] not in promote]
+    ignored = set(state["ignored"]) - promote
     start_ts = int(datetime.fromisoformat(cfg.get("start_date", "2026-01-01"))
                    .replace(tzinfo=timezone.utc).timestamp())
 
+    queues = [team_queue]
+    if cfg.get("outside", {}).get("enabled", True):
+        queues += [q for q in cfg.get("outside", {}).get("queues", [420, 440]) if q not in queues]
     candidates = set()
     for puuid in player_by_puuid:
-        candidates |= set(client.match_ids(puuid, cfg.get("queue", 440), start_ts))
+        for q in queues:
+            candidates |= set(client.match_ids(puuid, q, start_ts))
     todo = sorted(candidates - known - ignored)
     print(f"{len(todo)} nouvelle(s) partie(s) à examiner.")
 
-    new_games = []
-    for i, mid in enumerate(todo, 1):
-        match = client.match(mid)
-        if not match:
-            continue
-        game = normalize(match, player_by_puuid, player_roles, champs,
-                         cfg.get("min_team_players", 5))
-        if game:
-            store.save_raw(match)
-            new_games.append(game)
-        else:
-            state["ignored"].append(mid)
-        if i % 10 == 0:
-            print(f"  {i}/{len(todo)} examinées…")
+    new_games, n_team, n_out = [], 0, 0
 
-    store.save_state(state)
-    if new_games:
-        store.upsert_games(new_games)
-    print(f"{len(new_games)} partie(s) d'équipe ajoutée(s).")
+    def save():
+        state["ignored"] = sorted(ignored)
+        store.save_state(state)
+        store.save_outside(outside)
+        if new_games:
+            store.upsert_games(new_games)
+
+    # sauvegarde régulière : si la clé expire en route, le travail fait est conservé
+    try:
+        for i, mid in enumerate(todo, 1):
+            match = client.match(mid)
+            if not match:
+                continue
+            game = normalize(match, player_by_puuid, player_roles, champs, min_players, team_queue)
+            if game:
+                store.save_raw(match)
+                new_games.append(game)
+                n_team += 1
+            else:
+                recs = outside_records(match, player_by_puuid)
+                outside.extend(recs)
+                n_out += bool(recs)
+                ignored.add(mid)
+            if i % 25 == 0:
+                print(f"  {i}/{len(todo)} examinées…")
+                save()
+                new_games = []
+    finally:
+        save()
+    print(f"{n_team} partie(s) d'équipe ajoutée(s), {n_out} partie(s) hors soirée.")
     enrich_timelines(client)
-    return len(new_games)
+    return n_team

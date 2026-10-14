@@ -113,7 +113,7 @@ def build_dataset(games, session_of, name):
             for k in vals:
                 keys[k] = True
             rows.append({"game": g["match_id"],
-                         "date": session_of[g["match_id"]], "win": g["win"], "player": p.get("player") or p["role"],
+                         "date": session_of[g["match_id"]], "win": g["win"], "player": (p.get("player") or p["role"]) + (" (remp.)" if p.get("sub") else ""),
                          "role": p["role"], "champion": name(p["champion"]), "minutes": g["duration_min"],
                          "v": vals})
 

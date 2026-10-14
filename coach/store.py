@@ -9,6 +9,7 @@ DATA = Path("data")
 RAW = DATA / "raw"              # réponses brutes de l'API Riot (1 fichier par partie)
 GAMES = DATA / "games.json"     # parties normalisées utilisées pour les stats
 STATE = DATA / "state.json"     # PUUID des joueurs + parties ignorées
+OUTSIDE = DATA / "outside.json"  # parties jouées hors soirée (une fiche compacte par joueur)
 CHAMPS = DATA / "champions.json"  # noms des champions (Data Dragon)
 ICONS = DATA / "icons"            # icônes des champions (téléchargées une fois)
 
@@ -43,6 +44,16 @@ def upsert_games(new_games):
         by_id[g["match_id"]] = g
     save_games(list(by_id.values()))
     return len(by_id)
+
+
+def load_outside():
+    return _read(OUTSIDE, [])
+
+
+def save_outside(records):
+    """Dédoublonnées par (partie, joueur), triées par date."""
+    by_key = {(r["match_id"], r["player"]): r for r in records}
+    _write(OUTSIDE, sorted(by_key.values(), key=lambda r: r["start_utc"]))
 
 
 def load_state():

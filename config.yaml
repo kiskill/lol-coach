@@ -16,8 +16,17 @@ start_date: "2026-05-01"
 
 # Nombre minimum de joueurs de la liste ci-dessous présents dans la même
 # équipe pour que la partie compte (5 = uniquement les parties à 5,
-# 4 = accepte un remplaçant)
-min_team_players: 5
+# 4 = accepte un remplaçant). Le remplaçant est signalé sur la partie et
+# n'apparaît pas dans les stats par joueur. Changer cette valeur reclasse
+# les parties déjà collectées au passage suivant.
+min_team_players: 4
+
+# Parties jouées hors soirée (sans le groupe au complet) : page « Hors soirées »
+# et résumé dans l'analyse IA par joueur (sans appel IA supplémentaire).
+# Files : 420 = Solo/Duo, 440 = Flex, 400 = Normale draft, 430 = Normale blind
+outside:
+  enabled: true
+  queues: [420, 440]
 
 # Fuseau horaire et heure de "coupure" d'une session :
 # une partie lancée avant 6h du matin compte dans la soirée de la veille.
