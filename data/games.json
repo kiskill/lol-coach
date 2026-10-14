@@ -195,6 +195,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      53,
+      108,
+      111
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      12,
+      97,
+      110
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      54,
+      264,
+      268
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      75,
+      152,
+      169
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "I",
+      69,
+      134,
+      133
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      70,
+      92,
+      107
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      35,
+      146,
+      146
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      50,
+      28,
+      33
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      20,
+      103,
+      109
+     ],
+     "solo": [
+      "SILVER",
+      "I",
+      60,
+      77,
+      84
+     ]
+    }
+   }
   }
  },
  {
@@ -391,6 +558,173 @@
       "xp": -154,
       "cs": 5
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      18,
+      94,
+      85
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      44,
+      86,
+      79
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "III",
+      60,
+      4,
+      13
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      21,
+      62,
+      51
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "IV",
+      60,
+      16,
+      30
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      13,
+      77,
+      95
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      45,
+      93,
+      88
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      9,
+      259,
+      257
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      37,
+      186,
+      186
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      7,
+      88,
+      76
+     ]
     }
    }
   }
@@ -591,6 +925,152 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "II",
+      56,
+      182,
+      192
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "SILVER",
+      "II",
+      61,
+      228,
+      245
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "III",
+      94,
+      364,
+      378
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      73,
+      97,
+      108
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "III",
+      77,
+      8,
+      5
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      2,
+      321,
+      338
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      227,
+      217
+     ]
+    }
+   }
   }
  },
  {
@@ -789,6 +1269,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "SILVER",
+      "I",
+      36,
+      28,
+      40
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      88,
+      58,
+      64
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      86,
+      275,
+      288
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      85,
+      22,
+      16
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      10,
+      82,
+      86
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      62,
+      91,
+      80
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      37,
+      26,
+      20
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      76,
+      64,
+      55
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      21,
+      31,
+      28
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      61,
+      359,
+      357
+     ]
+    }
+   }
   }
  },
  {
@@ -984,6 +1631,173 @@
       "xp": -1004,
       "cs": -5
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      72,
+      43,
+      42
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      178,
+      147
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "III",
+      72,
+      22,
+      15
+     ],
+     "flex": [
+      "BRONZE",
+      "I",
+      50,
+      21,
+      12
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      63,
+      86,
+      77
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      87,
+      73
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      156,
+      142
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      75,
+      32,
+      28
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      7,
+      54,
+      54
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      13,
+      24,
+      16
+     ]
     }
    }
   }
@@ -1184,6 +1998,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "I",
+      54,
+      146,
+      162
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      28,
+      112,
+      115
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "III",
+      89,
+      115,
+      99
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      119,
+      109
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      41,
+      92,
+      99
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      51,
+      52
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      79,
+      110,
+      94
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      24,
+      104,
+      100
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      2,
+      74,
+      68
+     ],
+     "flex": [
+      "SILVER",
+      "I",
+      11,
+      75,
+      82
+     ]
+    }
+   }
   }
  },
  {
@@ -1380,6 +2361,173 @@
       "xp": 224,
       "cs": 4
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      18,
+      92,
+      94
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      15,
+      5,
+      11
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "SILVER",
+      "II",
+      0,
+      36,
+      34
+     ],
+     "solo": [
+      "SILVER",
+      "IV",
+      60,
+      18,
+      6
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      32,
+      33,
+      33
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      99,
+      20,
+      17
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "SILVER",
+      "III",
+      55,
+      3,
+      2
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      44,
+      118,
+      118
+     ]
+    },
+    "Support": {
+     "flex": [
+      "DIAMOND",
+      "II",
+      87,
+      197,
+      188
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      57,
+      194,
+      169
+     ]
     }
    }
   }
@@ -1580,6 +2728,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      94,
+      11,
+      12
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      19,
+      67,
+      56
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "II",
+      38,
+      4,
+      4
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      80,
+      16,
+      13
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "III",
+      36,
+      45,
+      44
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      12,
+      45,
+      56
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      99,
+      75,
+      64
+     ],
+     "flex": [
+      "GOLD",
+      "III",
+      76,
+      26,
+      23
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      4,
+      58,
+      60
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      0,
+      73,
+      73
+     ]
+    }
+   }
   }
  },
  {
@@ -1775,6 +3090,166 @@
       "xp": 735,
       "cs": 1
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "SILVER",
+      "I",
+      24,
+      87,
+      83
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      3,
+      170,
+      142
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      69,
+      95,
+      96
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      13,
+      370,
+      362
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "III",
+      89,
+      98,
+      85
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      32,
+      106,
+      95
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "III",
+      91,
+      88,
+      86
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      33,
+      259,
+      251
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      94,
+      15,
+      10
+     ]
     }
    }
   }
@@ -1975,6 +3450,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      14,
+      92,
+      97
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      304,
+      302
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      33,
+      75,
+      80
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      53,
+      39,
+      47
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      73,
+      294,
+      296
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      0,
+      175,
+      164
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      27,
+      49,
+      35
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      27,
+      68,
+      65
+     ]
+    },
+    "Support": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      24,
+      114,
+      89
+     ],
+     "solo": [
+      "DIAMOND",
+      "III",
+      5,
+      113,
+      96
+     ]
+    }
+   }
   }
  },
  {
@@ -2171,6 +3813,166 @@
       "xp": -237,
       "cs": -20
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      48,
+      265,
+      277
+     ],
+     "solo": [
+      "MASTER",
+      "I",
+      29,
+      234,
+      210
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "DIAMOND",
+      "II",
+      52,
+      181,
+      190
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      76,
+      169,
+      189
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "SILVER",
+      "I",
+      33,
+      207,
+      214
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "I",
+      75,
+      149,
+      136
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      29,
+      41,
+      43
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      66,
+      234,
+      229
+     ],
+     "solo": [
+      "SILVER",
+      "I",
+      68,
+      180,
+      202
+     ]
     }
    }
   }
@@ -2371,6 +4173,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "III",
+      49,
+      89,
+      82
+     ],
+     "flex": [
+      "GOLD",
+      "III",
+      43,
+      34,
+      28
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      75,
+      92,
+      89
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      94,
+      120,
+      106
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "II",
+      53,
+      81,
+      88
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      20,
+      84,
+      74
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      87,
+      71,
+      70
+     ],
+     "solo": [
+      "SILVER",
+      "I",
+      36,
+      47,
+      50
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "I",
+      54,
+      66,
+      58
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      6,
+      221,
+      208
+     ]
+    }
+   }
   }
  },
  {
@@ -2565,6 +4534,166 @@
       "xp": -388,
       "cs": -3
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "II",
+      75,
+      102,
+      68
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      39,
+      31,
+      12
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "III",
+      84,
+      67,
+      78
+     ],
+     "flex": [
+      "SILVER",
+      "II",
+      32,
+      13,
+      4
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "I",
+      15,
+      24,
+      12
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      78,
+      33,
+      26
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      55,
+      55,
+      38
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "III",
+      40,
+      140,
+      98
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      8,
+      232,
+      232
+     ]
     }
    }
   }
@@ -2765,6 +4894,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      31,
+      22,
+      22
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      15,
+      9,
+      5
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      96,
+      30,
+      36
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      50,
+      88,
+      95
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      45,
+      19,
+      11
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      75,
+      63,
+      52
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      98,
+      109,
+      94
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      49,
+      66,
+      65
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      34,
+      99,
+      95
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      4,
+      30,
+      33
+     ]
+    }
+   }
   }
  },
  {
@@ -2961,6 +5257,173 @@
       "xp": 65,
       "cs": -6
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      87,
+      2,
+      4
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      61,
+      13,
+      20
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      12,
+      133,
+      127
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      0,
+      95,
+      107
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "SILVER",
+      "III",
+      56,
+      8,
+      6
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      92,
+      13,
+      16
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "SILVER",
+      "II",
+      87,
+      2,
+      4
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      48,
+      27,
+      26
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "IV",
+      20,
+      44,
+      41
+     ],
+     "flex": [
+      "GOLD",
+      "III",
+      77,
+      2,
+      4
+     ]
     }
    }
   }
@@ -3161,6 +5624,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      79,
+      31,
+      28
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      93,
+      45,
+      42
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "SILVER",
+      "IV",
+      66,
+      151,
+      160
+     ],
+     "flex": [
+      "BRONZE",
+      "I",
+      31,
+      72,
+      77
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "III",
+      71,
+      61,
+      52
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      175,
+      172
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "III",
+      42,
+      50,
+      32
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      27,
+      53,
+      51
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "I",
+      50,
+      22,
+      24
+     ],
+     "solo": [
+      "SILVER",
+      "III",
+      24,
+      22,
+      17
+     ]
+    }
+   }
   }
  },
  {
@@ -3357,6 +5987,145 @@
       "xp": -112,
       "cs": -5
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      33,
+      18,
+      18
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      29,
+      196,
+      196
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "SILVER",
+      "III",
+      5,
+      24,
+      22
+     ],
+     "flex": [
+      "BRONZE",
+      "III",
+      46,
+      5,
+      2
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      91,
+      5,
+      4
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      1,
+      7,
+      8
+     ]
     }
    }
   }
@@ -3557,6 +6326,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "III",
+      82,
+      72,
+      60
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      14,
+      159,
+      146
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "I",
+      27,
+      127,
+      126
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      16,
+      90,
+      86
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      74,
+      275,
+      261
+     ],
+     "flex": [
+      "GOLD",
+      "III",
+      84,
+      141,
+      144
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      48,
+      53,
+      55
+     ],
+     "flex": [
+      "DIAMOND",
+      "II",
+      62,
+      128,
+      108
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "IV",
+      0,
+      17,
+      20
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      131,
+      107
+     ]
+    }
+   }
   }
  },
  {
@@ -3753,6 +6689,173 @@
       "xp": -464,
       "cs": 2
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "SILVER",
+      "II",
+      16,
+      51,
+      65
+     ],
+     "solo": [
+      "SILVER",
+      "I",
+      6,
+      63,
+      81
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      7,
+      14,
+      11
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      66,
+      44,
+      42
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "II",
+      52,
+      12,
+      10
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      11,
+      18,
+      10
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      10,
+      103,
+      98
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      60,
+      49,
+      43
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      46,
+      15,
+      9
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      25,
+      57,
+      44
+     ]
     }
    }
   }
@@ -3953,6 +7056,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "II",
+      35,
+      111,
+      106
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      53,
+      97,
+      87
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      18,
+      140,
+      139
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      44,
+      126,
+      128
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "SILVER",
+      "III",
+      10,
+      12,
+      13
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      7,
+      22,
+      14
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      52,
+      46
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      53,
+      123,
+      122
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "III",
+      48,
+      43,
+      47
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      22,
+      103,
+      90
+     ]
+    }
+   }
   }
  },
  {
@@ -4149,6 +7419,173 @@
       "xp": 71,
       "cs": -20
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "II",
+      60,
+      52,
+      36
+     ],
+     "flex": [
+      "MASTER",
+      "I",
+      103,
+      234,
+      208
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "IV",
+      14,
+      43,
+      45
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      95,
+      161,
+      142
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "II",
+      19,
+      90,
+      90
+     ],
+     "solo": [
+      "SILVER",
+      "III",
+      40,
+      4,
+      6
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      96,
+      117,
+      133
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      22,
+      85,
+      97
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "III",
+      15,
+      149,
+      173
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      90,
+      117,
+      133
+     ]
     }
    }
   }
@@ -4351,6 +7788,158 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      64,
+      10,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      30,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      79,
+      148,
+      138
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      79,
+      7,
+      12
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      47,
+      90,
+      90
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      59,
+      94,
+      77
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "DIAMOND",
+      "III",
+      0,
+      284,
+      275
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      34,
+      25,
+      24
+     ]
+    },
+    "ADC": {},
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      95,
+      74,
+      76
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      88,
+      64,
+      52
+     ]
+    }
+   }
   }
  },
  {
@@ -4547,6 +8136,173 @@
       "xp": 89,
       "cs": -9
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      64,
+      10,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      30,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "I",
+      75,
+      94,
+      70
+     ],
+     "solo": [
+      "DIAMOND",
+      "II",
+      75,
+      532,
+      497
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "IV",
+      75,
+      118,
+      126
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      48,
+      57,
+      46
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "III",
+      65,
+      12,
+      9
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      81,
+      36,
+      29
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      85,
+      148,
+      150
+     ],
+     "solo": [
+      "DIAMOND",
+      "II",
+      28,
+      42,
+      36
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "II",
+      74,
+      126,
+      121
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      90,
+      47,
+      35
+     ]
     }
    }
   }
@@ -4749,6 +8505,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      64,
+      10,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      30,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      13,
+      53,
+      50
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      77,
+      16,
+      9
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      28,
+      63,
+      60
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      7,
+      40,
+      38
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      34,
+      44,
+      45
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      99,
+      82,
+      85
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      78,
+      58,
+      54
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      9,
+      74,
+      66
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      2,
+      119,
+      119
+     ]
+    }
+   }
   }
  },
  {
@@ -4947,6 +8863,173 @@
       "xp": -311,
       "cs": 0
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      64,
+      10,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      30,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "IV",
+      87,
+      240,
+      244
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      5,
+      119,
+      110
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "III",
+      24,
+      41,
+      46
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      71,
+      44,
+      41
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      18,
+      85,
+      86
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      62,
+      96,
+      87
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      48,
+      32,
+      33
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      59,
+      126,
+      118
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      18,
+      188,
+      200
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      43,
+      26,
+      25
+     ]
     }
    }
   }
@@ -5149,6 +9232,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      64,
+      10,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      30,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "I",
+      55,
+      141,
+      128
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      54,
+      15,
+      13
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "II",
+      89,
+      140,
+      144
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      11,
+      297,
+      286
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "SILVER",
+      "I",
+      3,
+      78,
+      76
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      94,
+      111,
+      105
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "II",
+      49,
+      173,
+      177
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      72,
+      91,
+      78
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "I",
+      41,
+      12,
+      9
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      76,
+      19,
+      16
+     ]
+    }
+   }
   }
  },
  {
@@ -5345,6 +9595,173 @@
       "xp": -251,
       "cs": 7
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      70,
+      95,
+      117
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      43,
+      383,
+      387
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      32,
+      85,
+      85
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      41,
+      214,
+      213
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "MASTER",
+      "I",
+      44,
+      282,
+      268
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      40,
+      32
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      14,
+      23,
+      28
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      38,
+      111,
+      117
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "III",
+      86,
+      32,
+      36
+     ],
+     "solo": [
+      "SILVER",
+      "IV",
+      62,
+      20,
+      28
+     ]
     }
    }
   }
@@ -5545,6 +9962,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "II",
+      11,
+      314,
+      299
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      45,
+      71,
+      60
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "I",
+      17,
+      172,
+      157
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      40,
+      39,
+      42
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "I",
+      25,
+      204,
+      210
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      66,
+      31,
+      25
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "SILVER",
+      "IV",
+      90,
+      24,
+      23
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      52,
+      24,
+      15
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      84,
+      46,
+      40
+     ],
+     "solo": [
+      "SILVER",
+      "II",
+      28,
+      138,
+      158
+     ]
+    }
+   }
   }
  },
  {
@@ -5740,6 +10324,173 @@
       "xp": -843,
       "cs": -1
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      41,
+      37,
+      50
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      13,
+      41,
+      51
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      50,
+      243,
+      229
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      19,
+      47,
+      52
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "II",
+      57,
+      102,
+      84
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      98,
+      215,
+      220
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "IV",
+      30,
+      33,
+      27
+     ],
+     "solo": [
+      "DIAMOND",
+      "II",
+      4,
+      597,
+      584
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "II",
+      29,
+      307,
+      299
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      43,
+      21,
+      9
+     ]
     }
    }
   }
@@ -5938,6 +10689,166 @@
       "xp": -203,
       "cs": 8
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      62,
+      16,
+      21
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      0,
+      8,
+      8
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      81,
+      96,
+      107
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "IV",
+      75,
+      27,
+      31
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      10,
+      87,
+      71
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      65
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      21,
+      67,
+      77
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      21,
+      25
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      5,
+      98,
+      70
+     ]
     }
    }
   }
@@ -6140,6 +11051,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "IV",
+      62,
+      9,
+      20
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      65,
+      15,
+      19
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      44,
+      125,
+      129
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      84,
+      16,
+      19
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      39,
+      17,
+      21
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      15,
+      26,
+      19
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "IV",
+      86,
+      66,
+      78
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      43,
+      16,
+      11
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      26,
+      16,
+      11
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      96,
+      23,
+      27
+     ]
+    }
+   }
   }
  },
  {
@@ -6338,6 +11416,173 @@
       "xp": -397,
       "cs": -7
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "II",
+      59,
+      11,
+      13
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      29,
+      30,
+      25
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "SILVER",
+      "IV",
+      89,
+      17,
+      24
+     ],
+     "flex": [
+      "BRONZE",
+      "II",
+      85,
+      41,
+      47
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      25,
+      31,
+      26
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      4,
+      12,
+      15
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "III",
+      15,
+      53,
+      50
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      84,
+      60,
+      52
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      77,
+      56,
+      39
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      27,
+      45,
+      39
+     ]
     }
    }
   }
@@ -6540,6 +11785,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "BRONZE",
+      "IV",
+      29,
+      4,
+      10
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      22,
+      77,
+      63
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      0,
+      13,
+      14
+     ],
+     "solo": [
+      "SILVER",
+      "III",
+      80,
+      16,
+      16
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "SILVER",
+      "II",
+      88,
+      3,
+      8
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      18,
+      95,
+      84
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      27,
+      346,
+      355
+     ],
+     "solo": [
+      "BRONZE",
+      "II",
+      55,
+      11,
+      7
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "I",
+      65,
+      317,
+      312
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      83,
+      35,
+      25
+     ]
+    }
+   }
   }
  },
  {
@@ -6739,6 +12151,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "II",
+      33,
+      39,
+      32
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      30,
+      16,
+      16
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      58,
+      58,
+      51
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      21,
+      57,
+      63
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      41,
+      58,
+      48
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      2,
+      158,
+      152
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "SILVER",
+      "III",
+      37,
+      31,
+      33
+     ],
+     "flex": [
+      "SILVER",
+      "II",
+      14,
+      76,
+      65
+     ]
+    },
+    "Support": {
+     "solo": [
+      "BRONZE",
+      "II",
+      99,
+      5,
+      12
+     ],
+     "flex": [
+      "SILVER",
+      "IV",
+      91,
+      32,
+      37
+     ]
+    }
+   }
   }
  },
  {
@@ -6935,6 +12514,173 @@
       "xp": -670,
       "cs": 1
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      167,
+      173
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      40,
+      244,
+      234
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      83,
+      206,
+      205
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      31,
+      94,
+      90
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "BRONZE",
+      "III",
+      30,
+      21,
+      5
+     ],
+     "flex": [
+      "IRON",
+      "I",
+      24,
+      24,
+      46
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      33,
+      31
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      27,
+      136,
+      143
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "III",
+      51,
+      109,
+      124
+     ],
+     "solo": [
+      "SILVER",
+      "II",
+      31,
+      3,
+      11
+     ]
     }
    }
   }
@@ -7137,6 +12883,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      40,
+      24,
+      28
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "BRONZE",
+      "II",
+      13,
+      58,
+      60
+     ],
+     "solo": [
+      "BRONZE",
+      "IV",
+      15,
+      256,
+      295
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      41,
+      278,
+      286
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      57,
+      66,
+      78
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      86,
+      79
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      152,
+      161
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "II",
+      15,
+      3,
+      5
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      0,
+      18,
+      23
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      7,
+      347,
+      344
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      23,
+      20,
+      24
+     ]
+    }
+   }
   }
  },
  {
@@ -7337,6 +13243,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      40,
+      24,
+      28
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      77,
+      71,
+      58
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      36,
+      82,
+      87
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "IV",
+      28,
+      153,
+      158
+     ],
+     "flex": [
+      "BRONZE",
+      "II",
+      0,
+      8,
+      12
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "I",
+      65,
+      49,
+      37
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      0,
+      100,
+      90
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      25,
+      56,
+      60
+     ],
+     "solo": [
+      "DIAMOND",
+      "II",
+      38,
+      96,
+      83
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      56,
+      28,
+      30
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      52,
+      44,
+      39
+     ]
+    }
+   }
   }
  },
  {
@@ -7533,6 +13599,173 @@
       "xp": -232,
       "cs": 5
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      73,
+      92,
+      87
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      52,
+      297,
+      294
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "BRONZE",
+      "II",
+      90,
+      4,
+      11
+     ],
+     "solo": [
+      "IRON",
+      "I",
+      60,
+      1,
+      4
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "I",
+      17,
+      106,
+      99
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      35,
+      88,
+      76
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      80,
+      37,
+      42
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      23,
+      102,
+      94
+     ]
+    },
+    "Support": {
+     "flex": [
+      "IRON",
+      "IV",
+      55,
+      4,
+      21
+     ],
+     "solo": [
+      "BRONZE",
+      "II",
+      22,
+      29,
+      46
+     ]
     }
    }
   }
@@ -7733,6 +13966,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "I",
+      25,
+      78,
+      103
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      24,
+      149,
+      141
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "SILVER",
+      "I",
+      39,
+      6,
+      8
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      59,
+      63
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "IV",
+      23,
+      9,
+      10
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      39,
+      62,
+      58
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      41,
+      267,
+      264
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      4,
+      9,
+      15
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      1,
+      79,
+      75
+     ]
+    }
+   }
   }
  },
  {
@@ -7929,6 +14322,173 @@
       "xp": -1178,
       "cs": -12
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      11,
+      32,
+      25
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      86,
+      28,
+      35
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      11,
+      35,
+      19
+     ],
+     "solo": [
+      "MASTER",
+      "I",
+      362,
+      244,
+      225
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      6,
+      22,
+      18
+     ],
+     "solo": [
+      "DIAMOND",
+      "III",
+      81,
+      116,
+      98
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      37,
+      28
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      3,
+      276,
+      275
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      63,
+      25,
+      14
+     ],
+     "solo": [
+      "DIAMOND",
+      "I",
+      69,
+      349,
+      305
+     ]
     }
    }
   }
@@ -8129,6 +14689,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      5,
+      22,
+      22
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      82,
+      38,
+      32
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "DIAMOND",
+      "I",
+      61,
+      191,
+      170
+     ],
+     "flex": [
+      "DIAMOND",
+      "I",
+      8,
+      246,
+      225
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "IV",
+      0,
+      275,
+      271
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      38,
+      200,
+      195
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "II",
+      24,
+      117,
+      119
+     ],
+     "flex": [
+      "GOLD",
+      "III",
+      75,
+      19,
+      19
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "IV",
+      37,
+      16,
+      13
+     ],
+     "solo": [
+      "SILVER",
+      "II",
+      52,
+      53,
+      60
+     ]
+    }
+   }
   }
  },
  {
@@ -8325,6 +15052,159 @@
       "xp": -962,
       "cs": 4
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "III",
+      35,
+      7,
+      7
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "SILVER",
+      "I",
+      69,
+      19,
+      17
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      10,
+      2,
+      3
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "SILVER",
+      "III",
+      70,
+      18,
+      16
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      58,
+      46
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      50,
+      51,
+      47
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "IV",
+      99,
+      50,
+      44
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      26,
+      11,
+      19
+     ]
     }
    }
   }
@@ -8525,6 +15405,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "I",
+      12,
+      76,
+      100
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      55,
+      8,
+      8
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "II",
+      68,
+      19,
+      17
+     ],
+     "solo": [
+      "DIAMOND",
+      "I",
+      75,
+      97,
+      67
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      245,
+      233
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      19,
+      31,
+      35
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      26,
+      190,
+      190
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      66,
+      37,
+      24
+     ]
+    },
+    "Support": {
+     "solo": [
+      "DIAMOND",
+      "III",
+      87,
+      74,
+      66
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      5,
+      48,
+      49
+     ]
+    }
+   }
   }
  },
  {
@@ -8721,6 +15768,173 @@
       "xp": -972,
       "cs": 4
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      1,
+      342,
+      351
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      61,
+      7,
+      6
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "III",
+      33,
+      245,
+      243
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      93,
+      143,
+      146
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      67,
+      515,
+      526
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      51,
+      37,
+      39
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      38,
+      79,
+      67
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      70,
+      95,
+      100
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      5,
+      198,
+      191
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      86,
+      242,
+      245
+     ]
     }
    }
   }
@@ -8923,6 +16137,159 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      70,
+      36,
+      36
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      13,
+      72,
+      79
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      12,
+      20,
+      18
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      75,
+      87,
+      80
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "II",
+      71,
+      9,
+      9
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "II",
+      74,
+      33,
+      36
+     ],
+     "solo": [
+      "SILVER",
+      "II",
+      81,
+      9,
+      16
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      58,
+      12,
+      9
+     ]
+    }
+   }
   }
  },
  {
@@ -9122,6 +16489,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "III",
+      86,
+      5,
+      2
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      32,
+      261,
+      280
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "IV",
+      97,
+      7,
+      10
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "DIAMOND",
+      "III",
+      61,
+      140,
+      131
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      67,
+      164,
+      172
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      24,
+      158,
+      155
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      2,
+      86,
+      77
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      63,
+      6,
+      11
+     ],
+     "solo": [
+      "SILVER",
+      "IV",
+      91,
+      18,
+      29
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "III",
+      2,
+      36,
+      41
+     ],
+     "flex": [
+      "BRONZE",
+      "IV",
+      5,
+      4,
+      9
+     ]
+    }
+   }
   }
  },
  {
@@ -9317,6 +16844,159 @@
       "xp": -1456,
       "cs": -3
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "II",
+      36,
+      22,
+      30
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      60,
+      94,
+      94
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      0,
+      24,
+      30
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "SILVER",
+      "II",
+      92,
+      65,
+      77
+     ],
+     "flex": [
+      "SILVER",
+      "II",
+      43,
+      40,
+      40
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      90,
+      23,
+      26
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      11,
+      24,
+      32
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      50,
+      90,
+      82
+     ]
     }
    }
   }
@@ -9517,6 +17197,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "II",
+      32,
+      23,
+      34
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      95,
+      133,
+      102
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      37,
+      67,
+      71
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      98,
+      30,
+      40
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      6,
+      90,
+      95
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      27,
+      40,
+      35
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      39,
+      41,
+      53
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      19,
+      3,
+      4
+     ]
+    },
+    "Support": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      13,
+      228,
+      203
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      36,
+      138,
+      140
+     ]
+    }
+   }
   }
  },
  {
@@ -9713,6 +17560,173 @@
       "xp": -1039,
       "cs": -16
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      85,
+      29,
+      36
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      49,
+      55,
+      46
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "I",
+      16,
+      54,
+      51
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      9,
+      66,
+      47
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      84,
+      44,
+      43
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      4,
+      183,
+      179
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      50,
+      117,
+      104
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      26,
+      48,
+      49
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "III",
+      36,
+      15,
+      10
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      21,
+      272,
+      245
+     ]
     }
    }
   }
@@ -9913,6 +17927,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      27,
+      140,
+      134
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      3,
+      156,
+      153
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "SILVER",
+      "II",
+      58,
+      11,
+      15
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      57,
+      90,
+      93
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      44,
+      5,
+      6
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      75,
+      112,
+      88
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      39,
+      42,
+      20
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "II",
+      73,
+      51,
+      39
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      59,
+      15,
+      13
+     ]
+    }
+   }
   }
  },
  {
@@ -10109,6 +18283,173 @@
       "xp": -358,
       "cs": -2
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "II",
+      88,
+      87,
+      94
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      27,
+      254,
+      253
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      267,
+      283
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      64,
+      97,
+      92
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "I",
+      86,
+      28,
+      33
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      49,
+      31,
+      31
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "IV",
+      0,
+      101,
+      110
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      66,
+      60,
+      62
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      38,
+      62,
+      76
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      25,
+      49,
+      53
+     ]
     }
    }
   }
@@ -10309,6 +18650,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "SILVER",
+      "III",
+      0,
+      2,
+      4
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      85,
+      5,
+      5
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "I",
+      53,
+      76,
+      67
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      61,
+      174,
+      174
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "IV",
+      45,
+      32,
+      37
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      43,
+      66,
+      48
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "II",
+      14,
+      52,
+      53
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      22,
+      383,
+      384
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "IV",
+      0,
+      14,
+      22
+     ],
+     "solo": [
+      "SILVER",
+      "III",
+      61,
+      219,
+      244
+     ]
+    }
+   }
   }
  },
  {
@@ -10504,6 +19012,173 @@
       "xp": -1021,
       "cs": -3
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      9,
+      129,
+      125
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      54,
+      47,
+      41
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "II",
+      8,
+      54,
+      56
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      21,
+      126,
+      121
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      49,
+      46
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      156,
+      149
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      39,
+      82,
+      69
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      58,
+      55,
+      39
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      82,
+      270,
+      264
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      1,
+      143,
+      139
+     ]
     }
    }
   }
@@ -10704,6 +19379,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "III",
+      39,
+      25,
+      25
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      5,
+      83,
+      83
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "II",
+      27,
+      291,
+      272
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      10,
+      67,
+      58
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      20,
+      97,
+      112
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      28,
+      113,
+      120
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      4,
+      66,
+      80
+     ],
+     "solo": [
+      "DIAMOND",
+      "I",
+      85,
+      126,
+      95
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "I",
+      28,
+      78,
+      90
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      46,
+      49,
+      55
+     ]
+    }
+   }
   }
  },
  {
@@ -10900,6 +19742,173 @@
       "xp": 173,
       "cs": 6
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "II",
+      48,
+      41,
+      38
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      79,
+      149,
+      165
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "II",
+      89,
+      42,
+      33
+     ],
+     "solo": [
+      "DIAMOND",
+      "III",
+      51,
+      309,
+      292
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      26,
+      53,
+      51
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      204,
+      198
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "II",
+      25,
+      50,
+      55
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      55,
+      153,
+      153
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      17,
+      56,
+      57
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      95,
+      168,
+      179
+     ]
     }
    }
   }
@@ -11100,6 +20109,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "III",
+      99,
+      246,
+      223
+     ],
+     "solo": [
+      "DIAMOND",
+      "II",
+      19,
+      207,
+      206
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "DIAMOND",
+      "I",
+      19,
+      168,
+      140
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      181,
+      146
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      41,
+      233,
+      239
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      56,
+      251,
+      247
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      63,
+      125,
+      124
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      77,
+      67,
+      58
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      22,
+      90,
+      80
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      17,
+      166,
+      172
+     ]
+    }
+   }
   }
  },
  {
@@ -11296,6 +20472,173 @@
       "xp": -86,
       "cs": -12
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "III",
+      15,
+      63,
+      49
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      98,
+      98
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "I",
+      49,
+      162,
+      166
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      50,
+      65,
+      72
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "DIAMOND",
+      "III",
+      6,
+      90,
+      97
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      33,
+      50,
+      45
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      4,
+      70,
+      67
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      17,
+      245,
+      233
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      68,
+      212,
+      217
+     ],
+     "flex": [
+      "DIAMOND",
+      "III",
+      2,
+      122,
+      109
+     ]
     }
    }
   }
@@ -11496,6 +20839,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "II",
+      84,
+      49,
+      47
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      2,
+      129,
+      129
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      12,
+      86,
+      76
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      96,
+      59,
+      58
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "BRONZE",
+      "III",
+      55,
+      9,
+      10
+     ],
+     "solo": [
+      "SILVER",
+      "IV",
+      44,
+      41,
+      39
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      13,
+      94,
+      91
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      43,
+      51,
+      39
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      77,
+      65,
+      72
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      38,
+      125,
+      128
+     ]
+    }
+   }
   }
  },
  {
@@ -11692,6 +21202,173 @@
       "xp": -516,
       "cs": 12
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      71,
+      86,
+      86
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      50,
+      124,
+      103
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      20,
+      20,
+      22
+     ],
+     "flex": [
+      "SILVER",
+      "II",
+      21,
+      154,
+      173
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      77,
+      382,
+      358
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      38,
+      118,
+      111
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "SILVER",
+      "I",
+      9,
+      131,
+      136
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      37,
+      362,
+      349
+     ]
+    },
+    "Support": {
+     "solo": [
+      "SILVER",
+      "IV",
+      45,
+      6,
+      2
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      19,
+      128,
+      116
+     ]
     }
    }
   }
@@ -11892,6 +21569,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      56,
+      39,
+      46
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      28,
+      200,
+      203
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      91,
+      7,
+      9
+     ],
+     "flex": [
+      "GOLD",
+      "IV",
+      27,
+      14,
+      18
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      29,
+      30,
+      23
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      77,
+      365,
+      367
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "I",
+      93,
+      143,
+      140
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      29,
+      33
+     ]
+    },
+    "Support": {
+     "solo": [
+      "GOLD",
+      "I",
+      75,
+      17,
+      11
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      92,
+      7,
+      5
+     ]
+    }
+   }
   }
  },
  {
@@ -12087,6 +21931,166 @@
       "xp": 283,
       "cs": -7
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "III",
+      67,
+      6,
+      0
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      80,
+      49,
+      58
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "IV",
+      84,
+      95,
+      85
+     ],
+     "solo": [
+      "GOLD",
+      "I",
+      1,
+      129,
+      141
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      65,
+      307,
+      318
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      86,
+      112,
+      105
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      56,
+      62,
+      59
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      84,
+      53
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      81,
+      81,
+      77
+     ]
     }
    }
   }
@@ -12287,6 +22291,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      65,
+      20,
+      33
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      42,
+      38
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "III",
+      99,
+      51,
+      27
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      53,
+      103,
+      110
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "III",
+      75,
+      28,
+      23
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      81,
+      107,
+      101
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "II",
+      21,
+      80,
+      83
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      94,
+      221,
+      235
+     ]
+    },
+    "Support": {
+     "solo": [
+      "BRONZE",
+      "IV",
+      90,
+      4,
+      1
+     ]
+    }
+   }
   }
  },
  {
@@ -12483,6 +22647,173 @@
       "xp": -839,
       "cs": -8
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "I",
+      68,
+      60,
+      56
+     ],
+     "solo": [
+      "MASTER",
+      "I",
+      40,
+      283,
+      265
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "GOLD",
+      "II",
+      74,
+      124,
+      138
+     ],
+     "flex": [
+      "BRONZE",
+      "II",
+      93,
+      240,
+      240
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "SILVER",
+      "I",
+      46,
+      11,
+      16
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      47,
+      71,
+      91
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      61,
+      45
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      0,
+      183,
+      199
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "III",
+      28,
+      175,
+      155
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      47,
+      190,
+      199
+     ]
     }
    }
   }
@@ -12683,6 +23014,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      84,
+      67,
+      76
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      28,
+      322,
+      319
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "PLATINUM",
+      "IV",
+      51,
+      30,
+      25
+     ],
+     "solo": [
+      "GOLD",
+      "III",
+      5,
+      14,
+      18
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "III",
+      7,
+      36,
+      33
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      85,
+      31,
+      36
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      81,
+      143,
+      148
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      7,
+      28,
+      29
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "III",
+      74,
+      56,
+      52
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      56,
+      18,
+      18
+     ]
+    }
+   }
   }
  },
  {
@@ -12881,6 +23379,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      312,
+      292
+     ],
+     "flex": [
+      "GOLD",
+      "I",
+      69,
+      106,
+      100
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "II",
+      26,
+      107,
+      99
+     ],
+     "solo": [
+      "SILVER",
+      "III",
+      68,
+      124,
+      154
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "DIAMOND",
+      "II",
+      36,
+      226,
+      200
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      17,
+      107,
+      101
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      53,
+      68,
+      58
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      78,
+      33,
+      33
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      71,
+      106,
+      103
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      28,
+      22,
+      24
+     ]
+    }
+   }
   }
  },
  {
@@ -13076,6 +23741,166 @@
       "xp": -19,
       "cs": -4
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      84,
+      17,
+      17
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      31,
+      140,
+      133
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      31,
+      25,
+      21
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "III",
+      39,
+      65,
+      49
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      52,
+      25,
+      17
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "DIAMOND",
+      "III",
+      30,
+      68,
+      54
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      74,
+      224,
+      230
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      93,
+      53,
+      59
+     ],
+     "solo": [
+      "GOLD",
+      "II",
+      6,
+      17,
+      18
+     ]
     }
    }
   }
@@ -13276,6 +24101,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      27,
+      121,
+      109
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      71,
+      163,
+      153
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "II",
+      58,
+      14,
+      7
+     ],
+     "solo": [
+      "PLATINUM",
+      "II",
+      73,
+      66,
+      65
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      37,
+      17,
+      6
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      38,
+      43,
+      34
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "IV",
+      11,
+      27,
+      31
+     ],
+     "flex": [
+      "BRONZE",
+      "I",
+      67,
+      14,
+      4
+     ]
+    },
+    "Support": {
+     "solo": [
+      "EMERALD",
+      "III",
+      46,
+      156,
+      148
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      6,
+      29,
+      29
+     ]
+    }
+   }
   }
  },
  {
@@ -13471,6 +24463,173 @@
       "xp": -289,
       "cs": -3
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      68,
+      25,
+      31
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      57,
+      42,
+      32
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "SILVER",
+      "II",
+      86,
+      185,
+      186
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      2,
+      16,
+      17
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      16,
+      127,
+      143
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      28,
+      33,
+      35
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "III",
+      4,
+      33,
+      33
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      25,
+      31
+     ]
+    },
+    "Support": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      0,
+      280,
+      286
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      8,
+      8,
+      12
+     ]
     }
    }
   }
@@ -13671,6 +24830,173 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "III",
+      82,
+      82,
+      81
+     ],
+     "flex": [
+      "SILVER",
+      "III",
+      30,
+      1,
+      7
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "SILVER",
+      "II",
+      99,
+      4,
+      14
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      75,
+      4,
+      3
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      10,
+      2,
+      3
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      85,
+      56,
+      48
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      14,
+      36,
+      38
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      17,
+      69,
+      64
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "II",
+      1,
+      20,
+      21
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      31,
+      40,
+      30
+     ]
+    }
+   }
   }
  },
  {
@@ -13869,6 +25195,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "SILVER",
+      "IV",
+      36,
+      35,
+      39
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "I",
+      8,
+      109,
+      103
+     ],
+     "solo": [
+      "EMERALD",
+      "I",
+      75,
+      91,
+      72
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "II",
+      69,
+      34,
+      40
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      66,
+      41,
+      35
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "I",
+      7,
+      90,
+      97
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      82,
+      154,
+      149
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "III",
+      18,
+      170,
+      162
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      87,
+      94
+     ]
+    }
+   }
   }
  },
  {
@@ -14063,6 +25549,166 @@
       "xp": 658,
       "cs": 8
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "II",
+      18,
+      118,
+      104
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      49,
+      50,
+      61
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "III",
+      10,
+      31,
+      40
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      27,
+      26,
+      39
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      69,
+      18,
+      18
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      14,
+      68,
+      73
+     ],
+     "flex": [
+      "EMERALD",
+      "II",
+      16,
+      27,
+      31
+     ]
+    },
+    "Support": {
+     "solo": [
+      "SILVER",
+      "I",
+      75,
+      85,
+      79
+     ],
+     "flex": [
+      "SILVER",
+      "I",
+      21,
+      72,
+      70
+     ]
     }
    }
   }
@@ -14263,6 +25909,166 @@
      }
     }
    }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "GOLD",
+      "III",
+      40,
+      4,
+      5
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "MASTER",
+      "I",
+      11,
+      109,
+      90
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      45,
+      234,
+      221
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "III",
+      15,
+      14,
+      10
+     ],
+     "solo": [
+      "GOLD",
+      "IV",
+      36,
+      8,
+      16
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      13,
+      11,
+      10
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      5,
+      79,
+      75
+     ]
+    },
+    "Support": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      82,
+      175,
+      164
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      0,
+      130,
+      131
+     ]
+    }
+   }
   }
  },
  {
@@ -14458,6 +26264,166 @@
       "xp": 433,
       "cs": 0
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      1,
+      4,
+      8
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      81,
+      33,
+      34
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      48,
+      30,
+      33
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      40,
+      3,
+      4
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "GOLD",
+      "IV",
+      1,
+      38,
+      40
+     ],
+     "flex": [
+      "PLATINUM",
+      "IV",
+      41,
+      82,
+      77
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "I",
+      95,
+      73,
+      61
+     ],
+     "flex": [
+      "DIAMOND",
+      "II",
+      26,
+      100,
+      87
+     ]
+    },
+    "Support": {
+     "flex": [
+      "BRONZE",
+      "III",
+      4,
+      1,
+      6
+     ]
     }
    }
   }
@@ -14656,6 +26622,166 @@
       "xp": -296,
       "cs": 8
      }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-10-14T15:44:44+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "DIAMOND",
+      "IV",
+      13,
+      44,
+      34
+     ],
+     "solo": [
+      "PLATINUM",
+      "IV",
+      97,
+      13,
+      14
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      4,
+      145,
+      137
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      23,
+      402,
+      400
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "PLATINUM",
+      "I",
+      16,
+      77,
+      81
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      95,
+      153,
+      147
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      85,
+      79
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      13,
+      60,
+      67
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      11,
+      52,
+      47
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "PLATINUM",
+      "II",
+      26,
+      7,
+      9
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "III",
+      41,
+      96,
+      82
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      42,
+      97,
+      102
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "GOLD",
+      "II",
+      47,
+      44,
+      52
+     ],
+     "solo": [
+      "PLATINUM",
+      "I",
+      8,
+      78,
+      65
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "II",
+      15,
+      118,
+      107
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      45,
+      249,
+      250
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "I",
+      52,
+      22,
+      22
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      28,
+      257,
+      254
+     ]
     }
    }
   }

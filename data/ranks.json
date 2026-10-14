@@ -1,0 +1,88 @@
+[
+ {
+  "date": "2026-10-14",
+  "at": "2026-10-14T15:44:44+00:00",
+  "players": {
+   "Durtyweedz": {
+    "flex": [
+     "DIAMOND",
+     "IV",
+     13,
+     44,
+     34
+    ],
+    "solo": [
+     "PLATINUM",
+     "IV",
+     97,
+     13,
+     14
+    ]
+   },
+   "Kiskill": {
+    "flex": [
+     "EMERALD",
+     "IV",
+     4,
+     145,
+     137
+    ],
+    "solo": [
+     "EMERALD",
+     "IV",
+     23,
+     402,
+     400
+    ]
+   },
+   "Eoden974": {
+    "flex": [
+     "PLATINUM",
+     "I",
+     16,
+     77,
+     81
+    ],
+    "solo": [
+     "EMERALD",
+     "IV",
+     95,
+     153,
+     147
+    ]
+   },
+   "Andorian": {
+    "solo": [
+     "EMERALD",
+     "IV",
+     51,
+     85,
+     79
+    ],
+    "flex": [
+     "GOLD",
+     "II",
+     13,
+     60,
+     67
+    ]
+   },
+   "ChUck NoUb": {
+    "flex": [
+     "GOLD",
+     "III",
+     11,
+     52,
+     47
+    ],
+    "solo": [
+     "BRONZE",
+     "I",
+     31,
+     4,
+     6
+    ]
+   }
+  }
+ }
+]
