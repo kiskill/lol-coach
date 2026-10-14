@@ -33,11 +33,15 @@
 {% macro spark(points, better) -%}
 {%- set vals = points | map(attribute="value") | reject("none") | list -%}
 {%- if vals | length >= 2 -%}
-{%- set lo = vals | min -%}{%- set hi = vals | max -%}
-<span class="spark" title="Évolution soirée par soirée">
+{#- échelle ancrée sur 0 : la hauteur des barres reste proportionnelle aux valeurs -#}
+{%- set lo = [vals | min, 0] | min -%}{%- set hi = [vals | max, 0] | max -%}
+{%- set span = (hi - lo) or 1 -%}
+{%- set zero = 100 * (0 - lo) / span -%}
+<span class="spark" title="Évolution soirée par soirée (échelle à partir de 0)">
+  {%- if lo < 0 %}<b class="zero" style="bottom: {{ zero | round(1) }}%"></b>{% endif -%}
   {%- for p in points -%}
-  {%- if p.value is none %}<i class="na"></i>
-  {%- else %}{% set h = 20 + (80 * (p.value - lo) / (hi - lo) if hi > lo else 50) %}<i style="height: {{ h | round(0) }}%" title="{{ p.date[8:10] }}/{{ p.date[5:7] }} : {{ p.value | num }}"></i>{% endif -%}
+  {%- if p.value is none %}<i class="na" style="bottom: {{ zero | round(1) }}%"></i>
+  {%- else %}<i style="height: {{ (100 * (p.value | abs) / span) | round(1) }}%; bottom: {{ (100 * ([p.value, 0] | min - lo) / span) | round(1) }}%" title="{{ p.date[8:10] }}/{{ p.date[5:7] }} : {{ p.value | num }}"></i>{% endif -%}
   {%- endfor -%}
 </span>
 {%- endif -%}

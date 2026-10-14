@@ -144,9 +144,11 @@ h2 small { font-family: Inter; font-size: .85rem; font-weight: 400; }
 .ktile b small { font-family: Inter; font-size: .75rem; font-weight: 500; color: var(--muted); }
 .ktile .kref { font-size: .78rem; color: var(--muted); }
 .ktile.good .kref { color: var(--good); } .ktile.bad .kref { color: var(--bad); }
-.spark { display: flex; align-items: flex-end; gap: 3px; height: 26px; margin-top: 6px; }
-.spark i { flex: 1; max-width: 12px; background: color-mix(in srgb, var(--accent) 70%, transparent); border-radius: 2px 2px 0 0; }
+.spark { position: relative; display: flex; align-items: flex-end; gap: 3px; height: 26px; margin-top: 6px; border-bottom: 1px solid var(--line); }
+.spark i { position: relative; flex: 1; max-width: 12px; min-height: 1px; background: color-mix(in srgb, var(--accent) 70%, transparent); border-radius: 2px 2px 0 0; }
 .spark i.na { height: 3px; background: var(--line); }
+.spark .zero { position: absolute; left: 0; right: 0; height: 1px; background: var(--muted); opacity: .6; }
+.spark:has(.zero) { border-bottom: 0; }
 .spark i:last-child { background: var(--accent); }
 
 /* ---- ligne d'indicateurs d'une partie ---- */
