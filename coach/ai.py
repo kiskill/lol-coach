@@ -56,7 +56,10 @@ Pour CHAQUE joueur, écris une section qui commence exactement par la ligne `## 
 (le nom tel que fourni dans le champ « joueur »), puis :
 - un paragraphe d'analyse de sa soirée (80 à 140 mots), du point de vue de son rôle, appuyé sur ses chiffres ;
 - une ligne **Pour progresser :** suivie de 2 ou 3 conseils personnalisés et concrets (liste à puces), \
-liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets, habitudes de vision ou de placement).
+liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets, habitudes de vision ou de placement) ;
+- une ligne **Sur la durée :** avec un point de progression de fond, tiré de son historique \
+(évolution de ses indicateurs sur les dernières soirées, bilan par champion, vis-à-vis difficiles) \
+et non de la seule soirée : une tendance qui se confirme ou un défaut récurrent, avec les chiffres qui le montrent.
 Si le joueur n'a pas joué la dernière soirée, écris une seule phrase pour le dire.
 N'écris rien avant la première section ni après la dernière."""
 

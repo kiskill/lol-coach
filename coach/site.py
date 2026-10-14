@@ -108,6 +108,14 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
         shutil.copy(map_img, OUT / "img" / "map11.png")
     env.globals["map_img"] = "img/map11.png" if map_img else ""
 
+    # Analyse par joueur en premier : elle passe avant le plafond d'appels
+    reports = stats.player_reports(games, sessions, cfg)
+    last_date = sessions[-1]["date"]
+    if ia_sessions != "aucune" and (ia_sessions == "derniere" or not ai.load("players", last_date)):
+        print(f"Analyse IA par joueur de la soirée du {last_date}…")
+        text = ai.players_analysis(reports, last_date, cfg, name)
+        if text:
+            ai.save("players", text, last_date, games=len(sessions[-1]["games"]))
     g_ai = ai.load("global")
     if ia_global or (cfg.get("ai", {}).get("global_auto") and not g_ai):
         print("Analyse IA globale…")
@@ -127,13 +135,6 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
             text = ai.session_analysis(stats.session_report(s, games, cfg), grep, cfg, name)
             if text:
                 ai.save("session", text, s["date"], games=len(s["games"]))
-    reports = stats.player_reports(games, sessions, cfg)
-    last_date = sessions[-1]["date"]
-    if ia_sessions != "aucune" and (ia_sessions == "derniere" or not ai.load("players", last_date)):
-        print(f"Analyse IA par joueur de la soirée du {last_date}…")
-        text = ai.players_analysis(reports, last_date, cfg, name)
-        if text:
-            ai.save("players", text, last_date, games=len(sessions[-1]["games"]))
     print(f"Appels IA effectués lors de ce passage : {ai.STATUS['calls']}")
     generated = datetime.now().strftime("%d/%m/%Y %H:%M")
 
