@@ -108,6 +108,7 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
 
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape())
     env.globals.update(name=name, icon=champs.icon, ROLES=ROLES, fr_date=fr_date, item_name=items.name,
+                       item_icon=items.icon,
                        team=cfg.get("team_name", "Équipe"), min_champ=cfg.get("stats", {}).get("min_games_champion", 4))
     env.filters["wrclass"] = lambda wr: "good" if wr >= 60 else "bad" if wr <= 40 else "mid"
     env.filters["signed"] = signed
@@ -136,6 +137,13 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     for f in ok:
         shutil.copy(f, OUT / "img" / f.name)
     print(f"Icônes : {len(ok)}/{len(used)} disponibles.")
+    used_items = {i for g in games if g.get("ind") for pl in g["ind"]["players"].values()
+                  for i in [x for x, _ in pl.get("build") or []] + [pl.get("boots")] if i}
+    item_files = items.fetch_icons(used_items)
+    (OUT / "img" / "items").mkdir()
+    for f in item_files:
+        shutil.copy(f, OUT / "img" / "items" / f.name)
+    print(f"Icônes d'objets : {len(item_files)}/{len(used_items)} disponibles.")
     shutil.copy(TEMPLATES / "map.js", OUT / "map.js")
     map_img = store.fetch_map(champs.version)
     if map_img:

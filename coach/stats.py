@@ -616,7 +616,8 @@ def player_game_metrics(g, p):
         m["lane15"] = lane["gold"]
     ind = (g.get("ind") or {}).get("players", {}).get(p["role"])
     for k, v in (ind or {}).items():
-        if isinstance(v, (int, float)) and not isinstance(v, bool) and k not in m:
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and k not in m \
+                and k not in ("first_item", "boots"):  # identifiants d'objets, pas des mesures
             m[k] = round(v, 2) if isinstance(v, float) else v
     return m
 
@@ -674,8 +675,10 @@ def player_report(who, games, sessions, cfg):
     last_games = []
     for g, p, m in last:
         opp = by_role(g, p["role"], "enemy")
+        ind = (g.get("ind") or {}).get("players", {}).get(p["role"]) or {}
         last_games.append({"match_id": g["match_id"], "start_utc": g["start_utc"], "win": g["win"],
                            "duration_min": g["duration_min"], "champion": p["champion"],
+                           "build": ind.get("build") or [], "boots": ind.get("boots"),
                            "opponent": opp["champion"] if opp else None, "m": m})
 
     ids = {g["match_id"] for g, _, _ in mine}
@@ -689,8 +692,84 @@ def player_report(who, games, sessions, cfg):
                 indicator_rows({"values": ref}, None, defs),
         "trend": trend, "champions": champions, "matchups": matchups[:6],
         "last_games": last_games, "pool": cfg.get("champion_pools", {}).get(role, []),
+        "gear": gear_report(mine, last_ids),
         "map": mp, "has_map": bool(mp["deaths"] or mp["kills"]),
     }
+
+
+def gear_report(mine, last_ids=()):
+    """Équipement d'un joueur et son impact : timing des objets, winrate par objet, bottes,
+    build par champion, rentabilité de l'or et adaptation (anti-heal)."""
+    rows = [(g, p, g["ind"]["players"][p["role"]]) for g, p, _ in mine
+            if g.get("ind") and p["role"] in g["ind"]["players"]]
+    if not rows:
+        return None
+    base = rec(len(rows), sum(g["win"] for g, _, _ in rows))
+
+    def prof(rs):
+        return {**rec(len(rs), sum(g["win"] for g, _, _ in rs)),
+                "first_min": _avg([pl["first_item_min"] for _, _, pl in rs if pl.get("first_item_min")], 1),
+                "second_min": _avg([pl["second_item_min"] for _, _, pl in rs if pl.get("second_item_min")], 1),
+                "gold_min": _avg([pl["gold_min"] for _, _, pl in rs if pl.get("gold_min") is not None]),
+                "dmg_gold": _avg([pl["dmg_gold"] for _, _, pl in rs if pl.get("dmg_gold") is not None], 2),
+                "items_done": _avg([len(pl.get("build") or []) for _, _, pl in rs], 1)}
+
+    # Impact du timing : 1er objet avant / après la médiane du joueur
+    timed = sorted((x for x in rows if x[2].get("first_item_min")), key=lambda x: x[2]["first_item_min"])
+    timing = None
+    if len(timed) >= 4:
+        med = timed[len(timed) // 2][2]["first_item_min"]
+        early = [x for x in timed if x[2]["first_item_min"] < med]
+        late = [x for x in timed if x[2]["first_item_min"] >= med]
+        timing = {"median": med, "early": prof(early), "late": prof(late)}
+
+    def item_rows(key, filt=lambda pl: True):
+        acc = defaultdict(list)
+        for x in rows:
+            if filt(x[2]):
+                for it, minute in key(x[2]):
+                    acc[it].append((x, minute))
+        out = []
+        for it, v in acc.items():
+            r = rec(len(v), sum(x[0]["win"] for x, _ in v))
+            out.append({"item": it, **r, "diff": r["wr"] - base["wr"],
+                        "minute": _avg([m for _, m in v if m], 1),
+                        "champions": [c for c, _ in Counter(x[1]["champion"] for x, _ in v).most_common(3)]})
+        return sorted(out, key=lambda r: (-r["games"], -r["wr"]))
+
+    legendary = item_rows(lambda pl: [(i, m) for i, m in pl.get("build") or []])
+    boots = item_rows(lambda pl: [(pl["boots"], None)] if pl.get("boots") else [])
+
+    # Build par champion : 1er objet et build de base (2 premiers objets)
+    champs = defaultdict(list)
+    for x in rows:
+        champs[x[1]["champion"]].append(x)
+    builds = []
+    for c, v in sorted(champs.items(), key=lambda kv: -len(kv[1])):
+        cores = defaultdict(list)
+        firsts = defaultdict(list)
+        for x in v:
+            b = [i for i, _ in x[2].get("build") or []]
+            if len(b) >= 2:
+                cores[tuple(b[:2])].append(x)
+            if b:
+                firsts[b[0]].append(x)
+        mk = lambda d: sorted(({"ids": list(k) if isinstance(k, tuple) else [k],
+                                **rec(len(xs), sum(x[0]["win"] for x in xs))} for k, xs in d.items()),
+                              key=lambda r: (-r["games"], -r["wr"]))
+        builds.append({"champion": c, "games": len(v), **{k: val for k, val in prof(v).items() if k != "games"},
+                       "cores": mk(cores)[:3], "firsts": mk(firsts)[:3]})
+
+    needed = [x for x in rows if x[0]["ind"]["team"].get("antiheal_needed")]
+    got = [x for x in needed if x[2].get("antiheal")]
+    antiheal = {"needed": len(needed), "bought": len(got),
+                "with": rec(len(got), sum(x[0]["win"] for x in got)),
+                "without": rec(len(needed) - len(got), sum(x[0]["win"] for x in needed if x not in got))} \
+        if needed else None
+    last = [x for x in rows if x[0]["match_id"] in last_ids]
+    return {"profile": prof(rows), "last": prof(last) if last else None, "timing": timing,
+            "legendary": legendary, "boots": boots, "builds": builds[:6], "antiheal": antiheal,
+            "base_wr": base["wr"]}
 
 
 def player_reports(games, sessions, cfg):

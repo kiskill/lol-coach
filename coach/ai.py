@@ -60,6 +60,9 @@ Pour CHAQUE joueur, écris une section qui commence exactement par la ligne `## 
 - un paragraphe d'analyse de sa soirée (80 à 140 mots), du point de vue de son rôle, appuyé sur ses chiffres ;
 - une ligne **Pour progresser :** suivie de 2 ou 3 conseils personnalisés et concrets (liste à puces), \
 liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets, habitudes de vision ou de placement) ;
+- une ligne **Stuff :** en 1 à 3 phrases, si le champ « équipement » est fourni : timing de ses objets, \
+objets ou builds qui marchent ou non chez lui (seulement à partir de 3 parties), adaptation (anti-heal) \
+et un conseil d'itémisation concret pour ses champions ;
 - une ligne **Sur la durée :** avec un point de progression de fond, tiré de son historique \
 (évolution de ses indicateurs sur les dernières soirées, bilan par champion, vis-à-vis difficiles) \
 et non de la seule soirée : une tendance qui se confirme ou un défaut récurrent, avec les chiffres qui le montrent.
@@ -349,7 +352,38 @@ def _player_payload(r, name):
             + (f", {c['lane15']:+} or à 15 min" if c.get("lane15") is not None else "")
             for c in r["champions"][:6]],
         "vis-à-vis_les_plus_durs": [f"{name(c['champion'])} {c['wins']}/{c['games']}" for c in r["matchups"][:4]],
+        "équipement": _gear_payload(r.get("gear"), name),
     }
+
+
+def _gear_payload(gr, name):
+    """Stuff du joueur : timings, rentabilité, winrate par objet, builds et adaptation."""
+    if not gr:
+        return None
+    keys = ("first_min", "second_min", "gold_min", "dmg_gold", "items_done")
+    labels = {"first_min": "1er_objet_min", "second_min": "2e_objet_min", "gold_min": "or_par_min",
+              "dmg_gold": "dégâts_par_or", "items_done": "objets_finis"}
+    fmt = lambda rs: [f"{_item(x['item'])} {x['wins']}/{x['games']} ({x['diff']:+} pts)" for x in rs]
+    out = {
+        "habituel": {labels[k]: gr["profile"].get(k) for k in keys},
+        "soirée": {labels[k]: gr["last"].get(k) for k in keys} if gr["last"] else None,
+        "winrate_habituel": gr["base_wr"],
+        "objets (victoires/parties, écart au winrate habituel)": fmt([x for x in gr["legendary"] if x["games"] >= 2][:8]),
+        "bottes": fmt(gr["boots"][:3]),
+        "builds_par_champion": [
+            f"{name(b['champion'])} ({b['games']} parties) : "
+            + (" > ".join(_item(i) for i in b["cores"][0]["ids"]) + f" {b['cores'][0]['wins']}/{b['cores'][0]['games']}"
+               if b["cores"] else "pas de build complet")
+            for b in gr["builds"][:4]],
+    }
+    if gr["timing"]:
+        t = gr["timing"]
+        out["impact_timing_1er_objet"] = (f"avant {t['median']} min : {t['early']['wins']}/{t['early']['games']}, "
+                                          f"après : {t['late']['wins']}/{t['late']['games']}")
+    if gr["antiheal"]:
+        a = gr["antiheal"]
+        out["anti_heal_face_aux_soigneurs"] = f"acheté {a['bought']}/{a['needed']}"
+    return out
 
 
 def players_analysis(reports, date, cfg, name):

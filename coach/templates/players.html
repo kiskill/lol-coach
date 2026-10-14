@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi, keytiles, lolmap with context %}
+{% from "macros.html" import champ, item, wr, kpi, keytiles, lolmap with context %}
 {% block title %}{{ team }} · Joueurs{% endblock %}
 {% block content %}
 
@@ -53,15 +53,83 @@
   <section class="card">
     <h2>Ses parties de la soirée</h2>
     <div class="scroll"><table class="t players">
-      <tr><th>Résultat</th><th>Champion</th><th>Face à</th><th>K / D / A</th><th>CS/min</th><th>Or @15</th><th>Part dégâts</th><th>KP</th><th>Vision/min</th></tr>
+      <tr><th>Résultat</th><th>Champion</th><th>Face à</th><th>K / D / A</th><th>CS/min</th><th>Or @15</th><th>Part dégâts</th><th>KP</th><th>Vision/min</th><th>Stuff (ordre d'achat)</th></tr>
       {% for g in r.last_games %}{% set m = g.m %}
       <tr><td class="{{ 'good-t' if g.win else 'bad-t' }}"><b>{{ "Victoire" if g.win else "Défaite" }}</b> <small class="muted">{{ g.start_utc | localtime }}</small></td>
         <td>{{ champ(g.champion, "sm") }}</td><td>{% if g.opponent %}{{ champ(g.opponent, "sm") }}{% endif %}</td>
         <td>{% if m.kills is defined %}{{ m.kills }} / {{ m.deaths }} / {{ m.assists }}{% endif %}</td>
         <td>{{ m.cs_min | num }}</td><td class="{{ m.lane15 | signclass }}">{{ m.lane15 | signed }}</td>
-        <td>{% if m.dmg_pct is defined %}{{ m.dmg_pct }} %{% endif %}</td><td>{% if m.kp is defined %}{{ m.kp }} %{% endif %}</td><td>{{ m.vision_min | num(2) }}</td></tr>
+        <td>{% if m.dmg_pct is defined %}{{ m.dmg_pct }} %{% endif %}</td><td>{% if m.kp is defined %}{{ m.kp }} %{% endif %}</td><td>{{ m.vision_min | num(2) }}</td>
+        <td class="pair">{% for it, mn in g.build %}{{ item(it, mn) }}{% endfor %}{% if g.boots %}{{ item(g.boots) }}{% endif %}</td></tr>
       {% endfor %}
     </table></div>
+  </section>
+  {% endif %}
+
+  {% set gr = r.gear %}
+  {% if gr %}
+  {% set gp, gl = gr.profile, gr.last %}
+  <section class="card">
+    <h2>Équipement et impact <small class="muted">· {{ gp.games }} parties détaillées</small></h2>
+    <div class="kpis compact">
+      {{ kpi("1er objet légendaire", (gp.first_min | num) ~ " min", ("soirée " ~ (gl.first_min | num) ~ " min") if gl else "") }}
+      {{ kpi("2e objet légendaire", (gp.second_min | num) ~ " min", ("soirée " ~ (gl.second_min | num) ~ " min") if gl else "") }}
+      {{ kpi("Or / min", gp.gold_min | num, ("soirée " ~ (gl.gold_min | num)) if gl else "") }}
+      {{ kpi("Dégâts par pièce d'or", gp.dmg_gold | num(2), ("soirée " ~ (gl.dmg_gold | num(2))) if gl else "rentabilité du stuff") }}
+      {{ kpi("Objets finis / partie", gp.items_done | num, ("soirée " ~ (gl.items_done | num)) if gl else "") }}
+    </div>
+    {% if gr.timing %}{% set t = gr.timing %}
+    <h3>Impact du timing du 1er objet</h3>
+    <table class="t">
+      <tr><th>1er objet</th><th>Minute moyenne</th><th>Winrate</th></tr>
+      <tr><td>Avant {{ t.median | num }} min (sa médiane)</td><td>{{ t.early.first_min | num }} min</td><td>{{ wr(t.early) }}</td></tr>
+      <tr><td>À {{ t.median | num }} min ou après</td><td>{{ t.late.first_min | num }} min</td><td>{{ wr(t.late) }}</td></tr>
+    </table>
+    {% endif %}
+    <div class="grid2 inner">
+      <div>
+        <h3>Objets légendaires <small class="muted">· écart = winrate avec l'objet − son winrate habituel ({{ gr.base_wr }} %)</small></h3>
+        <div class="scroll"><table class="t">
+          <tr><th>Objet</th><th>Winrate</th><th>Écart</th><th>Acheté à</th><th>Sur</th></tr>
+          {% for it in gr.legendary[:10] %}
+          <tr class="{{ 'faded' if it.games < 3 }}"><td>{{ item(it.item, label=true) }}</td><td>{{ wr(it) }}</td>
+            <td class="{{ it.diff | signclass if it.games >= 3 }}">{{ it.diff | signed }} pts</td>
+            <td>{{ it.minute | num }}{% if it.minute is not none %} min{% endif %}</td>
+            <td class="pair">{% for c in it.champions %}{{ champ(c, "xs", false) }}{% endfor %}</td></tr>
+          {% endfor %}
+        </table></div>
+        <p class="muted small-note" style="margin-top: 6px">Lignes grisées : moins de 3 parties, ne pas en tirer de conclusion.</p>
+      </div>
+      <div>
+        {% if gr.boots %}
+        <h3>Bottes</h3>
+        <table class="t">
+          <tr><th>Bottes</th><th>Winrate</th><th>Écart</th></tr>
+          {% for it in gr.boots %}<tr class="{{ 'faded' if it.games < 3 }}"><td>{{ item(it.item, label=true) }}</td><td>{{ wr(it) }}</td><td class="{{ it.diff | signclass if it.games >= 3 }}">{{ it.diff | signed }} pts</td></tr>{% endfor %}
+        </table>
+        {% endif %}
+        {% if gr.antiheal %}{% set ah = gr.antiheal %}
+        <h3>Adaptation : anti-heal face aux soigneurs</h3>
+        <p>Acheté dans <b>{{ ah.bought }}</b> des {{ ah.needed }} parties face à un gros soigneur.</p>
+        <table class="t">
+          <tr><th></th><th>Winrate</th></tr>
+          {% if ah.with.games %}<tr><td>Avec anti-heal</td><td>{{ wr(ah.with) }}</td></tr>{% endif %}
+          {% if ah.without.games %}<tr><td>Sans anti-heal</td><td>{{ wr(ah.without) }}</td></tr>{% endif %}
+        </table>
+        {% endif %}
+      </div>
+    </div>
+    {% if gr.builds %}
+    <h3>Builds par champion</h3>
+    <div class="scroll"><table class="t players">
+      <tr><th>Champion</th><th>Parties</th><th>1er objet à</th><th>Build de base le plus joué</th><th>Premiers objets</th></tr>
+      {% for b in gr.builds %}
+      <tr><td>{{ champ(b.champion, "sm") }}</td><td>{{ b.games }}</td><td>{{ b.first_min | num }}{% if b.first_min is not none %} min{% endif %}</td>
+        <td>{% if b.cores %}{% set c = b.cores[0] %}<span class="pair">{% for it in c.ids %}{{ item(it) }}{% endfor %}</span> {{ wr(c) }}{% endif %}</td>
+        <td>{% for f in b.firsts %}<span class="chip">{{ item(f.ids[0]) }}<b>{{ f.wins }}/{{ f.games }}</b></span> {% endfor %}</td></tr>
+      {% endfor %}
+    </table></div>
+    {% endif %}
   </section>
   {% endif %}
 

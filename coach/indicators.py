@@ -86,8 +86,13 @@ def game_indicators(game, raw, tl, items):
             "vision_adv": round(100 * ch["visionScoreAdvantageLaneOpponent"]) if "visionScoreAdvantageLaneOpponent" in ch else None,
             "deaths15": 0, "cs10": None, "cs10_diff": None,
             "tf": 0, "tf_first_death": 0, "tf_dmg": 0,
-            "first_item": None, "first_item_min": None,
+            "first_item": None, "first_item_min": None, "second_item_min": None,
             "items": [i for i in final if i and items.legendary(i)],
+            # ordre d'achat des objets légendaires [[objet, minute], ...] (stuff final si pas de timeline)
+            "build": [[i, None] for i in final if i and items.legendary(i)],
+            "boots": next((i for i in final if i and items.boots(i)), None),
+            "gold_min": round(p["goldEarned"] / minutes),
+            "dmg_gold": round(p["totalDamageDealtToChampions"] / p["goldEarned"], 2) if p["goldEarned"] else None,
             "antiheal": any(i and items.antiheal(i) for i in final),
         }
 
@@ -204,12 +209,18 @@ def game_indicators(game, raw, tl, items):
                     if other:
                         players[role]["cs10_diff"] = mine[2] - other[2]
 
-        # --- premier objet légendaire acheté (et sa minute)
+        # --- objets légendaires dans l'ordre d'achat (et leur minute)
+        bought = defaultdict(list)
         for e in events:
             if e[0] == "I" and e[2] in our_pid and items.legendary(e[3]):
-                pl = players[our_pid[e[2]]]
-                if pl["first_item"] is None:
-                    pl["first_item"], pl["first_item_min"] = e[3], round(e[1] / 60, 1)
+                b = bought[our_pid[e[2]]]
+                if all(i != e[3] for i, _ in b):
+                    b.append([e[3], round(e[1] / 60, 1)])
+        for role, b in bought.items():
+            pl = players[role]
+            pl["build"] = b
+            pl["first_item"], pl["first_item_min"] = b[0]
+            pl["second_item_min"] = b[1][1] if len(b) > 1 else None
 
         # --- trajet du jungler (minutes 1 à 8)
         jg = ours.get("Jungle")

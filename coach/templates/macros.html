@@ -6,6 +6,14 @@
 </span>
 {%- endmacro %}
 
+{% macro item(iid, minute=none, label=false) -%}
+<span class="champ champ-sm item" title="{{ item_name(iid) }}{% if minute %} · {{ minute | num }} min{% endif %}">
+  {%- set src = item_icon(iid) -%}
+  {%- if src %}<img src="{{ root }}{{ src }}" alt="" loading="lazy">{% else %}<i>{{ item_name(iid)[:2] }}</i>{% endif -%}
+  {%- if label %}<span>{{ item_name(iid) }}</span>{% endif -%}
+</span>
+{%- endmacro %}
+
 {% macro wr(rec, min=0) -%}
 <span class="wr {{ rec.wr | wrclass }}{% if rec.games < min %} small{% endif %}">
   <span class="bar"><span style="width: {{ rec.wr }}%"></span></span>

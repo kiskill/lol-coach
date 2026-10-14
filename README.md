@@ -120,6 +120,13 @@ Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'his
   - Mid : or et CS face au vis-à-vis, part des dégâts, kills sur d'autres lanes, solo kills.
   - ADC : CS/min, dégâts/min, part des dégâts, morts, temps passé mort, premier mort en teamfight perdu.
   - Support : vision, pinks, wards détruites, vision face au support adverse, immobilisations.
+  - **Équipement et impact** (tous rôles) :
+    - minute du 1er et du 2e objet légendaire, or/min, dégâts par pièce d'or, objets finis par partie ;
+    - winrate quand le 1er objet arrive avant ou après la médiane du joueur ;
+    - winrate par objet légendaire et par bottes, avec l'écart à son winrate habituel ;
+    - build de base le plus joué par champion ;
+    - anti-heal acheté face aux gros soigneurs ;
+    - le stuff dans l'ordre d'achat pour chaque partie de la soirée.
   Une analyse IA de la dernière soirée et des conseils personnalisés accompagnent chaque fiche (un seul appel pour les 5 joueurs, conservé dans `data/ai/players/`).
 - **Parties avec remplaçant :** avec `min_team_players: 4`, une partie à 4 + 1 remplaçant compte dans la soirée et les stats d'équipe. Le remplaçant est signalé sur la partie, mais il n'a ni fiche ni ligne dans les tableaux par joueur.
 - **Classement :**

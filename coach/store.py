@@ -193,15 +193,19 @@ ITEMS = DATA / "items.json"
 MAP_IMG = ICONS / "map11.png"
 # Repli hors ligne : objets "Blessures graves" connus (la liste à jour vient de Data Dragon)
 _ANTIHEAL_FALLBACK = {3123, 3033, 3076, 3075, 3916, 3165, 6609, 3011}
+_BOOTS_FALLBACK = {3006, 3009, 3020, 3047, 3111, 3117, 3158}
+ITEM_ICONS = ICONS / "items"
+ITEMS_FORMAT = 2  # 2 = avec le repérage des bottes
 
 
 class Items:
-    """Noms d'items (fr), objets légendaires et objets anti-soin, via Data Dragon."""
+    """Noms d'items (fr), objets légendaires, bottes et objets anti-soin, via Data Dragon."""
 
     def __init__(self, version):
         cache = _read(ITEMS, None)
-        if not cache or cache.get("version") != version:
+        if not cache or cache.get("version") != version or cache.get("format") != ITEMS_FORMAT:
             cache = self._download(version) or cache or {}
+        self.version = cache.get("version") or version
         self.data = cache.get("items", {})
 
     @staticmethod
@@ -225,8 +229,10 @@ class Items:
                 "legendary": (not it.get("into") and gold >= 2200 and "Consumable" not in tags
                               and "Boots" not in tags and it.get("maps", {}).get("11", False)),
                 "antiheal": "Grievous Wounds" in desc,
+                # bottes améliorées (pas les Bottes de base)
+                "boots": "Boots" in tags and bool(it.get("from")),
             }
-        cache = {"version": version, "items": items}
+        cache = {"version": version, "format": ITEMS_FORMAT, "items": items}
         _write(ITEMS, cache)
         return cache
 
@@ -238,8 +244,37 @@ class Items:
         return it["legendary"] if it else False
 
     def antiheal(self, iid):
+        # la liste connue complète Data Dragon : certaines descriptions (ex. Cotte épineuse
+        # en 16.20) ne mentionnent plus « Grievous Wounds »
         it = self.data.get(str(iid))
-        return it["antiheal"] if it else int(iid) in _ANTIHEAL_FALLBACK
+        return bool(it and it["antiheal"]) or int(iid) in _ANTIHEAL_FALLBACK
+
+    def boots(self, iid):
+        it = self.data.get(str(iid))
+        return it["boots"] if it and "boots" in it else int(iid) in _BOOTS_FALLBACK
+
+    def icon(self, iid):
+        """Chemin relatif de l'icône si elle a été téléchargée, sinon None."""
+        return f"img/items/{iid}.png" if (ITEM_ICONS / f"{iid}.png").exists() else None
+
+    def fetch_icons(self, ids):
+        """Télécharge les icônes d'objets manquantes (une fois, dans data/icons/items/)."""
+        ITEM_ICONS.mkdir(parents=True, exist_ok=True)
+        online = bool(self.version)
+        for iid in sorted(ids):
+            f = ITEM_ICONS / f"{iid}.png"
+            if f.exists() or not online:
+                continue
+            try:
+                r = requests.get(f"https://ddragon.leagueoflegends.com/cdn/{self.version}/img/item/{iid}.png",
+                                 timeout=15)
+            except Exception as exc:
+                print(f"[info] Icônes d'objets indisponibles ({exc.__class__.__name__}).")
+                online = False
+                continue
+            if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
+                f.write_bytes(r.content)
+        return [ITEM_ICONS / f"{i}.png" for i in ids if (ITEM_ICONS / f"{i}.png").exists()]
 
 
 def fetch_map(version):
