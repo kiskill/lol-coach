@@ -97,9 +97,6 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     # Icônes : téléchargées une fois dans data/icons/, puis copiées avec le site
     used = {p["champion"] for g in games for side in ("our", "enemy") for p in g[side]}
     used |= {c for g in games for c in g.get("our_bans", []) + g.get("enemy_bans", [])}
-    outside = stats.outside_report(store.load_outside(), games, cfg, tz)
-    used |= {r[k] for o in outside["players"] for r in o["recent"] for k in ("champion", "opponent") if r[k]}
-    used |= {c["champion"] for o in outside["players"] for c in o["champions"]}
     ok = champs.fetch_icons(used)
     (OUT / "img").mkdir()
     for f in ok:
@@ -116,7 +113,7 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     last_date = sessions[-1]["date"]
     if ia_sessions != "aucune" and (ia_sessions == "derniere" or not ai.load("players", last_date)):
         print(f"Analyse IA par joueur de la soirée du {last_date}…")
-        text = ai.players_analysis(reports, last_date, cfg, name, outside)
+        text = ai.players_analysis(reports, last_date, cfg, name)
         if text:
             ai.save("players", text, last_date, games=len(sessions[-1]["games"]))
     g_ai = ai.load("global")
@@ -161,12 +158,6 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
         notes={r["player"]: insights.player_insights(r, name) for r in reports},
         generated=generated, root="", **ai_flags())
     (OUT / "players.html").write_text(html, encoding="utf-8")
-
-    # Hors soirées : parties classées jouées sans le groupe
-    html = env.get_template("outside.html").render(
-        r=outside, ai_texts={k: ai.outside_excerpt(v) for k, v in p_texts.items()},
-        min_stack=cfg.get("min_team_players", 5), generated=generated, root="")
-    (OUT / "outside.html").write_text(html, encoding="utf-8")
 
     # Explorateur : toutes les stats par joueur et par partie
     session_of = {g["match_id"]: s["date"] for s in sessions for g in s["games"]}

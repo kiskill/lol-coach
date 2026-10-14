@@ -3,8 +3,7 @@
 Chaque texte est généré UNE fois puis conservé dans data/ai/ :
   data/ai/global.json             -> bilan global (regénéré seulement sur demande)
   data/ai/sessions/AAAA-MM-JJ.json -> débrief d'une soirée (généré une fois)
-  data/ai/players/AAAA-MM-JJ.json  -> analyse par joueur de cette soirée (un seul appel pour les 5,
-                                      avec le résumé de leurs parties hors soirée)
+  data/ai/players/AAAA-MM-JJ.json  -> analyse par joueur de cette soirée (un seul appel pour les 5)
 Les relances, pushs ou redéploiements réutilisent ces fichiers sans rien payer.
 """
 import json
@@ -61,12 +60,7 @@ liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets
 - une ligne **Sur la durée :** avec un point de progression de fond, tiré de son historique \
 (évolution de ses indicateurs sur les dernières soirées, bilan par champion, vis-à-vis difficiles) \
 et non de la seule soirée : une tendance qui se confirme ou un défaut récurrent, avec les chiffres qui le montrent.
-Si le champ « hors_soirées » est fourni (parties classées jouées sans le groupe : solo/duo, flex \
-à moins de 4), ajoute une ligne **Hors soirées :** en 1 à 3 phrases : volume, rôle et champions \
-travaillés (dans le pool ou non), écarts de niveau avec les soirées, et un champion à intégrer \
-au pool si les chiffres le justifient. Ne confonds pas ces parties avec celles de la soirée.
-Si le joueur n'a pas joué la dernière soirée, écris une seule phrase pour le dire \
-(puis la ligne **Hors soirées :** si elle s'applique).
+Si le joueur n'a pas joué la dernière soirée, écris une seule phrase pour le dire.
 N'écris rien avant la première section ni après la dernière."""
 
 
@@ -323,38 +317,9 @@ def _player_payload(r, name):
     }
 
 
-def _outside_payload(o, name):
-    """Résumé des parties hors soirée d'un joueur."""
-    if not o or not o["profile"]["games"]:
-        return None
-    keys = ("games", "wins", "wr", "kda", "cs_min", "vision_min", "kp", "dmg_share")
-    return {
-        "bilan": {k: o["profile"].get(k) for k in keys},
-        "sur_son_rôle": {k: o["profile_role"].get(k) for k in keys},
-        "en_soirée (comparaison)": {k: o["team"].get(k) for k in keys} if o["team"] else None,
-        "par_file": [f"{q['key']} {q['wins']}/{q['games']}" for q in o["queues"]],
-        "par_rôle": [f"{q['key']} {q['wins']}/{q['games']}" for q in o["roles"]],
-        "%_parties_sur_son_rôle": o["role_pct"],
-        "%_parties_du_rôle_sur_le_pool_déclaré": o["pool_pct"],
-        "champions": [f"{name(c['champion'])} ({c['roles']}) {c['wins']}/{c['games']}, KDA {c['kda']}"
-                      + (", dans le pool" if c["in_pool"] else "") for c in o["champions"][:8]],
-        "candidats_pour_le_pool": [name(c["champion"]) for c in o["candidates"]],
-        "parties_par_semaine (8 dernières)": [w["games"] for w in o["weekly"]],
-        "avec_des_coéquipiers": [f"{m['key']} {m['wins']}/{m['games']}" for m in o["mates"]],
-    }
-
-
-def players_analysis(reports, date, cfg, name, outside=None):
-    by_player = {o["player"]: o for o in (outside or {}).get("players", [])}
-    joueurs = []
-    for r in reports:
-        pl = _player_payload(r, name)
-        hs = _outside_payload(by_player.get(r["player"]), name)
-        if hs:
-            pl["hors_soirées"] = hs
-        joueurs.append(pl)
+def players_analysis(reports, date, cfg, name):
     payload = {"contexte": cfg.get("ai", {}).get("team_context", ""), "soirée": date,
-               "joueurs": joueurs}
+               "joueurs": [_player_payload(r, name) for r in reports]}
     text = json.dumps(payload, ensure_ascii=False, indent=1)
     return _call(SYSTEM, f"{PLAYERS_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)
 
@@ -373,14 +338,3 @@ def split_players(text, names):
         if cur:
             out[cur].append(line)
     return {n: "\n".join(v).strip() for n, v in out.items()}
-
-
-def outside_excerpt(text):
-    """Paragraphe « **Hors soirées :** » de l'analyse d'un joueur (vide s'il n'y en a pas)."""
-    out = []
-    for line in (text or "").splitlines():
-        if out and (line.startswith("**") or line.startswith("#")):
-            break
-        if out or line.lstrip().startswith("**Hors soirées"):
-            out.append(line)
-    return "\n".join(out).strip()
