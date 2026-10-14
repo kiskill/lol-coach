@@ -114,6 +114,13 @@ Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'his
   - les champions adverses qui vous infligent le plus de dégâts avant vos morts.
   Un teamfight compte au moins 2 morts et 5 champions impliqués, avec moins de 20 s entre deux kills.
 - **Carte :** morts et kills filtrables par joueur et par période, trajet du jungler (page de session), zones de mort.
+- **Joueurs :** une fiche par joueur avec des indicateurs propres à son rôle, sa dernière soirée comparée à son habitude (avec l'évolution par soirée), ses champions, ses vis-à-vis les plus durs et la carte de ses morts et kills.
+  - Top : or et CS face au vis-à-vis, solo kills, plaques, dégâts encaissés, dégâts aux tours.
+  - Jungle : participation aux kills, objectifs épiques, CS de jungle avant 10 min, camps adverses, carapateurs, vision.
+  - Mid : or et CS face au vis-à-vis, part des dégâts, kills sur d'autres lanes, solo kills.
+  - ADC : CS/min, dégâts/min, part des dégâts, morts, temps passé mort, premier mort en teamfight perdu.
+  - Support : vision, pinks, wards détruites, vision face au support adverse, immobilisations.
+  Une analyse IA de la dernière soirée et des conseils personnalisés accompagnent chaque fiche (un seul appel pour les 5 joueurs, conservé dans `data/ai/players/`).
 - **Explorateur :** toutes les statistiques Riot de chaque partie (plus de 150, dont les « challenges ») et les indicateurs de l'outil. On peut les regrouper par joueur, champion, rôle, soirée ou résultat, et les filtrer.
 
 Tout est aussi transmis à l'analyse IA.
@@ -128,10 +135,10 @@ Chaque texte IA est généré **une seule fois**, puis conservé dans `data/ai/`
 
 | Quand | Appels IA |
 |---|---|
-| Lancement automatique du mercredi | **1** : le débrief de la soirée de la veille, seulement s'il n'existe pas encore |
-| Relance manuelle avec les options par défaut | 0 si le débrief de la dernière soirée existe déjà |
+| Lancement automatique du mercredi | **2** : le débrief de la soirée de la veille et l'analyse par joueur, seulement s'ils n'existent pas encore |
+| Relance manuelle avec les options par défaut | 0 si le débrief et l'analyse par joueur de la dernière soirée existent déjà |
 | Case « Regénérer le bilan global IA » cochée | +1 |
-| Option « derniere » | 1 : refait le débrief de la dernière soirée |
+| Option « derniere » | 2 : refait le débrief et l'analyse par joueur de la dernière soirée |
 | Option « toutes » | rattrape les anciennes soirées sans débrief, au maximum `max_calls_per_run` par passage |
 | Option « aucune » | 0 |
 
@@ -185,7 +192,7 @@ coach/site.py            ← génération des pages
 coach/templates/         ← HTML / CSS du site
 data/games.json          ← parties normalisées (sauvegardées à chaque passage)
 data/raw/                ← réponses brutes de Riot (tout le détail, pour de futures stats)
-data/ai/                 ← textes IA conservés (bilan global + 1 fichier par soirée)
+data/ai/                 ← textes IA conservés (bilan global, 1 débrief et 1 analyse par joueur par soirée)
 ```
 
 ## Limites connues et pistes d'amélioration
@@ -194,7 +201,6 @@ data/ai/                 ← textes IA conservés (bilan global + 1 fichier par 
 - **Le rôle de chaque joueur** vient de la position détectée par Riot. Si la détection échoue, l'outil utilise le rôle indiqué dans `config.yaml`.
 - **Timeline (écarts à 10/15 min)** : un appel API de plus par partie. Les parties déjà collectées sont complétées automatiquement au passage suivant.
 - **Pistes d'amélioration :**
-  - page par joueur ;
   - envoi du débrief sur Discord via un webhook ;
   - filtre par patch.
 - **Désactivation automatique :** GitHub désactive les tâches planifiées d'un dépôt public sans activité pendant 60 jours. Les commits hebdomadaires de données devraient l'éviter. Si ça arrive, réactive le workflow dans l'onglet Actions.

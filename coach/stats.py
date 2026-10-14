@@ -373,12 +373,12 @@ def key_indicators(games):
     return {"values": vals, **extra}
 
 
-def indicator_rows(cur, ref=None):
+def indicator_rows(cur, ref=None, defs=KEY_INDICATORS):
     """Lignes prêtes à afficher : valeur, référence, et si c'est mieux / moins bien."""
     if not cur:
         return []
     rows = []
-    for key, label, unit, better in KEY_INDICATORS:
+    for key, label, unit, better in defs:
         v = cur["values"].get(key)
         r = ref["values"].get(key) if ref else None
         status = ""
@@ -557,3 +557,134 @@ def game_line(g):
             "tf_outnumbered": t.get("tf_outnumbered"),
             "antiheal": (t["antiheal_bought"] if t["antiheal_needed"] else None),
             "healers": t["enemy_healers"], "ap_share": t["ap_share"]}
+
+
+# =================================================================== page Joueurs
+# Indicateurs propres à chaque rôle : (clé, libellé, unité, sens)
+_LANE15 = ("lane15", "Or vs vis-à-vis à 15 min", "", "high")
+_CS10 = ("cs10_diff", "Écart de CS à 10 min", "", "high")
+_KP = ("kp", "Participation aux kills", "%", "high")
+_D15 = ("deaths15", "Morts avant 15 min", "/ partie", "low")
+_DEATHS = ("deaths", "Morts", "/ partie", "low")
+_SOLO = ("solo_kills", "Solo kills", "/ partie", "high")
+_CSMIN = ("cs_min", "CS", "/ min", "high")
+_DMGPCT = ("dmg_pct", "Part des dégâts de l'équipe", "%", "high")
+_VISION = ("vision_min", "Score de vision", "/ min", "high")
+_PINKS = ("control_wards", "Pinks posées", "/ partie", "high")
+ROLE_METRICS = {
+    "Top": [_LANE15, _CS10, _SOLO, ("plates", "Plaques de tour prises", "/ partie", "high"),
+            ("tank_min", "Dégâts encaissés + atténués", "/ min", "high"),
+            ("turret_dmg_min", "Dégâts aux tours", "/ min", "high"), _D15, _KP],
+    "Jungle": [_KP, ("epic", "Objectifs épiques (dragon, Héraut, Nashor)", "/ partie", "high"),
+               ("jg_cs10", "CS de jungle avant 10 min", "", "high"),
+               ("enemy_jg", "Camps pris dans la jungle adverse", "/ partie", "high"),
+               ("scuttles", "Carapateurs", "/ partie", "high"), _VISION, _PINKS, _D15],
+    "Mid": [_LANE15, _CS10, _CSMIN, _DMGPCT,
+            ("roam_kills", "Kills sur d'autres lanes (début de partie)", "/ partie", "high"), _SOLO, _D15, _KP],
+    "ADC": [_CSMIN, _CS10, ("dmg_min", "Dégâts aux champions", "/ min", "high"), _DMGPCT, _DEATHS,
+            ("dead_pct", "Temps passé mort", "%", "low"),
+            ("tf_first_death", "1er mort d'un teamfight perdu", "/ partie", "low"), _LANE15],
+    "Support": [_VISION, _PINKS, ("ward_kills", "Wards détruites", "/ partie", "high"),
+                ("vision_adv", "Vision vs support adverse", "%", "high"),
+                ("immobilize", "Immobilisations d'adversaires", "/ partie", "high"), _KP, _DEATHS, _D15],
+}
+
+
+def player_game_metrics(g, p):
+    """Toutes les mesures d'un joueur sur une partie (stats de base + indicateurs avancés)."""
+    if "kills" not in p:
+        return {}
+    dur = max(g["duration_min"], 1)
+    m = {"kills": p["kills"], "deaths": p["deaths"], "assists": p["assists"],
+         "cs_min": round(p["cs"] / dur, 1), "dmg_min": round(p["damage"] / dur),
+         "vision_min": round(p["vision"] / dur, 2)}
+    team_dmg = sum(q.get("damage", 0) for q in g["our"])
+    if team_dmg:
+        m["dmg_pct"] = round(100 * p["damage"] / team_dmg)
+    lane = g.get("early", {}).get("15", {}).get("lanes", {}).get(p["role"])
+    if lane:
+        m["lane15"] = lane["gold"]
+    ind = (g.get("ind") or {}).get("players", {}).get(p["role"])
+    for k, v in (ind or {}).items():
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and k not in m:
+            m[k] = round(v, 2) if isinstance(v, float) else v
+    return m
+
+
+def _agg(pairs):
+    """Moyenne de chaque mesure sur une liste de (partie, joueur, mesures) ; KDA en ratio."""
+    acc = defaultdict(list)
+    for _, _, m in pairs:
+        for k, v in m.items():
+            if v is not None:
+                acc[k].append(v)
+    out = {k: _avg(v, 2 if k == "vision_min" else 1) for k, v in acc.items()}
+    out = {k: round(v) if abs(v) >= 100 else v for k, v in out.items()}  # or, dégâts : à l'unité
+    if acc["kills"]:
+        out["kda"] = round((sum(acc["kills"]) + sum(acc["assists"])) / max(sum(acc["deaths"]), 1), 2)
+    return out
+
+
+def _profile(pairs):
+    gs = [g for g, _, _ in pairs]
+    return {**rec(len(gs), sum(g["win"] for g in gs)), **_agg([x for x in pairs if x[2]])}
+
+
+def player_report(who, games, sessions, cfg):
+    mine = [(g, p, player_game_metrics(g, p)) for g in games for p in g["our"] if p.get("player") == who]
+    if not mine:
+        return None
+    role = Counter(p["role"] for _, p, _ in mine).most_common(1)[0][0]
+    defs = ROLE_METRICS.get(role, [])
+    last_s = sessions[-1] if sessions else None
+    last_ids = {g["match_id"] for g in last_s["games"]} if last_s else set()
+    last = [x for x in mine if x[0]["match_id"] in last_ids]
+    detailed = [x for x in mine if x[2]]
+    cur, ref = _agg(last), _agg(detailed)
+
+    by_session = {s["date"]: {g["match_id"] for g in s["games"]} for s in sessions}
+    trend = {k: [] for k, *_ in defs}
+    for date, ids in by_session.items():
+        vals = _agg([x for x in mine if x[0]["match_id"] in ids])
+        for k in trend:
+            trend[k].append({"date": date, "value": vals.get(k)})
+
+    champs = defaultdict(list)
+    opps = defaultdict(list)
+    for x in mine:
+        champs[x[1]["champion"]].append(x)
+        opp = by_role(x[0], x[1]["role"], "enemy")
+        if opp:
+            opps[opp["champion"]].append(x)
+    champions = sorted(({"champion": c, **_profile(v)} for c, v in champs.items()),
+                       key=lambda c: (-c["games"], -c["wr"]))
+    matchups = sorted(({"champion": c, **_profile(v)} for c, v in opps.items() if len(v) >= 2),
+                      key=lambda c: (c["wr"], c.get("lane15") or 0))
+
+    last_games = []
+    for g, p, m in last:
+        opp = by_role(g, p["role"], "enemy")
+        last_games.append({"match_id": g["match_id"], "start_utc": g["start_utc"], "win": g["win"],
+                           "duration_min": g["duration_min"], "champion": p["champion"],
+                           "opponent": opp["champion"] if opp else None, "m": m})
+
+    ids = {g["match_id"] for g, _, _ in mine}
+    mp = map_data([g for g in games if g["match_id"] in ids])
+    mp = {k: [d for d in v if d[4] == who] if k in ("deaths", "kills") else v for k, v in mp.items()}
+    return {
+        "player": who, "role": role, "defs": defs,
+        "profile": _profile(mine), "last_profile": _profile(last) if last else None,
+        "last_date": last_s["date"] if last_s else None,
+        "rows": indicator_rows({"values": cur}, {"values": ref}, defs) if last else
+                indicator_rows({"values": ref}, None, defs),
+        "trend": trend, "champions": champions, "matchups": matchups[:6],
+        "last_games": last_games, "pool": cfg.get("champion_pools", {}).get(role, []),
+        "map": mp, "has_map": bool(mp["deaths"] or mp["kills"]),
+    }
+
+
+def player_reports(games, sessions, cfg):
+    names = {p["player"] for g in games for p in g["our"] if p.get("player")}
+    reps = [r for r in (player_report(n, games, sessions, cfg) for n in names) if r]
+    order = {r: i for i, r in enumerate(ROLES)}
+    return sorted(reps, key=lambda r: (order.get(r["role"], 9), r["player"]))

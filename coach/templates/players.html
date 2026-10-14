@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% from "macros.html" import champ, wr, kpi, keytiles, lolmap with context %}
+{% block title %}{{ team }} · Joueurs{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <h1>Joueurs</h1>
+  <p class="muted">Indicateurs propres au rôle de chacun, analyse de la soirée du {{ fr_date(last_date) }} et conseils pour progresser.</p>
+  <nav class="pl-tabs">
+    {% for r in reports %}
+    <a href="#{{ r.player | slug }}" data-tab="{{ r.player | slug }}">{% if r.champions %}{{ champ(r.champions[0].champion, "sm", false) }}{% endif %}<b>{{ r.player }}</b><small>{{ r.role }}</small></a>
+    {% endfor %}
+  </nav>
+</section>
+
+{% for r in reports %}
+{% set p, lp = r.profile, r.last_profile %}
+<div class="pl" id="{{ r.player | slug }}">
+  <section class="card">
+    <h2>{{ r.player }} <small class="muted">· {{ r.role }} · {{ p.games }} parties</small></h2>
+    <div class="kpis compact">
+      {{ kpi("Winrate", p.wr ~ " %", p.wins ~ " / " ~ p.games ~ (" · soirée " ~ lp.wins ~ "/" ~ lp.games if lp else "")) }}
+      {{ kpi("KDA", p.kda | num(2), ("soirée " ~ (lp.kda | num(2))) if lp else "") }}
+      {{ kpi("Participation aux kills", (p.kp | num) ~ " %", ("soirée " ~ (lp.kp | num) ~ " %") if lp else "") }}
+      {% if r.role == "Support" %}{{ kpi("Vision / min", p.vision_min | num(2), ("soirée " ~ (lp.vision_min | num(2))) if lp else "") }}
+      {% else %}{{ kpi("CS / min", p.cs_min | num, ("soirée " ~ (lp.cs_min | num)) if lp else "") }}{% endif %}
+      {% if p.lane15 is not none %}{{ kpi("Or vs vis-à-vis à 15 min", p.lane15 | signed, ("soirée " ~ (lp.lane15 | signed)) if lp else "") }}{% endif %}
+    </div>
+  </section>
+
+  <section class="card ai">
+    <h2>Analyse de la soirée du {{ fr_date(last_date) }}</h2>
+    {% set txt = ai_texts.get(r.player) %}
+    {% if txt %}
+      <p class="ai-meta">Analyse générée le {{ ai_meta.generated }}.</p>
+      <div class="prose">{{ txt | md | safe }}</div>
+    {% else %}
+      {% if ai_error %}<p class="muted">L'analyse IA n'a pas pu être générée lors de ce passage ({{ ai_error }}). Constats automatiques :</p>
+      {% elif ai_on %}<p class="muted">Pas d'analyse IA pour ce joueur sur cette soirée. Constats automatiques :</p>
+      {% else %}<p class="muted">Analyse IA désactivée (secret <code>ANTHROPIC_API_KEY</code> absent). Constats automatiques :</p>{% endif %}
+      <ul class="notes">{% for n in notes[r.player] %}<li>{{ n }}</li>{% endfor %}</ul>
+    {% endif %}
+  </section>
+
+  {% if r.rows | selectattr("ref", "ne", none) | list %}
+  <section class="card">
+    <h2>Indicateurs du rôle {{ r.role }} <small class="muted">· {{ "soirée comparée à son habitude" if lp else "moyennes" }} · barres = évolution par soirée</small></h2>
+    {{ keytiles(r.rows, "habituel", r.trend) }}
+  </section>
+  {% endif %}
+
+  {% if r.last_games %}
+  <section class="card">
+    <h2>Ses parties de la soirée</h2>
+    <div class="scroll"><table class="t players">
+      <tr><th>Résultat</th><th>Champion</th><th>Face à</th><th>K / D / A</th><th>CS/min</th><th>Or @15</th><th>Part dégâts</th><th>KP</th><th>Vision/min</th></tr>
+      {% for g in r.last_games %}{% set m = g.m %}
+      <tr><td class="{{ 'good-t' if g.win else 'bad-t' }}"><b>{{ "Victoire" if g.win else "Défaite" }}</b> <small class="muted">{{ g.start_utc | localtime }}</small></td>
+        <td>{{ champ(g.champion, "sm") }}</td><td>{% if g.opponent %}{{ champ(g.opponent, "sm") }}{% endif %}</td>
+        <td>{% if m.kills is defined %}{{ m.kills }} / {{ m.deaths }} / {{ m.assists }}{% endif %}</td>
+        <td>{{ m.cs_min | num }}</td><td class="{{ m.lane15 | signclass }}">{{ m.lane15 | signed }}</td>
+        <td>{% if m.dmg_pct is defined %}{{ m.dmg_pct }} %{% endif %}</td><td>{% if m.kp is defined %}{{ m.kp }} %{% endif %}</td><td>{{ m.vision_min | num(2) }}</td></tr>
+      {% endfor %}
+    </table></div>
+  </section>
+  {% endif %}
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Ses champions</h2>
+      <table class="t">
+        <tr><th>Champion</th><th>Bilan</th><th>KDA</th><th>CS/min</th><th>Or @15</th></tr>
+        {% for c in r.champions[:8] %}
+        <tr><td>{{ champ(c.champion) }}{% if name(c.champion) not in r.pool %} <small class="muted" title="Hors champ-pool déclaré">hors pool</small>{% endif %}</td>
+          <td>{{ wr(c, min_champ) }}</td><td>{{ c.kda | num(2) }}</td><td>{{ c.cs_min | num }}</td><td class="{{ c.lane15 | signclass }}">{{ c.lane15 | signed }}</td></tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="card">
+      <h2>Vis-à-vis <small class="muted">· adversaire au même rôle, 2 parties min.</small></h2>
+      {% if r.matchups %}
+      <table class="t">
+        <tr><th>Face à</th><th>Bilan</th><th>KDA</th><th>Or @15</th></tr>
+        {% for c in r.matchups %}
+        <tr><td>{{ champ(c.champion) }}</td><td>{{ wr(c) }}</td><td>{{ c.kda | num(2) }}</td><td class="{{ c.lane15 | signclass }}">{{ c.lane15 | signed }}</td></tr>
+        {% endfor %}
+      </table>
+      {% else %}<p class="muted">Pas encore assez de parties face au même adversaire.</p>{% endif %}
+    </div>
+  </section>
+
+  {% if r.has_map %}
+  <section class="card">
+    <h2>Ses morts et ses kills <small class="muted">· toutes ses parties détaillées</small></h2>
+    <div class="map-wrap">{{ lolmap(r.map, "deaths,kills") }}<div></div></div>
+  </section>
+  {% endif %}
+</div>
+{% endfor %}
+
+<script>
+// Un joueur à la fois (sans JavaScript, tous les joueurs restent affichés les uns sous les autres)
+(function () {
+  const tabs = [...document.querySelectorAll(".pl-tabs a")];
+  const panes = [...document.querySelectorAll(".pl")];
+  function show() {
+    const id = location.hash.slice(1);
+    const cur = panes.some((p) => p.id === id) ? id : panes[0] && panes[0].id;
+    panes.forEach((p) => { p.hidden = p.id !== cur; });
+    tabs.forEach((t) => t.classList.toggle("on", t.dataset.tab === cur));
+  }
+  // Changer de joueur sans faire défiler la page sous la barre de sélection
+  tabs.forEach((t) => t.addEventListener("click", (e) => {
+    e.preventDefault();
+    history.replaceState(null, "", "#" + t.dataset.tab);
+    show();
+  }));
+  window.addEventListener("hashchange", show);
+  show();
+  if (location.hash) window.scrollTo(0, 0);
+})();
+</script>
+<script src="map.js" defer></script>
+{% endblock %}

@@ -117,7 +117,7 @@ table.t { width: 100%; border-collapse: collapse; }
 @media (max-width: 560px) {
   .brand { font-size: 1.15rem; white-space: nowrap; }
   .brand span { display: none; }
-  nav a { margin-left: 12px; font-size: .85rem; white-space: nowrap; }
+  nav a { margin-left: 9px; font-size: .8rem; white-space: nowrap; }
   h1 { font-size: 1.7rem; }
 }
 @media (max-width: 860px) {
@@ -198,3 +198,14 @@ details[open] summary { margin-bottom: 8px; }
 .ex-controls select, .ex-controls input { width: 100%; min-width: 0; box-sizing: border-box; }
 .ex-col { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 @media (max-width: 560px) { .ex-col { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- page Joueurs ---- */
+.pl-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.pl-tabs a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; margin: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 7px 12px 7px 8px; color: var(--ink); }
+.pl-tabs a small { color: var(--muted); font-size: .75rem; }
+.pl-tabs a:hover { border-color: var(--accent); }
+.pl-tabs a.on { border-color: var(--accent); background: var(--accent-soft); }
+.pl { scroll-margin-top: 70px; }
+.pl .kpis { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.pl .ktiles { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }

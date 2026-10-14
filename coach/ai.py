@@ -3,6 +3,7 @@
 Chaque texte est généré UNE fois puis conservé dans data/ai/ :
   data/ai/global.json             -> bilan global (regénéré seulement sur demande)
   data/ai/sessions/AAAA-MM-JJ.json -> débrief d'une soirée (généré une fois)
+  data/ai/players/AAAA-MM-JJ.json  -> analyse par joueur de cette soirée (un seul appel pour les 5)
 Les relances, pushs ou redéploiements réutilisent ces fichiers sans rien payer.
 """
 import json
@@ -48,6 +49,16 @@ comparaison. Rédige un débrief de session (250 à 450 mots) avec ces sections 
 ## Ce qui a marché
 ## Ce qui a coincé (picks, drafts, adversaires, phase de lane, teamfights, objectifs, vision, morts, joueurs)
 ## À retenir pour la semaine prochaine (2-3 points concrets)"""
+
+PLAYERS_TASK = """Voici, pour chaque joueur, sa dernière soirée comparée à ses moyennes \
+habituelles, avec les indicateurs propres à son rôle, ses champions et ses vis-à-vis. \
+Pour CHAQUE joueur, écris une section qui commence exactement par la ligne `## <joueur>` \
+(le nom tel que fourni dans le champ « joueur »), puis :
+- un paragraphe d'analyse de sa soirée (80 à 140 mots), du point de vue de son rôle, appuyé sur ses chiffres ;
+- une ligne **Pour progresser :** suivie de 2 ou 3 conseils personnalisés et concrets (liste à puces), \
+liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets, habitudes de vision ou de placement).
+Si le joueur n'a pas joué la dernière soirée, écris une seule phrase pour le dire.
+N'écris rien avant la première section ni après la dernière."""
 
 
 def _compact_game(g, name):
@@ -226,7 +237,9 @@ def _call(system, user, cfg):
 
 # ------------------------------------------------------------------ textes conservés
 def _path(kind, date=None):
-    return STORE / "global.json" if kind == "global" else STORE / "sessions" / f"{date}.json"
+    if kind == "global":
+        return STORE / "global.json"
+    return STORE / ("players" if kind == "players" else "sessions") / f"{date}.json"
 
 
 def load(kind, date=None):
@@ -272,3 +285,53 @@ def session_analysis(srep, grep, cfg, name):
     }
     text = json.dumps(payload, ensure_ascii=False, indent=1)
     return _call(SYSTEM, f"{SESSION_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)
+
+
+def _player_payload(r, name):
+    """Données d'un joueur : on garde la soirée et les moyennes, pas la carte."""
+    labels = {k: f"{label} ({unit})" if unit else label for k, label, unit, _ in r["defs"]}
+    labels.setdefault("lane15", "Or vs vis-à-vis à 15 min")
+    keep = ("kills", "deaths", "assists", "cs_min", "dmg_min", "vision_min", "lane15", *labels)
+    return {
+        "joueur": r["player"], "rôle": r["role"],
+        "champ_pool_déclaré": r["pool"],
+        "bilan_global": {k: r["profile"].get(k) for k in ("games", "wins", "wr", "kda", "kp", "cs_min", "lane15")},
+        "dernière_soirée": {k: r["last_profile"].get(k) for k in ("games", "wins", "wr", "kda")}
+                           if r["last_profile"] else "absent",
+        "parties_de_la_soirée": [
+            {"résultat": "Victoire" if g["win"] else "Défaite", "durée_min": g["duration_min"],
+             "champion": name(g["champion"]), "vis-à-vis": name(g["opponent"]) if g["opponent"] else None,
+             **{labels.get(k, k): v for k, v in g["m"].items() if k in keep}}
+            for g in r["last_games"]],
+        "indicateurs_du_rôle (soirée vs habituel)": _key_payload(r["rows"]),
+        "indicateurs_du_rôle_par_soirée (6 dernières)": {
+            labels[k]: [p["value"] for p in v[-6:]] for k, v in r["trend"].items()},
+        "champions (tous les temps)": [
+            f"{name(c['champion'])} {c['wins']}/{c['games']}, KDA {c.get('kda')}"
+            + (f", {c['lane15']:+} or à 15 min" if c.get("lane15") is not None else "")
+            for c in r["champions"][:6]],
+        "vis-à-vis_les_plus_durs": [f"{name(c['champion'])} {c['wins']}/{c['games']}" for c in r["matchups"][:4]],
+    }
+
+
+def players_analysis(reports, date, cfg, name):
+    payload = {"contexte": cfg.get("ai", {}).get("team_context", ""), "soirée": date,
+               "joueurs": [_player_payload(r, name) for r in reports]}
+    text = json.dumps(payload, ensure_ascii=False, indent=1)
+    return _call(SYSTEM, f"{PLAYERS_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)
+
+
+def split_players(text, names):
+    """Découpe la réponse en un texte par joueur (sections « ## <joueur> »)."""
+    out, cur = {}, None
+    lookup = {n.lower(): n for n in names}
+    for line in (text or "").splitlines():
+        if line.startswith("## "):
+            title = line[3:].strip().strip("*` ").split(" (")[0].strip()
+            cur = lookup.get(title.lower())
+            if cur:
+                out[cur] = []
+                continue
+        if cur:
+            out[cur].append(line)
+    return {n: "\n".join(v).strip() for n, v in out.items()}

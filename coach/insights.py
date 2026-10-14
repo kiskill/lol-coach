@@ -86,3 +86,30 @@ def session_insights(rep, name):
         best = max(players, key=lambda p: p["kda"])
         notes.append(f"Meilleur KDA de la soirée : {best['player']} ({best['kda']}).")
     return notes
+
+
+def player_insights(r, name):
+    """Constats par joueur : ses indicateurs de rôle qui s'écartent le plus de son habitude."""
+    lp, p = r["last_profile"], r["profile"]
+    if not lp:
+        return [f"{r['player']} n'a pas joué la dernière soirée."]
+    notes = [f"Dernière soirée : {lp['wins']} victoire(s) sur {lp['games']}"
+             + (f", KDA {lp['kda']} (habituel {p.get('kda')})." if lp.get("kda") is not None else ".")]
+    scored = []
+    for row in r["rows"]:
+        v, ref = row["value"], row["ref"]
+        if v is None or ref is None or not row["status"]:
+            continue
+        gap = abs(v - ref) / max(abs(ref), 1)
+        scored.append((gap, row))
+    scored.sort(key=lambda x: -x[0])
+    for kind, word in (("good", "mieux que d'habitude"), ("bad", "en dessous de l'habitude")):
+        top = [row for gap, row in scored if row["status"] == kind and gap >= .15][:2]
+        for row in top:
+            unit = f" {row['unit']}" if row["unit"] else ""
+            notes.append(f"{row['label']} : {row['value']}{unit}, {word} ({row['ref']}{unit}).")
+    hard = [m for m in r["matchups"] if m["wr"] <= 34 and m["games"] >= 3]
+    if hard:
+        notes.append("Vis-à-vis difficiles : " + ", ".join(
+            f"{name(m['champion'])} ({_fmt(m)})" for m in hard[:3]) + ".")
+    return notes

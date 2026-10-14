@@ -86,6 +86,7 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     env.filters["num"] = num
     env.filters["tojs"] = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":"))
     env.filters["md"] = lambda text: markdown.markdown(text or "", extensions=["tables"])
+    env.filters["slug"] = lambda v: "".join(c if c.isalnum() else "-" for c in v.lower()).strip("-")
     env.filters["localtime"] = lambda iso: stats.local_dt({"start_utc": iso}, tz).strftime("%H:%M")
 
     if OUT.exists():
@@ -126,6 +127,13 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
             text = ai.session_analysis(stats.session_report(s, games, cfg), grep, cfg, name)
             if text:
                 ai.save("session", text, s["date"], games=len(s["games"]))
+    reports = stats.player_reports(games, sessions, cfg)
+    last_date = sessions[-1]["date"]
+    if ia_sessions != "aucune" and (ia_sessions == "derniere" or not ai.load("players", last_date)):
+        print(f"Analyse IA par joueur de la soirée du {last_date}…")
+        text = ai.players_analysis(reports, last_date, cfg, name)
+        if text:
+            ai.save("players", text, last_date, games=len(sessions[-1]["games"]))
     print(f"Appels IA effectués lors de ce passage : {ai.STATUS['calls']}")
     generated = datetime.now().strftime("%d/%m/%Y %H:%M")
 
@@ -140,6 +148,15 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
             prev=prev_s, next=next_s, generated=generated, root="../", **ai_flags())
         (OUT / "sessions" / f"{s['date']}.html").write_text(html, encoding="utf-8")
         session_pages.append({**grep["sessions"][i]})
+
+    # Joueurs : indicateurs propres au rôle + analyse IA de la dernière soirée
+    p_ai = ai.load("players", last_date)
+    p_texts = ai.split_players(p_ai["text"], [r["player"] for r in reports]) if p_ai else {}
+    html = env.get_template("players.html").render(
+        reports=reports, ai_texts=p_texts, ai_meta=p_ai, last_date=last_date,
+        notes={r["player"]: insights.player_insights(r, name) for r in reports},
+        generated=generated, root="", **ai_flags())
+    (OUT / "players.html").write_text(html, encoding="utf-8")
 
     # Explorateur : toutes les stats par joueur et par partie
     session_of = {g["match_id"]: s["date"] for s in sessions for g in s["games"]}
