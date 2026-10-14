@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, item, wr, kpi, keytiles, lolmap with context %}
+{% from "macros.html" import champ, item, wr, kpi, keytiles with context %}
 {% block title %}{{ team }} · Joueurs{% endblock %}
 {% block content %}
 
@@ -157,12 +157,6 @@
     </div>
   </section>
 
-  {% if r.has_map %}
-  <section class="card">
-    <h2>Ses morts et ses kills <small class="muted">· toutes ses parties détaillées</small></h2>
-    <div class="map-wrap">{{ lolmap(r.map, "deaths,kills") }}<div></div></div>
-  </section>
-  {% endif %}
 </div>
 {% endfor %}
 
@@ -188,5 +182,4 @@
   if (location.hash) window.scrollTo(0, 0);
 })();
 </script>
-<script src="map.js" defer></script>
 {% endblock %}

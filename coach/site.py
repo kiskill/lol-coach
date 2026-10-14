@@ -144,11 +144,6 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     for f in item_files:
         shutil.copy(f, OUT / "img" / "items" / f.name)
     print(f"Icônes d'objets : {len(item_files)}/{len(used_items)} disponibles.")
-    shutil.copy(TEMPLATES / "map.js", OUT / "map.js")
-    map_img = store.fetch_map(champs.version)
-    if map_img:
-        shutil.copy(map_img, OUT / "img" / "map11.png")
-    env.globals["map_img"] = "img/map11.png" if map_img else ""
 
     # Analyse par joueur en premier : elle passe avant le plafond d'appels
     reports = stats.player_reports(games, sessions, cfg)
@@ -211,7 +206,7 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
 
     html = env.get_template("index.html").render(
         r=grep, ai_text=g_ai, ins=insights.global_insights(grep, name),
-        sessions=list(reversed(session_pages)), last=session_pages[-1],
+        last=session_pages[-1],
         generated=generated, warning=warning, root="", **ai_flags())
     (OUT / "index.html").write_text(html, encoding="utf-8")
     print(f"Site généré dans {OUT}/ ({len(sessions)} sessions, {len(games)} parties).")

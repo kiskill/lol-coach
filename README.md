@@ -114,8 +114,7 @@ Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'his
   - par joueur : présence, nombre de fois mort en premier dans un teamfight perdu, part des dégâts ;
   - les champions adverses qui vous infligent le plus de dégâts avant vos morts.
   Un teamfight compte au moins 2 morts et 5 champions impliqués, avec moins de 20 s entre deux kills.
-- **Carte :** morts et kills filtrables par joueur et par période, trajet du jungler (page de session), zones de mort.
-- **Joueurs :** une fiche par joueur avec des indicateurs propres à son rôle, sa dernière soirée comparée à son habitude (avec l'évolution par soirée), ses champions, ses vis-à-vis les plus durs et la carte de ses morts et kills.
+- **Joueurs :** une fiche par joueur avec des indicateurs propres à son rôle, sa dernière soirée comparée à son habitude (avec l'évolution par soirée), ses champions, ses vis-à-vis les plus durs.
   - Top : or et CS face au vis-à-vis, solo kills, plaques, dégâts encaissés, dégâts aux tours.
   - Jungle : participation aux kills, objectifs épiques, CS de jungle avant 10 min, camps adverses, carapateurs, vision.
   - Mid : or et CS face au vis-à-vis, part des dégâts, kills sur d'autres lanes, solo kills.

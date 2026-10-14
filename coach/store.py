@@ -188,9 +188,8 @@ class Champions:
             return [self.version]
 
 
-# ---------------------------------------------------------------- items & carte
+# ---------------------------------------------------------------- items
 ITEMS = DATA / "items.json"
-MAP_IMG = ICONS / "map11.png"
 # Repli hors ligne : objets "Blessures graves" connus (la liste à jour vient de Data Dragon)
 _ANTIHEAL_FALLBACK = {3123, 3033, 3076, 3075, 3916, 3165, 6609, 3011}
 _BOOTS_FALLBACK = {3006, 3009, 3020, 3047, 3111, 3117, 3158}
@@ -275,20 +274,3 @@ class Items:
             if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
                 f.write_bytes(r.content)
         return [ITEM_ICONS / f"{i}.png" for i in ids if (ITEM_ICONS / f"{i}.png").exists()]
-
-
-def fetch_map(version):
-    """Image de la mini-map (Faille de l'invocateur). None si indisponible."""
-    if MAP_IMG.exists():
-        return MAP_IMG
-    if not version:
-        return None
-    try:
-        r = requests.get(f"https://ddragon.leagueoflegends.com/cdn/{version}/img/map/map11.png", timeout=20)
-        if r.status_code == 200 and r.headers.get("content-type", "").startswith("image"):
-            ICONS.mkdir(parents=True, exist_ok=True)
-            MAP_IMG.write_bytes(r.content)
-            return MAP_IMG
-    except Exception:
-        pass
-    return None

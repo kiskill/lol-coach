@@ -281,7 +281,6 @@ def global_report(games, sessions, cfg, rank_hist=None):
         "composition": composition_stats(games),
         "tilt": tilt_stats(sessions),
         "zones": zone_stats(games),
-        "map": map_data(games),
         "form": form_stats(sessions),
         "ranks": rank_report(games, sessions, rank_hist or []),
         "sessions": [{"date": s["date"], "games": len(s["games"]),
@@ -318,7 +317,6 @@ def session_report(session, all_games, cfg):
         "player_details": player_details(games),
         "player_details_global": {p["player"]: p for p in player_details(all_games)},
         "zones": zone_stats(games),
-        "map": map_data(games, with_jungle=True),
         "lines": [game_line(g) for g in games],
         "bans": ban_stats(games),
         "ranks": [game_rank(g) for g in games],
@@ -531,22 +529,6 @@ def zone_stats(games):
     return {"total": total, "rows": sorted(rows, key=lambda r: -r["count"])}
 
 
-def map_data(games, with_jungle=False):
-    """Points à dessiner sur la mini-map (coordonnées Riot, ramenées côté bleu si besoin)."""
-    out = {"deaths": [], "kills": [], "objectives": [], "jungle": []}
-    for i, g in enumerate(_ind_games(games), 1):
-        names = {p["role"]: p.get("player") or p["role"] for p in g["our"]}
-        m = g["ind"]["map"]
-        for d in m["deaths"]:
-            out["deaths"].append([d["x"], d["y"], d["t"], d["role"], names.get(d["role"], d["role"]), i])
-        for k in m["kills"]:
-            out["kills"].append([k["x"], k["y"], k["t"], k["role"], names.get(k["role"], k["role"]), i])
-        if with_jungle and m["jungle"]:
-            out["jungle"].append({"game": i, "win": g["win"], "blue": g["ind"]["blue"],
-                                  "path": [[p["x"], p["y"], p["m"]] for p in m["jungle"]]})
-    return out
-
-
 def form_stats(sessions, last=6):
     """KDA et CS/min de chaque joueur sur les dernières soirées (repérer une baisse de forme)."""
     rows = defaultdict(dict)
@@ -682,10 +664,6 @@ def player_report(who, games, sessions, cfg):
                            "duration_min": g["duration_min"], "champion": p["champion"],
                            "build": ind.get("build") or [], "boots": ind.get("boots"),
                            "opponent": opp["champion"] if opp else None, "m": m})
-
-    ids = {g["match_id"] for g, _, _ in mine}
-    mp = map_data([g for g in games if g["match_id"] in ids])
-    mp = {k: [d for d in v if d[4] == who] if k in ("deaths", "kills") else v for k, v in mp.items()}
     return {
         "player": who, "role": role, "defs": defs,
         "profile": _profile(mine), "last_profile": _profile(last) if last else None,
@@ -695,7 +673,6 @@ def player_report(who, games, sessions, cfg):
         "trend": trend, "champions": champions, "matchups": matchups[:6],
         "last_games": last_games, "pool": cfg.get("champion_pools", {}).get(role, []),
         "gear": gear_report(mine, last_ids),
-        "map": mp, "has_map": bool(mp["deaths"] or mp["kills"]),
     }
 
 

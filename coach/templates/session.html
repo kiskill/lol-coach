@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, teamfights with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, teamfights with context %}
 {% block title %}{{ team }} · Session du {{ r.date }}{% endblock %}
 {% block content %}
 
@@ -89,22 +89,6 @@
   {% endfor %}
 </section>
 
-{% if r.zones %}
-<section class="card">
-  <h2>Carte de la soirée <small class="muted">· survole un point pour le détail</small></h2>
-  <div class="map-wrap">
-    {{ lolmap(r.map, "deaths,kills,jungle") }}
-    <div>
-      <h3>Où meurt l'équipe ce soir ({{ r.zones.total }} morts)</h3>
-      <table class="t">
-        <tr><th>Zone</th><th>Part</th><th>&lt; 15 min</th><th>15 min +</th></tr>
-        {% for z in r.zones.rows %}<tr><td>{{ z.zone }}</td><td><span class="wr mid"><span class="bar"><span style="width: {{ z.pct }}%"></span></span><b>{{ z.pct }} %</b></span></td><td>{{ z.early }}</td><td>{{ z.late }}</td></tr>{% endfor %}
-      </table>
-    </div>
-  </div>
-</section>
-{% endif %}
-
 <section class="card">
   <h2>Picks de la soirée vs bilan global</h2>
   <table class="t">
@@ -130,5 +114,4 @@
   </table></div>
 </section>
 {% endif %}
-<script src="../map.js" defer></script>
 {% endblock %}

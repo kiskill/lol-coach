@@ -55,11 +55,6 @@
 {%- endif -%}
 {%- endmacro %}
 
-{% macro lolmap(data, layers="deaths,kills,objectives") -%}
-<div class="lolmap" data-map="{{ data | tojs }}" data-layers="{{ layers }}" data-img="{{ (root ~ map_img) if map_img else '' }}"></div>
-{%- endmacro %}
-
-
 {% macro teamfights(tf, ref=none) -%}
 <div class="tf-grid">
   <div>

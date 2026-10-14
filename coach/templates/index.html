@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, teamfights, spark with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, teamfights, spark with context %}
 {% block title %}{{ team }} · Bilan global{% endblock %}
 {% block content %}
 
@@ -190,22 +190,6 @@
 </section>
 {% endif %}
 
-{% if r.zones %}
-<section class="card">
-  <h2>Carte <small class="muted">· survole un point pour le détail</small></h2>
-  <div class="map-wrap">
-    {{ lolmap(r.map, "deaths,kills") }}
-    <div>
-      <h3>Où meurt l'équipe ({{ r.zones.total }} morts)</h3>
-      <table class="t">
-        <tr><th>Zone</th><th>Part</th><th>&lt; 15 min</th><th>15 min +</th></tr>
-        {% for z in r.zones.rows %}<tr><td>{{ z.zone }}</td><td><span class="wr mid"><span class="bar"><span style="width: {{ z.pct }}%"></span></span><b>{{ z.pct }} %</b></span></td><td>{{ z.early }}</td><td>{{ z.late }}</td></tr>{% endfor %}
-      </table>
-    </div>
-  </div>
-</section>
-{% endif %}
-
 <section class="card">
   <h2>Champions par rôle</h2>
   <p class="muted small-note">Les lignes grisées ont moins de {{ min_champ }} parties : à interpréter avec prudence.</p>
@@ -284,14 +268,4 @@
 
 </section>
 {% endif %}
-
-<section class="card" id="sessions">
-  <h2>Sessions</h2>
-  <ul class="sessions">
-    {% for s in sessions %}
-    <li><a href="sessions/{{ s.date }}.html"><span>{{ fr_date(s.date) }}</span>{{ wr(s) }}</a></li>
-    {% endfor %}
-  </ul>
-</section>
-<script src="map.js" defer></script>
 {% endblock %}

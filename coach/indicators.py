@@ -20,7 +20,6 @@ HEALERS = {c.lower() for c in [
 
 FIGHT_GAP = 20      # secondes sans kill => nouveau combat
 CONVERT_WINDOW = 90  # secondes après un combat gagné pour prendre un objectif
-JUNGLE_MINUTES = range(1, 9)
 
 ZONES = ["Base", "Top lane", "Mid lane", "Bot lane", "Rivière", "Notre jungle", "Jungle adverse"]
 
@@ -114,7 +113,7 @@ def game_indicators(game, raw, tl, items):
         "tf_first_dead": {}, "killers_dmg": {},
         "isolated_deaths": None, "obj_share": None,
     }
-    spatial = {"deaths": [], "kills": [], "objectives": [], "jungle": []}
+    spatial = {"deaths": [], "kills": [], "objectives": []}
 
     if tl:
         events = tl["events"]
@@ -233,15 +232,6 @@ def game_indicators(game, raw, tl, items):
             pl["build"] = b
             pl["first_item"], pl["first_item_min"] = b[0]
             pl["second_item_min"] = b[1][1] if len(b) > 1 else None
-
-        # --- trajet du jungler (minutes 1 à 8)
-        jg = ours.get("Jungle")
-        if jg:
-            for m in JUNGLE_MINUTES:
-                if m < len(frames):
-                    pos = frames[m].get(str(jg["participantId"]))
-                    if pos:
-                        spatial["jungle"].append({"m": m, "x": pos[3], "y": pos[4]})
 
     return {"players": players, "team": team, "map": spatial, "blue": blue}
 
