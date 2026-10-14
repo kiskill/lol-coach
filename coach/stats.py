@@ -331,13 +331,14 @@ def session_report(session, all_games, cfg):
 # (clé, libellé, unité, sens : "high" = plus c'est haut mieux c'est)
 KEY_INDICATORS = [
     ("deaths15", "Morts avant 15 min", "/ partie", "low"),
+    ("isolated_deaths", "Morts isolées (pick-offs)", "/ partie", "low"),
+    ("obj_share", "Objectifs neutres pris", "%", "high"),  # dragons, larves, Héraut, Nashor
     ("tf_wr", "Teamfights gagnés", "%", "high"),
     ("tf_outnumbered", "Teamfights en infériorité numérique", "%", "low"),
     ("conversion", "Combats gagnés convertis en objectif", "%", "high"),
     ("cs10_diff", "Écart de CS à 10 min (lanes)", "", "high"),
     ("wards", "Wards posées (équipe)", "/ partie", "high"),
     ("pinks", "Pinks achetées (équipe)", "/ partie", "high"),
-    ("antiheal", "Anti-heal acheté quand nécessaire", "%", "high"),
     ("first_death", "Première mort", "min", "high"),
 ]
 LANES = ("Top", "Mid", "ADC")
@@ -356,7 +357,6 @@ def key_indicators(games):
     conv = sum(g["ind"]["team"]["converted"] or 0 for g in tl)
     cs = [g["ind"]["players"][r]["cs10_diff"] for g in tl for r in LANES
           if r in g["ind"]["players"] and g["ind"]["players"][r]["cs10_diff"] is not None]
-    need = [g for g in gs if g["ind"]["team"]["antiheal_needed"]]
     fd = [g["ind"]["team"]["first_death"] for g in tl if g["ind"]["team"]["first_death"] is not None]
     tf = sum(g["ind"]["team"].get("tf") or 0 for g in tl)
     tf_won = sum(g["ind"]["team"].get("tf_won") or 0 for g in tl)
@@ -369,11 +369,13 @@ def key_indicators(games):
         "cs10_diff": _avg(cs, 1),
         "wards": _avg([g["ind"]["team"]["wards"] for g in gs], 1),
         "pinks": _avg([g["ind"]["team"]["pinks"] for g in gs], 1),
-        "antiheal": round(100 * sum(g["ind"]["team"]["antiheal_bought"] for g in need) / len(need)) if need else None,
         "first_death": _avg(fd, 1),
+        "isolated_deaths": _avg([g["ind"]["team"]["isolated_deaths"] for g in tl
+                                 if g["ind"]["team"].get("isolated_deaths") is not None], 1),
+        "obj_share": _avg([g["ind"]["team"]["obj_share"] for g in tl
+                           if g["ind"]["team"].get("obj_share") is not None]),
     }
-    extra = {"games": len(gs), "fights_won": won, "converted": conv,
-             "antiheal_needed": len(need), "antiheal_bought": sum(g["ind"]["team"]["antiheal_bought"] for g in need)}
+    extra = {"games": len(gs), "fights_won": won, "converted": conv}
     return {"values": vals, **extra}
 
 

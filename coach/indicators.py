@@ -8,6 +8,9 @@ from collections import Counter, defaultdict
 
 from . import ROLES, store
 
+ISOLATED_GAP = 15  # s : une mort sans autre kill dans cet intervalle est une mort isolée
+EPIC_MONSTERS = {"DRAGON", "HORDE", "RIFTHERALD", "BARON_NASHOR"}  # dragon ancestral inclus (DRAGON)
+
 # Champions dont le kit repose fortement sur les soins (=> anti-heal utile en face)
 HEALERS = {c.lower() for c in [
     "Soraka", "Yuumi", "Sona", "Nami", "Seraphine", "Milio", "Taric", "Aatrox", "DrMundo",
@@ -109,6 +112,7 @@ def game_indicators(game, raw, tl, items):
         "deaths15": None, "first_death": None, "fights_won": None, "converted": None,
         "tf": None, "tf_won": None, "tf_lost": None, "tf_outnumbered": None, "tf_outnumbered_won": None,
         "tf_first_dead": {}, "killers_dmg": {},
+        "isolated_deaths": None, "obj_share": None,
     }
     spatial = {"deaths": [], "kills": [], "objectives": [], "jungle": []}
 
@@ -139,9 +143,17 @@ def game_indicators(game, raw, tl, items):
             elif e[0] == "B":
                 objectives.append({"t": e[1], "ours": e[2] != team_id, "type": e[3], "x": e[5], "y": e[6]})
         spatial["objectives"] = objectives
+        # --- contrôle des objectifs neutres (dragons, larves, Héraut, Nashor)
+        epic = [o for o in objectives if o["type"] in EPIC_MONSTERS]
+        if epic:
+            team["obj_share"] = round(100 * sum(o["ours"] for o in epic) / len(epic))
 
         # --- combats : kills rapprochés dans le temps (moins de FIGHT_GAP s d'écart)
         kills = sorted((e for e in events if e[0] == "K"), key=lambda e: e[1])
+        # morts isolées (pick-offs) : aucun autre kill, d'un côté ou de l'autre, à ±ISOLATED_GAP s
+        team["isolated_deaths"] = sum(
+            1 for i, e in enumerate(kills) if e[3] in our_pid
+            and not any(abs(o[1] - e[1]) <= ISOLATED_GAP for j, o in enumerate(kills) if j != i))
         fights, cur = [], None
         for e in kills:
             t, killer, victim = e[1], e[2], e[3]

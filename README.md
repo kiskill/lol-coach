@@ -105,7 +105,8 @@ Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'his
   - écart de CS à 10 minutes ;
   - morts avant 15 minutes ;
   - wards et pinks ;
-  - anti-heal ;
+  - morts isolées (pick-offs : aucun autre kill à ±15 s) ;
+  - part des objectifs neutres pris (dragons, larves, Héraut, Nashor) ;
   - première mort.
   Sur la page globale, chaque indicateur affiche sa mini-évolution par soirée. Sur une page de session, il est comparé à vos moyennes.
 - **Teamfights :**
