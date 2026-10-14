@@ -209,3 +209,12 @@ details[open] summary { margin-bottom: 8px; }
 .pl { scroll-margin-top: 70px; }
 .pl .kpis { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 .pl .ktiles { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+
+/* Classement */
+.rchart { width: 100%; height: auto; display: block; margin: 8px 0 4px; }
+.rchart text { fill: var(--muted); font: 11px Inter, system-ui, sans-serif; }
+.rchart .grid { stroke: var(--line); stroke-width: 1; }
+.rchart .line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.rchart .pt circle { fill: var(--accent); stroke: var(--surface); stroke-width: 2; }
+.rchart .pt circle.hit { fill: transparent; stroke: none; }
+.rchart .pt:hover circle:first-child { r: 6; }

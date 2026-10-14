@@ -216,7 +216,6 @@ def player_stats(games):
     for g in games:
         team_dmg = sum(p.get("damage", 0) for p in g["our"]) or 1
         team_gold = sum(p.get("gold", 0) for p in g["our"]) or 1
-        team_kills = sum(p.get("kills", 0) for p in g["our"])
         lanes15 = g.get("early", {}).get("15", {}).get("lanes", {})
         for p in g["our"]:
             if "player" not in p or p.get("sub"):  # le remplaçant n'a pas de ligne joueur
@@ -224,12 +223,10 @@ def player_stats(games):
             a = acc.setdefault(p["player"], {"player": p["player"], "role": p["role"],
                                              "games": 0, "wins": 0, "k": 0, "d": 0, "a": 0,
                                              "cs": 0, "minutes": 0, "damage": 0, "vision": 0,
-                                             "dmg_share": [], "gold_share": [], "lane15": [], "kp": [],
+                                             "dmg_share": [], "gold_share": [], "lane15": [],
                                              "champions": Counter()})
             a["dmg_share"].append(p["damage"] / team_dmg)
             a["gold_share"].append(p["gold"] / team_gold)
-            if team_kills:
-                a["kp"].append(100 * (p["kills"] + p["assists"]) / team_kills)
             if p["role"] in lanes15:
                 a["lane15"].append(lanes15[p["role"]]["gold"])
             a["games"] += 1
@@ -255,7 +252,6 @@ def player_stats(games):
             "vision_min": round(a["vision"] / a["minutes"], 2) if a["minutes"] else 0,
             "dmg_share": round(100 * sum(a["dmg_share"]) / n),
             "gold_share": round(100 * sum(a["gold_share"]) / n),
-            "kp": _avg(a["kp"]),
             "lane15": _avg(a["lane15"]),
             "champions": a["champions"].most_common(5),
         })
@@ -263,7 +259,7 @@ def player_stats(games):
     return sorted(out, key=lambda x: order.get(x["role"], 9))
 
 
-def global_report(games, sessions, cfg):
+def global_report(games, sessions, cfg, rank_hist=None):
     st = cfg.get("stats", {})
     return {
         "summary": summary(games),
@@ -287,6 +283,7 @@ def global_report(games, sessions, cfg):
         "zones": zone_stats(games),
         "map": map_data(games),
         "form": form_stats(sessions),
+        "ranks": rank_report(games, sessions, rank_hist or []),
         "sessions": [{"date": s["date"], "games": len(s["games"]),
                       "wins": s["wins"], "wr": s["wr"]} for s in sessions],
         "thresholds": st,
@@ -324,6 +321,9 @@ def session_report(session, all_games, cfg):
         "map": map_data(games, with_jungle=True),
         "lines": [game_line(g) for g in games],
         "bans": ban_stats(games),
+        "ranks": [game_rank(g) for g in games],
+        "rank_summary": _rank_rec([(g, r) for g in games if (r := game_rank(g))]),
+        "rank_global": _rank_rec([(g, r) for g in all_games if (r := game_rank(g))]),
     }
 
 
@@ -700,90 +700,131 @@ def player_reports(games, sessions, cfg):
     return sorted(reps, key=lambda r: (order.get(r["role"], 9), r["player"]))
 
 
-# =================================================================== hors soirées
-def _out_profile(recs):
-    """Bilan d'une liste de fiches hors soirée (même format que player_stats)."""
-    n = len(recs)
-    if not n:
-        return rec(0, 0)
-    mins = sum(r["duration_min"] for r in recs) or 1
-    k, d, a = (sum(r[x] for r in recs) for x in ("kills", "deaths", "assists"))
-    return {**rec(n, sum(r["win"] for r in recs)),
-            "kda": round((k + a) / max(d, 1), 2),
-            "kills": round(k / n, 1), "deaths": round(d / n, 1), "assists": round(a / n, 1),
-            "cs_min": round(sum(r["cs"] for r in recs) / mins, 1),
-            "damage_min": round(sum(r["damage"] for r in recs) / mins),
-            "vision_min": round(sum(r["vision"] for r in recs) / mins, 2),
-            "kp": _avg([r["kp"] for r in recs]),
-            "dmg_share": _avg([r["dmg_pct"] for r in recs if r.get("dmg_pct") is not None])}
+
+# =================================================================== classement
+TIERS = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND",
+         "MASTER", "GRANDMASTER", "CHALLENGER"]
+TIER_FR = ["Fer", "Bronze", "Argent", "Or", "Platine", "Émeraude", "Diamant", "Maître",
+           "Grand Maître", "Challenger"]
+DIVS = {"IV": 0, "III": 1, "II": 2, "I": 3}
+APEX = 7 * 400  # Maître et au-dessus : plus de divisions, seulement des LP
+GAP_BUCKETS = [(100, 99999, "Adversaires plus forts (+1 division et plus)"),
+               (-100, 100, "Niveau équivalent (moins d'une division d'écart)"),
+               (-99999, -100, "Adversaires plus faibles (−1 division et plus)")]
 
 
-def outside_report(records, games, cfg, tz="Europe/Paris", weeks=8):
-    """Parties jouées sans le groupe : volume, files, rôles, champions (dans le pool ou non),
-    comparaison avec les soirées, et partenaires de l'équipe."""
-    pools = cfg.get("champion_pools", {})
-    team = {p["player"]: p for p in player_stats(games)}
-    team_champs = defaultdict(set)
-    for g in games:
-        for p in g["our"]:
-            if p.get("player") and not p.get("sub"):
-                team_champs[p["player"]].add(p["champion"].lower())
-    now = datetime.now(ZoneInfo(tz)).date()
-    week0 = now - timedelta(days=now.weekday())
-    week_starts = [week0 - timedelta(weeks=i) for i in range(weeks - 1, -1, -1)]
-    out = []
-    for pl in cfg["players"]:
-        who, role = pl["riot_id"].split("#")[0], pl["role"]
-        mine = [r for r in records if r["player"] == who]
-        pool = {_norm(c) for c in pools.get(role, [])}
-        by = lambda key: sorted(({"key": k, **_out_profile(v)} for k, v in _group(mine, key).items()),
-                                key=lambda x: -x["games"])
-        champs = []
-        for c, v in _group(mine, lambda r: r["champion"]).items():
-            champs.append({"champion": c, **_out_profile(v),
-                           "roles": Counter(r["role"] for r in v).most_common(1)[0][0],
-                           "in_pool": _norm(c) in pool,
-                           "in_team": c.lower() in team_champs[who]})
-        champs.sort(key=lambda c: (-c["games"], -c["wr"]))
-        weekly = []
-        for ws in week_starts:
-            wk = [r for r in mine if ws <= local_dt(r, tz).date() < ws + timedelta(days=7)]
-            weekly.append({"date": ws.isoformat(), "value": len(wk), **rec(len(wk), sum(r["win"] for r in wk))})
-        on_role = [r for r in mine if r["role"] == role]
-        pool_games = [r for r in on_role if _norm(r["champion"]) in pool]
-        mates = by(lambda r: " + ".join(r["mates"]) if r["mates"] else "Sans l'équipe")
-        out.append({
-            "player": who, "role": role,
-            "profile": _out_profile(mine),
-            "profile_role": _out_profile(on_role),
-            "team": team.get(who),
-            "queues": by(lambda r: r["queue"]),
-            "roles": by(lambda r: r["role"] or "?"),
-            "mates": mates,
-            "champions": champs,
-            "role_pct": round(100 * len(on_role) / len(mine)) if mine else None,
-            "pool_pct": round(100 * len(pool_games) / len(on_role)) if on_role else None,
-            # pistes pour le pool : champions joués sur son rôle, hors pool, avec un bon bilan
-            "candidates": [c for c in champs if not c["in_pool"] and c["roles"] == role
-                           and c["games"] >= 3 and c["wr"] >= 55],
-            "weekly": weekly,
-            "recent": [{**r, "local": local_dt(r, tz).strftime("%d/%m %H:%M")}
-                       for r in sorted(mine, key=lambda r: r["start_utc"], reverse=True)[:10]],
-        })
-    order = {r: i for i, r in enumerate(ROLES)}
-    out.sort(key=lambda r: order.get(r["role"], 9))
-    total = {r["match_id"] for r in records}
-    return {"players": out, "games": len(total), "records": len(records),
-            "weeks": [w.isoformat() for w in week_starts]}
+def rank_score(r, queue="flex"):
+    """Rang -> nombre (400 par palier, 100 par division, + LP). Flex, sinon solo, sinon None."""
+    e = (r or {}).get(queue) or (r or {}).get("solo" if queue == "flex" else "flex")
+    if not e:
+        return None
+    tier = TIERS.index(e[0]) if e[0] in TIERS else 0
+    if tier >= 7:
+        return APEX + e[2]
+    return tier * 400 + DIVS.get(e[1], 0) * 100 + min(e[2], 100)
 
 
-def _norm(champ):
-    """« Dr. Mundo » (config) et « DrMundo » (Riot) -> « drmundo »."""
-    return "".join(c for c in champ.lower() if c.isalnum())
+def rank_label(score, lp=False):
+    """1530 -> « Platine III » (« Platine III 30 LP » avec lp=True)."""
+    if score is None:
+        return "—"
+    score = round(score)
+    if score >= APEX:
+        return f"Maître+ {score - APEX} LP"
+    tier, rest = divmod(max(score, 0), 400)
+    div = ["IV", "III", "II", "I"][min(rest // 100, 3)]
+    return f"{TIER_FR[tier]} {div}" + (f" {rest % 100} LP" if lp else "")
 
 
-def _group(recs, key):
-    out = defaultdict(list)
-    for r in recs:
-        out[key(r)].append(r)
+def game_rank(g):
+    """Rang moyen des deux équipes sur une partie, écart et adversaire le mieux classé."""
+    rk = g.get("ranks")
+    if not rk:
+        return None
+    ours = [s for s in (rank_score(r) for r in rk["our"].values()) if s is not None]
+    theirs = {role: rank_score(r) for role, r in rk["enemy"].items()}
+    ranked = {role: s for role, s in theirs.items() if s is not None}
+    if not ours or not ranked:
+        return None
+    top_role = max(ranked, key=ranked.get)
+    our_avg, en_avg = sum(ours) / len(ours), sum(ranked.values()) / len(ranked)
+    late = (datetime.fromisoformat(rk["at"]) - datetime.fromisoformat(g["start_utc"])).days > 3
+    return {"our": round(our_avg), "enemy": round(en_avg), "gap": round(en_avg - our_avg),
+            "our_max": max(ours), "enemy_max": ranked[top_role], "enemy_top_role": top_role,
+            "enemy_top_champ": (by_role(g, top_role, "enemy") or {}).get("champion"),
+            "unranked": len(theirs) - len(ranked), "approx": late}
+
+
+def _rank_rec(items):
+    gs = [g for g, _ in items]
+    out = rec(len(gs), sum(g["win"] for g in gs))
+    if items:
+        out["enemy"] = round(sum(r["enemy"] for _, r in items) / len(items))
+        out["our"] = round(sum(r["our"] for _, r in items) / len(items))
+        out["gap"] = out["enemy"] - out["our"]
     return out
+
+
+def rank_report(games, sessions, history):
+    """Rang des adversaires (moyenne, écart avec nous, winrate selon l'écart) et
+    évolution du rang des joueurs à partir des relevés successifs."""
+    items = [(g, r) for g in games if (r := game_rank(g))]
+    out = {"history": rank_history(history)}
+    if not items:
+        return out
+    by_tier = defaultdict(list)
+    by_top_role = defaultdict(list)
+    for g, r in items:
+        by_tier[min(r["enemy"] // 400, 7)].append((g, r))
+        by_top_role[r["enemy_top_role"]].append((g, r))
+    sess = []
+    for s in sessions:
+        ids = {g["match_id"] for g in s["games"]}
+        it = [x for x in items if x[0]["match_id"] in ids]
+        if it:
+            sess.append({"date": s["date"], **_rank_rec(it), "approx": any(r["approx"] for _, r in it)})
+    stomp = [x for x in items if x[1]["enemy_max"] >= x[1]["our_max"] + 200]
+    out.update({
+        "games": len(items), "approx": sum(r["approx"] for _, r in items),
+        "summary": _rank_rec(items),
+        "by_gap": [{"label": lab, **_rank_rec([x for x in items if lo <= x[1]["gap"] < hi])}
+                   for lo, hi, lab in GAP_BUCKETS],
+        "by_tier": [{"label": TIER_FR[t] if t < 7 else "Maître+", **_rank_rec(v)}
+                    for t, v in sorted(by_tier.items())],
+        "top_role": sorted(({"role": k, **_rank_rec(v),
+                             "top": round(sum(r["enemy_max"] for _, r in v) / len(v))}
+                            for k, v in by_top_role.items()),
+                           key=lambda x: ROLES.index(x["role"]) if x["role"] in ROLES else 9),
+        "stomp": _rank_rec(stomp),
+        "sessions": sess,
+    })
+    return out
+
+
+def rank_history(history):
+    """Rang flex de chaque joueur relevé après relevé, et moyenne de l'équipe."""
+    if not history:
+        return None
+    names = sorted({n for h in history for n in h["players"]})
+    points = []
+    for h in history:
+        vals = {n: rank_score(h["players"].get(n), "flex") for n in names}
+        known = [v for v in vals.values() if v is not None]
+        points.append({"date": h["date"], "players": vals,
+                       "value": round(sum(known) / len(known)) if known else None})
+    players = []
+    last = history[-1]["players"]
+    for n in names:
+        series = [{"date": p["date"], "value": p["players"][n]} for p in points]
+        vals = [p["value"] for p in series if p["value"] is not None]
+        flex = (last.get(n) or {}).get("flex")
+        players.append({
+            "player": n, "series": series, "score": series[-1]["value"] if flex else None,
+            "flex": flex, "solo": (last.get(n) or {}).get("solo"),
+            "wr": round(100 * flex[3] / (flex[3] + flex[4])) if flex and flex[3] + flex[4] else None,
+            "delta": vals[-1] - vals[0] if len(vals) >= 2 else None,
+            "delta_last": vals[-1] - vals[-2] if len(vals) >= 2 and flex else None,
+        })
+    team = [p["value"] for p in points if p["value"] is not None]
+    return {"points": points, "players": players, "team": team[-1] if team else None,
+            "team_delta": team[-1] - team[0] if len(team) >= 2 else None}

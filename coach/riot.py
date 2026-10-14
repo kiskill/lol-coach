@@ -3,6 +3,7 @@ import time
 import urllib.parse
 from collections import Counter
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -10,8 +11,7 @@ from . import ROLES, store
 
 POSITIONS = {"TOP": "Top", "JUNGLE": "Jungle", "MIDDLE": "Mid",
              "BOTTOM": "ADC", "UTILITY": "Support"}
-QUEUES = {420: "Solo/Duo", 440: "Flex", 400: "Normale draft", 430: "Normale blind"}
-STATE_VERSION = 2  # 2 = les parties écartées alimentent aussi data/outside.json
+STATE_VERSION = 3  # 3 = nombre de joueurs de l'équipe gardé pour chaque partie écartée
 
 
 class RiotError(Exception):
@@ -22,21 +22,22 @@ class RiotClient:
     # Clé dev/personnelle : 100 requêtes / 2 minutes -> ~1,25 s entre deux appels
     MIN_INTERVAL = 1.25
 
-    def __init__(self, api_key, regional="europe"):
+    def __init__(self, api_key, regional="europe", platform="euw1"):
         if not api_key:
             raise RiotError("Aucune clé Riot : définis la variable RIOT_API_KEY.")
         self.base = f"https://{regional}.api.riotgames.com"
+        self.platform = f"https://{platform}.api.riotgames.com"  # League-V4 (rangs)
         self.session = requests.Session()
         self.session.headers["X-Riot-Token"] = api_key
         self._last = 0.0
 
-    def _get(self, path, params=None):
+    def _get(self, path, params=None, base=None):
         for attempt in range(6):
             wait = self.MIN_INTERVAL - (time.time() - self._last)
             if wait > 0:
                 time.sleep(wait)
             self._last = time.time()
-            r = self.session.get(self.base + path, params=params, timeout=30)
+            r = self.session.get((base or self.base) + path, params=params, timeout=30)
             if r.status_code == 429:  # limite atteinte : on attend ce que Riot demande
                 time.sleep(int(r.headers.get("Retry-After", "10")) + 1)
                 continue
@@ -82,6 +83,17 @@ class RiotClient:
 
     def timeline(self, match_id):
         return self._get(f"/lol/match/v5/matches/{match_id}/timeline")
+
+    def ranks(self, puuid):
+        """Rang actuel (flex et solo) : {"flex": [tier, division, LP, victoires, défaites], ...}.
+        L'API ne donne que le rang du moment, pas d'historique."""
+        out = {}
+        for e in self._get(f"/lol/league/v4/entries/by-puuid/{puuid}", base=self.platform) or []:
+            key = {"RANKED_FLEX_SR": "flex", "RANKED_SOLO_5x5": "solo"}.get(e.get("queueType"))
+            if key:
+                out[key] = [e["tier"], e.get("rank", "I"), e.get("leaguePoints", 0),
+                            e.get("wins", 0), e.get("losses", 0)]
+        return out
 
 
 # ------------------------------------------------------------------ timeline
@@ -299,56 +311,15 @@ def normalize(match, player_by_puuid, player_roles, champs, min_players, team_qu
     }
 
 
-def outside_records(match, player_by_puuid):
-    """Une fiche compacte par joueur de l'équipe présent dans une partie hors soirée."""
-    info = match["info"]
-    parts = info["participants"]
-    if is_remake(match):
-        return []
-    dur = info["gameDuration"] / 60
-    team_kills = Counter()
-    for p in parts:
-        team_kills[p["teamId"]] += p["kills"]
-    ours = [p for p in parts if p["puuid"] in player_by_puuid]
-    out = []
-    for p in ours:
-        role = POSITIONS.get(p.get("teamPosition") or p.get("individualPosition"))
-        opp = next((q for q in parts if q["teamId"] != p["teamId"] and role
-                    and POSITIONS.get(q.get("teamPosition")) == role), None)
-        ch = p.get("challenges") or {}
-        mates = sorted(player_by_puuid[q["puuid"]] for q in ours
-                       if q is not p and q["teamId"] == p["teamId"])
-        out.append({
-            "match_id": match["metadata"]["matchId"],
-            "player": player_by_puuid[p["puuid"]],
-            "queue": QUEUES.get(info.get("queueId"), str(info.get("queueId"))),
-            "start_utc": datetime.fromtimestamp(info["gameStartTimestamp"] / 1000, tz=timezone.utc).isoformat(),
-            "duration_min": round(dur, 2),
-            "patch": ".".join(info.get("gameVersion", "").split(".")[:2]),
-            "win": bool(p["win"]),
-            "role": role,
-            "champion": p["championName"],
-            "opponent": opp["championName"] if opp else None,
-            "mates": mates,
-            "stack": len(mates) + 1,
-            "kills": p["kills"], "deaths": p["deaths"], "assists": p["assists"],
-            "cs": p["totalMinionsKilled"] + p["neutralMinionsKilled"],
-            "gold": p["goldEarned"],
-            "damage": p["totalDamageDealtToChampions"],
-            "vision": p["visionScore"],
-            "kp": round(100 * (p["kills"] + p["assists"]) / team_kills[p["teamId"]])
-                  if team_kills[p["teamId"]] else 0,
-            "dmg_pct": round(100 * ch["teamDamagePercentage"]) if "teamDamagePercentage" in ch else None,
-            "cs10": ch.get("laneMinionsFirst10Minutes"),
-            "solo_kills": ch.get("soloKills"),
-            "pinks": p.get("visionWardsBoughtInGame"),
-        })
-    return out
+def team_stack(match, player_by_puuid):
+    """Nombre de joueurs de la liste dans l'équipe la plus représentée."""
+    per_team = Counter(p["teamId"] for p in match["info"]["participants"] if p["puuid"] in player_by_puuid)
+    return max(per_team.values(), default=0)
 
 
 def collect(cfg, api_key, champs):
-    """Récupère les nouvelles parties de l'équipe, et celles jouées hors soirée."""
-    client = RiotClient(api_key, cfg.get("regional", "europe"))
+    """Récupère les nouvelles parties de l'équipe. Renvoie le nombre de parties ajoutées."""
+    client = RiotClient(api_key, cfg.get("regional", "europe"), cfg.get("platform", "euw1"))
     state = store.load_state()
 
     player_by_puuid, player_roles = {}, {}
@@ -364,36 +335,29 @@ def collect(cfg, api_key, champs):
     known = {g["match_id"] for g in store.load_games() if g.get("source") == "api"}
     min_players = cfg.get("min_team_players", 5)
     team_queue = cfg.get("queue", 440)
-    outside = store.load_outside()
     if state.get("v", 1) < STATE_VERSION:
-        # Ancien format : les parties écartées n'ont laissé aucune trace, on les réexamine
+        # Ancien format : on ne sait pas combien de joueurs de l'équipe avaient les parties
+        # écartées, on les réexamine une fois
         print(f"Migration : réexamen des {len(state['ignored'])} partie(s) écartée(s)…")
-        state["ignored"], state["v"] = [], STATE_VERSION
-    # Parties hors soirée devenues parties d'équipe (min_team_players abaissé) : réexaminées
-    promote = {r["match_id"] for r in outside if r["queue"] == QUEUES.get(team_queue)
-               and r["stack"] >= min_players}
-    if promote:
-        outside = [r for r in outside if r["match_id"] not in promote]
+        state.update(ignored=[], stacks={}, v=STATE_VERSION)
+    stacks = state.setdefault("stacks", {})
+    # Parties écartées qui comptent désormais (min_team_players abaissé) : réexaminées
+    promote = {mid for mid, n in stacks.items() if n >= min_players}
     ignored = set(state["ignored"]) - promote
     start_ts = int(datetime.fromisoformat(cfg.get("start_date", "2026-01-01"))
                    .replace(tzinfo=timezone.utc).timestamp())
 
-    queues = [team_queue]
-    if cfg.get("outside", {}).get("enabled", True):
-        queues += [q for q in cfg.get("outside", {}).get("queues", [420, 440]) if q not in queues]
     candidates = set()
     for puuid in player_by_puuid:
-        for q in queues:
-            candidates |= set(client.match_ids(puuid, q, start_ts))
+        candidates |= set(client.match_ids(puuid, team_queue, start_ts))
     todo = sorted(candidates - known - ignored)
     print(f"{len(todo)} nouvelle(s) partie(s) à examiner.")
 
-    new_games, n_team, n_out = [], 0, 0
+    new_games, n_team = [], 0
 
     def save():
         state["ignored"] = sorted(ignored)
         store.save_state(state)
-        store.save_outside(outside)
         if new_games:
             store.upsert_games(new_games)
 
@@ -407,18 +371,60 @@ def collect(cfg, api_key, champs):
             if game:
                 store.save_raw(match)
                 new_games.append(game)
+                stacks.pop(mid, None)
                 n_team += 1
             else:
-                recs = outside_records(match, player_by_puuid)
-                outside.extend(recs)
-                n_out += bool(recs)
                 ignored.add(mid)
+                if not is_remake(match):
+                    stacks[mid] = team_stack(match, player_by_puuid)
             if i % 25 == 0:
                 print(f"  {i}/{len(todo)} examinées…")
                 save()
                 new_games = []
     finally:
         save()
-    print(f"{n_team} partie(s) d'équipe ajoutée(s), {n_out} partie(s) hors soirée.")
+    print(f"{n_team} partie(s) d'équipe ajoutée(s).")
     enrich_timelines(client)
+    enrich_ranks(client, player_by_puuid, cfg)
     return n_team
+
+
+def enrich_ranks(client, player_by_puuid, cfg):
+    """Relevé des rangs : celui des 5 joueurs (historique, un point par jour) et celui des
+    10 joueurs de chaque partie qui n'en a pas encore (relevé au plus près de la partie)."""
+    cache = {}
+
+    def ranks(puuid):
+        if puuid not in cache:
+            cache[puuid] = client.ranks(puuid)
+        return cache[puuid]
+
+    now = datetime.now(timezone.utc)
+    today = now.astimezone(ZoneInfo(cfg.get("timezone", "Europe/Paris"))).date().isoformat()
+    hist = store.load_ranks()
+    snap = {"date": today, "at": now.isoformat(timespec="seconds"),
+            "players": {name: ranks(puuid) for puuid, name in player_by_puuid.items()}}
+    hist = [h for h in hist if h["date"] != today] + [snap]
+    store.save_ranks(hist)
+
+    games = store.load_games()
+    todo = [g for g in games if g.get("source") == "api" and "ranks" not in g]
+    if todo:
+        print(f"Rangs : {len(todo)} partie(s) à compléter…")
+    try:
+        for i, g in enumerate(todo, 1):
+            raw = store.load_raw(g["match_id"])
+            if not raw:
+                continue
+            by_champ = {p["championName"]: p for p in raw["info"]["participants"]}
+            g["ranks"] = {
+                "at": now.isoformat(timespec="seconds"),
+                **{side: {p["role"]: ranks(by_champ[p["champion"]]["puuid"])
+                          for p in g[side] if p["champion"] in by_champ}
+                   for side in ("our", "enemy")},
+            }
+            if i % 10 == 0:
+                print(f"  {i}/{len(todo)}…")
+                store.save_games(games)
+    finally:
+        store.save_games(games)

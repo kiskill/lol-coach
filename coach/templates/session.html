@@ -15,6 +15,7 @@
     {{ kpi("Victoires", r.summary.wins ~ " / " ~ r.summary.games) }}
     {{ kpi("Winrate", r.summary.wr ~ " %") }}
     {{ kpi("Durée moyenne", r.summary.avg_duration ~ " min") }}
+    {% if r.rank_summary.games %}{{ kpi("Rang moyen adverse", r.rank_summary.enemy | rank, "écart " ~ (r.rank_summary.gap | rankgap) ~ " · habituel " ~ (r.rank_global.enemy | rank)) }}{% endif %}
   </div>
 </section>
 
@@ -53,6 +54,8 @@
       <b>{{ "Victoire" if g.win else "Défaite" }}</b>
       <span>Partie {{ loop.index }} · {{ g.start_utc | localtime }} · {{ g.duration_min | round(0) | int }} min{% if g.patch %} · patch {{ g.patch }}{% endif %}{% if g.sub %} · <b title="Partie à 4 avec un remplaçant : il n'apparaît pas dans les stats par joueur">remplaçant : {{ g.sub }}</b>{% endif %}</span>
       {% if g.early and g.early['15'] %}<span class="obj">Or : <b class="{{ g.early['10'].gold | signclass }}">{{ g.early['10'].gold | signed }}</b> à 10 min, <b class="{{ g.early['15'].gold | signclass }}">{{ g.early['15'].gold | signed }}</b> à 15 min</span>{% endif %}
+      {% set gr = r.ranks[loop.index0] %}
+      {% if gr %}<span class="obj" title="Rang moyen (flex, sinon solo) · le mieux classé en face{% if gr.approx %} · rang relevé plus de 3 jours après la partie{% endif %}">Rangs : nous {{ gr.our | rank }}, eux <b>{{ gr.enemy | rank }}</b> ({{ gr.gap | rankgap }}) · meilleur en face : {{ gr.enemy_max | rank }} ({{ gr.enemy_top_role }}){% if gr.approx %} ≈{% endif %}</span>{% endif %}
       {% if g.objectives.dragons %}<span class="obj">Dragons {{ g.objectives.dragons[0] }}-{{ g.objectives.dragons[1] }} · Barons {{ g.objectives.barons[0] }}-{{ g.objectives.barons[1] }} · Tours {{ g.objectives.towers[0] }}-{{ g.objectives.towers[1] }}</span>{% endif %}
     </div>
     <div class="teams">

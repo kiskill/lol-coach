@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, teamfights with context %}
+{% from "macros.html" import champ, wr, kpi, keytiles, lolmap, teamfights, spark with context %}
 {% block title %}{{ team }} · Bilan global{% endblock %}
 {% block content %}
 
@@ -30,6 +30,72 @@
   </div>
   <p class="legend"><span class="dot w"></span> victoire <span class="dot l"></span> défaite · clique sur une soirée pour son débrief</p>
 </section>
+
+{% set rk = r.ranks %}
+{% if rk.history or rk.games %}
+<section class="card" id="classement">
+  <h2>Classement</h2>
+  {% set hst = rk.history %}
+  {% if hst %}
+  <div class="kpis compact">
+    {{ kpi("Rang flex moyen de l'équipe", hst.team | rank, (hst.team | rank(true)) ~ ((" · " ~ (hst.team_delta | signed) ~ " LP depuis le " ~ hst.points[0].date[8:10] ~ "/" ~ hst.points[0].date[5:7]) if hst.team_delta is not none else "")) }}
+    {% if rk.games %}
+    {{ kpi("Rang moyen des adversaires", rk.summary.enemy | rank, "sur " ~ rk.games ~ " parties") }}
+    {{ kpi("Écart moyen", rk.summary.gap | rankgap, "positif = adversaires mieux classés") }}
+    {% endif %}
+  </div>
+  {% if hst.points | length >= 2 %}
+  <h3>Rang flex moyen de l'équipe, relevé après relevé</h3>
+  {{ rank_chart(hst.points) | safe }}
+  {% else %}
+  <p class="muted small-note" style="margin-top: 8px">La courbe d'évolution apparaîtra au prochain relevé : Riot ne donne que le rang du moment, l'historique se construit à chaque passage.</p>
+  {% endif %}
+  <div class="scroll"><table class="t players">
+    <tr><th>Joueur</th><th>Rang flex</th><th>V / D flex</th><th>Évolution</th><th>Dernier relevé</th><th>Solo/Duo</th></tr>
+    {% for p in hst.players %}
+    <tr><td><b>{{ p.player }}</b></td>
+      <td>{% if p.flex %}{{ p.score | rank(true) }}{% else %}<span class="muted">non classé</span>{% endif %}</td>
+      <td>{% if p.flex %}{{ p.flex[3] }} / {{ p.flex[4] }} <small class="muted">({{ p.wr }} %)</small>{% endif %}</td>
+      <td>{{ spark(p.series, "high") }}</td>
+      <td class="{{ p.delta_last | signclass }}">{% if p.delta_last is not none %}{{ p.delta_last | signed }} LP{% else %}<span class="muted">—</span>{% endif %}</td>
+      <td>{% if p.solo %}{{ stats_rank({"solo": p.solo}, "solo") | rank(true) }}{% else %}<span class="muted">—</span>{% endif %}</td></tr>
+    {% endfor %}
+  </table></div>
+  <p class="muted small-note">Rang exprimé en LP équivalents : 100 par division, 400 par palier.</p>
+  {% endif %}
+
+  {% if rk.games %}
+  <h3>Face à quel niveau gagne-t-on ?</h3>
+  <div class="grid2">
+    <table class="t">
+      <tr><th>Écart de rang (eux − nous)</th><th>Winrate</th></tr>
+      {% for b in rk.by_gap if b.games %}<tr><td>{{ b.label }}</td><td>{{ wr(b) }}</td></tr>{% endfor %}
+      {% if rk.stomp.games %}<tr><td>Un adversaire 2 divisions au-dessus de notre meilleur joueur</td><td>{{ wr(rk.stomp) }}</td></tr>{% endif %}
+    </table>
+    <table class="t">
+      <tr><th>Rang moyen adverse</th><th>Winrate</th></tr>
+      {% for b in rk.by_tier %}<tr><td>{{ b.label }}</td><td>{{ wr(b) }}</td></tr>{% endfor %}
+    </table>
+  </div>
+  <h3>Où joue leur meilleur joueur</h3>
+  <table class="t">
+    <tr><th>Rôle du mieux classé en face</th><th>Winrate</th><th>Son rang (moyenne)</th></tr>
+    {% for b in rk.top_role %}<tr><td>{{ b.role }}</td><td>{{ wr(b) }}</td><td>{{ b.top | rank }}</td></tr>{% endfor %}
+  </table>
+  <details>
+    <summary>Rang des adversaires soirée par soirée</summary>
+    <div class="scroll"><table class="t">
+      <tr><th>Soirée</th><th>Nous</th><th>Eux</th><th>Écart</th><th>Résultat</th></tr>
+      {% for s in rk.sessions | reverse %}
+      <tr><td><a href="sessions/{{ s.date }}.html">{{ fr_date(s.date) }}</a>{% if s.approx %} <small class="muted">≈</small>{% endif %}</td>
+        <td>{{ s.our | rank }}</td><td>{{ s.enemy | rank }}</td><td>{{ s.gap | rankgap }}</td><td>{{ wr(s) }}</td></tr>
+      {% endfor %}
+    </table></div>
+  </details>
+  {% if rk.approx %}<p class="muted small-note" style="margin-top: 8px">≈ {{ rk.approx }} partie(s) ont un rang relevé plus de 3 jours après avoir été jouées (rang actuel des joueurs, pas celui du jour de la partie) : à lire comme une approximation.</p>{% endif %}
+  {% endif %}
+</section>
+{% endif %}
 
 <section class="card ai">
   <h2>Analyse du coach IA</h2>

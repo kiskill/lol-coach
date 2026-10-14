@@ -2,8 +2,8 @@
 
 Chaque semaine, l'outil fait quatre choses :
 
-1. Il récupère via l'API Riot les nouvelles parties de ranked flex jouées **à 5** (ou à 4 avec un remplaçant), ainsi que les parties classées jouées par chacun **hors soirée**.
-2. Il calcule les statistiques : winrate par champion et par rôle, synergies, adversaires, bans, objectifs, joueurs, rang de la partie dans la soirée.
+1. Il récupère via l'API Riot les nouvelles parties de ranked flex jouées **à 5** (ou à 4 avec un remplaçant).
+2. Il calcule les statistiques : winrate par champion et par rôle, synergies, adversaires, bans, objectifs, joueurs, rang de la partie dans la soirée, classement de l'équipe et niveau des adversaires.
 3. Il demande à une IA (Claude) un **bilan global** et un **débrief de la dernière soirée**.
 4. Il publie le tout sur un petit site web gratuit (GitHub Pages).
 
@@ -51,7 +51,6 @@ Tu peux le modifier directement sur GitHub : ouvre le fichier, clique sur le cra
 - `players` : le **Riot ID exact** de chaque joueur (`Pseudo#TAG`, comme affiché dans le client) et son rôle.
 - `start_date` : la date à partir de laquelle récupérer les parties.
 - `min_team_players` : `4` (défaut) compte aussi les parties avec un remplaçant ; `5` pour ne garder que les parties à 5.
-- `outside` : files analysées pour les parties jouées hors soirée (solo/duo et flex par défaut).
 
 ### Étape 4 : obtenir les clés et les enregistrer comme secrets
 
@@ -123,8 +122,12 @@ Ils sont calculés pour les parties récupérées par l'API Riot, pas pour l'his
   - Support : vision, pinks, wards détruites, vision face au support adverse, immobilisations.
   Une analyse IA de la dernière soirée et des conseils personnalisés accompagnent chaque fiche (un seul appel pour les 5 joueurs, conservé dans `data/ai/players/`).
 - **Parties avec remplaçant :** avec `min_team_players: 4`, une partie à 4 + 1 remplaçant compte dans la soirée et les stats d'équipe. Le remplaçant est signalé sur la partie, mais il n'a ni fiche ni ligne dans les tableaux par joueur.
-- **Hors soirées :** les parties classées jouées sans le groupe au complet (solo/duo, flex à 1-3) ne comptent pas dans les stats d'équipe. Elles ont leur propre page : volume par semaine, files, rôles, partenaires de l'équipe, champions (dans le pool déclaré ou non, pistes pour l'élargir) et comparaison avec le niveau en soirée. Elles sont aussi résumées dans l'analyse IA par joueur, sans appel supplémentaire. Seule une fiche compacte est conservée (`data/outside.json`), sans détail brut ni timeline.
-  - Premier passage après la mise à jour : les parties écartées auparavant sont réexaminées une fois (comptez quelques minutes de plus, à 1,25 s par partie). Les parties à 4 qu'elles contiennent rejoignent leurs soirées.
+- **Classement :**
+  - évolution du rang flex de chaque joueur et de la moyenne de l'équipe ;
+  - rang moyen des adversaires par partie et par soirée, comparé au nôtre ;
+  - winrate selon l'écart de rang (adversaires plus forts, équivalents, plus faibles) et selon le rang moyen adverse ;
+  - rôle où joue le mieux classé en face, et winrate quand un adversaire dépasse de 2 divisions notre meilleur joueur.
+  L'API Riot ne donne que le rang **du moment** : l'historique (`data/ranks.json`) se construit à chaque passage, un relevé par jour. Le rang des 10 joueurs d'une partie est relevé au passage qui suit la partie (le lendemain avec le lancement du mercredi). Les parties relevées plus de 3 jours après sont marquées ≈. Rang utilisé : flex, sinon solo/duo.
 - **Explorateur :** toutes les statistiques Riot de chaque partie (plus de 150, dont les « challenges ») et les indicateurs de l'outil. On peut les regrouper par joueur, champion, rôle, soirée ou résultat, et les filtrer.
 
 Tout est aussi transmis à l'analyse IA.
@@ -195,7 +198,7 @@ coach/ai.py              ← prompts et appel à l'IA (modifie les consignes ici
 coach/site.py            ← génération des pages
 coach/templates/         ← HTML / CSS du site
 data/games.json          ← parties normalisées (sauvegardées à chaque passage)
-data/outside.json        ← parties hors soirée (une fiche compacte par joueur et par partie)
+data/ranks.json          ← relevés successifs du rang des joueurs
 data/raw/                ← réponses brutes de Riot (tout le détail, pour de futures stats)
 data/ai/                 ← textes IA conservés (bilan global, 1 débrief et 1 analyse par joueur par soirée)
 ```

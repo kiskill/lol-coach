@@ -41,6 +41,35 @@ def signed(v):
     return f"{round(v):+,}".replace(",", " ")
 
 
+def rank_chart(points, w=720, h=220):
+    """Courbe SVG du rang moyen de l'équipe, relevé après relevé (repères à chaque division)."""
+    pts = [(p["date"], p["value"]) for p in points if p["value"] is not None]
+    if len(pts) < 2:
+        return ""
+    left, right, top, bottom = 104, 16, 12, 28
+    vals = [v for _, v in pts]
+    lo, hi = (min(vals) // 100) * 100, (max(vals) // 100 + 1) * 100
+    x = lambda i: left + i * (w - left - right) / (len(pts) - 1)
+    y = lambda v: top + (hi - v) * (h - top - bottom) / (hi - lo)
+    step = 100 if hi - lo <= 600 else 400  # au-delà de 6 divisions : un repère par palier
+    out = [f'<svg class="rchart" viewBox="0 0 {w} {h}" role="img" '
+           f'aria-label="Rang flex moyen de l\'équipe, relevé par relevé">']
+    for v in range(int(lo), int(hi) + 1, step):
+        out.append(f'<line x1="{left}" x2="{w - right}" y1="{y(v):.1f}" y2="{y(v):.1f}" class="grid"/>'
+                   f'<text x="{left - 8}" y="{y(v) + 4:.1f}" text-anchor="end">{stats.rank_label(v)}</text>')
+    path = " ".join(f"{'M' if i == 0 else 'L'}{x(i):.1f},{y(v):.1f}" for i, (_, v) in enumerate(pts))
+    out.append(f'<path d="{path}" class="line"/>')
+    every = max(1, len(pts) // 8)
+    for i, (d, v) in enumerate(pts):
+        out.append(f'<g class="pt"><circle cx="{x(i):.1f}" cy="{y(v):.1f}" r="4"/>'
+                   f'<circle cx="{x(i):.1f}" cy="{y(v):.1f}" r="14" class="hit"/>'
+                   f'<title>{d[8:10]}/{d[5:7]} : {stats.rank_label(v, lp=True)}</title></g>')
+        if i % every == 0 or i == len(pts) - 1:
+            out.append(f'<text x="{x(i):.1f}" y="{h - 8}" text-anchor="middle">{d[8:10]}/{d[5:7]}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
 def ai_flags():
     errs = ai.STATUS["errors"]
     on = ai.STATUS["enabled"] or bool(os.environ.get("ANTHROPIC_API_KEY", "").strip())
@@ -74,7 +103,7 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     ai.ITEM_NAMES.update({k: v["name"] for k, v in items.data.items()})
     print(f"Indicateurs avancés : {n_ind} partie(s) avec données détaillées.")
     sessions = stats.split_sessions(games, tz, cutoff)
-    grep = stats.global_report(games, sessions, cfg)
+    grep = stats.global_report(games, sessions, cfg, store.load_ranks())
     name = champs.name
 
     env = Environment(loader=FileSystemLoader(TEMPLATES), autoescape=select_autoescape())
@@ -84,6 +113,11 @@ def build(games, cfg, champs, warning=None, ia_sessions="nouvelles", ia_global=F
     env.filters["signed"] = signed
     env.filters["signclass"] = lambda v: "" if v is None else "good-t" if v > 0 else "bad-t" if v < 0 else ""
     env.filters["num"] = num
+    env.filters["rank"] = stats.rank_label
+    env.globals["rank_chart"] = rank_chart
+    env.globals["stats_rank"] = stats.rank_score
+    env.filters["rankgap"] = lambda v: "—" if v is None else (
+        "égal" if abs(v) < 25 else f"{v / 100:+.1f}".replace(".", ",") + " div.")
     env.filters["tojs"] = lambda v: json.dumps(v, ensure_ascii=False, separators=(",", ":"))
     env.filters["md"] = lambda text: markdown.markdown(text or "", extensions=["tables"])
     env.filters["slug"] = lambda v: "".join(c if c.isalnum() else "-" for c in v.lower()).strip("-")

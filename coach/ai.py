@@ -14,6 +14,8 @@ from pathlib import Path
 
 import requests
 
+from .stats import rank_label
+
 STORE = Path("data/ai")
 API_URL = "https://api.anthropic.com/v1/messages"
 PROMPT_VERSION = "v2"
@@ -39,6 +41,7 @@ GLOBAL_TASK = """Voici les statistiques globales de l'équipe. Rédige un bilan 
 ## Phase de lane et conversion de l'avance (seulement si des données de début de partie sont fournies : écarts d'or à 10/15 min, throws, comebacks, objectifs)
 ## Teamfights (bilan, infériorité numérique, qui meurt en premier, menaces adverses), si ces données sont fournies
 ## Discipline et vision (morts avant 15 min, zones de mort, wards et pinks, conversion des combats en objectifs, anti-heal), si ces données sont fournies
+## Niveau des adversaires et classement (seulement si le champ « classement » est fourni : winrate selon l'écart de rang, où joue leur meilleur joueur, évolution du rang de l'équipe)
 ## Draft : bans prioritaires et picks conseillés
 ## Élargir les champ-pools (2-3 champions simples ou proches des pools actuels par rôle)
 ## 3 actions prioritaires pour les prochaines sessions"""
@@ -143,6 +146,30 @@ def _early_payload(early, name):
     }
 
 
+def _rank_payload(rk):
+    """Rangs : évolution de l'équipe et niveau des adversaires (rangs en clair)."""
+    if not rk or not (rk.get("history") or rk.get("games")):
+        return None
+    def b(x):
+        return f"{x['wins']}/{x['games']}, adversaires {rank_label(x.get('enemy'))}"
+    out = {}
+    h = rk.get("history")
+    if h:
+        out["rang_flex_actuel"] = {p["player"]: rank_label(p["score"], lp=True) for p in h["players"]}
+        out["rang_moyen_équipe_par_relevé"] = [f"{p['date']} {rank_label(p['value'], lp=True)}"
+                                               for p in h["points"][-8:] if p["value"] is not None]
+    if rk.get("games"):
+        out.update({
+            "rang_moyen_nous_vs_adversaires": f"{rank_label(rk['summary']['our'])} vs {rank_label(rk['summary']['enemy'])}",
+            "winrate_selon_écart_de_rang": {x["label"]: b(x) for x in rk["by_gap"] if x["games"]},
+            "winrate_selon_rang_moyen_adverse": {x["label"]: f"{x['wins']}/{x['games']}" for x in rk["by_tier"]},
+            "winrate_selon_rôle_du_meilleur_adversaire": {x["role"]: b(x) for x in rk["top_role"]},
+            "parties_avec_un_adversaire_2_divisions_au_dessus_de_notre_meilleur": f"{rk['stomp']['wins']}/{rk['stomp']['games']}",
+            "parties_au_rang_approximatif (relevé tardif)": rk["approx"],
+        })
+    return out
+
+
 def _global_payload(rep, cfg, name):
     def champs(rows):
         return [f"{name(c['champion'])} {c['wins']}/{c['games']}" for c in rows]
@@ -173,6 +200,7 @@ def _global_payload(rep, cfg, name):
         "winrate_selon_type_de_dégâts": rep.get("composition"),
         "détail_par_joueur (moyennes par partie)": rep.get("player_details"),
         "teamfights": _tf_payload(rep.get("teamfights"), name),
+        "classement": _rank_payload(rep.get("ranks")),
     }
 
 
@@ -285,6 +313,13 @@ def session_analysis(srep, grep, cfg, name):
         "détail_par_joueur_soirée": srep.get("player_details"),
         "teamfights_soirée": _tf_payload(srep.get("teamfights"), name),
         "teamfights_moyenne_globale": _tf_payload(srep.get("teamfights_global"), name, short=True),
+        "rangs_par_partie (nous, eux, meilleur adverse)": [
+            f"{'V' if g['win'] else 'D'} : {rank_label(r['our'])} vs {rank_label(r['enemy'])}, "
+            f"meilleur adverse {rank_label(r['enemy_max'])} en {r['enemy_top_role']}" if r else None
+            for g, r in zip(srep["games"], srep.get("ranks", []))],
+        "rang_moyen_adverse_soirée_vs_habituel": (
+            f"{rank_label(srep['rank_summary'].get('enemy'))} vs {rank_label(srep['rank_global'].get('enemy'))}"
+            if srep.get("rank_summary", {}).get("games") else None),
     }
     text = json.dumps(payload, ensure_ascii=False, indent=1)
     return _call(SYSTEM, f"{SESSION_TASK}\n\nDonnées :\n```json\n{text}\n```", cfg)
