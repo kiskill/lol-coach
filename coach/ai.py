@@ -18,54 +18,63 @@ from .stats import rank_label
 
 STORE = Path("data/ai")
 API_URL = "https://api.anthropic.com/v1/messages"
-PROMPT_VERSION = "v2"
+PROMPT_VERSION = "v3"
 # État de l'IA pour l'affichage : désactivée (pas de clé) ou en erreur
 STATUS = {"enabled": False, "errors": [], "calls": 0}
 
-SYSTEM = """Tu es un coach League of Legends expérimenté qui analyse les statistiques \
-d'une équipe amateur. Tu écris en français, de façon directe et concrète, pour le coach \
-de l'équipe. Règles :
-- Appuie chaque affirmation sur les chiffres fournis (ex. « 7/9 victoires »).
-- Signale clairement quand un échantillon est trop petit (moins de 4 parties) pour conclure.
-- N'invente aucune donnée absente (ex. si les bans ne sont pas fournis, n'en parle pas comme d'un fait).
-- Tu peux utiliser tes connaissances du jeu (synergies, contres, champions simples à prendre en main) \
-pour interpréter, en le présentant comme du conseil et non comme une statistique.
-- Format : Markdown avec des titres ## et des listes courtes. Pas de tableau de plus de 6 lignes."""
+SYSTEM = """Tu es le coach d'une équipe amateur de League of Legends. Tu écris en français, \
+de façon directe, bienveillante (ou pas) et concrète, pour l'équipe et son coach. Règles :
+- Le lecteur a DÉJÀ sous les yeux tous les chiffres (tableaux, graphiques). Ne les recopie pas : \
+pas d'inventaire de statistiques, pas de listes de winrates ou de KDA. Les données te servent à \
+poser un diagnostic, pas à être répétées.
+- Cite un chiffre seulement s'il est indispensable pour comprendre un point, et au maximum un par paragraphe.
+- Explique le POURQUOI (cause probable dans le jeu : décisions, placement, timings, communication, \
+gestion des vagues, priorités d'objectifs, mental) et le COMMENT (ce qu'il faut faire différemment, \
+en jeu, dès la prochaine partie).
+- Chaque conseil doit être actionnable : une consigne claire, un réflexe à prendre, un exercice ou \
+une routine (ex. « au retour base après le 1er objet, le jungler ping la prochaine cible »).
+- Priorise : mieux vaut 3 axes de travail bien expliqués que 10 remarques.
+- Signale brièvement quand un échantillon est trop petit (moins de 4 parties) pour conclure.
+- N'invente aucune donnée absente. Tu peux utiliser tes connaissances du jeu (synergies, contres, \
+plans de jeu, champions simples à prendre en main) en le présentant comme du conseil.
+- Format : Markdown avec des titres ## et des listes courtes. Pas de tableau."""
 
-GLOBAL_TASK = """Voici les statistiques globales de l'équipe. Rédige un bilan de coaching \
-(500 à 800 mots) avec ces sections :
-## Identité de jeu (ce qui marche, compo signature, plan de jeu)
-## Forces
-## Faiblesses
-## Synergies à privilégier / à éviter
-## Phase de lane et conversion de l'avance (seulement si des données de début de partie sont fournies : écarts d'or à 10/15 min, throws, comebacks, objectifs)
-## Teamfights (bilan, infériorité numérique, qui meurt en premier, menaces adverses), si ces données sont fournies
-## Discipline et vision (morts avant 15 min, zones de mort, wards et pinks, conversion des combats en objectifs, anti-heal), si ces données sont fournies
-## Niveau des adversaires et classement (seulement si le champ « classement » est fourni : winrate selon l'écart de rang, où joue leur meilleur joueur, évolution du rang de l'équipe)
-## Draft : bans prioritaires et picks conseillés
-## Élargir les champ-pools (2-3 champions simples ou proches des pools actuels par rôle)
-## 3 actions prioritaires pour les prochaines sessions"""
+GLOBAL_TASK = """Voici les données globales de l'équipe. Rédige un bilan de coaching \
+(450 à 700 mots), centré sur ce que l'équipe doit travailler, avec ces sections :
+## Notre identité de jeu (le plan de jeu qui nous réussit et comment le jouer volontairement)
+## Ce qu'il faut garder (2-3 points forts et pourquoi ils marchent)
+## Les 3 axes de travail prioritaires
+Pour chacun : le problème en une phrase, sa cause probable dans le jeu, puis la consigne ou \
+l'exercice pour le corriger (qui fait quoi, à quel moment). Appuie-toi sur toutes les données \
+fournies (phase de lane, conversion d'avance, teamfights, vision, morts, objectifs, rangs adverses) \
+pour choisir les axes, sans les passer en revue une par une.
+## Draft (2-3 principes de draft pour cette équipe, bans prioritaires, picks qui servent notre plan de jeu)
+## Élargir les champ-pools (1-2 champions par rôle, simples ou proches des pools actuels, et pourquoi)
+## Mental et communication (seulement si les données le suggèrent : tilt, fin de soirée, throws)
+## Plan pour les prochaines sessions (un objectif de jeu par session, formulé comme une consigne)"""
 
 SESSION_TASK = """Voici le détail de la dernière soirée de jeu, avec le bilan global pour \
-comparaison. Rédige un débrief de session (250 à 450 mots) avec ces sections :
-## Résumé de la soirée
-## Ce qui a marché
-## Ce qui a coincé (picks, drafts, adversaires, phase de lane, teamfights, objectifs, vision, morts, joueurs)
-## À retenir pour la semaine prochaine (2-3 points concrets)"""
+comparaison. Rédige un débrief de session (200 à 400 mots), comme un coach qui parle à son équipe \
+après la soirée, avec ces sections :
+## La soirée en bref (2-3 phrases : le ressenti général et le fil rouge, sans liste de résultats)
+## Ce qu'on a bien fait (les décisions ou comportements à reproduire)
+## Ce qui a coincé (les 2-3 causes principales des défaites, en termes de jeu : draft, lane, \
+objectifs, teamfights, vision, morts évitables, mental)
+## Focus pour la prochaine fois (2-3 consignes concrètes, dont une à appliquer dès la 1re partie)"""
 
 PLAYERS_TASK = """Voici, pour chaque joueur, sa dernière soirée comparée à ses moyennes \
 habituelles, avec les indicateurs propres à son rôle, ses champions et ses vis-à-vis. \
 Pour CHAQUE joueur, écris une section qui commence exactement par la ligne `## <joueur>` \
 (le nom tel que fourni dans le champ « joueur »), puis :
-- un paragraphe d'analyse de sa soirée (80 à 140 mots), du point de vue de son rôle, appuyé sur ses chiffres ;
+- un paragraphe de lecture de sa soirée (60 à 110 mots), du point de vue de son rôle : ce que \
+ses chiffres révèlent de sa façon de jouer (pas un résumé de ses chiffres) ;
 - une ligne **Pour progresser :** suivie de 2 ou 3 conseils personnalisés et concrets (liste à puces), \
-liés à ses chiffres, à son rôle et à ses champions (gestes, timings, objets, habitudes de vision ou de placement) ;
-- une ligne **Stuff :** en 1 à 3 phrases, si le champ « équipement » est fourni : timing de ses objets, \
-objets ou builds qui marchent ou non chez lui (seulement à partir de 3 parties), adaptation (anti-heal) \
-et un conseil d'itémisation concret pour ses champions ;
-- une ligne **Sur la durée :** avec un point de progression de fond, tiré de son historique \
-(évolution de ses indicateurs sur les dernières soirées, bilan par champion, vis-à-vis difficiles) \
-et non de la seule soirée : une tendance qui se confirme ou un défaut récurrent, avec les chiffres qui le montrent.
+formulés comme des consignes à appliquer en jeu (gestes, timings, placement, vision, gestion des vagues, \
+communication avec l'équipe), adaptés à son rôle et à ses champions ;
+- une ligne **Stuff :** en 1 à 2 phrases, si le champ « équipement » est fourni : un conseil \
+d'itémisation concret (build, ordre, adaptation comme l'anti-heal), seulement si les données le justifient ;
+- une ligne **Sur la durée :** avec un point de progression de fond tiré de son historique \
+(une tendance qui se confirme ou un défaut récurrent) et l'habitude à prendre pour le corriger.
 Si le joueur n'a pas joué la dernière soirée, écris une seule phrase pour le dire.
 N'écris rien avant la première section ni après la dernière."""
 
