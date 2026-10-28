@@ -170,5 +170,91 @@
     ]
    }
   }
+ },
+ {
+  "date": "2026-10-28",
+  "at": "2026-10-28T10:54:11+00:00",
+  "players": {
+   "Durtyweedz": {
+    "flex": [
+     "DIAMOND",
+     "IV",
+     0,
+     45,
+     38
+    ],
+    "solo": [
+     "PLATINUM",
+     "IV",
+     97,
+     13,
+     14
+    ]
+   },
+   "Kiskill": {
+    "solo": [
+     "EMERALD",
+     "IV",
+     47,
+     422,
+     420
+    ],
+    "flex": [
+     "PLATINUM",
+     "I",
+     3,
+     162,
+     159
+    ]
+   },
+   "Eoden974": {
+    "solo": [
+     "EMERALD",
+     "III",
+     38,
+     165,
+     158
+    ],
+    "flex": [
+     "PLATINUM",
+     "I",
+     42,
+     87,
+     90
+    ]
+   },
+   "Andorian": {
+    "solo": [
+     "EMERALD",
+     "IV",
+     51,
+     85,
+     79
+    ],
+    "flex": [
+     "GOLD",
+     "III",
+     30,
+     64,
+     74
+    ]
+   },
+   "ChUck NoUb": {
+    "flex": [
+     "GOLD",
+     "III",
+     11,
+     52,
+     47
+    ],
+    "solo": [
+     "BRONZE",
+     "I",
+     31,
+     4,
+     6
+    ]
+   }
+  }
  }
 ]
