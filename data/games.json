@@ -28604,5 +28604,1817 @@
     }
    }
   }
+ },
+ {
+  "match_id": "EUW1_8056235787",
+  "source": "api",
+  "start_utc": "2026-11-24T19:16:39.981000+00:00",
+  "duration_min": 32.67,
+  "win": true,
+  "patch": "16.23",
+  "sub": "LEGENDARY LEMON",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Singed",
+    "player": "LEGENDARY LEMON",
+    "sub": true,
+    "kills": 2,
+    "deaths": 5,
+    "assists": 16,
+    "cs": 258,
+    "gold": 13424,
+    "damage": 33549,
+    "vision": 45,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne",
+    "player": "Kiskill",
+    "kills": 12,
+    "deaths": 6,
+    "assists": 13,
+    "cs": 246,
+    "gold": 17461,
+    "damage": 34712,
+    "vision": 28,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Vex",
+    "player": "Eoden974",
+    "kills": 12,
+    "deaths": 9,
+    "assists": 10,
+    "cs": 211,
+    "gold": 14173,
+    "damage": 40464,
+    "vision": 9,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Durtyweedz",
+    "kills": 16,
+    "deaths": 6,
+    "assists": 12,
+    "cs": 252,
+    "gold": 20318,
+    "damage": 50980,
+    "vision": 8,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 4,
+    "assists": 28,
+    "cs": 23,
+    "gold": 10108,
+    "damage": 7631,
+    "vision": 101,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Aatrox"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Naafiri"
+   },
+   {
+    "role": "Mid",
+    "champion": "Kayle"
+   },
+   {
+    "role": "ADC",
+    "champion": "Sivir"
+   },
+   {
+    "role": "Support",
+    "champion": "Soraka"
+   }
+  ],
+  "our_bans": [
+   "Sylas",
+   "Hwei",
+   "Gangplank",
+   "Evelynn",
+   "Graves"
+  ],
+  "enemy_bans": [
+   "Pyke",
+   "Akali",
+   "Vayne",
+   "Irelia",
+   "Chogath"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": true,
+   "first_dragon": false,
+   "dragons": [
+    3,
+    2
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    10,
+    6
+   ],
+   "kills": [
+    43,
+    30
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -3308,
+    "xp": -1895,
+    "cs": -1,
+    "lanes": {
+     "Top": {
+      "gold": -1066,
+      "xp": -1165,
+      "cs": -3
+     },
+     "Jungle": {
+      "gold": -435,
+      "xp": -78,
+      "cs": -3
+     },
+     "Mid": {
+      "gold": 805,
+      "xp": 469,
+      "cs": 15
+     },
+     "ADC": {
+      "gold": -1194,
+      "xp": -546,
+      "cs": -5
+     },
+     "Support": {
+      "gold": -1418,
+      "xp": -575,
+      "cs": -5
+     }
+    }
+   },
+   "15": {
+    "gold": -164,
+    "xp": 1830,
+    "cs": 25,
+    "lanes": {
+     "Top": {
+      "gold": -305,
+      "xp": 176,
+      "cs": 11
+     },
+     "Jungle": {
+      "gold": 1423,
+      "xp": 919,
+      "cs": -3
+     },
+     "Mid": {
+      "gold": -119,
+      "xp": 198,
+      "cs": 22
+     },
+     "ADC": {
+      "gold": -117,
+      "xp": 246,
+      "cs": 1
+     },
+     "Support": {
+      "gold": -1046,
+      "xp": 291,
+      "cs": -6
+     }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-11-25T15:06:48+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      80
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      36,
+      242,
+      237
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      423,
+      423
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      59,
+      168,
+      166
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      81,
+      183,
+      179
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      96,
+      96
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      49,
+      16,
+      16
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      1,
+      48,
+      40
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      41,
+      55,
+      49
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      23,
+      34,
+      53
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      57,
+      8,
+      10
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "BRONZE",
+      "I",
+      20,
+      9,
+      13
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "III",
+      74,
+      27,
+      21
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      19,
+      476,
+      485
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "GOLD",
+      "I",
+      17,
+      40,
+      43
+     ],
+     "solo": [
+      "SILVER",
+      "I",
+      55,
+      198,
+      213
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      85,
+      12,
+      6
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      39,
+      20,
+      11
+     ]
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_8056285748",
+  "source": "api",
+  "start_utc": "2026-11-24T19:53:41.055000+00:00",
+  "duration_min": 28.9,
+  "win": true,
+  "patch": "16.23",
+  "sub": "LEGENDARY LEMON",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Gnar",
+    "player": "LEGENDARY LEMON",
+    "sub": true,
+    "kills": 12,
+    "deaths": 10,
+    "assists": 10,
+    "cs": 160,
+    "gold": 13015,
+    "damage": 36898,
+    "vision": 21,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Nocturne",
+    "player": "Kiskill",
+    "kills": 6,
+    "deaths": 8,
+    "assists": 14,
+    "cs": 196,
+    "gold": 12870,
+    "damage": 21166,
+    "vision": 37,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Galio",
+    "player": "Eoden974",
+    "kills": 17,
+    "deaths": 4,
+    "assists": 12,
+    "cs": 206,
+    "gold": 15802,
+    "damage": 48722,
+    "vision": 13,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Durtyweedz",
+    "kills": 10,
+    "deaths": 5,
+    "assists": 5,
+    "cs": 220,
+    "gold": 15705,
+    "damage": 25727,
+    "vision": 16,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 4,
+    "assists": 17,
+    "cs": 23,
+    "gold": 8032,
+    "damage": 5690,
+    "vision": 57,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Gwen"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Corki"
+   },
+   {
+    "role": "Mid",
+    "champion": "Yasuo"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ezreal"
+   },
+   {
+    "role": "Support",
+    "champion": "Karma"
+   }
+  ],
+  "our_bans": [
+   "Sylas",
+   "Xerath",
+   "Graves",
+   "Hwei",
+   "Gangplank"
+  ],
+  "enemy_bans": [
+   "Kayle",
+   "Smolder",
+   "Nautilus",
+   "Qiyana",
+   "Locke"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    4,
+    0
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    11,
+    5
+   ],
+   "kills": [
+    45,
+    31
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 3124,
+    "xp": 2225,
+    "cs": 46,
+    "lanes": {
+     "Top": {
+      "gold": 677,
+      "xp": 697,
+      "cs": 7
+     },
+     "Jungle": {
+      "gold": 598,
+      "xp": 189,
+      "cs": 10
+     },
+     "Mid": {
+      "gold": 1394,
+      "xp": 1149,
+      "cs": 23
+     },
+     "ADC": {
+      "gold": 383,
+      "xp": -144,
+      "cs": 4
+     },
+     "Support": {
+      "gold": 72,
+      "xp": 334,
+      "cs": 2
+     }
+    }
+   },
+   "15": {
+    "gold": 1973,
+    "xp": 86,
+    "cs": 47,
+    "lanes": {
+     "Top": {
+      "gold": 1092,
+      "xp": 145,
+      "cs": 15
+     },
+     "Jungle": {
+      "gold": -759,
+      "xp": -535,
+      "cs": 15
+     },
+     "Mid": {
+      "gold": 998,
+      "xp": 723,
+      "cs": 20
+     },
+     "ADC": {
+      "gold": 409,
+      "xp": -694,
+      "cs": -4
+     },
+     "Support": {
+      "gold": 233,
+      "xp": 447,
+      "cs": 1
+     }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-11-25T15:06:48+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      80
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      36,
+      242,
+      237
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      423,
+      423
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      59,
+      168,
+      166
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      81,
+      183,
+      179
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      96,
+      96
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      49,
+      16,
+      16
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      1,
+      48,
+      40
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      41,
+      55,
+      49
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      78,
+      143,
+      129
+     ],
+     "solo": [
+      "DIAMOND",
+      "IV",
+      53,
+      154,
+      142
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      6,
+      55,
+      39
+     ],
+     "solo": [
+      "EMERALD",
+      "III",
+      34,
+      65,
+      50
+     ]
+    },
+    "Mid": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      5,
+      140,
+      132
+     ],
+     "solo": [
+      "EMERALD",
+      "IV",
+      51,
+      179,
+      162
+     ]
+    },
+    "ADC": {
+     "flex": [
+      "EMERALD",
+      "III",
+      40,
+      86,
+      79
+     ]
+    },
+    "Support": {
+     "flex": [
+      "SILVER",
+      "III",
+      64,
+      108,
+      112
+     ],
+     "solo": [
+      "PLATINUM",
+      "III",
+      71,
+      98,
+      71
+     ]
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_8056322295",
+  "source": "api",
+  "start_utc": "2026-11-24T20:27:47.383000+00:00",
+  "duration_min": 31.48,
+  "win": false,
+  "patch": "16.23",
+  "sub": "LEGENDARY LEMON",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Chogath",
+    "player": "LEGENDARY LEMON",
+    "sub": true,
+    "kills": 16,
+    "deaths": 7,
+    "assists": 3,
+    "cs": 199,
+    "gold": 16730,
+    "damage": 49565,
+    "vision": 22,
+    "first_blood": true
+   },
+   {
+    "role": "Jungle",
+    "champion": "Shyvana",
+    "player": "Kiskill",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 8,
+    "cs": 245,
+    "gold": 11856,
+    "damage": 20820,
+    "vision": 46,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Diana",
+    "player": "Eoden974",
+    "kills": 6,
+    "deaths": 10,
+    "assists": 5,
+    "cs": 225,
+    "gold": 13163,
+    "damage": 21204,
+    "vision": 18,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "Caitlyn",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 11,
+    "assists": 5,
+    "cs": 193,
+    "gold": 11331,
+    "damage": 18102,
+    "vision": 6,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 3,
+    "deaths": 8,
+    "assists": 15,
+    "cs": 25,
+    "gold": 9610,
+    "damage": 7872,
+    "vision": 74,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Mordekaiser"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Sejuani"
+   },
+   {
+    "role": "Mid",
+    "champion": "Fizz"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jinx"
+   },
+   {
+    "role": "Support",
+    "champion": "Pyke"
+   }
+  ],
+  "our_bans": [
+   "Hwei",
+   "Sylas",
+   "Xerath",
+   "Gangplank",
+   "Graves"
+  ],
+  "enemy_bans": [
+   "Akali",
+   "Lulu",
+   "Locke",
+   "Darius",
+   "Thresh"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": true,
+   "first_dragon": true,
+   "dragons": [
+    1,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    6,
+    7
+   ],
+   "kills": [
+    31,
+    41
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": 530,
+    "xp": 2433,
+    "cs": 43,
+    "lanes": {
+     "Top": {
+      "gold": 1611,
+      "xp": 2188,
+      "cs": 40
+     },
+     "Jungle": {
+      "gold": 866,
+      "xp": 707,
+      "cs": 15
+     },
+     "Mid": {
+      "gold": -1020,
+      "xp": 91,
+      "cs": 3
+     },
+     "ADC": {
+      "gold": -484,
+      "xp": 230,
+      "cs": -1
+     },
+     "Support": {
+      "gold": -443,
+      "xp": -783,
+      "cs": -14
+     }
+    }
+   },
+   "15": {
+    "gold": -1056,
+    "xp": 1625,
+    "cs": 51,
+    "lanes": {
+     "Top": {
+      "gold": 3484,
+      "xp": 5237,
+      "cs": 81
+     },
+     "Jungle": {
+      "gold": 414,
+      "xp": 429,
+      "cs": 15
+     },
+     "Mid": {
+      "gold": -1595,
+      "xp": -519,
+      "cs": -7
+     },
+     "ADC": {
+      "gold": -2160,
+      "xp": -1622,
+      "cs": -28
+     },
+     "Support": {
+      "gold": -1199,
+      "xp": -1900,
+      "cs": -10
+     }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-11-25T15:06:48+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      80
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      36,
+      242,
+      237
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      423,
+      423
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      59,
+      168,
+      166
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      81,
+      183,
+      179
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      96,
+      96
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      49,
+      16,
+      16
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      1,
+      48,
+      40
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      41,
+      55,
+      49
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "GOLD",
+      "I",
+      59,
+      81,
+      78
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      80,
+      32,
+      34
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      22,
+      77,
+      81
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      33,
+      162,
+      161
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      50,
+      70,
+      66
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      69,
+      30,
+      34
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      48,
+      67,
+      65
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      53,
+      150,
+      149
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      83,
+      76,
+      75
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      42,
+      156,
+      148
+     ]
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_8056370410",
+  "source": "api",
+  "start_utc": "2026-11-24T21:04:22.961000+00:00",
+  "duration_min": 28.32,
+  "win": true,
+  "patch": "16.23",
+  "sub": "LEGENDARY LEMON",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Gwen",
+    "player": "LEGENDARY LEMON",
+    "sub": true,
+    "kills": 6,
+    "deaths": 2,
+    "assists": 7,
+    "cs": 230,
+    "gold": 13388,
+    "damage": 20803,
+    "vision": 16,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 7,
+    "deaths": 5,
+    "assists": 14,
+    "cs": 231,
+    "gold": 13983,
+    "damage": 24709,
+    "vision": 37,
+    "first_blood": false
+   },
+   {
+    "role": "Mid",
+    "champion": "Mel",
+    "player": "Eoden974",
+    "kills": 15,
+    "deaths": 5,
+    "assists": 2,
+    "cs": 212,
+    "gold": 14017,
+    "damage": 32016,
+    "vision": 9,
+    "first_blood": false
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Durtyweedz",
+    "kills": 4,
+    "deaths": 7,
+    "assists": 13,
+    "cs": 192,
+    "gold": 13905,
+    "damage": 22730,
+    "vision": 12,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 0,
+    "deaths": 6,
+    "assists": 19,
+    "cs": 31,
+    "gold": 8107,
+    "damage": 6007,
+    "vision": 66,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Sion"
+   },
+   {
+    "role": "Jungle",
+    "champion": "XinZhao"
+   },
+   {
+    "role": "Mid",
+    "champion": "Anivia"
+   },
+   {
+    "role": "ADC",
+    "champion": "Jhin"
+   },
+   {
+    "role": "Support",
+    "champion": "Zyra"
+   }
+  ],
+  "our_bans": [
+   "Graves",
+   "Gangplank",
+   "Sylas",
+   "Xerath",
+   "Yasuo"
+  ],
+  "enemy_bans": [
+   "Zac",
+   "Locke",
+   "Akali",
+   "Zaahen",
+   "Blitzcrank"
+  ],
+  "objectives": {
+   "first_blood": false,
+   "first_tower": false,
+   "first_dragon": true,
+   "dragons": [
+    3,
+    1
+   ],
+   "barons": [
+    1,
+    0
+   ],
+   "towers": [
+    9,
+    6
+   ],
+   "kills": [
+    32,
+    25
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -100,
+    "xp": 31,
+    "cs": -5,
+    "lanes": {
+     "Top": {
+      "gold": -1147,
+      "xp": -361,
+      "cs": -26
+     },
+     "Jungle": {
+      "gold": 776,
+      "xp": 263,
+      "cs": 1
+     },
+     "Mid": {
+      "gold": 1203,
+      "xp": 570,
+      "cs": 19
+     },
+     "ADC": {
+      "gold": -412,
+      "xp": -236,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -520,
+      "xp": -205,
+      "cs": 8
+     }
+    }
+   },
+   "15": {
+    "gold": -136,
+    "xp": 50,
+    "cs": -6,
+    "lanes": {
+     "Top": {
+      "gold": -1360,
+      "xp": -335,
+      "cs": -30
+     },
+     "Jungle": {
+      "gold": 959,
+      "xp": 570,
+      "cs": 8
+     },
+     "Mid": {
+      "gold": 1332,
+      "xp": 690,
+      "cs": 22
+     },
+     "ADC": {
+      "gold": -91,
+      "xp": -298,
+      "cs": -7
+     },
+     "Support": {
+      "gold": -976,
+      "xp": -577,
+      "cs": 1
+     }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-11-25T15:06:48+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      80
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      36,
+      242,
+      237
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      423,
+      423
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      59,
+      168,
+      166
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      81,
+      183,
+      179
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      96,
+      96
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      49,
+      16,
+      16
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      1,
+      48,
+      40
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      41,
+      55,
+      49
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "DIAMOND",
+      "IV",
+      42,
+      87,
+      89
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      5,
+      49,
+      48
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      22,
+      77,
+      81
+     ],
+     "flex": [
+      "EMERALD",
+      "III",
+      33,
+      162,
+      161
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      50,
+      70,
+      66
+     ],
+     "flex": [
+      "GOLD",
+      "II",
+      69,
+      30,
+      34
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "I",
+      59,
+      81,
+      78
+     ],
+     "flex": [
+      "PLATINUM",
+      "I",
+      80,
+      32,
+      34
+     ]
+    },
+    "Support": {
+     "solo": [
+      "PLATINUM",
+      "II",
+      55,
+      52,
+      55
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      95,
+      92,
+      99
+     ]
+    }
+   }
+  }
+ },
+ {
+  "match_id": "EUW1_8056421925",
+  "source": "api",
+  "start_utc": "2026-11-24T21:38:17.689000+00:00",
+  "duration_min": 25.0,
+  "win": false,
+  "patch": "16.23",
+  "sub": "LEGENDARY LEMON",
+  "our": [
+   {
+    "role": "Top",
+    "champion": "Darius",
+    "player": "LEGENDARY LEMON",
+    "sub": true,
+    "kills": 7,
+    "deaths": 8,
+    "assists": 4,
+    "cs": 179,
+    "gold": 10962,
+    "damage": 17912,
+    "vision": 19,
+    "first_blood": false
+   },
+   {
+    "role": "Jungle",
+    "champion": "Trundle",
+    "player": "Kiskill",
+    "kills": 3,
+    "deaths": 10,
+    "assists": 7,
+    "cs": 170,
+    "gold": 10283,
+    "damage": 10436,
+    "vision": 32,
+    "first_blood": true
+   },
+   {
+    "role": "Mid",
+    "champion": "Blitzcrank",
+    "player": "Eoden974",
+    "kills": 7,
+    "deaths": 3,
+    "assists": 5,
+    "cs": 126,
+    "gold": 9637,
+    "damage": 18325,
+    "vision": 9,
+    "first_blood": true
+   },
+   {
+    "role": "ADC",
+    "champion": "MissFortune",
+    "player": "Durtyweedz",
+    "kills": 2,
+    "deaths": 5,
+    "assists": 4,
+    "cs": 167,
+    "gold": 9408,
+    "damage": 14733,
+    "vision": 9,
+    "first_blood": false
+   },
+   {
+    "role": "Support",
+    "champion": "Rakan",
+    "player": "ChUck NoUb",
+    "kills": 1,
+    "deaths": 7,
+    "assists": 9,
+    "cs": 21,
+    "gold": 6646,
+    "damage": 6638,
+    "vision": 47,
+    "first_blood": false
+   }
+  ],
+  "enemy": [
+   {
+    "role": "Top",
+    "champion": "Ahri"
+   },
+   {
+    "role": "Jungle",
+    "champion": "Volibear"
+   },
+   {
+    "role": "Mid",
+    "champion": "Garen"
+   },
+   {
+    "role": "ADC",
+    "champion": "Ashe"
+   },
+   {
+    "role": "Support",
+    "champion": "Braum"
+   }
+  ],
+  "our_bans": [
+   "Graves",
+   "Yasuo",
+   "Gangplank",
+   "Xerath"
+  ],
+  "enemy_bans": [
+   "Malzahar",
+   "Thresh",
+   "Malphite",
+   "Jinx"
+  ],
+  "objectives": {
+   "first_blood": true,
+   "first_tower": false,
+   "first_dragon": false,
+   "dragons": [
+    0,
+    3
+   ],
+   "barons": [
+    0,
+    1
+   ],
+   "towers": [
+    2,
+    9
+   ],
+   "kills": [
+    20,
+    33
+   ]
+  },
+  "early": {
+   "10": {
+    "gold": -2810,
+    "xp": -1247,
+    "cs": -39,
+    "lanes": {
+     "Top": {
+      "gold": 843,
+      "xp": 407,
+      "cs": 4
+     },
+     "Jungle": {
+      "gold": -1241,
+      "xp": -446,
+      "cs": -2
+     },
+     "Mid": {
+      "gold": -494,
+      "xp": 72,
+      "cs": -24
+     },
+     "ADC": {
+      "gold": -1065,
+      "xp": -598,
+      "cs": -16
+     },
+     "Support": {
+      "gold": -853,
+      "xp": -682,
+      "cs": -1
+     }
+    }
+   },
+   "15": {
+    "gold": -5255,
+    "xp": -4203,
+    "cs": -73,
+    "lanes": {
+     "Top": {
+      "gold": -455,
+      "xp": -1796,
+      "cs": -15
+     },
+     "Jungle": {
+      "gold": -1644,
+      "xp": -1163,
+      "cs": -6
+     },
+     "Mid": {
+      "gold": -967,
+      "xp": 520,
+      "cs": -23
+     },
+     "ADC": {
+      "gold": -1037,
+      "xp": -1108,
+      "cs": -25
+     },
+     "Support": {
+      "gold": -1152,
+      "xp": -656,
+      "cs": -4
+     }
+    }
+   }
+  },
+  "ranks": {
+   "at": "2026-11-25T15:06:48+00:00",
+   "our": {
+    "Top": {
+     "flex": [
+      "EMERALD",
+      "IV",
+      0,
+      70,
+      80
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      36,
+      242,
+      237
+     ]
+    },
+    "Jungle": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      0,
+      423,
+      423
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      59,
+      168,
+      166
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "EMERALD",
+      "IV",
+      81,
+      183,
+      179
+     ],
+     "flex": [
+      "EMERALD",
+      "IV",
+      44,
+      96,
+      96
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "PLATINUM",
+      "III",
+      49,
+      16,
+      16
+     ],
+     "flex": [
+      "DIAMOND",
+      "IV",
+      1,
+      48,
+      40
+     ]
+    },
+    "Support": {
+     "flex": [
+      "GOLD",
+      "III",
+      41,
+      55,
+      49
+     ],
+     "solo": [
+      "BRONZE",
+      "I",
+      31,
+      4,
+      6
+     ]
+    }
+   },
+   "enemy": {
+    "Top": {
+     "solo": [
+      "EMERALD",
+      "III",
+      91,
+      120,
+      118
+     ],
+     "flex": [
+      "PLATINUM",
+      "III",
+      70,
+      41,
+      42
+     ]
+    },
+    "Jungle": {
+     "flex": [
+      "GOLD",
+      "I",
+      1,
+      19,
+      15
+     ]
+    },
+    "Mid": {
+     "solo": [
+      "PLATINUM",
+      "IV",
+      74,
+      56,
+      57
+     ],
+     "flex": [
+      "PLATINUM",
+      "II",
+      9,
+      136,
+      130
+     ]
+    },
+    "ADC": {
+     "solo": [
+      "GOLD",
+      "III",
+      41,
+      11,
+      7
+     ],
+     "flex": [
+      "EMERALD",
+      "I",
+      65,
+      133,
+      138
+     ]
+    },
+    "Support": {
+     "flex": [
+      "EMERALD",
+      "III",
+      23,
+      216,
+      216
+     ],
+     "solo": [
+      "EMERALD",
+      "II",
+      10,
+      232,
+      229
+     ]
+    }
+   }
+  }
  }
 ]
